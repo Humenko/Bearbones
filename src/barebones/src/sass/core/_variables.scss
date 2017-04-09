@@ -8,8 +8,8 @@ $primary-pair: #ffffff;
 $secondary-color: #FFB52F;
 $secondary-pair: #ffffff;
 
-$error: #D33C40;
-$success: green;
+$negative-color: #FA2E41;
+$positive-color: #27E100;
 
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
@@ -22,6 +22,14 @@ $bq-border: 16px solid #f0f0f0;
 $white: #ffffff;
 $grey: #4a4a4a;
 
+// Breakpoints
+
+$breakpoints: (
+  'sm' : 20rem, // 320px
+  'md' : 40rem, // 640px
+  'lg' : 57.5rem, // 920px
+  );
+
 //-------------------------------------------------------------------
 
 /* Containers */
@@ -30,11 +38,6 @@ $x-small: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
-
-/* Breakpoints */
-
-$mobile: $x-small;
-$desktop: $medium;
 
 /* Typography */
 
@@ -137,6 +140,16 @@ $btn-primary-color-hover: $primary-pair;
 $btn-secondary-background: $secondary-color;
 $btn-secondary-color: $secondary-pair;
 $btn-secondary-color-hover: $secondary-pair;
+
+// Positive buttons
+$btn-positive-background: $positive-color;
+$btn-positive-color: $white;
+$btn-positive-color-hover: $white;
+
+// Negative buttons
+$btn-negative-background: $negative-color;
+$btn-negative-color: $white;
+$btn-negative-color-hover: $white;
 
 //Loading buttons 
 $btn-loader-size: .75rem;

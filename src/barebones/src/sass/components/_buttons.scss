@@ -62,6 +62,30 @@
 			background: darken($btn-secondary-background, 10%);
 		}
 	}
+	&.positive {
+		color: $btn-positive-color;
+		border: $btn-border-width $btn-border-style $btn-positive-background;
+		background: $btn-positive-background;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $btn-positive-color-hover;
+			border: $btn-border-width $btn-border-style darken($btn-positive-background, 10%);
+			background: darken($btn-positive-background, 10%);
+		}
+	}		
+	&.negative {
+		color: $btn-negative-color;
+		border: $btn-border-width $btn-border-style $btn-negative-background;
+		background: $btn-negative-background;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $btn-negative-color-hover;
+			border: $btn-border-width $btn-border-style darken($btn-negative-background, 10%);
+			background: darken($btn-negative-background, 10%);
+		}
+	}	
 	&.outline {
 		color: $btn-outline-color;
 		border: $btn-outline-border;
