@@ -1,0 +1,17 @@
+.dth-buttons {
+    display: inline-flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    margin: 0 .25em 0 0;
+    %buttons {
+        border-radius: 0rem;
+        &:first-child {
+            border-top-left-radius: $btn-border-radius;
+            border-bottom-left-radius: $btn-border-radius;
+        }
+        &:last-child {
+            border-top-right-radius: $btn-border-radius;
+            border-bottom-right-radius: $btn-border-radius;
+        }        
+    }
+}

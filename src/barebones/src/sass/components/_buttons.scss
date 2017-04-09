@@ -1,0 +1,196 @@
+%buttons {
+	-webkit-appearance: none;
+	display: inline-block;
+	color: $btn-color;
+	border: $btn-border-width $btn-border-style $btn-border-color;
+	border-radius: $btn-border-radius;
+	background: $btn-background;
+	font-weight: $btn-font-weight;
+	font-size: $btn-font-size;
+	text-transform: $btn-text-transform;
+	padding: $btn-padding $btn-padding+.75;
+	margin: 0 0 .5rem 0;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 1;
+	transition: all $btn-transition ease-in-out;
+	&%buttons-hover {
+		border: $btn-border-width $btn-border-style darken($btn-border-color, 10%);
+		background: $btn-background-hover;
+		text-decoration: none;
+	}
+	&%buttons-focus {
+		border: $btn-border-width $btn-border-style darken($btn-border-color, 10%);
+		background: darken($btn-background, 10%);
+		text-decoration: none;
+	}
+	&.xs {
+		font-size: .70rem;
+	}
+	&.sm {
+		font-size: .85rem;
+	}
+	&.lg {
+		font-size: 1.15rem;
+	}
+	&.xl {
+		font-size: 1.3rem;
+	}
+	&.primary {
+		color: $btn-primary-color;
+		border: $btn-border-width $btn-border-style $btn-primary-background;
+		background: $btn-primary-background;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $btn-primary-color-hover;
+			border: $btn-border-width $btn-border-style darken($btn-primary-background, 10%);
+			background: darken($btn-primary-background, 10%);
+		}
+	}
+	&.secondary {
+		color: $btn-secondary-color;
+		border: $btn-border-width $btn-border-style $btn-secondary-background;
+		background: $btn-secondary-background;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $btn-secondary-color-hover;
+			border: $btn-border-width $btn-border-style darken($btn-secondary-background, 10%);
+			background: darken($btn-secondary-background, 10%);
+		}
+	}
+	&.outline {
+		color: $btn-outline-color;
+		border: $btn-outline-border;
+		background: $btn-outline-background;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $btn-outline-color-hover;
+			border: $btn-outline-border-hover;
+			background: $btn-outline-background-hover;
+		}
+		&.primary {
+			color: $btn-primary-background;
+			border-color: $btn-primary-background;
+			&:hover,
+			&:focus,
+			&:active {
+				color: darken($btn-primary-background, 10%);
+				border-color: darken($btn-primary-background, 10%);
+			}
+		}
+		&.secondary {
+			color: $btn-secondary-background;
+			border-color: $btn-secondary-background;
+			&:hover,
+			&:focus,
+			&:active {
+				color: darken($btn-secondary-background, 10%);
+				border-color: darken($btn-secondary-background, 10%);
+			}
+		}
+	}
+	&.invert {
+		color: $btn-invert-color;
+		border: $btn-invert-border;
+		background: $btn-invert-background;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $btn-invert-color-hover;
+			background: $btn-invert-background-hover;
+		}
+		&.primary {
+			color: $btn-primary-color;
+			border-color: $btn-primary-background;
+			background: $btn-primary-background;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $btn-primary-background;
+				background: $btn-primary-color;
+			}
+		}
+		&.secondary {
+			color: $btn-secondary-color;
+			border-color: $btn-secondary-background;
+			background: $btn-secondary-background;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $btn-secondary-background;
+				background: $btn-secondary-color;
+			}
+		}
+	}
+	&.disabled,
+	&:disabled {
+		opacity: 0.7;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	&.loading {
+		position: relative;
+		cursor: default;
+		color: transparent !important;
+		pointer-events: none;
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			margin: $btn-loader-margin;
+			width: $btn-loader-size;
+			height: $btn-loader-size;
+			animation: button-spin $btn-transition*3 linear;
+			animation-iteration-count: infinite;
+			border-radius: $border-circle;
+			border-color: $white transparent transparent;
+			border-style: solid;
+			border-width: $btn-loader-border;
+		}
+		&.primary:after {
+			border-color: $btn-primary-color transparent transparent;
+		}
+		&.secondary:after {
+			border-color: $btn-secondary-color transparent transparent;
+		}
+		&.outline:after {
+			border-color: $btn-outline-color transparent transparent;
+		}
+		&.outline.primary:after {
+			border-color: $btn-primary-background transparent transparent;
+		}
+		&.outline.secondary:after {
+			border-color: $btn-secondary-background transparent transparent;
+		}	
+	}
+}
+
+@keyframes button-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#{$btn} {
+	@extend %buttons;
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+	&:hover {
+		@extend %buttons-hover;
+	}
+	&:focus,
+	&:active {
+		@extend %buttons-focus;
+	}
+}

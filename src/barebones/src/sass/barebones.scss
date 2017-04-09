@@ -1,3 +1,11 @@
 // Barebone main SCSS file
 
+@import "core/variables";
+
+@import "mixins/headings";
+
 @import "components/scaffolding";
+@import "components/buttons";
+@import "components/buttons-group";
+@import "components/helper";
+@import "components/headings";
