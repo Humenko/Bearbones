@@ -2,13 +2,16 @@
 
 @import "core/variables";
 
-@import "mixins/hover";
-@import "mixins/headings";
+@import "mixins/border-radius";
 @import "mixins/breakpoint";
 @import "mixins/buttons";
+@import "mixins/headings";
+@import "mixins/hover";
+
 
 @import "components/scaffolding";
 @import "components/buttons";
 @import "components/buttons-group";
+@import "components/breadcrumbs";
 @import "components/helper";
 @import "components/headings";
