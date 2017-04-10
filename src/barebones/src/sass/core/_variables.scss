@@ -2,19 +2,22 @@
 
 // Colours
 
-$background: #ffffff;
-$primary-color: #24C2AB;
-$primary-pair: #ffffff;
-$secondary-color: #FFB52F;
-$secondary-pair: #ffffff;
+$background: #ffffff !default;
+$primary-color: #24C2AB !default;
+$primary-pair: #ffffff !default;
+$secondary-color: #FFB52F !default;
+$secondary-pair: #ffffff !default;
 
-$positive-color: #27E100;
-$positive-pair: #ffffff;
-$negative-color: #FA2E41;
-$negative-pair: #ffffff;
+$positive-color: #27E100 !default;
+$positive-pair: #ffffff !default;
+$negative-color: #FA2E41 !default;
+$negative-pair: #ffffff !default;
 
-$white: #ffffff;
-$grey: #4a4a4a;
+$white: #ffffff !default;
+$grey: #4a4a4a !default;
+
+$light-grey: #7d7d7d!default;
+$lighter-grey: #f4f4f4 !default;
 
 // Breakpoints
 
@@ -24,80 +27,103 @@ $breakpoints: (
   'lg' : 57.5rem, // 920px
   );
 
+// Font sizes 
+
+$xs-font: .7rem;
+$sm-font: .85rem;
+$lg-font: 1.15rem;
+$xl-font: 1.30rem;
+
 //-------------------------------------------------------------------
 
 /* Typography */
 
 // Body font
-$font-size: 1rem;
-$body-font-size: 1rem;
-$font-style: normal;
-$font-variant: normal;
-$font-weight: normal;
-$font-color: #4a4a4a;
-$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-$line-height: 1.6;
+$font-size: 1rem !default;
+$body-font-size: 1rem !default;
+$font-style: normal !default;
+$font-variant: normal !default;
+$font-weight: normal !default;
+$font-color: #4a4a4a !default;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$line-height: 1.6 !default;
 
 // Headings
-$heading-font-color: #4a4a4a;
-$heading-font-weight: 600;
-$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-$heading-line-height: 1.2;
+$heading-font-color: #4a4a4a !default;
+$heading-font-weight: 600 !default;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$heading-line-height: 1.2 !default;
 
 /* Padding */
 
-$padding: 1rem;
-$margins: 1.5rem;
+$padding: 1rem !default;
+$margins: 1.5rem !default;
 
 /* Borders */
 
-$border-width: .125rem;
-$border-style: solid;
-$border-radius: .2rem;
-$no-border-radius: 0rem;
+$border-width: .125rem !default;
+$border-style: solid !default;
+$border-radius: .2rem !default;
+$no-border-radius: 0rem !default;
+
+// Links
+
+$link-color:            $primary-color !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 10%) !default;
+$link-hover-decoration: underline !default;
 
 // Buttons
 
-$btn: ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]');
+$btn: ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]') !default;
 
-$btn-background: $grey;
-$btn-background-hover: darken($btn-background, 10%);
-$btn-color: $white;
-$btn-font-weight: 500;
-$btn-font-size: 1rem;
-$btn-border-width: $border-width;
-$btn-border-style: $border-style;
-$btn-border-color: $btn-background;
-$btn-border-radius: $border-radius;
-$btn-text-transform: none;
-$btn-padding: .5rem;
-$btn-transition: .25s;
+$btn-background: $grey !default;
+$btn-background-hover: darken($btn-background, 10%) !default;
+$btn-color: $white !default;
+$btn-font-weight: 500 !default;
+$btn-font-size: 1rem !default;
+$btn-border-width: $border-width !default;
+$btn-border-style: $border-style !default;
+$btn-border-color: $btn-background !default;
+$btn-border-radius: $border-radius !default;
+$btn-text-transform: none !default;
+$btn-padding: .5rem !default;
+$btn-transition: .25s !default;
 
 // Primary buttons
-$btn-primary-background: $primary-color;
-$btn-primary-color: $primary-pair;
-$btn-primary-border: $btn-primary-background;
+$btn-primary-background: $primary-color !default;
+$btn-primary-color: $primary-pair !default;
+$btn-primary-border: $btn-primary-background !default;
 
 // Secondary buttons
-$btn-secondary-background: $secondary-color;
-$btn-secondary-color: $secondary-pair;
-$btn-secondary-border: $btn-secondary-background;
+$btn-secondary-background: $secondary-color !default;
+$btn-secondary-color: $secondary-pair !default;
+$btn-secondary-border: $btn-secondary-background !default;
 
 // Positive buttons
-$btn-positive-background: $positive-color;
-$btn-positive-color: $positive-pair;
-$btn-positive-border: $btn-positive-background;
+$btn-positive-background: $positive-color !default;
+$btn-positive-color: $positive-pair !default;
+$btn-positive-border: $btn-positive-background !default;
 
 // Negative buttons
-$btn-negative-background: $negative-color;
-$btn-negative-color: $negative-pair;
-$btn-negative-border: $btn-negative-background;
+$btn-negative-background: $negative-color !default;
+$btn-negative-color: $negative-pair !default;
+$btn-negative-border: $btn-negative-background !default;
 
 //Loading buttons 
-$btn-loader-size: .75rem;
-$btn-loader-offset: -($btn-loader-size / 2);
-$btn-loader-margin: $btn-loader-offset 0 0 $btn-loader-offset;
-$btn-loader-border: .1rem;
-$btn-loader-circle: 50%;
+$btn-loader-size: .75rem !default;
+$btn-loader-offset: -($btn-loader-size / 2) !default;
+$btn-loader-margin: $btn-loader-offset 0 0 $btn-loader-offset !default;
+$btn-loader-border: .1rem !default;
+$btn-loader-circle: 50% !default;
 
-//-------------------------------------------------------------------
+// Breadcrumbs
+
+$breadcrumb-padding-y:          .75rem !default;
+$breadcrumb-padding-x:          1rem !default;
+$breadcrumb-item-padding:       .5rem !default;
+
+$breadcrumb-bg:                 $lighter-grey !default;
+$breadcrumb-divider-color:      $grey !default;
+$breadcrumb-active-color:       $grey !default;
+$breadcrumb-divider:            "/" !default;
