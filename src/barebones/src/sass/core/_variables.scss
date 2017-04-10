@@ -8,8 +8,10 @@ $primary-pair: #ffffff;
 $secondary-color: #FFB52F;
 $secondary-pair: #ffffff;
 
-$negative-color: #FA2E41;
 $positive-color: #27E100;
+$positive-pair: #ffffff;
+$negative-color: #FA2E41;
+$negative-pair: #ffffff;
 
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
@@ -114,42 +116,25 @@ $btn-text-transform: none;
 $btn-padding: .5rem;
 $btn-transition: .25s;
 
-// Outline buttons
-
-$btn-outline-border: 2px solid $grey;
-$btn-outline-border-hover: 2px solid darken($grey, 40%);
-$btn-outline-background: transparent;
-$btn-outline-background-hover: transparent;
-$btn-outline-color: $grey;
-$btn-outline-color-hover: darken($btn-outline-color, 40%);
-
-// Inverted buttons
-
-$btn-invert-border: 2px solid $grey;
-$btn-invert-background: $grey;
-$btn-invert-background-hover: $white;
-$btn-invert-color: $btn-invert-background-hover;
-$btn-invert-color-hover: $btn-invert-background;
-
 // Primary buttons
 $btn-primary-background: $primary-color;
 $btn-primary-color: $primary-pair;
-$btn-primary-color-hover: $primary-pair;
+$btn-primary-border: $btn-primary-background;
 
 // Secondary buttons
 $btn-secondary-background: $secondary-color;
 $btn-secondary-color: $secondary-pair;
-$btn-secondary-color-hover: $secondary-pair;
+$btn-secondary-border: $btn-secondary-background;
 
 // Positive buttons
 $btn-positive-background: $positive-color;
-$btn-positive-color: $white;
-$btn-positive-color-hover: $white;
+$btn-positive-color: $positive-pair;
+$btn-positive-border: $btn-positive-background;
 
 // Negative buttons
 $btn-negative-background: $negative-color;
-$btn-negative-color: $white;
-$btn-negative-color-hover: $white;
+$btn-negative-color: $negative-pair;
+$btn-negative-border: $btn-negative-background;
 
 //Loading buttons 
 $btn-loader-size: .75rem;
