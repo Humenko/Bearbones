@@ -1,0 +1,33 @@
+.dth-breadcrumb {
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: $breadcrumb-bg;
+  @include border-radius($border-radius);
+  @include clearfix;
+  .breadcrumb-item {
+    float: left;
+    +.breadcrumb-item::before {
+      display: inline-block;
+      padding-right: $breadcrumb-item-padding;
+      padding-left: $breadcrumb-item-padding;
+      color: $breadcrumb-divider-color;
+      content: "#{$breadcrumb-divider}";
+    }
+    &.active {
+      color: $breadcrumb-active-color;
+    }
+    &.xs {
+      font-size: $xs-font;
+    }
+    &.sm {
+      font-size: $sm-font;
+    }
+    &.lg {
+      font-size: $lg-font;
+    }
+    &.xl {
+      font-size: $xl-font;
+    }
+  }
+}
