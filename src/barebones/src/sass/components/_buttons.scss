@@ -27,6 +27,10 @@
 	&.xl {
 		font-size: 1.3rem;
 	}
+	&.full {
+		display: block;
+		width: 100%;
+	}
 	&.primary {
 		@include button-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
 	}
