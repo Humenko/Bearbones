@@ -1,0 +1,102 @@
+// Variables
+
+// Colours
+
+$background: #ffffff;
+$primary-color: #24C2AB;
+$primary-pair: #ffffff;
+$secondary-color: #FFB52F;
+$secondary-pair: #ffffff;
+
+$positive-color: #27E100;
+$positive-pair: #ffffff;
+$negative-color: #FA2E41;
+$negative-pair: #ffffff;
+
+$white: #ffffff;
+$grey: #4a4a4a;
+
+// Breakpoints
+
+$breakpoints: (
+  'sm' : 20rem, // 320px
+  'md' : 40rem, // 640px
+  'lg' : 57.5rem, // 920px
+  );
+
+//-------------------------------------------------------------------
+
+/* Typography */
+
+// Body font
+$font-size: 1rem;
+$body-font-size: 1rem;
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-color: #4a4a4a;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$line-height: 1.6;
+
+// Headings
+$heading-font-color: #4a4a4a;
+$heading-font-weight: 600;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-line-height: 1.2;
+
+/* Padding */
+
+$padding: 1rem;
+$margins: 1.5rem;
+
+/* Borders */
+
+$border-width: .125rem;
+$border-style: solid;
+$border-radius: .2rem;
+
+// Buttons
+
+$btn: ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]');
+
+$btn-background: $grey;
+$btn-background-hover: darken($btn-background, 10%);
+$btn-color: $white;
+$btn-font-weight: 500;
+$btn-font-size: 1rem;
+$btn-border-width: $border-width;
+$btn-border-style: $border-style;
+$btn-border-color: $btn-background;
+$btn-border-radius: $border-radius;
+$btn-text-transform: none;
+$btn-padding: .5rem;
+$btn-transition: .25s;
+
+// Primary buttons
+$btn-primary-background: $primary-color;
+$btn-primary-color: $primary-pair;
+$btn-primary-border: $btn-primary-background;
+
+// Secondary buttons
+$btn-secondary-background: $secondary-color;
+$btn-secondary-color: $secondary-pair;
+$btn-secondary-border: $btn-secondary-background;
+
+// Positive buttons
+$btn-positive-background: $positive-color;
+$btn-positive-color: $positive-pair;
+$btn-positive-border: $btn-positive-background;
+
+// Negative buttons
+$btn-negative-background: $negative-color;
+$btn-negative-color: $negative-pair;
+$btn-negative-border: $btn-negative-background;
+
+//Loading buttons 
+$btn-loader-size: .75rem;
+$btn-loader-offset: -($btn-loader-size / 2);
+$btn-loader-margin: $btn-loader-offset 0 0 $btn-loader-offset;
+$btn-loader-border: .1rem;
+$btn-loader-circle: 50%;
+
+//-------------------------------------------------------------------

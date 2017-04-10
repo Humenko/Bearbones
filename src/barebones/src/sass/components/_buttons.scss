@@ -1,0 +1,141 @@
+%buttons {
+	@include button-variant($btn-color, $btn-background, $btn-border-color);
+	-webkit-appearance: none;
+	display: inline-block;
+	border: $btn-border-width $btn-border-style $btn-border-color;
+	border-radius: $btn-border-radius;
+	font-weight: $btn-font-weight;
+	font-size: $btn-font-size;
+	text-transform: $btn-text-transform;
+	padding: $btn-padding $btn-padding+.75;
+	margin: 0 0 .5rem 0;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 1;
+	transition: all $btn-transition ease-in-out;
+	&.xs {
+		font-size: .70rem;
+	}
+	&.sm {
+		font-size: .85rem;
+	}
+	&.lg {
+		font-size: 1.15rem;
+	}
+	&.xl {
+		font-size: 1.3rem;
+	}
+	&.full {
+		display: block;
+		width: 100%;
+	}
+	&.primary {
+		@include button-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
+	}
+	&.secondary {
+		@include button-variant($btn-secondary-color, $btn-secondary-background, $btn-secondary-border);
+	}
+	&.positive {
+		@include button-variant($btn-positive-color, $btn-positive-background, $btn-positive-border);
+	}
+	&.negative {
+		@include button-variant($btn-negative-color, $btn-negative-background, $btn-negative-border);
+	}
+	&.outline {
+		@include button-outline-variant($btn-background);
+		&.primary {
+			@include button-outline-variant($btn-primary-background);
+		}
+		&.secondary {
+			@include button-outline-variant($btn-secondary-background);
+		}
+		&.positive {
+			@include button-outline-variant($btn-positive-background);
+		}
+		&.negative {
+			@include button-outline-variant($btn-negative-background);
+		}
+	}
+	&.invert {
+		@include button-invert-variant($btn-color, $btn-background, $btn-border-color);
+		&.primary {
+			@include button-invert-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
+		}
+		&.secondary {
+			@include button-invert-variant($btn-secondary-color, $btn-secondary-background, $btn-secondary-border);
+		}
+		&.positive {
+			@include button-invert-variant($btn-positive-color, $btn-positive-background, $btn-positive-border);
+		}
+		&.negative {
+			@include button-invert-variant($btn-negative-color, $btn-negative-background, $btn-negative-border);
+		}
+	}
+	&.loading {
+		position: relative;
+		cursor: default;
+		color: transparent !important;
+		pointer-events: none;
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			margin: $btn-loader-margin;
+			width: $btn-loader-size;
+			height: $btn-loader-size;
+			animation: button-spin $btn-transition*3 linear;
+			animation-iteration-count: infinite;
+			border-radius: $btn-loader-circle;
+			@include button-loading-variant($btn-color);
+			border-style: solid;
+			border-width: $btn-loader-border;
+		}
+		&.primary:after {
+			@include button-loading-variant($btn-primary-color);
+		}
+		&.secondary:after {
+			@include button-loading-variant($btn-secondary-color);			
+		}
+		&.positive:after {
+			@include button-loading-variant($btn-positive-color);
+		}
+		&.negative:after {
+			@include button-loading-variant($btn-negative-color);			
+		}		
+		&.outline:after {
+			@include button-loading-variant($btn-background);			
+		}
+		&.outline.primary:after {
+			@include button-loading-variant($btn-primary-background);			
+		}
+		&.outline.secondary:after {
+			@include button-loading-variant($btn-secondary-background);
+		}
+		&.outline.positive:after {
+			@include button-loading-variant($btn-positive-background);
+		}
+		&.outline.negative:after {
+			@include button-loading-variant($btn-negative-background);			
+		}			
+	}
+}
+
+@keyframes button-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#{$btn} {
+	@extend %buttons;
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
