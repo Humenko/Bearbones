@@ -16,16 +16,16 @@
 	line-height: 1;
 	transition: all $btn-transition ease-in-out;
 	&.xs {
-		font-size: .70rem;
+		font-size: $xs-font;
 	}
 	&.sm {
-		font-size: .85rem;
+		font-size: $sm-font;
 	}
 	&.lg {
-		font-size: 1.15rem;
+		font-size: $lg-font;
 	}
 	&.xl {
-		font-size: 1.3rem;
+		font-size: $xl-font;
 	}
 	&.full {
 		display: block;
