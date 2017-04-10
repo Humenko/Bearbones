@@ -1,0 +1,80 @@
+@mixin button-variant($btn-color, $btn-background, $btn-border) {
+    $btn-active-background: darken($btn-background, 10%);
+    $btn-active-border: darken($btn-border, 12%);
+    color: $btn-color;
+    background-color: $btn-background;
+    border-color: $btn-border;
+    @include hover {
+        color: $btn-color;
+        background-color: $btn-active-background;
+        border-color: $btn-active-border;
+    }
+    &.disabled,
+    &:disabled {
+        opacity: 0.7;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    &:active,
+    &.active {
+        color: $btn-color;
+        background-color: $btn-active-background;
+        border-color: $btn-active-border;
+    }
+}
+
+@mixin button-outline-variant($btn-color) {
+    $btn-active-color: darken($btn-color, 20%);
+    color: $btn-color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $btn-color;
+    @include hover {
+        color: $btn-active-color;
+        border-color: $btn-active-color;
+    }
+    &.disabled,
+    &:disabled {
+        opacity: 0.7;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    &:active,
+    &.active {
+        color: $btn-color;
+        border-color: $btn-active-color;
+    }
+}
+
+@mixin button-invert-variant($btn-color, $btn-background, $btn-border) {
+    $btn-active-background: $btn-color;
+    $btn-active-color: $btn-background;    
+    color: $btn-color;
+    background-color: $btn-background;
+    border-color: $btn-border;
+    @include hover {
+        background-color: $btn-active-background;
+        color: $btn-active-color;  
+    }
+    &.disabled,
+    &:disabled {
+        opacity: 0.7;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    &:active,
+    &.active {
+        background-color: $btn-active-background;
+        color: $btn-active-color;        
+    }
+}
+
+@mixin button-loading-variant($btn-color) {
+	border-color: $btn-color transparent transparent;
+    &.disabled,
+    &:disabled {
+        opacity: 0.7;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}

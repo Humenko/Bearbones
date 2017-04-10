@@ -2,8 +2,10 @@
 
 @import "core/variables";
 
+@import "mixins/hover";
 @import "mixins/headings";
 @import "mixins/breakpoint";
+@import "mixins/buttons";
 
 @import "components/scaffolding";
 @import "components/buttons";

@@ -1,10 +1,9 @@
 %buttons {
+	@include button-variant($btn-color, $btn-background, $btn-border-color);
 	-webkit-appearance: none;
 	display: inline-block;
-	color: $btn-color;
 	border: $btn-border-width $btn-border-style $btn-border-color;
 	border-radius: $btn-border-radius;
-	background: $btn-background;
 	font-weight: $btn-font-weight;
 	font-size: $btn-font-size;
 	text-transform: $btn-text-transform;
@@ -16,16 +15,6 @@
 	text-decoration: none;
 	line-height: 1;
 	transition: all $btn-transition ease-in-out;
-	&%buttons-hover {
-		border: $btn-border-width $btn-border-style darken($btn-border-color, 10%);
-		background: $btn-background-hover;
-		text-decoration: none;
-	}
-	&%buttons-focus {
-		border: $btn-border-width $btn-border-style darken($btn-border-color, 10%);
-		background: darken($btn-background, 10%);
-		text-decoration: none;
-	}
 	&.xs {
 		font-size: .70rem;
 	}
@@ -39,123 +28,46 @@
 		font-size: 1.3rem;
 	}
 	&.primary {
-		color: $btn-primary-color;
-		border: $btn-border-width $btn-border-style $btn-primary-background;
-		background: $btn-primary-background;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $btn-primary-color-hover;
-			border: $btn-border-width $btn-border-style darken($btn-primary-background, 10%);
-			background: darken($btn-primary-background, 10%);
-		}
+		@include button-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
 	}
 	&.secondary {
-		color: $btn-secondary-color;
-		border: $btn-border-width $btn-border-style $btn-secondary-background;
-		background: $btn-secondary-background;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $btn-secondary-color-hover;
-			border: $btn-border-width $btn-border-style darken($btn-secondary-background, 10%);
-			background: darken($btn-secondary-background, 10%);
-		}
+		@include button-variant($btn-secondary-color, $btn-secondary-background, $btn-secondary-border);
 	}
 	&.positive {
-		color: $btn-positive-color;
-		border: $btn-border-width $btn-border-style $btn-positive-background;
-		background: $btn-positive-background;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $btn-positive-color-hover;
-			border: $btn-border-width $btn-border-style darken($btn-positive-background, 10%);
-			background: darken($btn-positive-background, 10%);
-		}
-	}		
+		@include button-variant($btn-positive-color, $btn-positive-background, $btn-positive-border);
+	}
 	&.negative {
-		color: $btn-negative-color;
-		border: $btn-border-width $btn-border-style $btn-negative-background;
-		background: $btn-negative-background;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $btn-negative-color-hover;
-			border: $btn-border-width $btn-border-style darken($btn-negative-background, 10%);
-			background: darken($btn-negative-background, 10%);
-		}
-	}	
+		@include button-variant($btn-negative-color, $btn-negative-background, $btn-negative-border);
+	}
 	&.outline {
-		color: $btn-outline-color;
-		border: $btn-outline-border;
-		background: $btn-outline-background;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $btn-outline-color-hover;
-			border: $btn-outline-border-hover;
-			background: $btn-outline-background-hover;
-		}
+		@include button-outline-variant($btn-background);
 		&.primary {
-			color: $btn-primary-background;
-			border-color: $btn-primary-background;
-			&:hover,
-			&:focus,
-			&:active {
-				color: darken($btn-primary-background, 10%);
-				border-color: darken($btn-primary-background, 10%);
-			}
+			@include button-outline-variant($btn-primary-background);
 		}
 		&.secondary {
-			color: $btn-secondary-background;
-			border-color: $btn-secondary-background;
-			&:hover,
-			&:focus,
-			&:active {
-				color: darken($btn-secondary-background, 10%);
-				border-color: darken($btn-secondary-background, 10%);
-			}
+			@include button-outline-variant($btn-secondary-background);
+		}
+		&.positive {
+			@include button-outline-variant($btn-positive-background);
+		}
+		&.negative {
+			@include button-outline-variant($btn-negative-background);
 		}
 	}
 	&.invert {
-		color: $btn-invert-color;
-		border: $btn-invert-border;
-		background: $btn-invert-background;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $btn-invert-color-hover;
-			background: $btn-invert-background-hover;
-		}
+		@include button-invert-variant($btn-color, $btn-background, $btn-border-color);
 		&.primary {
-			color: $btn-primary-color;
-			border-color: $btn-primary-background;
-			background: $btn-primary-background;
-			&:hover,
-			&:focus,
-			&:active {
-				color: $btn-primary-background;
-				background: $btn-primary-color;
-			}
+			@include button-invert-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
 		}
 		&.secondary {
-			color: $btn-secondary-color;
-			border-color: $btn-secondary-background;
-			background: $btn-secondary-background;
-			&:hover,
-			&:focus,
-			&:active {
-				color: $btn-secondary-background;
-				background: $btn-secondary-color;
-			}
+			@include button-invert-variant($btn-secondary-color, $btn-secondary-background, $btn-secondary-border);
 		}
-	}
-	&.disabled,
-	&:disabled {
-		opacity: 0.7;
-		pointer-events: none;
-		cursor: not-allowed;
+		&.positive {
+			@include button-invert-variant($btn-positive-color, $btn-positive-background, $btn-positive-border);
+		}
+		&.negative {
+			@include button-invert-variant($btn-negative-color, $btn-negative-background, $btn-negative-border);
+		}
 	}
 	&.loading {
 		position: relative;
@@ -173,25 +85,37 @@
 			animation: button-spin $btn-transition*3 linear;
 			animation-iteration-count: infinite;
 			border-radius: $border-circle;
-			border-color: $white transparent transparent;
+			@include button-loading-variant($btn-color);
 			border-style: solid;
 			border-width: $btn-loader-border;
 		}
 		&.primary:after {
-			border-color: $btn-primary-color transparent transparent;
+			@include button-loading-variant($btn-primary-color);
 		}
 		&.secondary:after {
-			border-color: $btn-secondary-color transparent transparent;
+			@include button-loading-variant($btn-secondary-color);			
 		}
+		&.positive:after {
+			@include button-loading-variant($btn-positive-color);
+		}
+		&.negative:after {
+			@include button-loading-variant($btn-negative-color);			
+		}		
 		&.outline:after {
-			border-color: $btn-outline-color transparent transparent;
+			@include button-loading-variant($btn-background);			
 		}
 		&.outline.primary:after {
-			border-color: $btn-primary-background transparent transparent;
+			@include button-loading-variant($btn-primary-background);			
 		}
 		&.outline.secondary:after {
-			border-color: $btn-secondary-background transparent transparent;
-		}	
+			@include button-loading-variant($btn-secondary-background);
+		}
+		&.outline.positive:after {
+			@include button-loading-variant($btn-positive-background);
+		}
+		&.outline.negative:after {
+			@include button-loading-variant($btn-negative-background);			
+		}			
 	}
 }
 
@@ -209,12 +133,5 @@
 	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
-	}
-	&:hover {
-		@extend %buttons-hover;
-	}
-	&:focus,
-	&:active {
-		@extend %buttons-focus;
 	}
 }
