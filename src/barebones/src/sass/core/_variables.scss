@@ -34,13 +34,6 @@ $breakpoints: (
 
 //-------------------------------------------------------------------
 
-/* Containers */
-
-$x-small: 600px;
-$small: 800px;
-$medium: 1000px;
-$large: 1200px;
-
 /* Typography */
 
 // Body font
@@ -49,12 +42,12 @@ $body-font-size: 1rem;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
-$font-color: #404040;
+$font-color: #4a4a4a;
 $font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $line-height: 1.6;
 
 // Headings
-$heading-font-color: #404040;
+$heading-font-color: #4a4a4a;
 $heading-font-weight: 600;
 $heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $heading-line-height: 1.2;
@@ -63,41 +56,12 @@ $heading-line-height: 1.2;
 
 $padding: 1rem;
 $margins: 1.5rem;
-$content-padding: 60px 0;
-$content-padding-mobile: 30px 0;
 
 /* Borders */
 
-$border-width: 1px;
-$border-circle: 50%;
+$border-width: 2px;
 $border-style: solid;
-$border-color: #dedede;
 $border-radius: 0.2rem;
-$borders: $border-width $border-style $border-color;
-
-/* Forms */
-
-$forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
-$input-background: transparent;
-$placeholder: darken($accent-color, 20%);
-$form-border: 1px solid #cdcdcd;
-$form-border-hover: 1px solid darken(#cdcdcd, 10%);
-$form-border-focus: 1px solid $link-color;
-
-/* Tables */
-
-$stripes: #f0f0f0;
-$caption: #ababab;
-
-/* Code */
-
-$code-color: $font-color;
-$code-size: 14px;
-$code-family: Menlo, monospace;
-$code-background: transparent;
-$code-borders: $borders;
-
-// -------------------------------------------------------------------
 
 // Buttons
 
@@ -108,8 +72,8 @@ $btn-background-hover: darken($btn-background, 10%);
 $btn-color: $white;
 $btn-font-weight: 500;
 $btn-font-size: 1rem;
-$btn-border-width: 2px;
-$btn-border-style: solid;
+$btn-border-width: $border-width;
+$btn-border-style: $border-style;
 $btn-border-color: $btn-background;
 $btn-border-radius: $border-radius;
 $btn-text-transform: none;
@@ -141,5 +105,6 @@ $btn-loader-size: .75rem;
 $btn-loader-offset: -($btn-loader-size / 2);
 $btn-loader-margin: $btn-loader-offset 0 0 $btn-loader-offset;
 $btn-loader-border: .1rem;
+$btn-loader-circle: 50%;
 
 //-------------------------------------------------------------------

@@ -88,7 +88,7 @@
 			height: $btn-loader-size;
 			animation: button-spin $btn-transition*3 linear;
 			animation-iteration-count: infinite;
-			border-radius: $border-circle;
+			border-radius: $btn-loader-circle;
 			@include button-loading-variant($btn-color);
 			border-style: solid;
 			border-width: $btn-loader-border;
