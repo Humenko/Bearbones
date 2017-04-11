@@ -3,7 +3,7 @@
 	-webkit-appearance: none;
 	display: inline-block;
 	border: $btn-border-width $btn-border-style $btn-border-color;
-	border-radius: $btn-border-radius;
+  	@include border-radius($btn-border-radius);
 	font-weight: $btn-font-weight;
 	font-size: $btn-font-size;
 	text-transform: $btn-text-transform;
@@ -16,16 +16,16 @@
 	line-height: 1;
 	transition: all $btn-transition ease-in-out;
 	&.xs {
-		font-size: .70rem;
+		font-size: $xs-font;
 	}
 	&.sm {
-		font-size: .85rem;
+		font-size: $sm-font;
 	}
 	&.lg {
-		font-size: 1.15rem;
+		font-size: $lg-font;
 	}
 	&.xl {
-		font-size: 1.3rem;
+		font-size: $xl-font;
 	}
 	&.full {
 		display: block;
@@ -88,7 +88,7 @@
 			height: $btn-loader-size;
 			animation: button-spin $btn-transition*3 linear;
 			animation-iteration-count: infinite;
-			border-radius: $btn-loader-circle;
+  			@include border-radius($btn-loader-circle);			
 			@include button-loading-variant($btn-color);
 			border-style: solid;
 			border-width: $btn-loader-border;
