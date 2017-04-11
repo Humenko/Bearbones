@@ -72,7 +72,7 @@ $link-decoration:               none !default;
 $link-hover-color:              darken($link-color, 10%) !default;
 $link-hover-decoration:         underline !default;
 
-// Buttons
+//* Buttons *//
 
 $btn:                           ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]') !default;
 
@@ -109,14 +109,14 @@ $btn-negative-background:       $negative-color !default;
 $btn-negative-color:            $negative-pair !default;
 $btn-negative-border:           $btn-negative-background !default;
 
-//Loading buttons 
+// Loading buttons 
 $btn-loader-size:               .75rem !default;
 $btn-loader-offset:             -($btn-loader-size / 2) !default;
 $btn-loader-margin:             $btn-loader-offset 0 0 $btn-loader-offset !default;
 $btn-loader-border:             .1rem !default;
 $btn-loader-circle:             50% !default;
 
-// Breadcrumbs
+// Breadcrumbs //
 
 $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
