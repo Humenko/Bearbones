@@ -56,7 +56,7 @@ $heading-line-height:           1.2 !default;
 /* Padding */
 
 $padding:                       1rem !default;
-$margins:                       1.5rem !default;
+$margin:                       1.5rem !default;
 
 /* Borders */
 
@@ -126,3 +126,11 @@ $breadcrumb-bg:                 transparent !default;
 $breadcrumb-divider-color:      $grey !default;
 $breadcrumb-active-color:       $grey !default;
 $breadcrumb-divider:            "/" !default;
+
+// Divider //
+
+$divider-margin-y:              $margin 0 !default;
+$divider-font-weight:           500;
+$divider-color:                 $lighter-grey !default;
+$divider-border-width:          0.0625rem !default;
+$divider-border-style:          $border-style !default;
