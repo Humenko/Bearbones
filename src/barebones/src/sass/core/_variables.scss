@@ -56,7 +56,7 @@ $heading-line-height:           1.2 !default;
 /* Padding */
 
 $padding:                       1rem !default;
-$margins:                       1.5rem !default;
+$margin:                       1.5rem !default;
 
 /* Borders */
 
@@ -126,3 +126,20 @@ $breadcrumb-bg:                 transparent !default;
 $breadcrumb-divider-color:      $grey !default;
 $breadcrumb-active-color:       $grey !default;
 $breadcrumb-divider:            "/" !default;
+
+// Divider //
+
+$divider-margin-y:              $margin 0 !default;
+$divider-color:                 $lighter-grey !default;
+$divider-border-width:          0.0625rem !default;
+$divider-border-style:          $border-style !default;
+$divider-horizontal-margin:     1rem;
+
+$divider-content-border-width:  $divider-border-width*1.5 !default;
+$divider-font-weight:           500 !default;
+$divider-content-color:         $light-grey !default;
+
+$divider-icon-margin:           0rem !default;
+$divider-icon-font:             1rem !default;
+
+$divider-hidden-color:          transparent !default;
