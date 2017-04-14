@@ -1,0 +1,43 @@
+.dth-divider {
+    margin: $divider-margin-y;
+    line-height: 1;
+    height: 0em;
+    font-weight: $divider-font-weight;
+    color: $divider-content-color;
+    user-select: none;
+    &:not(.content) {
+        @include divider-border($divider-border-width, $divider-border-style, $divider-color);
+    }
+    &.content {
+        display: table;
+        white-space: nowrap;
+        height: auto;
+        line-height: 1;
+        text-align: center;
+        &:before,
+        &:after {
+            content: '';
+            display: table-cell;
+            position: relative;
+            top: 50%;
+            width: 50%;
+            background-repeat: no-repeat;
+            @include divider-content-border($divider-content-border-width, $divider-color);
+        }
+        &:before {
+            background-position: right $divider-horizontal-margin top 50%;
+        }
+        &:after {
+            background-position: left $divider-horizontal-margin top 50%;
+        }
+    }
+    &>.icon {
+        margin: $divider-icon-margin;
+        font-size: $divider-icon-font;
+        height: 1rem;
+        vertical-align: middle;
+    }
+    &.hidden {
+        @include divider-border($divider-border-width, $divider-border-style, $divider-hidden-color);
+    }
+}
