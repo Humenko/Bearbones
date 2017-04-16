@@ -70,6 +70,19 @@ a {
   }
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
 .container {
 	max-width: 75rem;
 	padding: 0 $padding;

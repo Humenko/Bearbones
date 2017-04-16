@@ -1,0 +1,158 @@
+.dth-input {
+    position: relative;
+    display: inline-flex;
+    input {
+        position: relative;
+        padding: $input-padding-y $input-padding-x;
+        z-index: 2;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-bottom: 0;
+        border: $input-border-width solid $input-border-color;
+        @include hover-focus-active {
+            z-index: 3;
+        }
+    }
+}
+
+.dth-input-addon,
+.dth-input-btn,
+.dth-input input {
+    display: flex;
+    align-items: center;
+    &:not(:first-child):not(:last-child) {
+        @include border-radius(0);
+    }
+}
+
+.dth-input-addon,
+.dth-input-btn {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+// // Sizing options
+// //
+// // Remix the default form control sizing classes into new ones for easier
+// // manipulation.
+// .dth-input-lg > input,
+// .dth-input-lg > .dth-input-addon,
+// .dth-input-lg > .dth-input-btn > .btn {
+//   @extend input-lg;
+// }
+// .dth-input-sm > input,
+// .dth-input-sm > .dth-input-addon,
+// .dth-input-sm > .dth-input-btn > .btn {
+//   @extend input-sm;
+// }
+//
+// Text input groups
+//
+.dth-input-addon {
+    padding: $input-btn-padding-y $input-btn-padding-x;
+    margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
+    font-size: $font-size; // Match inputs
+    font-weight: $font-weight;
+    line-height: $input-btn-line-height;
+    color: $input-color;
+    text-align: center;
+    background-color: $input-group-addon-bg;
+    border: $input-border-width solid $input-group-addon-border-color;
+    @include border-radius($input-border-radius);
+    &.primary {
+		@include input-addon-variant($input-addon-primary-color, $input-addon-primary-background, $input-addon-primary-border);
+	}
+	&.secondary {
+		@include input-addon-variant($input-addon-secondary-color, $input-addon-secondary-background, $input-addon-secondary-border);
+	}
+	&.positive {
+		@include input-addon-variant($input-addon-positive-color, $input-addon-positive-background, $input-addon-positive-border);
+	}
+	&.negative {
+		@include input-addon-variant($input-addon-negative-color, $input-addon-negative-background, $input-addon-negative-border);
+	}    
+    //   // Sizing
+    //   &input-sm {
+    //     padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
+    //     font-size: $font-size-sm;
+    //     @include border-radius($input-border-radius-sm);
+    //   }
+    //   &input-lg {
+    //     padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
+    //     font-size: $font-size-lg;
+    //     @include border-radius($input-border-radius-lg);
+    //   }
+    // scss-lint:disable QualifyingElement
+    // Nuke default margins from checkboxes and radios to vertically center within.
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-top: 0;
+    } // scss-lint:enable QualifyingElement
+}
+
+//
+// Reset rounded corners
+//
+.dth-input input:not(:last-child),
+.dth-input-addon:not(:last-child),
+.dth-input-btn:not(:last-child)>.btn,
+.dth-input-btn:not(:last-child)>.btn-group>.btn,
+.dth-input-btn:not(:last-child)>.dropdown-toggle,
+.dth-input-btn:not(:first-child)>.btn:not(:last-child):not(.dropdown-toggle),
+.dth-input-btn:not(:first-child)>.btn-group:not(:last-child)>.btn {
+    @include border-right-radius(0);
+}
+
+.dth-input-addon:not(:last-child) {
+    border-right: 0;
+}
+
+.dth-input input:not(:first-child),
+.dth-input-addon:not(:first-child),
+.dth-input-btn:not(:first-child)>.btn,
+.dth-input-btn:not(:first-child)>.btn-group>.btn,
+.dth-input-btn:not(:first-child)>.dropdown-toggle,
+.dth-input-btn:not(:last-child)>.btn:not(:first-child),
+.dth-input-btn:not(:last-child)>.btn-group:not(:first-child)>.btn {
+    @include border-left-radius(0);
+}
+
+input+.dth-input-addon:not(:first-child) {
+    border-left: 0;
+}
+
+//
+// Button input groups
+//
+.dth-input-btn {
+    position: relative; // Jankily prevent input button groups from wrapping with `white-space` and
+    // `font-size` in combination with `inline-block` on buttons.
+    font-size: 0;
+    white-space: nowrap; // Negative margin for spacing, position for bringing hovered/focused/actived
+    // element above the siblings.
+    >.btn {
+        position: relative;
+        +.btn {
+            margin-left: (-$input-border-width);
+        } // Bring the "active" button to the front
+        @include hover-focus-active {
+            z-index: 3;
+        }
+    } // Negative margin to only have a single, shared border between the two
+    &:not(:last-child) {
+        >.btn,
+        >.btn-group {
+            margin-right: (-$input-border-width);
+        }
+    }
+    &:not(:first-child) {
+        >.btn,
+        >.btn-group {
+            z-index: 2;
+            margin-left: (-$input-border-width); // Because specificity
+            @include hover-focus-active {
+                z-index: 3;
+            }
+        }
+    }
+}

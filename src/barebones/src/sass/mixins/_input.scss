@@ -1,0 +1,9 @@
+@mixin input-addon-variant($input-addon-color, $input-addon-background, $input-addon-border) {
+    color: $input-addon-color;
+    background-color: $input-addon-background;
+    border-color: $input-addon-border;
+    &.disabled,
+    &:disabled {
+        opacity: 0.7;
+    }
+}
