@@ -1,4 +1,4 @@
-// Barebone main SCSS file
+// Barebones main SCSS file
 
 @import "core/variables";
 
@@ -9,6 +9,7 @@
 @import "mixins/divider";
 @import "mixins/headings";
 @import "mixins/hover";
+@import "mixins/input";
 
 
 @import "components/scaffolding";
@@ -16,5 +17,6 @@
 @import "components/buttons-group";
 @import "components/breadcrumb";
 @import "components/divider";
-@import "components/helper";
 @import "components/headings";
+@import "components/helper";
+@import "components/input";
