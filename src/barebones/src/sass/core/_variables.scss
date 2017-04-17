@@ -32,14 +32,14 @@ $breakpoints: (
 
 // Font sizes 
 
-$font-size-xs:                       .7rem;
-$font-size-sm:                       .85rem;
-$font-size-lg:                       1.15rem;
-$font-size-xl:                       1.30rem;
+$font-size-xs:                  .7rem !default;
+$font-size-sm:                  .85rem !default;
+$font-size-lg:                  1.15rem !default;
+$font-size-xl:                  1.30rem !default;
 
 
-$transition-effect: ease-in-out;
-$transition-duration: .25s;
+$transition-effect:             ease-in-out !default;
+$transition-duration:           .25s !default;
 
 /* Typography */
 
@@ -62,7 +62,7 @@ $heading-line-height:           1.2 !default;
 /* Padding */
 
 $padding:                       1rem !default;
-$margin:                       1.5rem !default;
+$margin:                        1.5rem !default;
 
 /* Borders */
 
@@ -153,8 +153,8 @@ $divider-hidden-color:          transparent !default;
 
 //* Input *//
 
-$input-padding-x:               1rem !default;
-$input-padding-y:               0.5rem !default;
+$input-padding-x:                1rem !default;
+$input-padding-y:                0.5rem !default;
 $input-color:                    $base-color !default;
 $input-border-color:             $lighter-grey !default;
 $input-border-width:             $border-width !default;
@@ -162,34 +162,34 @@ $input-border-radius:            $border-radius !default;
 $input-border-focus:             $input-color !default;
 $input-color-focus:              $input-color !default;
 $input-color-placeholder:        $light-grey !default;
-$input-line-height:         1.25 !default;
+$input-line-height:              1.25 !default;
 $input-height:                   (($font-size * $input-line-height) + ($input-padding-y * 2)) !default;
 $input-transition:               border-color $transition-effect $transition-duration !default;
 
 //Addon
-$input-addon-color:                     $base-pair !default;
-$input-group-addon-bg:                  $base-color !default;
-$input-group-addon-border-color:        $input-group-addon-bg!default;
+$input-addon-color:              $base-pair !default;
+$input-group-addon-bg:           $base-color !default;
+$input-group-addon-border-color: $input-group-addon-bg!default;
 
 // Primary input
-$input-primary-background:        $primary-color !default;
-$input-primary-color:             $primary-pair !default;
-$input-primary-border:            $input-primary-background !default;
+$input-primary-background:       $primary-color !default;
+$input-primary-color:            $primary-pair !default;
+$input-primary-border:           $input-primary-background !default;
 
 // Secondary input
-$input-secondary-background:      $secondary-color !default;
-$input-secondary-color:           $secondary-pair !default;
-$input-secondary-border:          $input-secondary-background !default;
+$input-secondary-background:     $secondary-color !default;
+$input-secondary-color:          $secondary-pair !default;
+$input-secondary-border:         $input-secondary-background !default;
 
 // Positive input
-$input-positive-background:       $positive-color !default;
-$input-positive-color:            $positive-pair !default;
-$input-positive-border:           $input-positive-background !default;
+$input-positive-background:      $positive-color !default;
+$input-positive-color:           $positive-pair !default;
+$input-positive-border:          $input-positive-background !default;
 
 // Negative input
-$input-negative-background:       $negative-color !default;
-$input-negative-color:            $negative-pair !default;
-$input-negative-border:           $input-negative-background !default;
+$input-negative-background:      $negative-color !default;
+$input-negative-color:           $negative-pair !default;
+$input-negative-border:          $input-negative-background !default;
 
 // $form-text-margin-top:     .25rem !default;
 // $form-feedback-margin-top: $form-text-margin-top !default;
