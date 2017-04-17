@@ -16,6 +16,9 @@ $negative-pair:               #ffffff !default;
 $white:                       #ffffff !default;
 $grey:                        #4a4a4a !default;
 
+$base-color:                  #4a4a4a !default;
+$base-pair:                   #ffffff !default;
+
 $light-grey:                  #7d7d7d!default;
 $lighter-grey:                #f4f4f4 !default;
 
@@ -29,16 +32,14 @@ $breakpoints: (
 
 // Font sizes 
 
-$xs-font:                       .7rem;
-$sm-font:                       .85rem;
-$lg-font:                       1.15rem;
-$xl-font:                       1.30rem;
-
 $font-size-xs:                       .7rem;
 $font-size-sm:                       .85rem;
 $font-size-lg:                       1.15rem;
 $font-size-xl:                       1.30rem;
 
+
+$transition-effect: ease-in-out;
+$transition-duration: .25s;
 
 /* Typography */
 
@@ -81,9 +82,9 @@ $link-hover-decoration:         underline !default;
 
 $btn:                           ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]') !default;
 
-$btn-background:                $light-grey !default;
+$btn-background:                $base-color !default;
 $btn-background-hover:          darken($btn-background, 10%) !default;
-$btn-color:                     $white !default;
+$btn-color:                     $base-pair !default;
 $btn-font-weight:               500 !default;
 $btn-font-size:                 1rem !default;
 $btn-border-width:              $border-width !default;
@@ -91,8 +92,9 @@ $btn-border-style:              $border-style !default;
 $btn-border-color:              $btn-background !default;
 $btn-border-radius:             $border-radius !default;
 $btn-text-transform:            none !default;
+$btn-line-height:               1.25 !default;
 $btn-padding:                   .5rem !default;
-$btn-transition:                .25s !default;
+$btn-transition:                $transition-duration !default;
 
 // Primary buttons
 $btn-primary-background:        $primary-color !default;
@@ -128,8 +130,8 @@ $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
 $breadcrumb-bg:                 transparent !default;
-$breadcrumb-divider-color:      $grey !default;
-$breadcrumb-active-color:       $grey !default;
+$breadcrumb-divider-color:      $base-color !default;
+$breadcrumb-active-color:       $base-color !default;
 $breadcrumb-divider:            "/" !default;
 
 //* Divider *//
@@ -153,73 +155,50 @@ $divider-hidden-color:          transparent !default;
 
 $input-padding-x:               1rem !default;
 $input-padding-y:               0.5rem !default;
-
-$input-btn-padding-x:           $input-padding-x !default;
-$input-btn-padding-y:           $input-padding-y !default;
-$input-btn-line-height:         1.25 !default;
-
-// $input-btn-padding-x-sm:    .5rem !default;
-// $input-btn-padding-y-sm:    .25rem !default;
-// $input-btn-line-height-sm:  1.5 !default;
-
-// $input-btn-padding-x-lg:    1rem !default;
-// $input-btn-padding-y-lg:    .5rem !default;
-// $input-btn-line-height-lg:  1.5 !default;
-
-$input-bg:                       $white !default;
-$input-bg-disabled:              $light-grey !default;
-
-$input-color:                    $grey !default;
+$input-color:                    $base-color !default;
 $input-border-color:             $lighter-grey !default;
 $input-border-width:             $border-width !default;
-
 $input-border-radius:            $border-radius !default;
-$input-border-radius-lg:         $border-radius*2 !default;
-$input-border-radius-sm:         $border-radius*5 !default;
-
-$input-bg-focus:                 $input-bg !default;
-$input-border-focus:             lighten($primary-color, 25%) !default;
+$input-border-focus:             $input-color !default;
 $input-color-focus:              $input-color !default;
+$input-color-placeholder:        $light-grey !default;
+$input-line-height:         1.25 !default;
+$input-height:                   (($font-size * $input-line-height) + ($input-padding-y * 2)) !default;
+$input-transition:               border-color $transition-effect $transition-duration !default;
 
-$input-color-placeholder:        $lighter-grey !default;
-
-$input-height:                   (($font-size * $input-btn-line-height) + ($input-btn-padding-y * 2)) !default;
-// $input-height-lg:                (($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2)) !default;
-// $input-height-sm:                (($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2)) !default;
-
-$input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
-
-$form-text-margin-top:     .25rem !default;
-$form-feedback-margin-top: $form-text-margin-top !default;
-
-$form-check-margin-bottom:  .5rem !default;
-$form-check-input-gutter:   1.25rem !default;
-$form-check-input-margin-y: .25rem !default;
-$form-check-input-margin-x: .25rem !default;
-
-$form-check-inline-margin-x: .75rem !default;
-
-$form-group-margin-bottom:       1rem !default;
-
-$input-group-addon-bg:           $lighter-grey !default;
-$input-group-addon-border-color: $input-border-color !default;
+//Addon
+$input-addon-color:                     $base-pair !default;
+$input-group-addon-bg:                  $base-color !default;
+$input-group-addon-border-color:        $input-group-addon-bg!default;
 
 // Primary input
-$input-addon-primary-background:        $primary-color !default;
-$input-addon-primary-color:             $primary-pair !default;
-$input-addon-primary-border:            $input-addon-primary-background !default;
+$input-primary-background:        $primary-color !default;
+$input-primary-color:             $primary-pair !default;
+$input-primary-border:            $input-primary-background !default;
 
 // Secondary input
-$input-addon-secondary-background:      $secondary-color !default;
-$input-addon-secondary-color:           $secondary-pair !default;
-$input-addon-secondary-border:          $input-addon-secondary-background !default;
+$input-secondary-background:      $secondary-color !default;
+$input-secondary-color:           $secondary-pair !default;
+$input-secondary-border:          $input-secondary-background !default;
 
 // Positive input
-$input-addon-positive-background:       $positive-color !default;
-$input-addon-positive-color:            $positive-pair !default;
-$input-addon-positive-border:           $input-addon-positive-background !default;
+$input-positive-background:       $positive-color !default;
+$input-positive-color:            $positive-pair !default;
+$input-positive-border:           $input-positive-background !default;
 
 // Negative input
-$input-addon-negative-background:       $negative-color !default;
-$input-addon-negative-color:            $negative-pair !default;
-$input-addon-negative-border:           $input-addon-negative-background !default;
+$input-negative-background:       $negative-color !default;
+$input-negative-color:            $negative-pair !default;
+$input-negative-border:           $input-negative-background !default;
+
+// $form-text-margin-top:     .25rem !default;
+// $form-feedback-margin-top: $form-text-margin-top !default;
+
+// $form-check-margin-bottom:  .5rem !default;
+// $form-check-input-gutter:   1.25rem !default;
+// $form-check-input-margin-y: .25rem !default;
+// $form-check-input-margin-x: .25rem !default;
+
+// $form-check-inline-margin-x: .75rem !default;
+
+// $form-group-margin-bottom:       1rem !default;
