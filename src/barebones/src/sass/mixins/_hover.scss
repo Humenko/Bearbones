@@ -4,10 +4,9 @@
     }
 }
 
-@mixin hover-focus-active {
+@mixin focus-active {
     &:focus,
-    &:active,
-    &:hover {
+    &:active {
         @content
     }
 }
