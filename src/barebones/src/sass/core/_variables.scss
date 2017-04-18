@@ -129,7 +129,7 @@ $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 transparent !default;
+$breadcrumb-background:                 transparent !default;
 $breadcrumb-divider-color:      $base-color !default;
 $breadcrumb-active-color:       $base-color !default;
 $breadcrumb-divider:            "/" !default;
@@ -166,10 +166,10 @@ $input-line-height:              1.25 !default;
 $input-height:                   (($font-size * $input-line-height) + ($input-padding-y * 2)) !default;
 $input-transition:               border-color $transition-effect $transition-duration !default;
 
-//Addon
+// Addon
 $input-addon-color:              $base-pair !default;
-$input-group-addon-bg:           $base-color !default;
-$input-group-addon-border-color: $input-group-addon-bg!default;
+$input-group-addon-background:           $base-color !default;
+$input-group-addon-border-color: $input-group-addon-background!default;
 
 // Primary input
 $input-primary-background:       $primary-color !default;
@@ -202,3 +202,28 @@ $input-negative-border:          $input-negative-background !default;
 // $form-check-inline-margin-x: .75rem !default;
 
 // $form-group-margin-bottom:       1rem !default;
+
+//* Jumbotron *//
+
+$jumbotron-padding:                  $padding !default;
+$jumbotron-border-radius:            $border-radius*2 !default;
+
+// Base
+$jumbotron-background:               $lighter-grey !default;
+$jumbotron-color:                    $base-color !default;
+
+// Primary input
+$jumbotron-primary-background:       $primary-color !default;
+$jumbotron-primary-color:            $primary-pair !default;
+
+// Secondary input
+$jumbotron-secondary-background:     $secondary-color !default;
+$jumbotron-secondary-color:          $secondary-pair !default;
+
+// Positive input
+$jumbotron-positive-background:      $positive-color !default;
+$jumbotron-positive-color:           $positive-pair !default;
+
+// Negative input
+$jumbotron-negative-background:      $negative-color !default;
+$jumbotron-negative-color:           $negative-pair !default;
