@@ -81,7 +81,7 @@
     line-height: $input-line-height;
     color: $input-addon-color;
     text-align: center;
-    background-color: $input-group-addon-bg;
+    background-color: $input-group-addon-background;
     border: $input-border-width solid $input-group-addon-border-color;
     &.primary {
         @include input-addon-variant($input-primary-color, $input-primary-background, $input-primary-border);
