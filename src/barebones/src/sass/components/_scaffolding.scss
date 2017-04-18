@@ -39,11 +39,10 @@ h2,
 h3,
 h4,
 h5 {
-	margin: $margin 0;
 	font-weight: $heading-font-weight;
 	font-family: $heading-font-family;
 	line-height: $heading-line-height;
-	color: $heading-font-color;
+	color: inherit;
 	&:not(:first-child) {
 		margin: 1.5rem 0;
 	}
