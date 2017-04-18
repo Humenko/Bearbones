@@ -1,0 +1,29 @@
+.dth-jumbotron {
+    padding: $jumbotron-padding ($jumbotron-padding / 2);
+    margin-bottom: $jumbotron-padding;
+    @include border-radius($jumbotron-border-radius);
+    @include jumbotron-variant($jumbotron-color, $jumbotron-background);
+    @include respond-to('md') {
+        padding: ($jumbotron-padding * 3) ($jumbotron-padding * 2);
+    }
+    &.full {
+        padding-right: 0;
+        padding-left: 0;
+        @include border-radius(0);
+    }
+    &.primary {
+        @include jumbotron-variant($jumbotron-primary-color, $jumbotron-primary-background);
+    }
+    &.secondary {
+        @include jumbotron-variant($jumbotron-secondary-color, $jumbotron-secondary-background);
+    }
+    &.positive {
+        @include jumbotron-variant($jumbotron-positive-color, $jumbotron-positive-background);
+    }
+    &.negative {
+        @include jumbotron-variant($jumbotron-negative-color, $jumbotron-negative-background);
+    }    
+    .dth-divider {
+        border-top-color: darken($jumbotron-background, 10%);
+    }
+}
