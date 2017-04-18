@@ -1,0 +1,22 @@
+@mixin input-variant($input-color, $input-background, $input-border) {
+    .dth-input-addon {
+        color: $input-color;
+        background-color: $input-background;
+        border-color: $input-border;
+        &.disabled,
+        &:disabled {
+            opacity: 0.7;
+        }
+    }
+    input {
+        @include focus-active {
+            border-color: $input-border;
+        }
+    }
+}
+
+@mixin input-addon-variant($input-addon-color, $input-addon-background, $input-addon-border) {
+    color: $input-addon-color;
+    background-color: $input-addon-background;
+    border-color: $input-addon-border;
+}

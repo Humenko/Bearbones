@@ -8,7 +8,7 @@
         width: auto;
     }
     %buttons {
-        border-radius: 0rem;
+        @include border-radius(0);
         flex: 1;
         &:first-child {
             @include border-left-radius($btn-border-radius);
