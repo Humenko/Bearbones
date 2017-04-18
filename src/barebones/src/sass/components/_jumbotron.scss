@@ -23,7 +23,4 @@
     &.negative {
         @include jumbotron-variant($jumbotron-negative-color, $jumbotron-negative-background);
     }    
-    .dth-divider {
-        border-top-color: darken($jumbotron-background, 10%);
-    }
 }
