@@ -1,0 +1,4 @@
+@mixin jumbotron-variant($jumbotron-color, $jumbotron-background) {
+    color: $jumbotron-color;
+    background-color: $jumbotron-background;
+}
