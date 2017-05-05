@@ -1,0 +1,66 @@
+.dth-pagination {
+    @include pagination-variant($pagination-color, $pagination-background);
+    margin: 0;
+    display: inline-flex;
+    vertical-align: middle;
+    .item {
+        font-size: $pagination-font-size;
+        font-weight: $pagination-font-weight;
+        border-top: $pagination-border-width $pagination-border-style;
+        border-bottom: $pagination-border-width $pagination-border-style;
+        border-left: $pagination-border-width $pagination-border-style;
+        padding: $pagination-padding $pagination-padding+.5;
+        min-width: 3rem;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all $pagination-transition ease-in-out;
+        &:first-child {
+            @include border-left-radius($pagination-border-radius);
+        }
+        &:last-child {
+            @include border-right-radius($pagination-border-radius);
+            border-right: $pagination-border-width $pagination-border-style;
+        }
+    }
+    .dot {
+        padding: $dot-padding;
+        border-radius: $dot-border-radius;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all $pagination-transition ease-in-out;
+        &:not(:first-child),
+        &:not(:last-child) {
+            margin: 0 $pagination-margin;
+        }
+    }
+    &.borderless {
+        .item {
+            border: none;
+        }
+    }    
+    &.primary {
+        @include pagination-variant($pagination-primary-color, $pagination-primary-background);
+    }
+    &.secondary {
+        @include pagination-variant($pagination-secondary-color, $pagination-secondary-background);
+    }
+    &.positive {
+        @include pagination-variant($pagination-positive-color, $pagination-positive-background);
+    }
+    &.negative {
+        @include pagination-variant($pagination-negative-color, $pagination-negative-background);
+    }
+    &.sm {
+        .item {
+            font-size: $font-size-sm;
+            min-width: 2rem;
+        }
+    }
+    &.lg {
+        .item {
+            font-size: $font-size-lg;
+            min-width: 4rem;
+        }
+    }
+}
