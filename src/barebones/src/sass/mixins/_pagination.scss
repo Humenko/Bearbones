@@ -1,0 +1,23 @@
+@mixin pagination-variant($pagination-color, $pagination-background) {
+        .item,.dot {
+            $pagination-active-background: darken($pagination-background, 10%);
+            color: $pagination-color;
+            background-color: $pagination-background;
+            border-color: $pagination-active-background;
+            @include hover {
+                color: $pagination-color;
+                background-color: $pagination-active-background;
+                text-decoration: none;
+            }
+            &.disabled,
+            &:disabled {
+                pointer-events: none;
+                cursor: not-allowed;
+            }
+            &:active,
+            &.active {
+                color: $pagination-color;
+                background-color: $pagination-active-background;
+            }
+        }
+}
