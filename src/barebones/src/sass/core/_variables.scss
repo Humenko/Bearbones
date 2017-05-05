@@ -8,9 +8,9 @@ $primary-pair:                #ffffff !default;
 $secondary-color:             #FFB52F !default;
 $secondary-pair:              #ffffff !default;
 
-$positive-color:              #27E100 !default;
+$positive-color:              #28D656 !default;
 $positive-pair:               #ffffff !default;
-$negative-color:              #FA2E41 !default;
+$negative-color:              #FF4430 !default;
 $negative-pair:               #ffffff !default;
 
 $white:                       #ffffff !default;
@@ -227,3 +227,45 @@ $jumbotron-positive-color:           $positive-pair !default;
 // Negative input
 $jumbotron-negative-background:      $negative-color !default;
 $jumbotron-negative-color:           $negative-pair !default;
+
+//* Pagination *//
+
+$pagination-padding:                  $padding/2 !default;
+$pagination-margin:                   $margin/10 !default;
+$pagination-font-weight:              500 !default;
+$pagination-font-size:                1rem !default;
+$pagination-border-radius:            $border-radius !default;
+$pagination-border-width:             $border-width/2 !default;
+$pagination-border-style:             $border-style !default;
+$pagination-transition:               $transition-duration !default;
+
+// Dots 
+
+$dot-padding:                         $padding/3 !default;
+$dot-border-radius:                   50% !default;
+
+// Base
+$pagination-background:               $base-pair !default;
+$pagination-color:                    $base-color !default;
+$pagination-border-color:             $pagination-background !default;
+
+// Primary input
+$pagination-primary-background:       $primary-color !default;
+$pagination-primary-color:            $primary-pair !default;
+$pagination-primary-border:           $pagination-primary-background !default;
+
+// Secondary input
+$pagination-secondary-background:     $secondary-color !default;
+$pagination-secondary-color:          $secondary-pair !default;
+$pagination-secondary-border:         $pagination-secondary-background !default;
+
+// Positive input
+$pagination-positive-background:      $positive-color !default;
+$pagination-positive-color:           $positive-pair !default;
+$pagination-positive-border:          $pagination-positive-background !default;
+
+// Negative input
+$pagination-negative-background:      $negative-color !default;
+$pagination-negative-color:           $negative-pair !default;
+$pagination-negative-border:          $pagination-negative-background !default;
+ 
