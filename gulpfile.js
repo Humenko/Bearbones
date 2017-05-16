@@ -103,7 +103,7 @@ gulp.task('browser:reload', function (done) {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['./src/www/sass/**/*.scss','./src/barebones/src/sass/**/*.scss'],
+    gulp.watch(['./src/www/sass/**/*.scss','./src/barebones/**/*.scss'],
         function () {
             runSequence('workflow-styles', 'browser:reload');
         });
