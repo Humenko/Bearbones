@@ -13,7 +13,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	line-height: $btn-line-height;
-	@include transition($btn-transition);        
+	@include transition($btn-transition);
 	&.xs {
 		font-size: $font-size-xs;
 	}
