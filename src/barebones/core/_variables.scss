@@ -59,7 +59,7 @@ $heading-font-weight:           600 !default;
 $heading-font-family:           -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $heading-line-height:           1.2 !default;
 
-/* Padding */
+/* Spacing */
 
 $padding:                       1rem !default;
 $margin:                        1.5rem !default;
@@ -94,7 +94,7 @@ $btn-border-radius:             $border-radius !default;
 $btn-text-transform:            none !default;
 $btn-line-height:               1.25 !default;
 $btn-padding:                   .5rem !default;
-$btn-transition:                $transition-duration !default;
+$btn-transition:                $transition-duration all $transition-effect !default;
 
 // Primary buttons
 $btn-primary-background:        $primary-color !default;
@@ -168,7 +168,7 @@ $input-transition:               border-color $transition-effect $transition-dur
 
 // Addon
 $input-addon-color:              $base-pair !default;
-$input-group-addon-background:           $base-color !default;
+$input-group-addon-background:   $base-color !default;
 $input-group-addon-border-color: $input-group-addon-background!default;
 
 // Primary input
@@ -237,7 +237,7 @@ $pagination-font-size:                1rem !default;
 $pagination-border-radius:            $border-radius !default;
 $pagination-border-width:             $border-width/2 !default;
 $pagination-border-style:             $border-style !default;
-$pagination-transition:               $transition-duration !default;
+$pagination-transition:               $transition-duration all $transition-effect !default;
 
 // Dots 
 

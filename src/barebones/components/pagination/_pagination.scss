@@ -14,7 +14,7 @@
         text-align: center;
         cursor: pointer;
         text-decoration: none;
-        transition: all $pagination-transition ease-in-out;
+        @include transition($pagination-transition);        
         &:first-child {
             @include border-left-radius($pagination-border-radius);
         }
@@ -28,7 +28,7 @@
         border-radius: $dot-border-radius;
         cursor: pointer;
         text-decoration: none;
-        transition: all $pagination-transition ease-in-out;
+        @include transition($pagination-transition);        
         &:not(:first-child),
         &:not(:last-child) {
             margin: 0 $pagination-margin;

@@ -56,17 +56,15 @@ h3:not(:first-child) {
 }
 
 // Links
-
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-
-  @include hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
+	color: $link-color;
+	text-decoration: $link-decoration;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
 }
 
 .container {
