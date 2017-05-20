@@ -1,4 +1,4 @@
-node_modules/
-bower_components/
-/dist
+/css
 .DS_store
+node_modules/
+npm-debug.log
