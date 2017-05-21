@@ -2,7 +2,7 @@
     padding: $jumbotron-padding ($jumbotron-padding / 2);
     margin-bottom: $jumbotron-padding;
     @include border-radius($jumbotron-border-radius);
-    @include jumbotron-variant($jumbotron-color, $jumbotron-background);
+    @include jumbotron-variant($base-variant-color, $base-variant-background);
     @include respond-to('md') {
         padding: ($jumbotron-padding * 3) ($jumbotron-padding * 2);
     }
@@ -12,15 +12,15 @@
         @include border-radius(0);
     }
     &.primary {
-        @include jumbotron-variant($jumbotron-primary-color, $jumbotron-primary-background);
+        @include jumbotron-variant($primary-variant-color, $primary-variant-background);
     }
     &.secondary {
-        @include jumbotron-variant($jumbotron-secondary-color, $jumbotron-secondary-background);
+        @include jumbotron-variant($secondary-variant-color, $secondary-variant-background);
     }
     &.positive {
-        @include jumbotron-variant($jumbotron-positive-color, $jumbotron-positive-background);
+        @include jumbotron-variant($positive-variant-color, $positive-variant-background);
     }
     &.negative {
-        @include jumbotron-variant($jumbotron-negative-color, $jumbotron-negative-background);
+        @include jumbotron-variant($negative-variant-color, $negative-variant-background);
     }    
 }

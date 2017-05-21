@@ -5,15 +5,15 @@
         padding-bottom: $layout-padding-lg;        
     }    
     &.primary {
-        @include layout-variant($layout-primary-color, $layout-primary-background);
+        @include layout-variant($primary-variant-color, $primary-variant-background);
     }
     &.secondary {
-        @include layout-variant($layout-secondary-color, $layout-secondary-background);
+        @include layout-variant($secondary-variant-color, $secondary-variant-background);
     }
     &.positive {
-        @include layout-variant($layout-positive-color, $layout-positive-background);
+        @include layout-variant($positive-variant-color, $positive-variant-background);
     }
     &.negative {
-        @include layout-variant($layout-negative-color, $layout-negative-background);
-    }
+        @include layout-variant($negative-variant-color, $negative-variant-background);
+    }   
 }

@@ -1,5 +1,5 @@
 .dth-pagination {
-    @include pagination-variant($pagination-color, $pagination-background);
+    @include pagination-variant($base-variant-color, $base-variant-background);
     margin: 0;
     display: inline-flex;
     vertical-align: middle;
@@ -40,16 +40,16 @@
         }
     }    
     &.primary {
-        @include pagination-variant($pagination-primary-color, $pagination-primary-background);
+        @include pagination-variant($primary-variant-color, $primary-variant-background);
     }
     &.secondary {
-        @include pagination-variant($pagination-secondary-color, $pagination-secondary-background);
+        @include pagination-variant($secondary-variant-color, $secondary-variant-background);
     }
     &.positive {
-        @include pagination-variant($pagination-positive-color, $pagination-positive-background);
+        @include pagination-variant($positive-variant-color, $positive-variant-background);
     }
     &.negative {
-        @include pagination-variant($pagination-negative-color, $pagination-negative-background);
+        @include pagination-variant($negative-variant-color, $negative-variant-background);
     }
     &.sm {
         .item {

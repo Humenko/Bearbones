@@ -2,16 +2,16 @@
     position: relative;
     display: inline-flex;
     &.primary {
-        @include input-variant($input-primary-color, $input-primary-background, $input-primary-border);
+        @include input-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
     }
     &.secondary {
-        @include input-variant($input-secondary-color, $input-secondary-background, $input-secondary-border);
+        @include input-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
     }
     &.positive {
-        @include input-variant($input-positive-color, $input-positive-background, $input-positive-border);
+        @include input-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
     }
     &.negative {
-        @include input-variant($input-negative-color, $input-negative-background, $input-negative-border);
+        @include input-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
     }
     &.xs {
       font-size: $font-size-xs;
@@ -43,7 +43,7 @@
             box-shadow: none;
             border-color: $input-border-focus;
             &::placeholder {
-                color: $input-color-focus;
+                color: $input-border-focus;
             }
         }
     }
@@ -84,16 +84,16 @@
     background-color: $input-group-addon-background;
     border: $input-border-width solid $input-group-addon-border-color;
     &.primary {
-        @include input-addon-variant($input-primary-color, $input-primary-background, $input-primary-border);
+        @include input-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
     }
     &.secondary {
-        @include input-addon-variant($input-secondary-color, $input-secondary-background, $input-secondary-border);
+        @include input-addon-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
     }
     &.positive {
-        @include input-addon-variant($input-positive-color, $input-positive-background, $input-positive-border);
+        @include input-addon-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
     }
     &.negative {
-        @include input-addon-variant($input-negative-color, $input-negative-background, $input-negative-border);
+        @include input-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
     }
     @include border-radius($input-border-radius); 
     input[type="radio"],
