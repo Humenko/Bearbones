@@ -3,7 +3,6 @@
     line-height: 1;
     height: 0em;
     font-weight: $divider-font-weight;
-    color: $divider-content-color;
     user-select: none;
     &:not(.content) {
         @include divider-border($divider-border-width, $divider-border-style, $divider-color);
