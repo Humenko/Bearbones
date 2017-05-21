@@ -6,7 +6,7 @@
     @include respond-to('md') {
         padding: ($jumbotron-padding * 3) ($jumbotron-padding * 2);
     }
-    &.full {
+    &.full-x {
         padding-right: 0;
         padding-left: 0;
         @include border-radius(0);

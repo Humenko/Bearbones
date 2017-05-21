@@ -1,0 +1,19 @@
+.section {
+    padding: $layout-padding*2 $layout-padding*1.5;
+    &.lg {
+        padding-top: $layout-padding-lg;
+        padding-bottom: $layout-padding-lg;        
+    }    
+    &.primary {
+        @include layout-variant($layout-primary-color, $layout-primary-background);
+    }
+    &.secondary {
+        @include layout-variant($layout-secondary-color, $layout-secondary-background);
+    }
+    &.positive {
+        @include layout-variant($layout-positive-color, $layout-positive-background);
+    }
+    &.negative {
+        @include layout-variant($layout-negative-color, $layout-negative-background);
+    }
+}

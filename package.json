@@ -18,6 +18,7 @@
     "build-autoprefix": "postcss --use autoprefixer --output css/barebones.css css/barebones.css",
     "build-minify": "postcss --use cssnano --output css/barebones.min.css css/barebones.css",
     "build-clean": "rimraf css",
-    "build-sass": "node-sass --output-style expanded --source-map true barebones.scss css/barebones.css"
+    "build-sass": "node-sass --output-style expanded --source-map true barebones.scss css/barebones.css",
+    "start": "npm run build-sass -- --watch"
   }
 }

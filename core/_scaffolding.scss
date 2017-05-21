@@ -16,6 +16,11 @@ body {
 	font-size: $body-font-size;
 }
 
+body, p{
+    margin: 0;
+    padding: 0;
+}
+
 p,
 ol,
 ul,
@@ -65,11 +70,4 @@ a {
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
 	}
-}
-
-.container {
-	max-width: 75rem;
-	padding: 0 $padding;
-	margin-left: auto;
-	margin-right: auto;
 }
