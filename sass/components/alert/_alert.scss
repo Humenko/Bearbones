@@ -1,0 +1,18 @@
+.alert {
+    text-align: center;
+    @include border-radius($alert-border-radius);
+    position: relative;
+    @include alert-variant($base-variant-color, $base-variant-background);    
+    &.primary {
+        @include alert-variant($primary-variant-color, $primary-variant-background);
+    }
+    &.secondary {
+        @include alert-variant($secondary-variant-color, $secondary-variant-background);
+    }
+    &.positive {
+        @include alert-variant($positive-variant-color, $positive-variant-background);
+    }
+    &.negative {
+        @include alert-variant($negative-variant-color, $negative-variant-background);
+    }  
+}
