@@ -1,0 +1,39 @@
+.hero {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    &.primary {
+        @include layout-variant($layout-primary-color, $layout-primary-background);
+    }
+    &.secondary {
+        @include layout-variant($layout-secondary-color, $layout-secondary-background);
+    }
+    &.positive {
+        @include layout-variant($layout-positive-color, $layout-positive-background);
+    }
+    &.negative {
+        @include layout-variant($layout-negative-color, $layout-negative-background);
+    }
+    &.full-y {
+        min-height: 100vh;
+        .body {
+            align-items: center;
+            display: flex;
+            &>.container {
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+        }
+    }
+    .head,
+    .tail {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .body {
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: $layout-padding*2 0;
+    }
+}

@@ -1,41 +1,56 @@
-$min_width: 20rem;
-$max_width: 75rem;
-$min_font: 1rem;
-$max_font: 1.5rem;
-$mod_1: 1.2;
-$mod_2: 1.5;
+  $min_width: 20rem;
+  $max_width: 75rem;
+  $min_font: 1rem;
+  $max_font: 1.5rem;
+  $mod_1: 1.2;
+  $mod_2: 1.5;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.2;
+    margin: 2rem 0 1rem 0;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  margin: 2rem 0 1rem 0;
-}
+  h1 {
+    font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
+    @include heading-font-size($min_width, $max_width, $mod_1*$mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2 *$min_font);
+  }
 
-h1 {
-  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
-  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2 *$min_font);
-}
+  h2 {
+    font-size: $mod_1*$mod_1*$mod_1 *1rem;
+    @include heading-font-size($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+  }
 
-h2 {
-  font-size: $mod_1*$mod_1*$mod_1 *1rem;
-  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-}
+  h3 {
+    font-size: $mod_1*$mod_1 *1rem;
+    @include heading-font-size($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+  }
 
-h3 {
-  font-size: $mod_1*$mod_1 *1rem;
-  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
-}
+  h4 {
+    font-size: $mod_1 *1rem;
+    @include heading-font-size($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
+  }
 
-h4 {
-  font-size: $mod_1 *1rem;
-  @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
-}
+  h5 {
+    font-size: $mod_1;
+    @include heading-font-size($min_width, $max_width, $mod_1, $mod_2);
+  }
 
-h5 {
-  font-size: $mod_1;
-  @include fluid-type($min_width, $max_width, $mod_1, $mod_2);
-}
+  .title:not(:last-child),
+  .subtitle:not(:last-child) {
+      margin: 0 0 $title-padding 0;
+  }
+
+  .title+.subtitle {
+    margin: 0;
+    @include respond-to('md') {
+      margin: -$title-padding 0 0 0;
+    }
+  }
+
+  .subtitle {
+    font-size: $subtitle-font-size;
+  }

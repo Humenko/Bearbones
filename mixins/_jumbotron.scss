@@ -1,6 +1,15 @@
 @mixin jumbotron-variant($jumbotron-color, $jumbotron-background) {
-    color: $jumbotron-color;
-    background-color: $jumbotron-background;
+    background-color: $jumbotron-background;   
+    color: $jumbotron-color;     
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a {
+        color: $jumbotron-color;
+    }
     .dth-divider {
         border-top-color: darken($jumbotron-background, 12%);
         border-bottom-color: darken($jumbotron-background, 12%);        

@@ -59,6 +59,11 @@ $heading-font-weight:           600 !default;
 $heading-font-family:           -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $heading-line-height:           1.2 !default;
 
+//Title
+
+$title-padding:                 1.3rem;
+$subtitle-font-size:            $font-size-xl;
+
 /* Spacing */
 
 $padding:                       1rem !default;
@@ -77,6 +82,31 @@ $link-color:                    $primary-color !default;
 $link-decoration:               none !default;
 $link-hover-color:              darken($link-color, 10%) !default;
 $link-hover-decoration:         underline !default;
+
+//* Layout *//
+
+$layout-padding:                  $padding !default;
+$layout-padding-lg:               $padding*4 !default;
+
+// Base
+$layout-background:               $lighter-grey !default;
+$layout-color:                    $base-color !default;
+
+// Primary layout
+$layout-primary-background:       $primary-color !default;
+$layout-primary-color:            $primary-pair !default;
+
+// Secondary layout
+$layout-secondary-background:     $secondary-color !default;
+$layout-secondary-color:          $secondary-pair !default;
+
+// Positive layout
+$layout-positive-background:      $positive-color !default;
+$layout-positive-color:           $positive-pair !default;
+
+// Negative layout
+$layout-negative-background:      $negative-color !default;
+$layout-negative-color:           $negative-pair !default;
 
 //* Buttons *//
 
@@ -212,19 +242,19 @@ $jumbotron-border-radius:            $border-radius*2 !default;
 $jumbotron-background:               $lighter-grey !default;
 $jumbotron-color:                    $base-color !default;
 
-// Primary input
+// Primary jumbotron
 $jumbotron-primary-background:       $primary-color !default;
 $jumbotron-primary-color:            $primary-pair !default;
 
-// Secondary input
+// Secondary jumbotron
 $jumbotron-secondary-background:     $secondary-color !default;
 $jumbotron-secondary-color:          $secondary-pair !default;
 
-// Positive input
+// Positive jumbotron
 $jumbotron-positive-background:      $positive-color !default;
 $jumbotron-positive-color:           $positive-pair !default;
 
-// Negative input
+// Negative jumbotron
 $jumbotron-negative-background:      $negative-color !default;
 $jumbotron-negative-color:           $negative-pair !default;
 

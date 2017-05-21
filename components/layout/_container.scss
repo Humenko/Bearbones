@@ -1,0 +1,9 @@
+.container {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    &.full-x {
+        max-width: none;
+        margin: 0 $layout-padding*1.5;
+    }
+}

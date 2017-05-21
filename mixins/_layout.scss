@@ -1,0 +1,13 @@
+@mixin layout-variant($layout-color, $layout-background) {
+    background-color: $layout-background;
+    color: $layout-color;    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a {
+        color: $layout-color;
+    }
+}
