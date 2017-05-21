@@ -1,54 +1,3 @@
-.dth-input {
-    position: relative;
-    display: inline-flex;
-    &.primary {
-        @include input-variant($input-primary-color, $input-primary-background, $input-primary-border);
-    }
-    &.secondary {
-        @include input-variant($input-secondary-color, $input-secondary-background, $input-secondary-border);
-    }
-    &.positive {
-        @include input-variant($input-positive-color, $input-positive-background, $input-positive-border);
-    }
-    &.negative {
-        @include input-variant($input-negative-color, $input-negative-background, $input-negative-border);
-    }
-    &.xs {
-      font-size: $font-size-xs;
-    }
-    &.sm {
-      font-size: $font-size-sm;
-    }
-    &.lg {
-      font-size: $font-size-lg;
-    }
-    &.xl {
-      font-size: $font-size-xl;
-    }    
-    input {
-        position: relative;
-        padding: $input-padding-y $input-padding-x;
-        z-index: 2;
-        flex: 1 1 auto;
-        width: 1%;
-        margin-bottom: 0;
-        border: $input-border-width solid $input-border-color;
-        @include border-radius($input-border-radius);
-        @include transition($input-transition);
-        &::placeholder {
-            color: $input-color-placeholder;
-        }
-        @include focus-active {
-            z-index: 3;
-            box-shadow: none;
-            border-color: $input-border-focus;
-            &::placeholder {
-                color: $input-color-focus;
-            }
-        }
-    }
-}
-
 .dth-input-addon,
 .dth-input-btn,
 .dth-input input {
@@ -84,16 +33,16 @@
     background-color: $input-group-addon-background;
     border: $input-border-width solid $input-group-addon-border-color;
     &.primary {
-        @include input-addon-variant($input-primary-color, $input-primary-background, $input-primary-border);
+        @include input-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
     }
     &.secondary {
-        @include input-addon-variant($input-secondary-color, $input-secondary-background, $input-secondary-border);
+        @include input-addon-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
     }
     &.positive {
-        @include input-addon-variant($input-positive-color, $input-positive-background, $input-positive-border);
+        @include input-addon-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
     }
     &.negative {
-        @include input-addon-variant($input-negative-color, $input-negative-background, $input-negative-border);
+        @include input-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
     }
     @include border-radius($input-border-radius); 
     input[type="radio"],

@@ -867,8 +867,8 @@ a:hover {
   text-align: center;
   border-radius: 0.2rem;
   position: relative;
-  background-color: #f4f4f4;
-  color: #4a4a4a;
+  background-color: #4a4a4a;
+  color: #ffffff;
 }
 
 .alert h1,
@@ -878,7 +878,7 @@ a:hover {
 .alert h5,
 .alert p,
 .alert a {
-  color: #4a4a4a;
+  color: #ffffff;
 }
 
 .alert.primary {
@@ -988,12 +988,12 @@ a:hover {
 }
 
 .dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button] {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
   -webkit-appearance: none;
   display: inline-block;
-  border: 0.125rem solid #f4f4f4;
+  border: 0.125rem solid #4a4a4a;
   border-radius: 0.2rem;
   font-weight: 500;
   font-size: 1rem;
@@ -1008,9 +1008,9 @@ a:hover {
 }
 
 .dth-btn:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
-  border-color: #d5d5d5;
+  color: #ffffff;
+  background-color: #313131;
+  border-color: #2b2b2b;
 }
 
 .disabled.dth-btn, button.disabled, .disabled[type=submit], .disabled[type=reset], .disabled[type=button], .dth-btn:disabled, button:disabled, [type=submit]:disabled, [type=reset]:disabled, [type=button]:disabled {
@@ -1020,9 +1020,9 @@ a:hover {
 }
 
 .dth-btn:active, button:active, [type=submit]:active, [type=reset]:active, [type=button]:active, .active.dth-btn, button.active, .active[type=submit], .active[type=reset], .active[type=button] {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
-  border-color: #d5d5d5;
+  color: #ffffff;
+  background-color: #313131;
+  border-color: #2b2b2b;
 }
 
 .xs.dth-btn, button.xs, .xs[type=submit], .xs[type=reset], .xs[type=button] {
@@ -1143,15 +1143,15 @@ a:hover {
 }
 
 .outline.dth-btn, button.outline, .outline[type=submit], .outline[type=reset], .outline[type=button] {
-  color: #f4f4f4;
+  color: #4a4a4a;
   background-color: transparent;
   background-image: none;
-  border-color: #f4f4f4;
+  border-color: #4a4a4a;
 }
 
 .outline.dth-btn:hover, button.outline:hover, .outline[type=submit]:hover, .outline[type=reset]:hover, .outline[type=button]:hover {
-  color: #c1c1c1;
-  border-color: #c1c1c1;
+  color: #171717;
+  border-color: #171717;
 }
 
 .outline.disabled.dth-btn, button.outline.disabled, .outline.disabled[type=submit], .outline.disabled[type=reset], .outline.disabled[type=button], .outline.dth-btn:disabled, button.outline:disabled, .outline[type=submit]:disabled, .outline[type=reset]:disabled, .outline[type=button]:disabled {
@@ -1161,8 +1161,8 @@ a:hover {
 }
 
 .outline.dth-btn:active, button.outline:active, .outline[type=submit]:active, .outline[type=reset]:active, .outline[type=button]:active, .outline.active.dth-btn, button.outline.active, .outline.active[type=submit], .outline.active[type=reset], .outline.active[type=button] {
-  color: #f4f4f4;
-  border-color: #c1c1c1;
+  color: #4a4a4a;
+  border-color: #171717;
 }
 
 .outline.primary.dth-btn, button.outline.primary, .outline.primary[type=submit], .outline.primary[type=reset], .outline.primary[type=button] {
@@ -1258,14 +1258,14 @@ a:hover {
 }
 
 .invert.dth-btn, button.invert, .invert[type=submit], .invert[type=reset], .invert[type=button] {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
 }
 
 .invert.dth-btn:hover, button.invert:hover, .invert[type=submit]:hover, .invert[type=reset]:hover, .invert[type=button]:hover {
-  background-color: #4a4a4a;
-  color: #f4f4f4;
+  background-color: #ffffff;
+  color: #4a4a4a;
 }
 
 .invert.disabled.dth-btn, button.invert.disabled, .invert.disabled[type=submit], .invert.disabled[type=reset], .invert.disabled[type=button], .invert.dth-btn:disabled, button.invert:disabled, .invert[type=submit]:disabled, .invert[type=reset]:disabled, .invert[type=button]:disabled {
@@ -1275,8 +1275,8 @@ a:hover {
 }
 
 .invert.dth-btn:active, button.invert:active, .invert[type=submit]:active, .invert[type=reset]:active, .invert[type=button]:active, .invert.active.dth-btn, button.invert.active, .invert.active[type=submit], .invert.active[type=reset], .invert.active[type=button] {
-  background-color: #4a4a4a;
-  color: #f4f4f4;
+  background-color: #ffffff;
+  color: #4a4a4a;
 }
 
 .invert.primary.dth-btn, button.invert.primary, .invert.primary[type=submit], .invert.primary[type=reset], .invert.primary[type=button] {
@@ -1387,7 +1387,7 @@ a:hover {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   border-radius: 50%;
-  border-color: #4a4a4a transparent transparent;
+  border-color: #ffffff transparent transparent;
   border-style: solid;
   border-width: 0.1rem;
 }
@@ -1439,7 +1439,7 @@ a:hover {
 }
 
 .loading.outline.dth-btn:after, button.loading.outline:after, .loading.outline[type=submit]:after, .loading.outline[type=reset]:after, .loading.outline[type=button]:after {
-  border-color: #f4f4f4 transparent transparent;
+  border-color: #4a4a4a transparent transparent;
 }
 
 .loading.outline.dth-btn:after.disabled, button.loading.outline:after.disabled, .loading.outline[type=submit]:after.disabled, .loading.outline[type=reset]:after.disabled, .loading.outline[type=button]:after.disabled, .loading.outline.dth-btn:after:disabled, button.loading.outline:after:disabled, .loading.outline[type=submit]:after:disabled, .loading.outline[type=reset]:after:disabled, .loading.outline[type=button]:after:disabled {
@@ -1516,12 +1516,12 @@ a:hover {
 }
 
 .dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button] {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
   -webkit-appearance: none;
   display: inline-block;
-  border: 0.125rem solid #f4f4f4;
+  border: 0.125rem solid #4a4a4a;
   border-radius: 0.2rem;
   font-weight: 500;
   font-size: 1rem;
@@ -1536,9 +1536,9 @@ a:hover {
 }
 
 .dth-btn:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
-  border-color: #d5d5d5;
+  color: #ffffff;
+  background-color: #313131;
+  border-color: #2b2b2b;
 }
 
 .disabled.dth-btn, button.disabled, .disabled[type=submit], .disabled[type=reset], .disabled[type=button], .dth-btn:disabled, button:disabled, [type=submit]:disabled, [type=reset]:disabled, [type=button]:disabled {
@@ -1548,9 +1548,9 @@ a:hover {
 }
 
 .dth-btn:active, button:active, [type=submit]:active, [type=reset]:active, [type=button]:active, .active.dth-btn, button.active, .active[type=submit], .active[type=reset], .active[type=button] {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
-  border-color: #d5d5d5;
+  color: #ffffff;
+  background-color: #313131;
+  border-color: #2b2b2b;
 }
 
 .xs.dth-btn, button.xs, .xs[type=submit], .xs[type=reset], .xs[type=button] {
@@ -1671,15 +1671,15 @@ a:hover {
 }
 
 .outline.dth-btn, button.outline, .outline[type=submit], .outline[type=reset], .outline[type=button] {
-  color: #f4f4f4;
+  color: #4a4a4a;
   background-color: transparent;
   background-image: none;
-  border-color: #f4f4f4;
+  border-color: #4a4a4a;
 }
 
 .outline.dth-btn:hover, button.outline:hover, .outline[type=submit]:hover, .outline[type=reset]:hover, .outline[type=button]:hover {
-  color: #c1c1c1;
-  border-color: #c1c1c1;
+  color: #171717;
+  border-color: #171717;
 }
 
 .outline.disabled.dth-btn, button.outline.disabled, .outline.disabled[type=submit], .outline.disabled[type=reset], .outline.disabled[type=button], .outline.dth-btn:disabled, button.outline:disabled, .outline[type=submit]:disabled, .outline[type=reset]:disabled, .outline[type=button]:disabled {
@@ -1689,8 +1689,8 @@ a:hover {
 }
 
 .outline.dth-btn:active, button.outline:active, .outline[type=submit]:active, .outline[type=reset]:active, .outline[type=button]:active, .outline.active.dth-btn, button.outline.active, .outline.active[type=submit], .outline.active[type=reset], .outline.active[type=button] {
-  color: #f4f4f4;
-  border-color: #c1c1c1;
+  color: #4a4a4a;
+  border-color: #171717;
 }
 
 .outline.primary.dth-btn, button.outline.primary, .outline.primary[type=submit], .outline.primary[type=reset], .outline.primary[type=button] {
@@ -1786,14 +1786,14 @@ a:hover {
 }
 
 .invert.dth-btn, button.invert, .invert[type=submit], .invert[type=reset], .invert[type=button] {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
 }
 
 .invert.dth-btn:hover, button.invert:hover, .invert[type=submit]:hover, .invert[type=reset]:hover, .invert[type=button]:hover {
-  background-color: #4a4a4a;
-  color: #f4f4f4;
+  background-color: #ffffff;
+  color: #4a4a4a;
 }
 
 .invert.disabled.dth-btn, button.invert.disabled, .invert.disabled[type=submit], .invert.disabled[type=reset], .invert.disabled[type=button], .invert.dth-btn:disabled, button.invert:disabled, .invert[type=submit]:disabled, .invert[type=reset]:disabled, .invert[type=button]:disabled {
@@ -1803,8 +1803,8 @@ a:hover {
 }
 
 .invert.dth-btn:active, button.invert:active, .invert[type=submit]:active, .invert[type=reset]:active, .invert[type=button]:active, .invert.active.dth-btn, button.invert.active, .invert.active[type=submit], .invert.active[type=reset], .invert.active[type=button] {
-  background-color: #4a4a4a;
-  color: #f4f4f4;
+  background-color: #ffffff;
+  color: #4a4a4a;
 }
 
 .invert.primary.dth-btn, button.invert.primary, .invert.primary[type=submit], .invert.primary[type=reset], .invert.primary[type=button] {
@@ -1915,7 +1915,7 @@ a:hover {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   border-radius: 50%;
-  border-color: #4a4a4a transparent transparent;
+  border-color: #ffffff transparent transparent;
   border-style: solid;
   border-width: 0.1rem;
 }
@@ -1967,7 +1967,7 @@ a:hover {
 }
 
 .loading.outline.dth-btn:after, button.loading.outline:after, .loading.outline[type=submit]:after, .loading.outline[type=reset]:after, .loading.outline[type=button]:after {
-  border-color: #f4f4f4 transparent transparent;
+  border-color: #4a4a4a transparent transparent;
 }
 
 .loading.outline.dth-btn:after.disabled, button.loading.outline:after.disabled, .loading.outline[type=submit]:after.disabled, .loading.outline[type=reset]:after.disabled, .loading.outline[type=button]:after.disabled, .loading.outline.dth-btn:after:disabled, button.loading.outline:after:disabled, .loading.outline[type=submit]:after:disabled, .loading.outline[type=reset]:after:disabled, .loading.outline[type=button]:after:disabled {
@@ -2382,108 +2382,13 @@ h5 {
   color: #4a4a4a;
 }
 
-.dth-input-addon,
-.dth-input-btn,
-.dth-input input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.dth-input-addon:not(:first-child):not(:last-child),
-.dth-input-btn:not(:first-child):not(:last-child),
-.dth-input input:not(:first-child):not(:last-child) {
-  border-radius: 0;
-}
-
-.dth-input-addon,
-.dth-input-btn {
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
-.dth-input-addon {
-  padding: 0.5rem 1rem;
-  margin-bottom: 0;
-  line-height: 1.25;
-  color: #ffffff;
-  text-align: center;
-  background-color: #4a4a4a;
-  border: 0.125rem solid #4a4a4a;
-  border-radius: 0.2rem;
-}
-
-.dth-input-addon.primary {
-  color: #ffffff;
-  background-color: #24C2AB;
-  border-color: #24C2AB;
-}
-
-.dth-input-addon.secondary {
-  color: #4a4a4a;
-  background-color: #FFB52F;
-  border-color: #FFB52F;
-}
-
-.dth-input-addon.positive {
-  color: #ffffff;
-  background-color: #28D656;
-  border-color: #28D656;
-}
-
-.dth-input-addon.negative {
-  color: #ffffff;
-  background-color: #FF4430;
-  border-color: #FF4430;
-}
-
-.dth-input-addon input[type="radio"],
-.dth-input-addon input[type="checkbox"] {
-  margin-top: 0;
-}
-
-.dth-input input:not(:last-child),
-.dth-input-addon:not(:last-child),
-.dth-input-btn:not(:last-child) > .dth-btn,
-.dth-input-btn:not(:last-child) > .dth-btn-group > .dth-btn,
-.dth-input-btn:not(:last-child) > .dropdown-toggle,
-.dth-input-btn:not(:first-child) > .dth-btn:not(:last-child):not(.dropdown-toggle),
-.dth-input-btn:not(:first-child) > .dth-btn-group:not(:last-child) > .dth-btn {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: 0;
-}
-
-.dth-input-addon:not(:last-child) {
-  border-right: 0;
-}
-
-.dth-input input:not(:first-child),
-.dth-input-addon:not(:first-child),
-.dth-input-btn:not(:first-child) > .dth-btn,
-.dth-input-btn:not(:first-child) > .dth-btn-group > .dth-btn,
-.dth-input-btn:not(:first-child) > .dropdown-toggle,
-.dth-input-btn:not(:last-child) > .dth-btn:not(:first-child),
-.dth-input-btn:not(:last-child) > .dth-btn-group:not(:first-child) > .dth-btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: 0;
-}
-
-input + .dth-input-addon:not(:first-child) {
-  border-left: 0;
-}
-
 .dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button] {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
   -webkit-appearance: none;
   display: inline-block;
-  border: 0.125rem solid #f4f4f4;
+  border: 0.125rem solid #4a4a4a;
   border-radius: 0.2rem;
   font-weight: 500;
   font-size: 1rem;
@@ -2498,9 +2403,9 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .dth-btn:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
-  border-color: #d5d5d5;
+  color: #ffffff;
+  background-color: #313131;
+  border-color: #2b2b2b;
 }
 
 .disabled.dth-btn, button.disabled, .disabled[type=submit], .disabled[type=reset], .disabled[type=button], .dth-btn:disabled, button:disabled, [type=submit]:disabled, [type=reset]:disabled, [type=button]:disabled {
@@ -2510,9 +2415,9 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .dth-btn:active, button:active, [type=submit]:active, [type=reset]:active, [type=button]:active, .active.dth-btn, button.active, .active[type=submit], .active[type=reset], .active[type=button] {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
-  border-color: #d5d5d5;
+  color: #ffffff;
+  background-color: #313131;
+  border-color: #2b2b2b;
 }
 
 .xs.dth-btn, button.xs, .xs[type=submit], .xs[type=reset], .xs[type=button] {
@@ -2633,15 +2538,15 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .outline.dth-btn, button.outline, .outline[type=submit], .outline[type=reset], .outline[type=button] {
-  color: #f4f4f4;
+  color: #4a4a4a;
   background-color: transparent;
   background-image: none;
-  border-color: #f4f4f4;
+  border-color: #4a4a4a;
 }
 
 .outline.dth-btn:hover, button.outline:hover, .outline[type=submit]:hover, .outline[type=reset]:hover, .outline[type=button]:hover {
-  color: #c1c1c1;
-  border-color: #c1c1c1;
+  color: #171717;
+  border-color: #171717;
 }
 
 .outline.disabled.dth-btn, button.outline.disabled, .outline.disabled[type=submit], .outline.disabled[type=reset], .outline.disabled[type=button], .outline.dth-btn:disabled, button.outline:disabled, .outline[type=submit]:disabled, .outline[type=reset]:disabled, .outline[type=button]:disabled {
@@ -2651,8 +2556,8 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .outline.dth-btn:active, button.outline:active, .outline[type=submit]:active, .outline[type=reset]:active, .outline[type=button]:active, .outline.active.dth-btn, button.outline.active, .outline.active[type=submit], .outline.active[type=reset], .outline.active[type=button] {
-  color: #f4f4f4;
-  border-color: #c1c1c1;
+  color: #4a4a4a;
+  border-color: #171717;
 }
 
 .outline.primary.dth-btn, button.outline.primary, .outline.primary[type=submit], .outline.primary[type=reset], .outline.primary[type=button] {
@@ -2748,14 +2653,14 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .invert.dth-btn, button.invert, .invert[type=submit], .invert[type=reset], .invert[type=button] {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
 }
 
 .invert.dth-btn:hover, button.invert:hover, .invert[type=submit]:hover, .invert[type=reset]:hover, .invert[type=button]:hover {
-  background-color: #4a4a4a;
-  color: #f4f4f4;
+  background-color: #ffffff;
+  color: #4a4a4a;
 }
 
 .invert.disabled.dth-btn, button.invert.disabled, .invert.disabled[type=submit], .invert.disabled[type=reset], .invert.disabled[type=button], .invert.dth-btn:disabled, button.invert:disabled, .invert[type=submit]:disabled, .invert[type=reset]:disabled, .invert[type=button]:disabled {
@@ -2765,8 +2670,8 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .invert.dth-btn:active, button.invert:active, .invert[type=submit]:active, .invert[type=reset]:active, .invert[type=button]:active, .invert.active.dth-btn, button.invert.active, .invert.active[type=submit], .invert.active[type=reset], .invert.active[type=button] {
-  background-color: #4a4a4a;
-  color: #f4f4f4;
+  background-color: #ffffff;
+  color: #4a4a4a;
 }
 
 .invert.primary.dth-btn, button.invert.primary, .invert.primary[type=submit], .invert.primary[type=reset], .invert.primary[type=button] {
@@ -2877,7 +2782,7 @@ input + .dth-input-addon:not(:first-child) {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   border-radius: 50%;
-  border-color: #4a4a4a transparent transparent;
+  border-color: #ffffff transparent transparent;
   border-style: solid;
   border-width: 0.1rem;
 }
@@ -2929,7 +2834,7 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .loading.outline.dth-btn:after, button.loading.outline:after, .loading.outline[type=submit]:after, .loading.outline[type=reset]:after, .loading.outline[type=button]:after {
-  border-color: #f4f4f4 transparent transparent;
+  border-color: #4a4a4a transparent transparent;
 }
 
 .loading.outline.dth-btn:after.disabled, button.loading.outline:after.disabled, .loading.outline[type=submit]:after.disabled, .loading.outline[type=reset]:after.disabled, .loading.outline[type=button]:after.disabled, .loading.outline.dth-btn:after:disabled, button.loading.outline:after:disabled, .loading.outline[type=submit]:after:disabled, .loading.outline[type=reset]:after:disabled, .loading.outline[type=button]:after:disabled {
@@ -3216,8 +3121,8 @@ input + .dth-input-addon:not(:first-child) {
   padding: 1rem 0.5rem;
   margin-bottom: 1rem;
   border-radius: 0.4rem;
-  background-color: #f4f4f4;
-  color: #4a4a4a;
+  background-color: #4a4a4a;
+  color: #ffffff;
 }
 
 .dth-jumbotron h1,
@@ -3227,12 +3132,12 @@ input + .dth-input-addon:not(:first-child) {
 .dth-jumbotron h5,
 .dth-jumbotron p,
 .dth-jumbotron a {
-  color: #4a4a4a;
+  color: #ffffff;
 }
 
 .dth-jumbotron .dth-divider {
-  border-top-color: #d5d5d5;
-  border-bottom-color: #d5d5d5;
+  border-top-color: #2b2b2b;
+  border-bottom-color: #2b2b2b;
 }
 
 @media (min-width: 40rem) {
@@ -3336,14 +3241,14 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .dth-pagination .item, .dth-pagination .dot {
-  color: #4a4a4a;
-  background-color: #f4f4f4;
-  border-color: #dbdbdb;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-color: #313131;
 }
 
 .dth-pagination .item:hover, .dth-pagination .dot:hover {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
+  color: #ffffff;
+  background-color: #313131;
   text-decoration: none;
 }
 
@@ -3353,8 +3258,8 @@ input + .dth-input-addon:not(:first-child) {
 }
 
 .dth-pagination .item:active, .dth-pagination .item.active, .dth-pagination .dot:active, .dth-pagination .dot.active {
-  color: #4a4a4a;
-  background-color: #dbdbdb;
+  color: #ffffff;
+  background-color: #313131;
 }
 
 .dth-pagination .item {
