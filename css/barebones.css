@@ -250,8 +250,7 @@ body {
   font-size: 1rem;
 }
 
-body,
-p {
+body, p {
   margin: 0;
   padding: 0;
 }
@@ -281,7 +280,20 @@ h5 {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.2;
   color: inherit;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child) {
   margin: 1.5rem 0;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+  margin-top: 2rem;
 }
 
 a {

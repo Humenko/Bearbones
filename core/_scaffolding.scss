@@ -16,10 +16,9 @@ body {
 	font-size: $body-font-size;
 }
 
-body,
-p {
-	margin: 0;
-	padding: 0;
+body, p{
+    margin: 0;
+    padding: 0;
 }
 
 p,
@@ -49,7 +48,16 @@ h5 {
 	font-family: $heading-font-family;
 	line-height: $heading-line-height;
 	color: inherit;
-	margin: 1.5rem 0;
+	&:not(:first-child) {
+		margin: 1.5rem 0;
+	}
+}
+
+// Increased margin on additional headings
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+	margin-top: 2rem;
 }
 
 // Links
