@@ -7,7 +7,7 @@
     }
     &:not(:last-child) {
         margin-bottom: 0.75rem;
-    } // Modifiers
+    }
     &.is-centered {
         justify-content: center;
     }
@@ -40,20 +40,20 @@
     //       }
     //     }
     //   }
-    &.is-mobile {
-        display: flex;
-    }
-    &.is-multiline {
-        flex-wrap: wrap;
-    }
-    &.is-vcentered {
-        align-items: center;
-    }
-    @include respond-to('md') {
-        &:not(.is-desktop) {
-            display: flex;
-        }
-    } 
+    // &.is-mobile {
+    //     display: flex;
+    // }
+    // &.is-multiline {
+    //     flex-wrap: wrap;
+    // }
+    // &.is-vcentered {
+    //     align-items: center;
+    // }
+    // @include respond-to('md') {
+    //     &:not(.is-desktop) {
+    //         display: flex;
+    //     }
+    // } 
     //   @include desktop {
     //     // Modifiers
     //     &.is-desktop {
@@ -68,57 +68,57 @@
     flex-grow: 1;
     flex-shrink: 1;
     padding: 0.75rem;
-    @for $i from 1 through 16 {
-        &.is-#{$i} {
+    @for $i from 1 through $max-column {
+        &.col-#{$i} {
             flex: none;
             width: $i / 16 * 100%;
         }
-        &.is-offset-#{$i} {
+        &.col-offset-#{$i} {
             margin-left: $i / 16 * 100%;
         }
-    }    
-    .grid.is-mobile>&.is-narrow {
-        flex: none;
     }
-    .grid.is-mobile>&.is-full {
-        flex: none;
-        width: 100%;
-    }
-    .grid.is-mobile>&.is-three-quarters {
-        flex: none;
-        width: 75%;
-    }
-    .grid.is-mobile>&.is-two-thirds {
-        flex: none;
-        width: 66.6666%;
-    }
-    .grid.is-mobile>&.is-half {
-        flex: none;
-        width: 50%;
-    }
-    .grid.is-mobile>&.is-one-third {
-        flex: none;
-        width: 33.3333%;
-    }
-    .grid.is-mobile>&.is-one-quarter {
-        flex: none;
-        width: 25%;
-    }
-    .grid.is-mobile>&.is-offset-three-quarters {
-        margin-left: 75%;
-    }
-    .grid.is-mobile>&.is-offset-two-thirds {
-        margin-left: 66.6666%;
-    }
-    .grid.is-mobile>&.is-offset-half {
-        margin-left: 50%;
-    }
-    .grid.is-mobile>&.is-offset-one-third {
-        margin-left: 33.3333%;
-    }
-    .grid.is-mobile>&.is-offset-one-quarter {
-        margin-left: 25%;
-    }
+    // .grid.is-mobile>&.is-narrow {
+    //     flex: none;
+    // }
+    // .grid.is-mobile>&.is-full {
+    //     flex: none;
+    //     width: 100%;
+    // }
+    // .grid.is-mobile>&.is-three-quarters {
+    //     flex: none;
+    //     width: 75%;
+    // }
+    // .grid.is-mobile>&.is-two-thirds {
+    //     flex: none;
+    //     width: 66.6666%;
+    // }
+    // .grid.is-mobile>&.is-half {
+    //     flex: none;
+    //     width: 50%;
+    // }
+    // .grid.is-mobile>&.is-one-third {
+    //     flex: none;
+    //     width: 33.3333%;
+    // }
+    // .grid.is-mobile>&.is-one-quarter {
+    //     flex: none;
+    //     width: 25%;
+    // }
+    // .grid.is-mobile>&.is-offset-three-quarters {
+    //     margin-left: 75%;
+    // }
+    // .grid.is-mobile>&.is-offset-two-thirds {
+    //     margin-left: 66.6666%;
+    // }
+    // .grid.is-mobile>&.is-offset-half {
+    //     margin-left: 50%;
+    // }
+    // .grid.is-mobile>&.is-offset-one-third {
+    //     margin-left: 33.3333%;
+    // }
+    // .grid.is-mobile>&.is-offset-one-quarter {
+    //     margin-left: 25%;
+    // } 
     //   @include mobile {
     //     &.is-narrow-mobile {
     //       flex: none;

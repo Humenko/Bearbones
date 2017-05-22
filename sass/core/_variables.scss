@@ -30,6 +30,10 @@ $breakpoints: (
   'lg' : 57.5rem, // 920px
   );
 
+// Grid 
+
+$max-column:                   16;
+
 // Font sizes 
 
 $font-size-xs:                  .7rem !default;
@@ -94,7 +98,7 @@ $layout-color:                    $base-color !default;
 
 //* Buttons *//
 
-$btn:                           ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]') !default;
+$btn:                           ('.dth-btn, a.dth-btn') !default;
 
 $btn-background:                $base-color !default;
 $btn-background-hover:          darken($btn-background, 10%) !default;
