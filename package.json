@@ -13,8 +13,7 @@
     "rimraf": "^2.6.1"
   },
   "scripts": {
-    "deploy-patch": "npm run build && npm version patch && git tag npm_package_versio && npm publish",
-    "deploy-minor": "npm run build && npm version minor && git tag npm_package_versio && npm publish",
+    "deploy": "npm run build && git tag npm_package_version && npm publish",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/barebones.css css/barebones.css",
     "build-minify": "postcss --use cssnano --output css/barebones.min.css css/barebones.css",
