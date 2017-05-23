@@ -1,6 +1,6 @@
 {
   "name": "dth-barebones",
-  "version": "0.2.4",
+  "version": "0.3.4",
   "description": "",
   "main": "barebones.scss",
   "author": "Daniel Humenko",
@@ -13,12 +13,12 @@
     "rimraf": "^2.6.1"
   },
   "scripts": {
-    "deploy": "npm run build && npm publish",
+    "deploy": "npm run build && git tag npm_package_version && npm publish",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/barebones.css css/barebones.css",
     "build-minify": "postcss --use cssnano --output css/barebones.min.css css/barebones.css",
     "build-clean": "rimraf css",
-    "build-sass": "node-sass --output-style expanded --source-map true barebones.scss css/barebones.css",
-    "start": "npm run build-sass -- --watch"
+    "build-sass": "node-sass --output-style expanded --source-map true sass/barebones.scss css/barebones.css",
+    "watch": "npm run build-sass -- --watch"
   }
 }
