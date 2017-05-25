@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "bearbones",
   "version": "0.3.6",
-=======
-  "name": "dth-barebones",
-  "version": "0.3.0",
->>>>>>> origin/master
   "description": "",
   "main": "bearbones.scss",
   "author": "Daniel Humenko",
@@ -23,11 +18,7 @@
     "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
     "build-minify": "postcss --use cssnano --output css/bearbones.min.css css/bearbones.css",
     "build-clean": "rimraf css",
-<<<<<<< HEAD
     "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
-=======
-    "build-sass": "node-sass --output-style expanded --source-map true sass/barebones.scss css/barebones.css",
->>>>>>> origin/master
     "watch": "npm run build-sass -- --watch"
   }
 }
