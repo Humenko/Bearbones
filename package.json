@@ -1,8 +1,13 @@
 {
+<<<<<<< HEAD
+  "name": "bearbones",
+  "version": "0.3.6",
+=======
   "name": "dth-barebones",
-  "version": "0.3.5",
+  "version": "0.3.0",
+>>>>>>> origin/master
   "description": "",
-  "main": "barebones.scss",
+  "main": "bearbones.scss",
   "author": "Daniel Humenko",
   "license": "MIT",
   "devDependencies": {
@@ -13,12 +18,16 @@
     "rimraf": "^2.6.1"
   },
   "scripts": {
-    "deploy": "npm run build && git tag npm_package_version && npm publish",
+    "deploy": "npm run build && git push --tags && npm publish",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
-    "build-autoprefix": "postcss --use autoprefixer --output css/barebones.css css/barebones.css",
-    "build-minify": "postcss --use cssnano --output css/barebones.min.css css/barebones.css",
+    "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
+    "build-minify": "postcss --use cssnano --output css/bearbones.min.css css/bearbones.css",
     "build-clean": "rimraf css",
+<<<<<<< HEAD
+    "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
+=======
     "build-sass": "node-sass --output-style expanded --source-map true sass/barebones.scss css/barebones.css",
+>>>>>>> origin/master
     "watch": "npm run build-sass -- --watch"
   }
 }
