@@ -28,11 +28,13 @@ $breakpoints: (
   'sm' : 20rem, // 320px
   'md' : 40rem, // 640px
   'lg' : 57.5rem, // 920px
+  'xl' : 75rem, // 1200px
   );
 
 // Grid 
 
-$max-column:                   16;
+$max-column:                    16 !default;
+$grid-padding:                  0.5rem !default;
 
 // Font sizes 
 
