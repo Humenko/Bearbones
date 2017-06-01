@@ -1,6 +1,6 @@
-.dth-input-addon,
-.dth-input-btn,
-.dth-input input {
+.bb-input-addon,
+.bb-input-btn,
+.bb-input input {
     display: flex;
     align-items: center;
     &:not(:first-child):not(:last-child) {
@@ -8,23 +8,13 @@
     }
 }
 
-.dth-input-addon,
-.dth-input-btn {
+.bb-input-addon,
+.bb-input-btn {
     white-space: nowrap;
     vertical-align: middle;
 }
 
-// .dth-input-lg > input,
-// .dth-input-lg > .dth-input-addon,
-// .dth-input-lg > .dth-input-btn > .btn {
-//   @extend input-lg;
-// }
-// .dth-input-sm > input,
-// .dth-input-sm > .dth-input-addon,
-// .dth-input-sm > .dth-input-btn > .btn {
-//   @extend input-sm;
-// }
-.dth-input-addon {
+.bb-input-addon {
     padding: $input-padding-y $input-padding-x;
     margin-bottom: 0;
     line-height: $input-line-height;
@@ -51,32 +41,32 @@
     }
 }
 
-.dth-input input:not(:last-child),
-.dth-input-addon:not(:last-child),
-.dth-input-btn:not(:last-child)>.dth-btn,
-.dth-input-btn:not(:last-child)>.dth-btn-group>.dth-btn,
-.dth-input-btn:not(:last-child)>.dropdown-toggle,
-.dth-input-btn:not(:first-child)>.dth-btn:not(:last-child):not(.dropdown-toggle),
-.dth-input-btn:not(:first-child)>.dth-btn-group:not(:last-child)>.dth-btn {
+.bb-input input:not(:last-child),
+.bb-input-addon:not(:last-child),
+.bb-input-btn:not(:last-child)>.bb-btn,
+.bb-input-btn:not(:last-child)>.bb-btn-group>.bb-btn,
+.bb-input-btn:not(:last-child)>.dropdown-toggle,
+.bb-input-btn:not(:first-child)>.bb-btn:not(:last-child):not(.dropdown-toggle),
+.bb-input-btn:not(:first-child)>.bb-btn-group:not(:last-child)>.bb-btn {
     @include border-right-radius(0);
     border-right: 0;
 }
 
-.dth-input-addon:not(:last-child) {
+.bb-input-addon:not(:last-child) {
     border-right: 0;
 }
 
-.dth-input input:not(:first-child),
-.dth-input-addon:not(:first-child),
-.dth-input-btn:not(:first-child)>.dth-btn,
-.dth-input-btn:not(:first-child)>.dth-btn-group>.dth-btn,
-.dth-input-btn:not(:first-child)>.dropdown-toggle,
-.dth-input-btn:not(:last-child)>.dth-btn:not(:first-child),
-.dth-input-btn:not(:last-child)>.dth-btn-group:not(:first-child)>.dth-btn {
+.bb-input input:not(:first-child),
+.bb-input-addon:not(:first-child),
+.bb-input-btn:not(:first-child)>.bb-btn,
+.bb-input-btn:not(:first-child)>.bb-btn-group>.bb-btn,
+.bb-input-btn:not(:first-child)>.dropdown-toggle,
+.bb-input-btn:not(:last-child)>.bb-btn:not(:first-child),
+.bb-input-btn:not(:last-child)>.bb-btn-group:not(:first-child)>.bb-btn {
     @include border-left-radius(0);
     border-left: 0;
 }
 
-input+.dth-input-addon:not(:first-child) {
+input+.bb-input-addon:not(:first-child) {
     border-left: 0;
 }

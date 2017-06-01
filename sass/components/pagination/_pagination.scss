@@ -1,4 +1,4 @@
-.dth-pagination {
+.bb-pagination {
     @include pagination-variant($base-variant-color, $base-variant-background);
     margin: 0;
     display: inline-flex;
@@ -25,7 +25,7 @@
     }
     .dot {
         padding: $dot-padding;
-        border-radius: $dot-border-radius;
+        @include border-radius($dot-border-radius);        
         cursor: pointer;
         text-decoration: none;
         @include transition($pagination-transition);        
