@@ -6,7 +6,7 @@ $background:                  #ffffff !default;
 $primary-color:               #24C2AB !default;
 $primary-pair:                #ffffff !default;
 $secondary-color:             #FFB52F !default;
-$secondary-pair:              #ffffff !default;
+$secondary-pair:              #4a4a4a !default;
 
 $positive-color:              #28D656 !default;
 $positive-pair:               #ffffff !default;
@@ -28,7 +28,13 @@ $breakpoints: (
   'sm' : 20rem, // 320px
   'md' : 40rem, // 640px
   'lg' : 57.5rem, // 920px
+  'xl' : 75rem, // 1200px
   );
+
+// Grid 
+
+$max-column:                    16 !default;
+$grid-padding:                  0.5rem !default;
 
 // Font sizes 
 
@@ -92,25 +98,9 @@ $layout-padding-lg:               $padding*4 !default;
 $layout-background:               $lighter-grey !default;
 $layout-color:                    $base-color !default;
 
-// Primary layout
-$layout-primary-background:       $primary-color !default;
-$layout-primary-color:            $primary-pair !default;
-
-// Secondary layout
-$layout-secondary-background:     $secondary-color !default;
-$layout-secondary-color:          $secondary-pair !default;
-
-// Positive layout
-$layout-positive-background:      $positive-color !default;
-$layout-positive-color:           $positive-pair !default;
-
-// Negative layout
-$layout-negative-background:      $negative-color !default;
-$layout-negative-color:           $negative-pair !default;
-
 //* Buttons *//
 
-$btn:                           ('.dth-btn, a.dth-btn, button, [type=submit], [type=reset], [type=button]') !default;
+$btn:                           ('.bb-btn, a.bb-btn') !default;
 
 $btn-background:                $base-color !default;
 $btn-background-hover:          darken($btn-background, 10%) !default;
@@ -125,26 +115,6 @@ $btn-text-transform:            none !default;
 $btn-line-height:               1.25 !default;
 $btn-padding:                   .5rem !default;
 $btn-transition:                $transition-duration all $transition-effect !default;
-
-// Primary buttons
-$btn-primary-background:        $primary-color !default;
-$btn-primary-color:             $primary-pair !default;
-$btn-primary-border:            $btn-primary-background !default;
-
-// Secondary buttons
-$btn-secondary-background:      $secondary-color !default;
-$btn-secondary-color:           $secondary-pair !default;
-$btn-secondary-border:          $btn-secondary-background !default;
-
-// Positive buttons
-$btn-positive-background:       $positive-color !default;
-$btn-positive-color:            $positive-pair !default;
-$btn-positive-border:           $btn-positive-background !default;
-
-// Negative buttons
-$btn-negative-background:       $negative-color !default;
-$btn-negative-color:            $negative-pair !default;
-$btn-negative-border:           $btn-negative-background !default;
 
 // Loading buttons 
 $btn-loader-size:               .75rem !default;
@@ -201,26 +171,6 @@ $input-addon-color:              $base-pair !default;
 $input-group-addon-background:   $base-color !default;
 $input-group-addon-border-color: $input-group-addon-background!default;
 
-// Primary input
-$input-primary-background:       $primary-color !default;
-$input-primary-color:            $primary-pair !default;
-$input-primary-border:           $input-primary-background !default;
-
-// Secondary input
-$input-secondary-background:     $secondary-color !default;
-$input-secondary-color:          $secondary-pair !default;
-$input-secondary-border:         $input-secondary-background !default;
-
-// Positive input
-$input-positive-background:      $positive-color !default;
-$input-positive-color:           $positive-pair !default;
-$input-positive-border:          $input-positive-background !default;
-
-// Negative input
-$input-negative-background:      $negative-color !default;
-$input-negative-color:           $negative-pair !default;
-$input-negative-border:          $input-negative-background !default;
-
 // $form-text-margin-top:     .25rem !default;
 // $form-feedback-margin-top: $form-text-margin-top !default;
 
@@ -238,26 +188,6 @@ $input-negative-border:          $input-negative-background !default;
 $jumbotron-padding:                  $padding !default;
 $jumbotron-border-radius:            $border-radius*2 !default;
 
-// Base
-$jumbotron-background:               $lighter-grey !default;
-$jumbotron-color:                    $base-color !default;
-
-// Primary jumbotron
-$jumbotron-primary-background:       $primary-color !default;
-$jumbotron-primary-color:            $primary-pair !default;
-
-// Secondary jumbotron
-$jumbotron-secondary-background:     $secondary-color !default;
-$jumbotron-secondary-color:          $secondary-pair !default;
-
-// Positive jumbotron
-$jumbotron-positive-background:      $positive-color !default;
-$jumbotron-positive-color:           $positive-pair !default;
-
-// Negative jumbotron
-$jumbotron-negative-background:      $negative-color !default;
-$jumbotron-negative-color:           $negative-pair !default;
-
 //* Pagination *//
 
 $pagination-padding:                  $padding/2 !default;
@@ -274,28 +204,32 @@ $pagination-transition:               $transition-duration all $transition-effec
 $dot-padding:                         $padding/3 !default;
 $dot-border-radius:                   50% !default;
 
+ //* Alert *//
+
+$alert-padding:                      1.5rem 2.5rem !default;
+$alert-border-radius:                $border-radius !default;
+
 // Base
-$pagination-background:               $base-pair !default;
-$pagination-color:                    $base-color !default;
-$pagination-border-color:             $pagination-background !default;
+$base-variant-background:           $base-color !default;
+$base-variant-color:                $base-pair !default;
+$base-variant-border:               $base-variant-background !default;
 
-// Primary input
-$pagination-primary-background:       $primary-color !default;
-$pagination-primary-color:            $primary-pair !default;
-$pagination-primary-border:           $pagination-primary-background !default;
+// Primary
+$primary-variant-background:       $primary-color !default;
+$primary-variant-color:            $primary-pair !default;
+$primary-variant-border:           $primary-variant-background !default;
 
-// Secondary input
-$pagination-secondary-background:     $secondary-color !default;
-$pagination-secondary-color:          $secondary-pair !default;
-$pagination-secondary-border:         $pagination-secondary-background !default;
+// Secondary
+$secondary-variant-background:     $secondary-color !default;
+$secondary-variant-color:          $secondary-pair !default;
+$secondary-variant-border:         $secondary-variant-background !default;
 
-// Positive input
-$pagination-positive-background:      $positive-color !default;
-$pagination-positive-color:           $positive-pair !default;
-$pagination-positive-border:          $pagination-positive-background !default;
+// Positive 
+$positive-variant-background:      $positive-color !default;
+$positive-variant-color:           $positive-pair !default;
+$positive-variant-border:          $positive-variant-background !default;
 
-// Negative input
-$pagination-negative-background:      $negative-color !default;
-$pagination-negative-color:           $negative-pair !default;
-$pagination-negative-border:          $pagination-negative-background !default;
- 
+// Negative
+$negative-variant-background:      $negative-color !default;
+$negative-variant-color:           $negative-pair !default;
+$negative-variant-border:          $negative-variant-background !default;

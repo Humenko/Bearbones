@@ -1,0 +1,13 @@
+@mixin alert-variant($alert-color, $alert-background) {
+    background-color: $alert-background;   
+    color: $alert-color;     
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a {
+        color: $alert-color;
+    } 
+}

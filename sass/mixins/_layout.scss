@@ -1,6 +1,6 @@
 @mixin layout-variant($layout-color, $layout-background) {
     background-color: $layout-background;
-    color: $layout-color;    
+    color: $layout-color;
     h1,
     h2,
     h3,
@@ -9,5 +9,9 @@
     p,
     a {
         color: $layout-color;
+    }
+    .bb-divider {
+        border-top-color: darken($layout-background, 12%);
+        border-bottom-color: darken($layout-background, 12%);
     }
 }

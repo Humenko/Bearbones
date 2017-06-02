@@ -1,0 +1,17 @@
+.bb-box {
+    @include box-variant($base-variant-color, $base-variant-background);
+    @include border-radius($border-radius);
+    padding: 1rem;
+    &.primary {
+        @include box-variant($primary-variant-color, $primary-variant-background);
+    }
+    &.secondary {
+        @include box-variant($secondary-variant-color, $secondary-variant-background);
+    }
+    &.positive {
+        @include box-variant($positive-variant-color, $positive-variant-background);
+    }
+    &.negative {
+        @include box-variant($negative-variant-color, $negative-variant-background);
+    }
+}

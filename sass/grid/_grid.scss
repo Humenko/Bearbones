@@ -1,0 +1,61 @@
+.bb-grid {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-flow: wrap;
+  margin-left: -$grid-padding;
+  margin-right: -$grid-padding;
+  margin-bottom: $grid-padding*2;
+  @include respond-to('lg') {
+    display: flex;
+  }
+  &:last-child {
+    margin-bottom: -$grid-padding;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.connected {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &>.column {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-bottom: $grid-padding*2;
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &.xs {
+    @include grid;
+  }
+  @include respond-to('sm') {
+    &.sm {
+      @include grid;
+    }
+  }
+  @include respond-to('md') {
+    &.md {
+      @include grid;
+    }
+  }
+  @include respond-to('lg') {
+    &.lg {
+      @include grid;
+    }
+  }
+}

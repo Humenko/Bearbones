@@ -1,8 +1,8 @@
 %buttons {
-	@include button-variant($btn-color, $btn-background, $btn-border-color);
+	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	-webkit-appearance: none;
 	display: inline-block;
-	border: $btn-border-width $btn-border-style $btn-border-color;
+	border: $btn-border-width $btn-border-style $base-variant-border;
   	@include border-radius($btn-border-radius);
 	font-weight: $btn-font-weight;
 	font-size: $btn-font-size;
@@ -31,45 +31,45 @@
 		width: 100%;
 	}
 	&.primary {
-		@include button-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
+		@include button-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
 	}
 	&.secondary {
-		@include button-variant($btn-secondary-color, $btn-secondary-background, $btn-secondary-border);
+		@include button-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
 	}
 	&.positive {
-		@include button-variant($btn-positive-color, $btn-positive-background, $btn-positive-border);
+		@include button-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
 	}
 	&.negative {
-		@include button-variant($btn-negative-color, $btn-negative-background, $btn-negative-border);
+		@include button-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
 	}
 	&.outline {
-		@include button-outline-variant($btn-background);
+		@include button-outline-variant($base-variant-background);
 		&.primary {
-			@include button-outline-variant($btn-primary-background);
+			@include button-outline-variant($primary-variant-background);
 		}
 		&.secondary {
-			@include button-outline-variant($btn-secondary-background);
+			@include button-outline-variant($secondary-variant-background);
 		}
 		&.positive {
-			@include button-outline-variant($btn-positive-background);
+			@include button-outline-variant($positive-variant-background);
 		}
 		&.negative {
-			@include button-outline-variant($btn-negative-background);
+			@include button-outline-variant($negative-variant-background);
 		}
 	}
 	&.invert {
-		@include button-invert-variant($btn-color, $btn-background, $btn-border-color);
+		@include button-invert-variant($base-variant-color, $base-variant-background, $base-variant-border);
 		&.primary {
-			@include button-invert-variant($btn-primary-color, $btn-primary-background, $btn-primary-border);
+			@include button-invert-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
 		}
 		&.secondary {
-			@include button-invert-variant($btn-secondary-color, $btn-secondary-background, $btn-secondary-border);
+			@include button-invert-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
 		}
 		&.positive {
-			@include button-invert-variant($btn-positive-color, $btn-positive-background, $btn-positive-border);
+			@include button-invert-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
 		}
 		&.negative {
-			@include button-invert-variant($btn-negative-color, $btn-negative-background, $btn-negative-border);
+			@include button-invert-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
 		}
 	}
 	&.loading {
@@ -88,36 +88,36 @@
 			animation: button-spin $transition-duration*3 linear;
 			animation-iteration-count: infinite;
   			@include border-radius($btn-loader-circle);			
-			@include button-loading-variant($btn-color);
+			@include button-loading-variant($base-variant-color);
 			border-style: solid;
 			border-width: $btn-loader-border;
 		}
 		&.primary:after {
-			@include button-loading-variant($btn-primary-color);
+			@include button-loading-variant($primary-variant-color);
 		}
 		&.secondary:after {
-			@include button-loading-variant($btn-secondary-color);			
+			@include button-loading-variant($secondary-variant-color);			
 		}
 		&.positive:after {
-			@include button-loading-variant($btn-positive-color);
+			@include button-loading-variant($positive-variant-color);
 		}
 		&.negative:after {
-			@include button-loading-variant($btn-negative-color);			
+			@include button-loading-variant($negative-variant-color);			
 		}		
 		&.outline:after {
-			@include button-loading-variant($btn-background);			
+			@include button-loading-variant($base-variant-background);			
 		}
 		&.outline.primary:after {
-			@include button-loading-variant($btn-primary-background);			
+			@include button-loading-variant($primary-variant-background);			
 		}
 		&.outline.secondary:after {
-			@include button-loading-variant($btn-secondary-background);
+			@include button-loading-variant($secondary-variant-background);
 		}
 		&.outline.positive:after {
-			@include button-loading-variant($btn-positive-background);
+			@include button-loading-variant($positive-variant-background);
 		}
 		&.outline.negative:after {
-			@include button-loading-variant($btn-negative-background);			
+			@include button-loading-variant($negative-variant-background);			
 		}			
 	}
 }

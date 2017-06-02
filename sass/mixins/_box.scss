@@ -1,0 +1,13 @@
+@mixin box-variant($box-color, $box-background) {
+    background-color: $box-background;   
+    color: $box-color;     
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a {
+        color: $box-color;
+    } 
+}

@@ -1,0 +1,47 @@
+@mixin grid {
+    display: flex;
+    .one-quarter {
+        flex: none;
+        width: 25%;
+    }
+    .half {
+        flex: none;
+        width: 50%;
+    }
+    .three-quarters {
+        flex: none;
+        width: 75%;
+    }
+    .one-third {
+        flex: none;
+        width: 33.3333%;
+    }
+    .two-thirds {
+        flex: none;
+        width: 66.6666%;
+    }
+    .offset-one-quarter {
+        margin-left: 25%;
+    }
+    .offset-half {
+        margin-left: 50%;
+    }
+    .offset-three-quarters {
+        margin-left: 75%;
+    }
+    .offset-one-third {
+        margin-left: 33.3333%;
+    }
+    .offset-two-thirds {
+        margin-left: 66.6666%;
+    }
+    @for $i from 1 through $max-column {
+        .column-#{$i} {
+            flex: none;
+            width: $i / $max-column * 100%;
+        }
+        .column-offset-#{$i} {
+            margin-left: $i / $max-column * 100%;
+        }
+    }
+}
