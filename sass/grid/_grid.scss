@@ -10,6 +10,9 @@
   @include respond-to('lg') {
     display: flex;
   }
+  &:last-child {
+    margin-bottom: -$grid-padding;
+  }
   &.center {
     justify-content: center;
   }
