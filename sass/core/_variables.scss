@@ -81,6 +81,7 @@ $border-width:                  .125rem !default;
 $border-style:                  solid !default;
 $border-radius:                 .2rem !default;
 $no-border-radius:              0rem !default;
+$border-radius-circle:          50% !default;
 
 // Links
 
@@ -106,7 +107,7 @@ $btn-background:                $base-color !default;
 $btn-background-hover:          darken($btn-background, 10%) !default;
 $btn-color:                     $base-pair !default;
 $btn-font-weight:               500 !default;
-$btn-font-size:                 1rem !default;
+$btn-font-size:                 $font-size !default;
 $btn-border-width:              $border-width !default;
 $btn-border-style:              $border-style !default;
 $btn-border-color:              $btn-background !default;
@@ -115,6 +116,18 @@ $btn-text-transform:            none !default;
 $btn-line-height:               1.25 !default;
 $btn-padding:                   .5rem !default;
 $btn-transition:                $transition-duration all $transition-effect !default;
+
+$btn-close-size:                1.25rem;
+$btn-close-size-xs:             .85rem;
+$btn-close-size-sm:             1.05rem;
+$btn-close-size-lg:             1.45rem;
+$btn-close-size-xl:             1.65rem;
+$btn-close-icon-size:           .125rem;
+$btn-close-transform:           translateX(-50%) translateY(-50%) rotate(45deg);
+
+// Box 
+
+$box-padding:                   1rem !default;
 
 // Loading buttons 
 $btn-loader-size:               .75rem !default;
@@ -193,7 +206,7 @@ $jumbotron-border-radius:            $border-radius*2 !default;
 $pagination-padding:                  $padding/2 !default;
 $pagination-margin:                   $margin/10 !default;
 $pagination-font-weight:              500 !default;
-$pagination-font-size:                1rem !default;
+$pagination-font-size:                $font-size !default;
 $pagination-border-radius:            $border-radius !default;
 $pagination-border-width:             $border-width/2 !default;
 $pagination-border-style:             $border-style !default;
@@ -202,7 +215,7 @@ $pagination-transition:               $transition-duration all $transition-effec
 // Dots 
 
 $dot-padding:                         $padding/3 !default;
-$dot-border-radius:                   50% !default;
+$dot-border-radius:                   $border-radius-circle !default;
 
  //* Alert *//
 

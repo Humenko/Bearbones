@@ -78,3 +78,14 @@
         cursor: not-allowed;
     }
 }
+
+@mixin close-variant($close-background, $close-color) {
+    background-color: darken($close-background, 10%);   
+	&:before,
+	&:after {
+		background-color: $close-color;
+    }    
+    @include hover-focus-active {
+        background-color: darken($close-background, 20%);   
+    } 
+}
