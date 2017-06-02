@@ -1,12 +1,40 @@
 @mixin hover {
     &:hover {
-        @content
+        @content;
+    }
+}
+
+@mixin focus {
+    &:focus {
+        @content;
+    }
+}
+
+@mixin active {
+    &:active {
+        @content;
     }
 }
 
 @mixin focus-active {
     &:focus,
     &:active {
-        @content
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+
+@mixin hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
     }
 }

@@ -1,7 +1,8 @@
 .bb-box {
     @include box-variant($base-variant-color, $base-variant-background);
     @include border-radius($border-radius);
-    padding: 1rem;
+    position: relative;
+    padding: $box-padding;
     &.primary {
         @include box-variant($primary-variant-color, $primary-variant-background);
     }
@@ -13,5 +14,10 @@
     }
     &.negative {
         @include box-variant($negative-variant-color, $negative-variant-background);
+    }
+    .close {
+        position: absolute;
+        right: $box-padding;
+        top: $box-padding;
     }
 }

@@ -1704,6 +1704,7 @@ a:hover {
   background-color: #4a4a4a;
   color: #ffffff;
   border-radius: 0.2rem;
+  position: relative;
   padding: 1rem;
 }
 
@@ -1775,6 +1776,12 @@ a:hover {
 .bb-box.negative p,
 .bb-box.negative a {
   color: #ffffff;
+}
+
+.bb-box .close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .bb-breadcrumb {
@@ -2324,6 +2331,118 @@ a:hover {
   cursor: not-allowed;
 }
 
+.close {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  height: 1.25rem;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 1.25rem;
+  background-color: #313131;
+}
+
+.close:before, .close:after {
+  background-color: #ffffff;
+}
+
+.close:hover, .close:focus, .close:active {
+  background-color: #171717;
+}
+
+.close.primary {
+  background-color: #1c9785;
+}
+
+.close.primary:before, .close.primary:after {
+  background-color: #ffffff;
+}
+
+.close.primary:hover, .close.primary:focus, .close.primary:active {
+  background-color: #146c5f;
+}
+
+.close.secondary {
+  background-color: #fba200;
+}
+
+.close.secondary:before, .close.secondary:after {
+  background-color: #4a4a4a;
+}
+
+.close.secondary:hover, .close.secondary:focus, .close.secondary:active {
+  background-color: #c88100;
+}
+
+.close.positive {
+  background-color: #20ab45;
+}
+
+.close.positive:before, .close.positive:after {
+  background-color: #ffffff;
+}
+
+.close.positive:hover, .close.positive:focus, .close.positive:active {
+  background-color: #188033;
+}
+
+.close.negative {
+  background-color: #fc1800;
+}
+
+.close.negative:before, .close.negative:after {
+  background-color: #ffffff;
+}
+
+.close.negative:hover, .close.negative:focus, .close.negative:active {
+  background-color: #c91300;
+}
+
+.close:before, .close:after {
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.close:before {
+  height: 0.125rem;
+  width: 50%;
+}
+
+.close:after {
+  height: 50%;
+  width: 0.125rem;
+}
+
+.close.xs {
+  width: 1.65rem;
+  height: 0.85rem;
+}
+
+.close.sm {
+  width: 1.65rem;
+  height: 1.05rem;
+}
+
+.close.lg {
+  width: 1.65rem;
+  height: 1.45rem;
+}
+
+.close.xl {
+  width: 1.65rem;
+  height: 1.65rem;
+}
+
 @-webkit-keyframes button-spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -2850,6 +2969,118 @@ a:hover {
   opacity: 0.7;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+.close {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  height: 1.25rem;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 1.25rem;
+  background-color: #313131;
+}
+
+.close:before, .close:after {
+  background-color: #ffffff;
+}
+
+.close:hover, .close:focus, .close:active {
+  background-color: #171717;
+}
+
+.close.primary {
+  background-color: #1c9785;
+}
+
+.close.primary:before, .close.primary:after {
+  background-color: #ffffff;
+}
+
+.close.primary:hover, .close.primary:focus, .close.primary:active {
+  background-color: #146c5f;
+}
+
+.close.secondary {
+  background-color: #fba200;
+}
+
+.close.secondary:before, .close.secondary:after {
+  background-color: #4a4a4a;
+}
+
+.close.secondary:hover, .close.secondary:focus, .close.secondary:active {
+  background-color: #c88100;
+}
+
+.close.positive {
+  background-color: #20ab45;
+}
+
+.close.positive:before, .close.positive:after {
+  background-color: #ffffff;
+}
+
+.close.positive:hover, .close.positive:focus, .close.positive:active {
+  background-color: #188033;
+}
+
+.close.negative {
+  background-color: #fc1800;
+}
+
+.close.negative:before, .close.negative:after {
+  background-color: #ffffff;
+}
+
+.close.negative:hover, .close.negative:focus, .close.negative:active {
+  background-color: #c91300;
+}
+
+.close:before, .close:after {
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.close:before {
+  height: 0.125rem;
+  width: 50%;
+}
+
+.close:after {
+  height: 50%;
+  width: 0.125rem;
+}
+
+.close.xs {
+  width: 1.65rem;
+  height: 0.85rem;
+}
+
+.close.sm {
+  width: 1.65rem;
+  height: 1.05rem;
+}
+
+.close.lg {
+  width: 1.65rem;
+  height: 1.45rem;
+}
+
+.close.xl {
+  width: 1.65rem;
+  height: 1.65rem;
 }
 
 @keyframes button-spin {
@@ -3717,6 +3948,118 @@ h5 {
   opacity: 0.7;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+.close {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  height: 1.25rem;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 1.25rem;
+  background-color: #313131;
+}
+
+.close:before, .close:after {
+  background-color: #ffffff;
+}
+
+.close:hover, .close:focus, .close:active {
+  background-color: #171717;
+}
+
+.close.primary {
+  background-color: #1c9785;
+}
+
+.close.primary:before, .close.primary:after {
+  background-color: #ffffff;
+}
+
+.close.primary:hover, .close.primary:focus, .close.primary:active {
+  background-color: #146c5f;
+}
+
+.close.secondary {
+  background-color: #fba200;
+}
+
+.close.secondary:before, .close.secondary:after {
+  background-color: #4a4a4a;
+}
+
+.close.secondary:hover, .close.secondary:focus, .close.secondary:active {
+  background-color: #c88100;
+}
+
+.close.positive {
+  background-color: #20ab45;
+}
+
+.close.positive:before, .close.positive:after {
+  background-color: #ffffff;
+}
+
+.close.positive:hover, .close.positive:focus, .close.positive:active {
+  background-color: #188033;
+}
+
+.close.negative {
+  background-color: #fc1800;
+}
+
+.close.negative:before, .close.negative:after {
+  background-color: #ffffff;
+}
+
+.close.negative:hover, .close.negative:focus, .close.negative:active {
+  background-color: #c91300;
+}
+
+.close:before, .close:after {
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.close:before {
+  height: 0.125rem;
+  width: 50%;
+}
+
+.close:after {
+  height: 50%;
+  width: 0.125rem;
+}
+
+.close.xs {
+  width: 1.65rem;
+  height: 0.85rem;
+}
+
+.close.sm {
+  width: 1.65rem;
+  height: 1.05rem;
+}
+
+.close.lg {
+  width: 1.65rem;
+  height: 1.45rem;
+}
+
+.close.xl {
+  width: 1.65rem;
+  height: 1.65rem;
 }
 
 @keyframes button-spin {
