@@ -1,0 +1,16 @@
+@mixin footer-variant($footer-color, $footer-background) {
+    background-color: $footer-background;   
+    color: $footer-color;     
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        color: $footer-color;
+    }
+    .bb-divider {
+        border-top-color: darken($footer-background, 12%);
+        border-bottom-color: darken($footer-background, 12%);        
+    }    
+}
