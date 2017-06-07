@@ -46,7 +46,7 @@
     }
 }
 
-@mixin button-invert-variant($btn-color, $btn-background, $btn-border) {
+@mixin button-inverted-variant($btn-color, $btn-background, $btn-border) {
     $btn-active-background: $btn-color;
     $btn-active-color: $btn-background;    
     color: $btn-color;

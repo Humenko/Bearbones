@@ -1,9 +1,6 @@
 .bb-footer {
     padding: $footer-padding;
     background: $footer-background;
-    &.invert {
-        @include footer-variant($base-variant-color, $base-variant-background);
-    }    
     &.primary {
         @include footer-variant($primary-variant-color, $primary-variant-background);
     }
