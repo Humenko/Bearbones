@@ -67,7 +67,7 @@
 		@include button-inverted-variant($base-variant-color, $base-variant-background, $base-variant-border);
 		&.invert {
 			@include button-inverted-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
-		} 		
+		}
 		&.primary {
 			@include button-inverted-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
 		}
@@ -149,9 +149,9 @@
 	vertical-align: top;
 	width: $btn-close-size;
 	@include close-variant($base-variant-background, $base-variant-color);
-    &.invert {
-        @include close-variant($invert-variant-background, $invert-variant-color);
-    } 	
+	&.invert {
+		@include close-variant($invert-variant-background, $invert-variant-color);
+	}
 	&.primary {
 		@include close-variant($primary-variant-background, $primary-variant-color);
 	}
