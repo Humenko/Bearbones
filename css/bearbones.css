@@ -356,8 +356,7 @@ a:hover {
 .hero.invert h3,
 .hero.invert h4,
 .hero.invert h5,
-.hero.invert p,
-.hero.invert a {
+.hero.invert p {
   color: #4a4a4a;
 }
 
@@ -376,8 +375,7 @@ a:hover {
 .hero.primary h3,
 .hero.primary h4,
 .hero.primary h5,
-.hero.primary p,
-.hero.primary a {
+.hero.primary p {
   color: #ffffff;
 }
 
@@ -396,8 +394,7 @@ a:hover {
 .hero.secondary h3,
 .hero.secondary h4,
 .hero.secondary h5,
-.hero.secondary p,
-.hero.secondary a {
+.hero.secondary p {
   color: #4a4a4a;
 }
 
@@ -416,8 +413,7 @@ a:hover {
 .hero.positive h3,
 .hero.positive h4,
 .hero.positive h5,
-.hero.positive p,
-.hero.positive a {
+.hero.positive p {
   color: #ffffff;
 }
 
@@ -436,8 +432,7 @@ a:hover {
 .hero.negative h3,
 .hero.negative h4,
 .hero.negative h5,
-.hero.negative p,
-.hero.negative a {
+.hero.negative p {
   color: #ffffff;
 }
 
@@ -511,8 +506,7 @@ a:hover {
 .section.invert h3,
 .section.invert h4,
 .section.invert h5,
-.section.invert p,
-.section.invert a {
+.section.invert p {
   color: #4a4a4a;
 }
 
@@ -531,8 +525,7 @@ a:hover {
 .section.primary h3,
 .section.primary h4,
 .section.primary h5,
-.section.primary p,
-.section.primary a {
+.section.primary p {
   color: #ffffff;
 }
 
@@ -551,8 +544,7 @@ a:hover {
 .section.secondary h3,
 .section.secondary h4,
 .section.secondary h5,
-.section.secondary p,
-.section.secondary a {
+.section.secondary p {
   color: #4a4a4a;
 }
 
@@ -571,8 +563,7 @@ a:hover {
 .section.positive h3,
 .section.positive h4,
 .section.positive h5,
-.section.positive p,
-.section.positive a {
+.section.positive p {
   color: #ffffff;
 }
 
@@ -591,8 +582,7 @@ a:hover {
 .section.negative h3,
 .section.negative h4,
 .section.negative h5,
-.section.negative p,
-.section.negative a {
+.section.negative p {
   color: #ffffff;
 }
 
@@ -1693,8 +1683,7 @@ a:hover {
 .bb-alert h3,
 .bb-alert h4,
 .bb-alert h5,
-.bb-alert p,
-.bb-alert a {
+.bb-alert p {
   color: #e4e4e4;
 }
 
@@ -1708,8 +1697,7 @@ a:hover {
 .bb-alert.invert h3,
 .bb-alert.invert h4,
 .bb-alert.invert h5,
-.bb-alert.invert p,
-.bb-alert.invert a {
+.bb-alert.invert p {
   color: #4a4a4a;
 }
 
@@ -1723,8 +1711,7 @@ a:hover {
 .bb-alert.primary h3,
 .bb-alert.primary h4,
 .bb-alert.primary h5,
-.bb-alert.primary p,
-.bb-alert.primary a {
+.bb-alert.primary p {
   color: #ffffff;
 }
 
@@ -1738,8 +1725,7 @@ a:hover {
 .bb-alert.secondary h3,
 .bb-alert.secondary h4,
 .bb-alert.secondary h5,
-.bb-alert.secondary p,
-.bb-alert.secondary a {
+.bb-alert.secondary p {
   color: #4a4a4a;
 }
 
@@ -1753,8 +1739,7 @@ a:hover {
 .bb-alert.positive h3,
 .bb-alert.positive h4,
 .bb-alert.positive h5,
-.bb-alert.positive p,
-.bb-alert.positive a {
+.bb-alert.positive p {
   color: #ffffff;
 }
 
@@ -1768,8 +1753,7 @@ a:hover {
 .bb-alert.negative h3,
 .bb-alert.negative h4,
 .bb-alert.negative h5,
-.bb-alert.negative p,
-.bb-alert.negative a {
+.bb-alert.negative p {
   color: #ffffff;
 }
 
@@ -1786,8 +1770,7 @@ a:hover {
 .bb-box h3,
 .bb-box h4,
 .bb-box h5,
-.bb-box p,
-.bb-box a {
+.bb-box p {
   color: #e4e4e4;
 }
 
@@ -1801,8 +1784,7 @@ a:hover {
 .bb-box.invert h3,
 .bb-box.invert h4,
 .bb-box.invert h5,
-.bb-box.invert p,
-.bb-box.invert a {
+.bb-box.invert p {
   color: #4a4a4a;
 }
 
@@ -1816,8 +1798,7 @@ a:hover {
 .bb-box.primary h3,
 .bb-box.primary h4,
 .bb-box.primary h5,
-.bb-box.primary p,
-.bb-box.primary a {
+.bb-box.primary p {
   color: #ffffff;
 }
 
@@ -1831,8 +1812,7 @@ a:hover {
 .bb-box.secondary h3,
 .bb-box.secondary h4,
 .bb-box.secondary h5,
-.bb-box.secondary p,
-.bb-box.secondary a {
+.bb-box.secondary p {
   color: #4a4a4a;
 }
 
@@ -1846,8 +1826,7 @@ a:hover {
 .bb-box.positive h3,
 .bb-box.positive h4,
 .bb-box.positive h5,
-.bb-box.positive p,
-.bb-box.positive a {
+.bb-box.positive p {
   color: #ffffff;
 }
 
@@ -1861,8 +1840,7 @@ a:hover {
 .bb-box.negative h3,
 .bb-box.negative h4,
 .bb-box.negative h5,
-.bb-box.negative p,
-.bb-box.negative a {
+.bb-box.negative p {
   color: #ffffff;
 }
 
@@ -3519,8 +3497,7 @@ a:hover {
 .bb-footer.primary h3,
 .bb-footer.primary h4,
 .bb-footer.primary h5,
-.bb-footer.primary p,
-.bb-footer.primary a {
+.bb-footer.primary p {
   color: #ffffff;
 }
 
@@ -3539,8 +3516,7 @@ a:hover {
 .bb-footer.secondary h3,
 .bb-footer.secondary h4,
 .bb-footer.secondary h5,
-.bb-footer.secondary p,
-.bb-footer.secondary a {
+.bb-footer.secondary p {
   color: #4a4a4a;
 }
 
@@ -3559,8 +3535,7 @@ a:hover {
 .bb-footer.positive h3,
 .bb-footer.positive h4,
 .bb-footer.positive h5,
-.bb-footer.positive p,
-.bb-footer.positive a {
+.bb-footer.positive p {
   color: #ffffff;
 }
 
@@ -3579,8 +3554,7 @@ a:hover {
 .bb-footer.negative h3,
 .bb-footer.negative h4,
 .bb-footer.negative h5,
-.bb-footer.negative p,
-.bb-footer.negative a {
+.bb-footer.negative p {
   color: #ffffff;
 }
 
@@ -4819,8 +4793,7 @@ input + .bb-input-addon:not(:first-child) {
 .bb-jumbotron h3,
 .bb-jumbotron h4,
 .bb-jumbotron h5,
-.bb-jumbotron p,
-.bb-jumbotron a {
+.bb-jumbotron p {
   color: #e4e4e4;
 }
 
@@ -4851,8 +4824,7 @@ input + .bb-input-addon:not(:first-child) {
 .bb-jumbotron.invert h3,
 .bb-jumbotron.invert h4,
 .bb-jumbotron.invert h5,
-.bb-jumbotron.invert p,
-.bb-jumbotron.invert a {
+.bb-jumbotron.invert p {
   color: #4a4a4a;
 }
 
@@ -4871,8 +4843,7 @@ input + .bb-input-addon:not(:first-child) {
 .bb-jumbotron.primary h3,
 .bb-jumbotron.primary h4,
 .bb-jumbotron.primary h5,
-.bb-jumbotron.primary p,
-.bb-jumbotron.primary a {
+.bb-jumbotron.primary p {
   color: #ffffff;
 }
 
@@ -4891,8 +4862,7 @@ input + .bb-input-addon:not(:first-child) {
 .bb-jumbotron.secondary h3,
 .bb-jumbotron.secondary h4,
 .bb-jumbotron.secondary h5,
-.bb-jumbotron.secondary p,
-.bb-jumbotron.secondary a {
+.bb-jumbotron.secondary p {
   color: #4a4a4a;
 }
 
@@ -4911,8 +4881,7 @@ input + .bb-input-addon:not(:first-child) {
 .bb-jumbotron.positive h3,
 .bb-jumbotron.positive h4,
 .bb-jumbotron.positive h5,
-.bb-jumbotron.positive p,
-.bb-jumbotron.positive a {
+.bb-jumbotron.positive p {
   color: #ffffff;
 }
 
@@ -4931,8 +4900,7 @@ input + .bb-input-addon:not(:first-child) {
 .bb-jumbotron.negative h3,
 .bb-jumbotron.negative h4,
 .bb-jumbotron.negative h5,
-.bb-jumbotron.negative p,
-.bb-jumbotron.negative a {
+.bb-jumbotron.negative p {
   color: #ffffff;
 }
 
