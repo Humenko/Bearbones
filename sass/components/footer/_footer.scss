@@ -1,0 +1,16 @@
+.bb-footer {
+    padding: $footer-padding;
+    background: $footer-background;
+    &.primary {
+        @include footer-variant($primary-variant-color, $primary-variant-background);
+    }
+    &.secondary {
+        @include footer-variant($secondary-variant-color, $secondary-variant-background);
+    }
+    &.positive {
+        @include footer-variant($positive-variant-color, $positive-variant-background);
+    }
+    &.negative {
+        @include footer-variant($negative-variant-color, $negative-variant-background);
+    }          
+}

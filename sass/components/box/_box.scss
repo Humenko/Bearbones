@@ -3,6 +3,9 @@
     @include border-radius($border-radius);
     position: relative;
     padding: $box-padding;
+    &.invert {
+        @include alert-variant($invert-variant-color, $invert-variant-background);
+    }    
     &.primary {
         @include box-variant($primary-variant-color, $primary-variant-background);
     }

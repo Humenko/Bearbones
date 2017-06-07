@@ -17,7 +17,7 @@ $white:                       #ffffff !default;
 $grey:                        #4a4a4a !default;
 
 $base-color:                  #4a4a4a !default;
-$base-pair:                   #ffffff !default;
+$base-pair:                   #e4e4e4 !default;
 
 $light-grey:                  #7d7d7d!default;
 $lighter-grey:                #f4f4f4 !default;
@@ -227,6 +227,11 @@ $base-variant-background:           $base-color !default;
 $base-variant-color:                $base-pair !default;
 $base-variant-border:               $base-variant-background !default;
 
+// Invert
+$invert-variant-background:         $base-pair !default;
+$invert-variant-color:              $base-color !default;
+$invert-variant-border:             $invert-variant-background !default;
+
 // Primary
 $primary-variant-background:       $primary-color !default;
 $primary-variant-color:            $primary-pair !default;
@@ -246,3 +251,8 @@ $positive-variant-border:          $positive-variant-background !default;
 $negative-variant-background:      $negative-color !default;
 $negative-variant-color:           $negative-pair !default;
 $negative-variant-border:          $negative-variant-background !default;
+
+//Footer 
+
+$footer-background:                $base-pair !default;
+$footer-padding:                   3rem 0 4rem 0;

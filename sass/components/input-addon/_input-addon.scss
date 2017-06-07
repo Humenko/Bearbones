@@ -22,6 +22,9 @@
     text-align: center;
     background-color: $input-group-addon-background;
     border: $input-border-width solid $input-group-addon-border-color;
+    &.invert {
+        @include input-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+    }    
     &.primary {
         @include input-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
     }

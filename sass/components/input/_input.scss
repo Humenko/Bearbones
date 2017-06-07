@@ -1,6 +1,9 @@
 .bb-input {
     position: relative;
     display: inline-flex;
+    &.invert {
+        @include input-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+    }    
     &.primary {
         @include input-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
     }

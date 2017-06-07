@@ -3,6 +3,9 @@
     @include border-radius($alert-border-radius);
     position: relative;
     @include alert-variant($base-variant-color, $base-variant-background);    
+    &.invert {
+        @include alert-variant($invert-variant-color, $invert-variant-background);
+    }    
     &.primary {
         @include alert-variant($primary-variant-color, $primary-variant-background);
     }

@@ -1,9 +1,18 @@
 .section {
-    padding: $layout-padding*2 $layout-padding*1.5;
+    max-width: 75rem;    
+    margin-left: auto;
+    margin-right: auto;    
+    padding: $layout-padding*2 0;
     &.lg {
         padding-top: $layout-padding-lg;
-        padding-bottom: $layout-padding-lg;        
-    }    
+        padding-bottom: $layout-padding-lg;
+    }
+    &.full-x {
+        max-width: none;
+    }
+    &.invert {
+        @include layout-variant($invert-variant-color, $invert-variant-background);
+    }
     &.primary {
         @include layout-variant($primary-variant-color, $primary-variant-background);
     }
@@ -15,5 +24,5 @@
     }
     &.negative {
         @include layout-variant($negative-variant-color, $negative-variant-background);
-    }   
+    }
 }

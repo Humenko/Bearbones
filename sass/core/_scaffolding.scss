@@ -14,11 +14,18 @@ body {
 	color: $font-color;
 	background: $background;
 	font-size: $body-font-size;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;	
 }
 
 body, p{
     margin: 0;
     padding: 0;
+}
+
+main {
+	flex: 1;
 }
 
 p,

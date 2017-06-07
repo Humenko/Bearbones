@@ -30,6 +30,9 @@
 		display: block;
 		width: 100%;
 	}
+	&.invert {
+		@include button-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+	}
 	&.primary {
 		@include button-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
 	}
@@ -44,6 +47,9 @@
 	}
 	&.outline {
 		@include button-outline-variant($base-variant-background);
+		&.invert {
+			@include button-outline-variant($invert-variant-background);
+		}
 		&.primary {
 			@include button-outline-variant($primary-variant-background);
 		}
@@ -57,19 +63,22 @@
 			@include button-outline-variant($negative-variant-background);
 		}
 	}
-	&.invert {
-		@include button-invert-variant($base-variant-color, $base-variant-background, $base-variant-border);
+	&.inverted {
+		@include button-inverted-variant($base-variant-color, $base-variant-background, $base-variant-border);
+		&.invert {
+			@include button-inverted-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+		}
 		&.primary {
-			@include button-invert-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
+			@include button-inverted-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
 		}
 		&.secondary {
-			@include button-invert-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
+			@include button-inverted-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
 		}
 		&.positive {
-			@include button-invert-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
+			@include button-inverted-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
 		}
 		&.negative {
-			@include button-invert-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+			@include button-inverted-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
 		}
 	}
 	&.loading {
@@ -92,6 +101,9 @@
 			border-style: solid;
 			border-width: $btn-loader-border;
 		}
+		&.invert:after {
+			@include button-loading-variant($invert-variant-color);
+		}
 		&.primary:after {
 			@include button-loading-variant($primary-variant-color);
 		}
@@ -106,6 +118,9 @@
 		}
 		&.outline:after {
 			@include button-loading-variant($base-variant-background);
+		}
+		&.outline.invert:after {
+			@include button-loading-variant($invert-variant-background);
 		}
 		&.outline.primary:after {
 			@include button-loading-variant($primary-variant-background);
@@ -133,19 +148,22 @@
 	position: relative;
 	vertical-align: top;
 	width: $btn-close-size;
-	@include close-variant($base-variant-background, $base-variant-color);	
-		&.primary {
-			@include close-variant($primary-variant-background, $primary-variant-color);
-		}
-		&.secondary {
-			@include close-variant($secondary-variant-background, $secondary-variant-color);
-		}
-		&.positive {
-			@include close-variant($positive-variant-background, $positive-variant-color);
-		}
-		&.negative {
-			@include close-variant($negative-variant-background, $negative-variant-color);
-		}	
+	@include close-variant($base-variant-background, $base-variant-color);
+	&.invert {
+		@include close-variant($invert-variant-background, $invert-variant-color);
+	}
+	&.primary {
+		@include close-variant($primary-variant-background, $primary-variant-color);
+	}
+	&.secondary {
+		@include close-variant($secondary-variant-background, $secondary-variant-color);
+	}
+	&.positive {
+		@include close-variant($positive-variant-background, $positive-variant-color);
+	}
+	&.negative {
+		@include close-variant($negative-variant-background, $negative-variant-color);
+	}
 	&:before,
 	&:after {
 		content: "";
@@ -177,7 +195,7 @@
 		height: $btn-close-size-lg;
 	}
 	&.xl {
-		width: $btn-close-size-xl;		
+		width: $btn-close-size-xl;
 		height: $btn-close-size-xl;
 	}
 }
