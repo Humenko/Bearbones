@@ -56,7 +56,7 @@ $font-variant:                  normal !default;
 $font-weight:                   normal !default;
 $font-color:                  #4a4a4a !default;
 $font-family:                   -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
-$line-height:                   1.2 !default;
+$line-height:                   1.4 !default;
 
 // Headings
 $heading-font-color:          #4a4a4a !default;
@@ -66,7 +66,8 @@ $heading-line-height:           1.6 !default;
 
 //Title
 
-$title-spacing:                 1.5rem;
+$title-spacing:                 1.5rem !default;
+$title-line-height:             1.2 !default;
 $subtitle-font-size:            $font-size-xl;
 
 /* Spacing */
@@ -86,7 +87,7 @@ $border-radius-circle:          50% !default;
 
 $link-color:                    $primary-color !default;
 $link-decoration:               none !default;
-$link-hover-color:              darken($link-color, 10%) !default;
+$link-hover-color:              darken($link-color, 20%) !default;
 $link-hover-decoration:         underline !default;
 
 //* Layout *//
