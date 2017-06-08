@@ -113,6 +113,7 @@ sub {
 
 img {
   border: 0;
+  display: block;
 }
 
 svg:not(:root) {
@@ -120,7 +121,7 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 hr {
@@ -240,7 +241,7 @@ th {
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font: normal normal normal 1rem/1.6 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: normal normal normal 1rem/1.4 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 
@@ -261,6 +262,7 @@ body {
 body, p {
   margin: 0;
   padding: 0;
+  line-height: 1.4;
 }
 
 main {
@@ -274,7 +276,7 @@ ol,
 ul,
 dl,
 table {
-  margin: 0 0 1.5rem 0;
+  margin: 0;
 }
 
 ul li ul {
@@ -318,8 +320,7 @@ a {
 }
 
 a:hover {
-  color: #1c9785;
-  text-decoration: underline;
+  color: #146c5f;
 }
 
 .container {
@@ -1955,6 +1956,10 @@ a:hover {
   width: 100%;
 }
 
+.no-border.bb-btn {
+  border-radius: 0rem;
+}
+
 .invert.bb-btn {
   color: #4a4a4a;
   background-color: #ffffff;
@@ -2696,6 +2701,10 @@ a:hover {
   width: 100%;
 }
 
+.no-border.bb-btn {
+  border-radius: 0rem;
+}
+
 .invert.bb-btn {
   color: #4a4a4a;
   background-color: #ffffff;
@@ -3386,8 +3395,26 @@ a:hover {
   }
 }
 
+.bb-btns.full-x {
+  width: 100%;
+}
+
+.bb-btns.no-border {
+  border-radius: 0rem;
+}
+
+.bb-btns.no-border .bb-btn:first-child {
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.bb-btns.no-border .bb-btn:last-child {
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
 .bb-btns .bb-btn {
-  border-radius: 0;
+  border-radius: 0rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -3656,9 +3683,13 @@ h5 {
   font-size: 1.2;
 }
 
+.title {
+  line-height: 1.2;
+}
+
 .title:not(:last-child),
 .subtitle:not(:last-child) {
-  margin: 0 0 1.3rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .title + .subtitle {
@@ -3667,7 +3698,7 @@ h5 {
 
 @media (min-width: 40rem) {
   .title + .subtitle {
-    margin: -1.3rem 0 0 0;
+    margin: -1.5rem 0 0 0;
   }
 }
 
@@ -3869,6 +3900,10 @@ h5 {
 .full-x.bb-btn {
   display: block;
   width: 100%;
+}
+
+.no-border.bb-btn {
+  border-radius: 0rem;
 }
 
 .invert.bb-btn {
@@ -4976,7 +5011,7 @@ input + .bb-input-addon:not(:first-child) {
   margin: 0 0.15rem;
 }
 
-.bb-pagination.borderless .item {
+.bb-pagination.no-border .item {
   border: none;
 }
 
