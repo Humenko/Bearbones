@@ -1,0 +1,10 @@
+@function setInvertedColour($color) {
+    $base-color: #4a4a4a !default;
+    $base-pair: #ffffff !default;
+    @if (lightness($color) > 55) {
+        @return $base-color;
+    }
+    @else {
+        @return $base-pair;
+    }
+}
