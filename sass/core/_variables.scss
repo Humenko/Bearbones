@@ -33,7 +33,7 @@ $breakpoints: (
 // Grid 
 
 $max-column:                    16 !default;
-$grid-padding:                  0.5rem !default;
+$grid-spacing:                  0.5rem !default;
 
 // Font sizes 
 
@@ -56,7 +56,7 @@ $font-variant:                  normal !default;
 $font-weight:                   normal !default;
 $font-color:                  #4a4a4a !default;
 $font-family:                   -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
-$line-height:                   1.6 !default;
+$line-height:                   1.4 !default;
 
 // Headings
 $heading-font-color:          #4a4a4a !default;
@@ -66,7 +66,8 @@ $heading-line-height:           1.2 !default;
 
 //Title
 
-$title-padding:                 1.3rem;
+$title-spacing:                 1.5rem !default;
+$title-line-height:             $heading-line-height !default;
 $subtitle-font-size:            $font-size-xl;
 
 /* Spacing */
@@ -86,13 +87,13 @@ $border-radius-circle:          50% !default;
 
 $link-color:                    $primary-color !default;
 $link-decoration:               none !default;
-$link-hover-color:              darken($link-color, 10%) !default;
+$link-hover-color:              darken($link-color, 20%) !default;
 $link-hover-decoration:         underline !default;
 
 //* Layout *//
 
-$layout-padding:                  $padding !default;
-$layout-padding-lg:               $padding*4 !default;
+$layout-spacing:                  $padding !default;
+$layout-spacing-lg:               $padding*4 !default;
 
 // Base
 $layout-background:               $lighter-grey !default;
@@ -113,7 +114,7 @@ $btn-border-color:              $btn-background !default;
 $btn-border-radius:             $border-radius !default;
 $btn-text-transform:            none !default;
 $btn-line-height:               1.25 !default;
-$btn-padding:                   .5rem !default;
+$btn-spacing:                   .5rem !default;
 $btn-transition:                $transition-duration all $transition-effect !default;
 
 $btn-close-size:                1.25rem;
@@ -126,7 +127,7 @@ $btn-close-transform:           translateX(-50%) translateY(-50%) rotate(45deg);
 
 // Box 
 
-$box-padding:                   1rem !default;
+$box-spacing:                   1rem !default;
 
 // Loading buttons 
 $btn-loader-size:               .75rem !default;
@@ -137,8 +138,8 @@ $btn-loader-circle:             50% !default;
 
 //* Breadcrumbs *//
 
-$breadcrumb-padding-y:          .75rem !default;
-$breadcrumb-padding-x:          1rem !default;
+$breadcrumb-spacing-y:          .75rem !default;
+$breadcrumb-spacing-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
 $breadcrumb-background:                 transparent !default;
@@ -197,7 +198,7 @@ $input-group-addon-border-color: $input-group-addon-background!default;
 
 //* Jumbotron *//
 
-$jumbotron-padding:                  $padding !default;
+$jumbotron-spacing:                  $padding !default;
 $jumbotron-border-radius:            $border-radius*2 !default;
 
 //* Pagination *//
@@ -255,3 +256,9 @@ $negative-variant-border:          $negative-variant-background !default;
 
 $footer-background:                $lighter-grey !default;
 $footer-padding:                   3rem 0 4rem 0;
+
+//Card 
+
+$card-spacing:                     $padding !default;
+$card-box-shadow:                  0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !default;
+$card-border-radius:               $border-radius !default;

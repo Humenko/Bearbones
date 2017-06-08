@@ -2,7 +2,7 @@
     @include box-variant($base-variant-color, $base-variant-background);
     @include border-radius($border-radius);
     position: relative;
-    padding: $box-padding;
+    padding: $box-spacing;
     &.invert {
         @include alert-variant($invert-variant-color, $invert-variant-background);
     }    
@@ -20,7 +20,7 @@
     }
     .close {
         position: absolute;
-        right: $box-padding;
-        top: $box-padding;
+        right: $box-spacing;
+        top: $box-spacing;
     }
 }

@@ -7,8 +7,22 @@
     @include respond-to('md') {
         width: auto;
     }
+    &.full-x {
+        width: 100%;
+    }
+    &.no-border {
+        @include border-radius($no-border-radius);
+        %buttons {
+            &:first-child {
+                @include border-left-radius($no-border-radius);
+            }
+            &:last-child {
+                @include border-right-radius($no-border-radius);
+            }
+        }
+    }
     %buttons {
-        @include border-radius(0);
+        @include border-radius($no-border-radius);
         flex: 1;
         &:first-child {
             @include border-left-radius($btn-border-radius);

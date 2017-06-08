@@ -6,26 +6,26 @@
     flex-shrink: 1;
     min-height: min-content;
     &.grand-parent {
-        margin-left: -$grid-padding;
-        margin-right: -$grid-padding;
-        margin-top: -$grid-padding;
+        margin-left: -$grid-spacing;
+        margin-right: -$grid-spacing;
+        margin-top: -$grid-spacing;
         &:last-child {
-            margin-bottom: -$grid-padding;
+            margin-bottom: -$grid-spacing;
         }
         &:not(:last-child) {
-            margin-bottom: $grid-padding;
+            margin-bottom: $grid-spacing;
         }
     }
     &.child {
         margin: 0;
     }
     &.parent {
-        padding: $grid-padding;
+        padding: $grid-spacing;
     }
     &.vertical {
         flex-direction: column;
         &>.bb-family-grid.child:not(:last-child) {
-            margin-bottom: $grid-padding*2;
+            margin-bottom: $grid-spacing*2;
         }
     }
     @include respond-to('lg') {
