@@ -139,7 +139,7 @@
 
 .close {
 	border: none;
-	border-radius: $border-radius-circle;
+	@include border-radius($border-radius-circle);	
 	cursor: pointer;
 	display: inline-block;
 	font-size: $font-size;
