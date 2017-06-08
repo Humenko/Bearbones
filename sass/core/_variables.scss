@@ -67,7 +67,7 @@ $heading-line-height:           1.2 !default;
 //Title
 
 $title-spacing:                 1.5rem !default;
-$title-line-height:             1.2 !default;
+$title-line-height:             $heading-line-height !default;
 $subtitle-font-size:            $font-size-xl;
 
 /* Spacing */
