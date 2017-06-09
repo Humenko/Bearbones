@@ -6,7 +6,7 @@
         align-items: center;
     }
     .media {
-        @include border-top($border-width, $border-style, $lighter-grey);
+        @include border-top($border-width, $border-style, $media-divider-color);
         display: flex;
         padding-top: $media-spacing/1.5;
     }

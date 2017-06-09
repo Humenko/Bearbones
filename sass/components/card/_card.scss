@@ -60,7 +60,7 @@
     }
   }
   .card-footer {
-    @include border-top($btn-border-width, $btn-border-style, $lighter-grey);	    
+    @include border-top($btn-border-width, $btn-border-style, $card-border-color);	    
     align-items: stretch;
     display: flex;
     .footer-item {
