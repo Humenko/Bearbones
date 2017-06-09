@@ -18,6 +18,21 @@
     &.negative {
         @include box-variant($negative-variant-color, $negative-variant-background);
     }
+    &.outline {  
+        @include box-outline-variant($base-variant-background);        
+        &.primary {
+            @include box-outline-variant($primary-variant-background);
+        }
+        &.secondary {
+            @include box-outline-variant($secondary-variant-background);
+        }
+        &.positive {
+            @include box-outline-variant($positive-variant-background);
+        }
+        &.negative {
+            @include box-outline-variant($negative-variant-background);
+        }      
+    }
     .close {
         position: absolute;
         right: $box-spacing;
