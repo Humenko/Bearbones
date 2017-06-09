@@ -48,10 +48,7 @@
   }
 
   .title+.subtitle {
-    margin: 0;
-    @include respond-to('md') {
       margin: -$title-spacing 0 0 0;
-    }
   }
 
   .subtitle {

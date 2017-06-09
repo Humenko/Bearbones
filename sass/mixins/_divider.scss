@@ -1,6 +1,6 @@
  @mixin divider-border($divider-border-width, $divider-border-style, $divider-color) {
-     border-top: $divider-border-width $divider-border-style $divider-color;
-     border-bottom: $divider-border-width $divider-border-style $divider-color;
+     @include border-top($divider-border-width, $divider-border-style, $divider-color);     
+     @include border-bottom($divider-border-width, $divider-border-style, $divider-color);     
  }
 
  @mixin divider-content-border($divider-content-border-width, $divider-color) {
