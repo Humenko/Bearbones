@@ -2,7 +2,7 @@
 	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	-webkit-appearance: none;
 	display: inline-block;
-	border: $btn-border-width $btn-border-style $base-variant-border;
+    @include border($btn-border-width, $btn-border-style, $base-variant-border);	
 	@include border-radius($btn-border-radius);
 	font-weight: $btn-font-weight;
 	font-size: $btn-font-size;
@@ -141,7 +141,7 @@
 }
 
 .close {
-	border: none;
+	border: 0;
 	@include border-radius($border-radius-circle);	
 	cursor: pointer;
 	display: inline-block;
