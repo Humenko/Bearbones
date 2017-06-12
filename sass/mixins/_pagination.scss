@@ -21,3 +21,25 @@
             }
         }
 }
+
+@mixin outline-pagination-variant($outline-pagination-background) {
+        .item,.dot {
+            $outline-pagination-active-background: lighten($outline-pagination-background, 50%);
+            color: $outline-pagination-background;
+            background-color: $white;
+            border-color: $outline-pagination-background;
+            @include hover {
+                background-color: $outline-pagination-active-background;
+                text-decoration: none;
+            }
+            &.disabled,
+            &:disabled {
+                pointer-events: none;
+                cursor: not-allowed;
+            }
+            &:active,
+            &.active {
+                background-color: $outline-pagination-active-background;
+            }
+        }
+}

@@ -6,7 +6,7 @@
     .item {
         font-size: $pagination-font-size;
         font-weight: $pagination-font-weight;
-        @include border-top($pagination-border-width, $pagination-border-style, $base-variant-border);	        
+        @include border-top($pagination-border-width, $pagination-border-style, $base-variant-border);
         @include border-bottom($pagination-border-width, $pagination-border-style, $base-variant-border);
         @include border-left($pagination-border-width, $pagination-border-style, $base-variant-border);
         padding: $pagination-padding $pagination-padding+.5;
@@ -14,7 +14,7 @@
         text-align: center;
         cursor: pointer;
         text-decoration: none;
-        @include transition($pagination-transition);        
+        @include transition($pagination-transition);
         &:first-child {
             @include border-left-radius($pagination-border-radius);
         }
@@ -25,10 +25,10 @@
     }
     .dot {
         padding: $dot-padding;
-        @include border-radius($dot-border-radius);        
+        @include border-radius($dot-border-radius);
         cursor: pointer;
         text-decoration: none;
-        @include transition($pagination-transition);        
+        @include transition($pagination-transition);
         &:not(:first-child),
         &:not(:last-child) {
             margin: 0 $pagination-margin;
@@ -38,10 +38,10 @@
         .item {
             border: 0;
         }
-    }   
+    }
     &.invert {
         @include pagination-variant($invert-variant-color, $invert-variant-background);
-    }     
+    }
     &.primary {
         @include pagination-variant($primary-variant-color, $primary-variant-background);
     }
@@ -53,6 +53,24 @@
     }
     &.negative {
         @include pagination-variant($negative-variant-color, $negative-variant-background);
+    }
+    &.outline {
+        @include outline-pagination-variant($base-variant-background);        
+        &.invert {
+            @include outline-pagination-variant($invert-variant-background);
+        }
+        &.primary {
+            @include outline-pagination-variant($primary-variant-background);
+        }
+        &.secondary {
+            @include outline-pagination-variant($secondary-variant-background);
+        }
+        &.positive {
+            @include outline-pagination-variant($positive-variant-background);
+        }
+        &.negative {
+            @include outline-pagination-variant($negative-variant-background);
+        }
     }
     &.sm {
         .item {

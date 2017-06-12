@@ -43,18 +43,8 @@
   &.xs {
     @include grid;
   }
-  @include respond-to('sm') {
-    &.sm {
-      @include grid;
-    }
-  }
-  @include respond-to('md') {
-    &.md {
-      @include grid;
-    }
-  }
-  @include respond-to('lg') {
-    &.lg {
+  @each $breakpoint in map-keys($breakpoints) {
+    &.#{$breakpoint} {
       @include grid;
     }
   }
