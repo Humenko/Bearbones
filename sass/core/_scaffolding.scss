@@ -22,6 +22,7 @@ body {
 body, p{
     margin: 0;
     padding: 0;
+    line-height: $line-height;	
 }
 
 main {
@@ -33,7 +34,7 @@ ol,
 ul,
 dl,
 table {
-	margin: 0 0 $margin 0;
+	margin: 0;
 }
 
 // Remove extra margin for nested lists
@@ -75,6 +76,5 @@ a {
 	-webkit-text-decoration-skip: objects;
 	&:hover {
 		color: $link-hover-color;
-		text-decoration: $link-hover-decoration;
 	}
 }

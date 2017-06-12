@@ -8,8 +8,7 @@
   h2,
   h3,
   h4,
-  h5
-  {
+  h5 {
     line-height: 1.2;
     margin: 0;
   }
@@ -39,16 +38,17 @@
     @include heading-font-size($min_width, $max_width, $mod_1, $mod_2);
   }
 
+  .title {
+    line-height: $title-line-height;     
+  }
+
   .title:not(:last-child),
   .subtitle:not(:last-child) {
-      margin: 0 0 $title-padding 0;
+    margin: 0 0 $title-spacing 0;
   }
 
   .title+.subtitle {
-    margin: 0;
-    @include respond-to('md') {
-      margin: -$title-padding 0 0 0;
-    }
+      margin: -$title-spacing 0 0 0;
   }
 
   .subtitle {

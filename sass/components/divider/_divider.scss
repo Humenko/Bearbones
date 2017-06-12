@@ -4,10 +4,10 @@
     height: 0em;
     font-weight: $divider-font-weight;
     user-select: none;
-    &:not(.content) {
+    &:not(.divider-content) {
         @include divider-border($divider-border-width, $divider-border-style, $divider-color);
     }
-    &.content {
+    &.divider-content {
         display: table;
         white-space: nowrap;
         height: auto;

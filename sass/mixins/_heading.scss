@@ -1,7 +1,3 @@
-@function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
-}
-
 @mixin heading-font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
     $u1: unit($min-vw);
     $u2: unit($max-vw);

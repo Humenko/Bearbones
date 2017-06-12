@@ -35,7 +35,7 @@
         flex: 1 1 auto;
         width: 1%;
         margin-bottom: 0;
-        border: $input-border-width solid $input-border-color;
+        @include border($input-border-width, $border-style, $input-border-color);	        
         @include border-radius($input-border-radius);
         @include transition($input-transition);
         &::placeholder {

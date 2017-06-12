@@ -2,12 +2,12 @@
 	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	-webkit-appearance: none;
 	display: inline-block;
-	border: $btn-border-width $btn-border-style $base-variant-border;
+    @include border($btn-border-width, $btn-border-style, $base-variant-border);	
 	@include border-radius($btn-border-radius);
 	font-weight: $btn-font-weight;
 	font-size: $btn-font-size;
 	text-transform: $btn-text-transform;
-	padding: $btn-padding $btn-padding+.75;
+	padding: $btn-spacing $btn-spacing+.75;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
@@ -29,6 +29,9 @@
 	&.full-x {
 		display: block;
 		width: 100%;
+	}
+	&.no-border {
+		@include border-radius($no-border-radius);		
 	}
 	&.invert {
 		@include button-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
@@ -138,8 +141,8 @@
 }
 
 .close {
-	border: none;
-	border-radius: $border-radius-circle;
+	border: 0;
+	@include border-radius($border-radius-circle);	
 	cursor: pointer;
 	display: inline-block;
 	font-size: $font-size;

@@ -1,10 +1,10 @@
 .bb-jumbotron {
-    padding: $jumbotron-padding ($jumbotron-padding / 2);
-    margin-bottom: $jumbotron-padding;
+    padding: $jumbotron-spacing ($jumbotron-spacing / 2);
+    margin-bottom: $jumbotron-spacing;
     @include border-radius($jumbotron-border-radius);
     @include jumbotron-variant($base-variant-color, $base-variant-background);
     @include respond-to('md') {
-        padding: ($jumbotron-padding * 3) ($jumbotron-padding * 2);
+        padding: ($jumbotron-spacing * 3) ($jumbotron-spacing * 2);
     }
     &.full-x {
         padding-right: 0;
