@@ -7,25 +7,35 @@ $property-abbrev in (margin: m, padding: p) {
         .#{$property-abbrev}-#{$size} {
             #{$property}: $coordinate-y $coordinate-x;
         }
-        .#{$property-abbrev}t-#{$size} {
+        .#{$property-abbrev}-t-#{$size} {
             #{$property}-top: $coordinate-y;
         }
-        .#{$property-abbrev}r-#{$size} {
+        .#{$property-abbrev}-r-#{$size} {
             #{$property}-right: $coordinate-x;
         }
-        .#{$property-abbrev}b-#{$size} {
+        .#{$property-abbrev}-b-#{$size} {
             #{$property}-bottom: $coordinate-y;
         }
-        .#{$property-abbrev}l-#{$size} {
+        .#{$property-abbrev}-l-#{$size} {
             #{$property}-left: $coordinate-x;
         }
-        .#{$property-abbrev}x-#{$size} {
+        .#{$property-abbrev}-x-#{$size} {
             #{$property}-right: $coordinate-x;
             #{$property}-left: $coordinate-x;
         }
-        .#{$property-abbrev}y-#{$size} {
+        .#{$property-abbrev}-y-#{$size} {
             #{$property}-top: $coordinate-y;
             #{$property}-bottom: $coordinate-y;
         }
     }
+}
+
+.m-x-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.m-y-auto {
+    margin-top: auto;
+    margin-bottom: auto;
 }
