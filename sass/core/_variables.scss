@@ -24,11 +24,11 @@ $lighter-grey:                #f4f4f4 !default;
 // Breakpoints
 
 $breakpoints: (
-  'sm' : 20rem, // 320px
-  'md' : 40rem, // 640px
-  'lg' : 57.5rem, // 920px
-  'xl' : 75rem, // 1200px
-  );
+  sm : 20rem, // 320px
+  md : 40rem, // 640px
+  lg : 57.5rem, // 920px
+  xl : 75rem, // 1200px
+  ) !default;
 
 // Grid 
 
@@ -54,13 +54,14 @@ $body-font-size:                1rem !default;
 $font-style:                    normal !default;
 $font-variant:                  normal !default;
 $font-weight:                   normal !default;
+$font-weight-bold:              700 !default;
 $font-color:                  #4a4a4a !default;
 $font-family:                   -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $line-height:                   1.4 !default;
 
 // Headings
 $heading-font-color:          #4a4a4a !default;
-$heading-font-weight:           600 !default;
+$heading-font-weight:           $font-weight-bold !default;
 $heading-font-family:           -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $heading-line-height:           1.2 !default;
 
