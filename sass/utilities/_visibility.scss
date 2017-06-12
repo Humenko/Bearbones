@@ -1,0 +1,12 @@
+@each $breakpoint in map-keys($breakpoints) {
+    .hidden-#{$breakpoint}-up {
+        @include media-breakpoint-up($breakpoint) {
+            display: none !important;
+        }
+    }
+    .hidden-#{$breakpoint}-down {
+        @include media-breakpoint-down($breakpoint) {
+            display: none !important;
+        }
+    }
+}
