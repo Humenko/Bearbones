@@ -44,8 +44,10 @@
     @include grid;
   }
   @each $breakpoint in map-keys($breakpoints) {
-    &.#{$breakpoint} {
-      @include grid;
+    @include respond-to($breakpoint) {
+      &.#{$breakpoint} {
+        @include grid;
+      }
     }
   }
 }
