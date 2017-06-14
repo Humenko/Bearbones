@@ -1,0 +1,10 @@
+ul.unstyled {
+    @include list-unstyled;
+}
+
+ul.inline {
+    @include list-unstyled;
+    .inline-item {
+        display: inline-block;
+    }
+}

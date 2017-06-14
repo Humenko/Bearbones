@@ -1,11 +1,15 @@
-@mixin button-variant($btn-color, $btn-background, $btn-border) {
-    $btn-active-background: darken($btn-background, 10%);
-    $btn-active-border: darken($btn-border, 12%);
-    color: $btn-color;
-    background-color: $btn-background;
-    border-color: $btn-border;
+@mixin button-size($font-size) {
+    font-size: $font-size;
+}
+
+@mixin button-variant($color, $background, $border) {
+    $btn-active-background: darken($background, 10%);
+    $btn-active-border: darken($border, 12%);
+    color: $color;
+    background-color: $background;
+    border-color: $border;
     @include hover {
-        color: $btn-color;
+        color: $color;
         background-color: $btn-active-background;
         border-color: $btn-active-border;
     }
@@ -17,18 +21,18 @@
     }
     &:active,
     &.active {
-        color: $btn-color;
+        color: $color;
         background-color: $btn-active-background;
         border-color: $btn-active-border;
     }
 }
 
-@mixin button-outline-variant($btn-color) {
-    $btn-active-color: darken($btn-color, 20%);
-    color: $btn-color;
+@mixin button-outline-variant($color) {
+    $btn-active-color: darken($color, 20%);
+    color: $color;
     background-color: transparent;
     background-image: none;
-    border-color: $btn-color;
+    border-color: $color;
     @include hover {
         color: $btn-active-color;
         border-color: $btn-active-color;
@@ -41,17 +45,17 @@
     }
     &:active,
     &.active {
-        color: $btn-color;
+        color: $color;
         border-color: $btn-active-color;
     }
 }
 
-@mixin button-inverted-variant($btn-color, $btn-background, $btn-border) {
-    $btn-active-background: $btn-color;
-    $btn-active-color: $btn-background;    
-    color: $btn-color;
-    background-color: $btn-background;
-    border-color: $btn-border;
+@mixin button-inverted-variant($color, $background, $border) {
+    $btn-active-background: $color;
+    $btn-active-color: $background;    
+    color: $color;
+    background-color: $background;
+    border-color: $border;
     @include hover {
         background-color: $btn-active-background;
         color: $btn-active-color;  
@@ -69,8 +73,8 @@
     }
 }
 
-@mixin button-loading-variant($btn-color) {
-	border-color: $btn-color transparent transparent;
+@mixin button-loading-variant($color) {
+	border-color: $color transparent transparent;
     &.disabled,
     &:disabled {
         opacity: 0.7;
@@ -79,13 +83,18 @@
     }
 }
 
-@mixin close-variant($close-background, $close-color) {
-    background-color: darken($close-background, 10%);   
+@mixin close-variant($background, $color) {
+    background-color: darken($background, 10%);   
 	&:before,
 	&:after {
-		background-color: $close-color;
+		background-color: $color;
     }    
     @include hover-focus-active {
-        background-color: darken($close-background, 20%);   
+        background-color: darken($background, 20%);   
     } 
+}
+
+@mixin close-size($width, $height) {
+    width: $width;
+    height: $height;
 }

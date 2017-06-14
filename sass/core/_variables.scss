@@ -24,11 +24,11 @@ $lighter-grey:                #f4f4f4 !default;
 // Breakpoints
 
 $breakpoints: (
-  'sm' : 20rem, // 320px
-  'md' : 40rem, // 640px
-  'lg' : 57.5rem, // 920px
-  'xl' : 75rem, // 1200px
-  );
+  sm : 20rem, // 320px
+  md : 40rem, // 640px
+  lg : 57.5rem, // 920px
+  xl : 75rem, // 1200px
+  ) !default;
 
 // Grid 
 
@@ -46,7 +46,7 @@ $font-size-xl:                  1.30rem !default;
 $transition-effect:             ease-in-out !default;
 $transition-duration:           .25s !default;
 
-/* Typography */
+//* Typography *//
 
 // Body font
 $font-size:                     1rem !default;
@@ -54,13 +54,14 @@ $body-font-size:                1rem !default;
 $font-style:                    normal !default;
 $font-variant:                  normal !default;
 $font-weight:                   normal !default;
+$font-weight-bold:              700 !default;
 $font-color:                  #4a4a4a !default;
 $font-family:                   -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $line-height:                   1.4 !default;
 
 // Headings
 $heading-font-color:          #4a4a4a !default;
-$heading-font-weight:           600 !default;
+$heading-font-weight:           $font-weight-bold !default;
 $heading-font-family:           -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $heading-line-height:           1.2 !default;
 
@@ -70,12 +71,12 @@ $title-spacing:                 1.5rem !default;
 $title-line-height:             $heading-line-height !default;
 $subtitle-font-size:            $font-size-xl;
 
-/* Spacing */
+//* Spacing *//
 
 $padding:                       1rem !default;
 $margin:                        1.5rem !default;
 
-/* Borders */
+//* Borders *//
 
 $border-width:                  .125rem !default;
 $border-style:                  solid !default;
@@ -87,7 +88,6 @@ $border-radius-circle:          50% !default;
 
 $link-color:                    $primary-color !default;
 $link-decoration:               none !default;
-$link-hover-color:              darken($link-color, 20%) !default;
 $link-hover-decoration:         underline !default;
 
 //* Layout *//
@@ -268,3 +268,35 @@ $card-border-radius:               $border-radius !default;
 
 $media-spacing:                    $padding !default;
 $media-divider-color:              $lighter-grey !default;
+
+// Spacing 
+
+$spacer:   $padding !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+) !default;

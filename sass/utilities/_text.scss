@@ -1,0 +1,64 @@
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-xs {
+    @include text-size($font-size-xs)
+}
+
+.text-sm {
+    @include text-size($font-size-sm)
+}
+
+.text-lg {
+    @include text-size($font-size-lg)
+}
+
+.text-xl {
+    @include text-size($font-size-xl)
+}
+
+.font-weight-normal {
+    font-weight: $font-weight;
+}
+
+.font-weight-bold {
+    font-weight: $font-weight-bold;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+@include text-variant('.text-primary', $primary-color);
+@include text-variant('.text-secondary', $primary-color);
+@include text-variant('.text-positive', $primary-color);
+@include text-variant('.text-negative', $primary-color);
