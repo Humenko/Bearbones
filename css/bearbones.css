@@ -233,11 +233,6 @@ th {
   padding: 0;
 }
 
-/* Typography */
-/* Spacing */
-/* Borders */
-/* Scaffolding
-  =============== */
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2775,11 +2770,11 @@ a:hover {
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
-  height: 1.25rem;
   outline: none;
   position: relative;
   vertical-align: top;
   width: 1.25rem;
+  height: 1.25rem;
   background-color: #313131;
 }
 
@@ -2874,17 +2869,17 @@ a:hover {
 }
 
 .close.xs {
-  width: 1.65rem;
+  width: 0.85rem;
   height: 0.85rem;
 }
 
 .close.sm {
-  width: 1.65rem;
+  width: 1.05rem;
   height: 1.05rem;
 }
 
 .close.lg {
-  width: 1.65rem;
+  width: 1.45rem;
   height: 1.45rem;
 }
 
@@ -3520,11 +3515,11 @@ a:hover {
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
-  height: 1.25rem;
   outline: none;
   position: relative;
   vertical-align: top;
   width: 1.25rem;
+  height: 1.25rem;
   background-color: #313131;
 }
 
@@ -3619,17 +3614,17 @@ a:hover {
 }
 
 .close.xs {
-  width: 1.65rem;
+  width: 0.85rem;
   height: 0.85rem;
 }
 
 .close.sm {
-  width: 1.65rem;
+  width: 1.05rem;
   height: 1.05rem;
 }
 
 .close.lg {
-  width: 1.65rem;
+  width: 1.45rem;
   height: 1.45rem;
 }
 
@@ -3750,8 +3745,8 @@ a:hover {
 }
 
 .bb-card.no-border .card-image img {
-  border-top-right-radius: 0rem;
   border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
 }
 
 .bb-card.invert {
@@ -3805,8 +3800,8 @@ a:hover {
 
 .bb-card .card-image img {
   width: 100%;
-  border-top-right-radius: 0.2rem;
   border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
 }
 
 .bb-card .card-content {
@@ -4837,11 +4832,11 @@ h5 {
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
-  height: 1.25rem;
   outline: none;
   position: relative;
   vertical-align: top;
   width: 1.25rem;
+  height: 1.25rem;
   background-color: #313131;
 }
 
@@ -4936,17 +4931,17 @@ h5 {
 }
 
 .close.xs {
-  width: 1.65rem;
+  width: 0.85rem;
   height: 0.85rem;
 }
 
 .close.sm {
-  width: 1.65rem;
+  width: 1.05rem;
   height: 1.05rem;
 }
 
 .close.lg {
-  width: 1.65rem;
+  width: 1.45rem;
   height: 1.45rem;
 }
 
@@ -5425,12 +5420,12 @@ input + .bb-input-addon:not(:first-child) {
 
 .bb-pagination .item {
   font-size: 1rem;
+  min-width: 3rem;
   font-weight: 500;
   border-top: 0.0625rem solid #4a4a4a;
   border-bottom: 0.0625rem solid #4a4a4a;
   border-left: 0.0625rem solid #4a4a4a;
   padding: 0.5rem 1rem;
-  min-width: 3rem;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -5924,8 +5919,17 @@ input + .bb-input-addon:not(:first-child) {
 }
 
 ul.unstyled {
+  padding-left: 0;
   list-style: none;
-  padding: 0;
+}
+
+ul.inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.inline .inline-item {
+  display: inline-block;
 }
 
 .m-0 {
@@ -6358,51 +6362,83 @@ ul.unstyled {
   font-style: italic;
 }
 
+.text-primary {
+  color: #24C2AB;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #146c5f;
+}
+
+.text-secondary {
+  color: #24C2AB;
+}
+
+a.text-secondary:hover, a.text-secondary:focus {
+  color: #146c5f;
+}
+
+.text-positive {
+  color: #24C2AB;
+}
+
+a.text-positive:hover, a.text-positive:focus {
+  color: #146c5f;
+}
+
+.text-negative {
+  color: #24C2AB;
+}
+
+a.text-negative:hover, a.text-negative:focus {
+  color: #146c5f;
+}
+
 @media (min-width: 20rem) {
   .hidden-sm-up {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (max-width: 19.9375rem) {
   .hidden-sm-down {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (min-width: 40rem) {
   .hidden-md-up {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (max-width: 39.9375rem) {
   .hidden-md-down {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (min-width: 57.5rem) {
   .hidden-lg-up {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (max-width: 57.4375rem) {
   .hidden-lg-down {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (min-width: 75rem) {
   .hidden-xl-up {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (max-width: 74.9375rem) {
   .hidden-xl-down {
-    display: none !important;
+    display: none;
   }
 }
 
