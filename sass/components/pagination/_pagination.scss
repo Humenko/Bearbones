@@ -4,13 +4,12 @@
     display: inline-flex;
     vertical-align: middle;
     .item {
-        font-size: $pagination-font-size;
+        @include pagination-size($pagination-font-size, 3rem);
         font-weight: $pagination-font-weight;
         @include border-top($pagination-border-width, $pagination-border-style, $base-variant-border);
         @include border-bottom($pagination-border-width, $pagination-border-style, $base-variant-border);
         @include border-left($pagination-border-width, $pagination-border-style, $base-variant-border);
         padding: $pagination-padding $pagination-padding+.5;
-        min-width: 3rem;
         text-align: center;
         cursor: pointer;
         text-decoration: none;
@@ -74,14 +73,12 @@
     }
     &.sm {
         .item {
-            font-size: $font-size-sm;
-            min-width: 2rem;
+            @include pagination-size($font-size-sm, 2rem);
         }
     }
     &.lg {
         .item {
-            font-size: $font-size-lg;
-            min-width: 4rem;
+            @include pagination-size($font-size-lg, 4rem);
         }
     }
 }

@@ -10,8 +10,7 @@
   &.no-border {
     @include border-radius($no-border-radius);
     .card-image img {
-      border-top-right-radius: $no-border-radius;
-      border-top-left-radius: $no-border-radius;
+      @include border-top-radius($no-border-radius);
     }
   }
   &.invert {
@@ -31,7 +30,7 @@
   }
   .card-header {
     align-items: stretch;
-    @include border-bottom($border-width, $border-style, $card-border-color);             
+    @include border-bottom($border-width, $border-style, $card-border-color);
     display: flex;
     .header-title {
       align-items: center;
@@ -46,8 +45,7 @@
     position: relative;
     img {
       width: 100%;
-      border-top-right-radius: $card-border-radius;
-      border-top-left-radius: $card-border-radius;
+      @include border-top-radius($card-border-radius);
     }
   }
   .card-content {
@@ -60,7 +58,7 @@
     }
   }
   .card-footer {
-    @include border-top($btn-border-width, $btn-border-style, $card-border-color);	    
+    @include border-top($btn-border-width, $btn-border-style, $card-border-color);
     align-items: stretch;
     display: flex;
     .footer-item {
@@ -72,7 +70,7 @@
       justify-content: center;
       padding: $card-spacing / 2;
       &:not(:last-child) {
-        @include border-right($border-width, $border-style, $card-border-color);             
+        @include border-right($border-width, $border-style, $card-border-color);
       }
     }
   }

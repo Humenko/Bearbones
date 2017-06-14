@@ -43,3 +43,8 @@
             }
         }
 }
+
+@mixin pagination-size($font-size, $min-width) {
+    font-size: $font-size;
+    min-width: $min-width;
+}

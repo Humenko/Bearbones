@@ -1,7 +1,3 @@
-/* Scaffolding
-  =============== */
-
-// HTML base
 html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -9,7 +5,6 @@ html {
 	font-size: $font-size;
 }
 
-// Body base
 body {
 	color: $font-color;
 	background: $white;
@@ -37,7 +32,6 @@ table {
 	margin: 0;
 }
 
-// Remove extra margin for nested lists
 ul li ul {
 	margin-bottom: 0;
 }
@@ -46,7 +40,6 @@ ol li ol {
 	margin-bottom: 0;
 }
 
-// Headings
 h1,
 h2,
 h3,
@@ -61,20 +54,18 @@ h5 {
 	}
 }
 
-// Increased margin on additional headings
 h1:not(:first-child),
 h2:not(:first-child),
 h3:not(:first-child) {
 	margin-top: 2rem;
 }
 
-// Links
 a {
 	color: $link-color;
 	text-decoration: $link-decoration;
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
 	&:hover {
-		color: $link-hover-color;
+		color: darken($link-color, 20%);
 	}
 }

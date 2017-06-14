@@ -1,3 +1,7 @@
+@mixin button-size($font-size) {
+    font-size: $font-size;
+}
+
 @mixin button-variant($color, $background, $border) {
     $btn-active-background: darken($background, 10%);
     $btn-active-border: darken($border, 12%);
@@ -88,4 +92,9 @@
     @include hover-focus-active {
         background-color: darken($background, 20%);   
     } 
+}
+
+@mixin close-size($width, $height) {
+    width: $width;
+    height: $height;
 }

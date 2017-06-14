@@ -31,19 +31,19 @@
 }
 
 .text-xs {
-    font-size: $font-size-xs;
+    @include text-size($font-size-xs)
 }
 
 .text-sm {
-    font-size: $font-size-sm;
+    @include text-size($font-size-sm)
 }
 
 .text-lg {
-    font-size: $font-size-lg;
+    @include text-size($font-size-lg)
 }
 
 .text-xl {
-    font-size: $font-size-xl;
+    @include text-size($font-size-xl)
 }
 
 .font-weight-normal {
@@ -57,3 +57,8 @@
 .font-italic {
     font-style: italic;
 }
+
+@include text-variant('.text-primary', $primary-color);
+@include text-variant('.text-secondary', $primary-color);
+@include text-variant('.text-positive', $primary-color);
+@include text-variant('.text-negative', $primary-color);

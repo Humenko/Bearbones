@@ -2,10 +2,10 @@
 	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	-webkit-appearance: none;
 	display: inline-block;
-    @include border($btn-border-width, $btn-border-style, $base-variant-border);	
+	@include border($btn-border-width, $btn-border-style, $base-variant-border);
 	@include border-radius($btn-border-radius);
 	font-weight: $btn-font-weight;
-	font-size: $btn-font-size;
+	@include button-size($btn-font-size);
 	text-transform: $btn-text-transform;
 	padding: $btn-spacing $btn-spacing+.75;
 	vertical-align: middle;
@@ -15,23 +15,23 @@
 	line-height: $btn-line-height;
 	@include transition($btn-transition);
 	&.xs {
-		font-size: $font-size-xs;
+		@include button-size($font-size-xs)
 	}
 	&.sm {
-		font-size: $font-size-sm;
+		@include button-size($font-size-sm)
 	}
 	&.lg {
-		font-size: $font-size-lg;
+		@include button-size($font-size-lg)
 	}
 	&.xl {
-		font-size: $font-size-xl;
+		@include button-size($font-size-xl)
 	}
 	&.full-x {
 		display: block;
 		width: 100%;
 	}
 	&.no-border {
-		@include border-radius($no-border-radius);		
+		@include border-radius($no-border-radius);
 	}
 	&.invert {
 		@include button-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
@@ -142,15 +142,14 @@
 
 .close {
 	border: 0;
-	@include border-radius($border-radius-circle);	
+	@include border-radius($border-radius-circle);
 	cursor: pointer;
 	display: inline-block;
 	font-size: $font-size;
-	height: $btn-close-size;
 	outline: none;
 	position: relative;
 	vertical-align: top;
-	width: $btn-close-size;
+	@include close-size($btn-close-size, $btn-close-size);
 	@include close-variant($base-variant-background, $base-variant-color);
 	&.invert {
 		@include close-variant($invert-variant-background, $invert-variant-color);
@@ -186,20 +185,16 @@
 		width: $btn-close-icon-size;
 	}
 	&.xs {
-		width: $btn-close-size-xl;
-		height: $btn-close-size-xs;
+		@include close-size($btn-close-size-xs, $btn-close-size-xs);
 	}
 	&.sm {
-		width: $btn-close-size-xl;
-		height: $btn-close-size-sm;
+		@include close-size($btn-close-size-sm, $btn-close-size-sm);
 	}
 	&.lg {
-		width: $btn-close-size-xl;
-		height: $btn-close-size-lg;
+		@include close-size($btn-close-size-lg, $btn-close-size-lg);
 	}
 	&.xl {
-		width: $btn-close-size-xl;
-		height: $btn-close-size-xl;
+		@include close-size($btn-close-size-xl, $btn-close-size-xl);
 	}
 }
 
