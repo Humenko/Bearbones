@@ -3,6 +3,7 @@
     margin: 0;
     display: inline-flex;
     vertical-align: middle;
+    user-select: none;
     .item {
         @include pagination-size($pagination-font-size, 3rem);
         font-weight: $pagination-font-weight;
