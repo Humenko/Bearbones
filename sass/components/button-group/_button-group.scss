@@ -10,7 +10,7 @@
     &.full-x {
         width: 100%;
     }
-    &.no-border {
+    &.no-border-radius {
         @include border-radius($no-border-radius);
         %buttons {
             &:first-child {
