@@ -13,24 +13,25 @@
 	cursor: pointer;
 	text-decoration: none;
 	line-height: $btn-line-height;
+	user-select: none;
 	@include transition($btn-transition);
 	&.xs {
-		@include button-size($font-size-xs)
+		@include button-size($font-size-xs);
 	}
 	&.sm {
-		@include button-size($font-size-sm)
+		@include button-size($font-size-sm);
 	}
 	&.lg {
-		@include button-size($font-size-lg)
+		@include button-size($font-size-lg);
 	}
 	&.xl {
-		@include button-size($font-size-xl)
+		@include button-size($font-size-xl);
 	}
 	&.full-x {
 		display: block;
 		width: 100%;
 	}
-	&.no-border {
+	&.no-border-radius {
 		@include border-radius($no-border-radius);
 	}
 	&.invert {

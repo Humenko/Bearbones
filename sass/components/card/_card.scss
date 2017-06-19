@@ -7,7 +7,7 @@
   &.no-shadow {
     box-shadow: none;
   }
-  &.no-border {
+  &.no-border-radius {
     @include border-radius($no-border-radius);
     .card-image img {
       @include border-top-radius($no-border-radius);

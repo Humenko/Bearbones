@@ -1,0 +1,114 @@
+.bb-tabs {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  @include tab-size($font-size);
+  &.primary {
+    @include tab-variant($primary-color);
+  }
+  &.secondary {
+    @include tab-variant($secondary-color);
+  }
+  &.positive {
+    @include tab-variant($positive-color);
+  }
+  &.negative {
+    @include tab-variant($negative-color);
+  }
+  ul {
+    @include border-bottom($tab-border-width, $border-style, $tab-background);
+    display: flex;
+    padding: 0;
+    flex-grow: 1;
+    li {
+      display: block;
+      &.active {
+        a {
+          @include border-bottom-color($primary-color);
+          color: $primary-color;
+          @include hover {
+            @include border-bottom-color($primary-color);
+            color: $primary-color;
+          }
+        }
+      }
+      a {
+        align-items: center;
+        @include border-bottom($tab-border-width, $border-style, $tab-background);
+        display: flex;
+        justify-content: center;
+        margin-bottom: -$tab-border-width;
+        padding: $padding/2 $padding;
+        color: $light-grey;
+        cursor: pointer;
+        @include hover {
+          @include border-bottom-color($base-color);
+          color: $base-color;
+        }
+      }
+    }
+  }
+  &.center {
+    ul {
+      justify-content: center;
+    }
+  }
+  &.right {
+    ul {
+      justify-content: flex-end;
+    }
+  }
+  &.outline {
+    li {
+      &.active {
+        a {
+          background-color: transparent;
+          @include border-color($tab-background);
+          @include border-bottom-color($white);
+          @include hover {
+            background-color: transparent;
+            @include border-bottom-color($white);
+          }
+        }
+      }
+      a {
+        @include border($tab-border-width, $border-style, transparent);
+        @include border-top-radius($border-radius);
+        @include hover {
+          background-color: $tab-background;
+        @include border-bottom-color($tab-background);
+        }
+      }
+    }
+    &.primary {
+      @include tab-outline-variant($primary-color);
+    }
+    &.secondary {
+      @include tab-outline-variant($secondary-color);
+    }
+    &.positive {
+      @include tab-outline-variant($positive-color);
+    }
+    &.negative {
+      @include tab-outline-variant($negative-color);
+    }
+  }
+  &.xs {
+    @include tab-size($font-size-xs);
+  }
+  &.sm {
+    @include tab-size($font-size-sm);
+  }
+  &.lg {
+    @include tab-size($font-size-lg);
+  }
+  &.xl {
+    @include tab-size($font-size-xl);
+  }
+  &.full-x {
+    li {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }  
+}
