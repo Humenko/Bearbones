@@ -55,7 +55,7 @@
         @include pagination-variant($negative-variant-color, $negative-variant-background);
     }
     &.outline {
-        @include outline-pagination-variant($base-variant-background);        
+        @include outline-pagination-variant($base-variant-background);
         &.invert {
             @include outline-pagination-variant($invert-variant-background);
         }
