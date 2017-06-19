@@ -2,7 +2,6 @@
   user-select: none;
   display: flex;
   justify-content: space-between;
-  white-space: nowrap;
   @include tab-size($font-size);
   &.primary {
     @include tab-variant($primary-color);
@@ -17,7 +16,7 @@
     @include tab-variant($negative-color);
   }
   ul {
-    @include border-bottom($border-width, $border-style, $lighter-grey);
+    @include border-bottom($tab-border-width, $border-style, $tab-background);
     display: flex;
     padding: 0;
     flex-grow: 1;
@@ -35,11 +34,11 @@
       }
       a {
         align-items: center;
-        @include border-bottom($border-width, $border-style, $lighter-grey);
+        @include border-bottom($tab-border-width, $border-style, $tab-background);
         display: flex;
         justify-content: center;
-        margin-bottom: -$border-width;
-        padding: 0.5em 1em;
+        margin-bottom: -$tab-border-width;
+        padding: $padding/2 $padding;
         color: $light-grey;
         cursor: pointer;
         @include hover {
@@ -64,7 +63,7 @@
       &.active {
         a {
           background-color: transparent;
-          @include border-color($lighter-grey);
+          @include border-color($tab-background);
           @include border-bottom-color($white);
           @include hover {
             background-color: transparent;
@@ -73,11 +72,11 @@
         }
       }
       a {
-        @include border($border-width, $border-style, transparent);
+        @include border($tab-border-width, $border-style, transparent);
         @include border-top-radius($border-radius);
         @include hover {
-          background-color: $lighter-grey;
-        @include border-bottom-color($lighter-grey);
+          background-color: $tab-background;
+        @include border-bottom-color($tab-background);
         }
       }
     }
