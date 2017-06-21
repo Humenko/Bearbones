@@ -1,19 +1,21 @@
-.bb-tabs {
+.bb-tab {
   user-select: none;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  overflow-x:auto;
   @include tab-size($font-size);
   &.primary {
-    @include tab-variant($primary-color);
+    @include tab-variant($primary-variant-background);
   }
   &.secondary {
-    @include tab-variant($secondary-color);
+    @include tab-variant($secondary-variant-background);
   }
   &.positive {
-    @include tab-variant($positive-color);
+    @include tab-variant($positive-variant-background);
   }
   &.negative {
-    @include tab-variant($negative-color);
+    @include tab-variant($negative-variant-background);
   }
   ul {
     @include border-bottom($tab-border-width, $border-style, $tab-background);
@@ -81,16 +83,16 @@
       }
     }
     &.primary {
-      @include tab-outline-variant($primary-color);
+      @include tab-outline-variant($primary-variant-background);
     }
     &.secondary {
-      @include tab-outline-variant($secondary-color);
+      @include tab-outline-variant($secondary-variant-background);
     }
     &.positive {
-      @include tab-outline-variant($positive-color);
+      @include tab-outline-variant($positive-variant-background);
     }
     &.negative {
-      @include tab-outline-variant($negative-color);
+      @include tab-outline-variant($negative-variant-background);
     }
   }
   &.xs {

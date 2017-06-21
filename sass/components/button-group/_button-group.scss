@@ -31,19 +31,18 @@
             @include border-right-radius($btn-border-radius);
         }
     }
-}
-
-.bb-vertical-btns {
-    display: inline-flex;
-    flex-direction: column;
-    %buttons {
-        @include border-radius($no-border-radius);
-        margin: 0;
-        &:first-child {
-            @include border-top-radius($btn-border-radius);
+    &.vertical {
+        display: inline-flex;
+        flex-direction: column;
+        %buttons {
+            @include border-radius($no-border-radius);
+            margin: 0;
+            &:first-child {
+                @include border-top-radius($btn-border-radius);
+            }
+            &:last-child {
+                @include border-bottom-radius($btn-border-radius);
+            }
         }
-        &:last-child {
-            @include border-bottom-radius($btn-border-radius);
-        }
-    }
+    }    
 }

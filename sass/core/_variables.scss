@@ -93,7 +93,7 @@ $link-hover-decoration:         underline !default;
 //* Layout *//
 
 $layout-spacing:                  $padding !default;
-$layout-spacing-lg:               $padding*4 !default;
+$layout-spacing-lg:               $padding * 4 !default;
 
 // Base
 $layout-background:               $lighter-grey !default;
@@ -155,7 +155,7 @@ $divider-border-width:          $border-width/2 !default;
 $divider-border-style:          $border-style !default;
 $divider-horizontal-margin:     1rem;
 
-$divider-content-border-width:  $divider-border-width*1.5 !default;
+$divider-content-border-width:  $divider-border-width * 1.5 !default;
 $divider-font-weight:           500 !default;
 $divider-content-color:         $light-grey !default;
 
@@ -199,7 +199,7 @@ $input-group-addon-border-color: $input-group-addon-background!default;
 //* Jumbotron *//
 
 $jumbotron-spacing:                  $padding !default;
-$jumbotron-border-radius:            $border-radius*2 !default;
+$jumbotron-border-radius:            $border-radius * 2 !default;
 
 //* Pagination *//
 
@@ -305,3 +305,17 @@ $spacers: (
     y: ($spacer-y * 3)
   )
 ) !default;
+
+// Stat
+
+$stat-font-size:                     3rem !default;
+$stat-line-height:                   1em !default;
+$stat-label-font-weight:             700 !default;
+$stat-text-font-weight:              700 !default;
+$stat-value-font-weight:             400 !default;
+$stat-text-transform:                uppercase !default;
+$stat-spacing:                       $padding !default;
+$stat-font-size-xs:                  $stat-font-size - 1.5rem !default;
+$stat-font-size-sm:                  $stat-font-size - .75rem !default;
+$stat-font-size-lg:                  $stat-font-size + .75rem !default;
+$stat-font-size-xl:                  $stat-font-size + 1.5rem !default;
