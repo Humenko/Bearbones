@@ -2,6 +2,8 @@
   user-select: none;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  overflow-x:auto;
   @include tab-size($font-size);
   &.primary {
     @include tab-variant($primary-color);
