@@ -1,0 +1,5 @@
+@mixin stat-variant($color) {
+    .value {
+        color: $color;
+    }
+}

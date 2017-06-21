@@ -1,0 +1,63 @@
+.bb-stat {
+  display: inline-flex;
+  flex-direction: column;
+  .value {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1em;
+    color: #1b1c1d;
+    text-transform: uppercase;
+    text-align: center;
+    &.text {
+      line-height: 1em;
+      min-height: 2em;
+      font-weight: 700;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  .label {
+    font-size: 1em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .87);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &.horizontal {
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0;
+     :last-child {
+      margin-left: $padding;
+    }
+  }
+  &.primary {
+    @include stat-variant($primary-variant-background);
+  }
+  &.secondary {
+    @include stat-variant($secondary-variant-background);
+  }
+  &.positive {
+    @include stat-variant($positive-variant-background);
+  }
+  &.negative {
+    @include stat-variant($negative-variant-background);
+  }
+}
+
+.bb-stats {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .bb-stat {
+    margin: $padding;
+  }
+  &.vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    max-width: none;
+  }
+}
