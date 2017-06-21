@@ -7,7 +7,7 @@
 	font-weight: $btn-font-weight;
 	@include button-size($btn-font-size);
 	text-transform: $btn-text-transform;
-	padding: $btn-spacing $btn-spacing+.75;
+	padding: $btn-spacing $btn-spacing + .75;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
@@ -98,7 +98,7 @@
 			margin: $btn-loader-margin;
 			width: $btn-loader-size;
 			height: $btn-loader-size;
-			animation: button-spin $transition-duration*3 linear;
+			animation: button-spin $transition-duration * 3 linear;
 			animation-iteration-count: infinite;
 			@include border-radius($btn-loader-circle);
 			@include button-loading-variant($base-variant-color);

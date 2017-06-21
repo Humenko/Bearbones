@@ -25,7 +25,7 @@
     &.vertical {
         flex-direction: column;
         &>.bb-family-grid.child:not(:last-child) {
-            margin-bottom: $grid-spacing*2;
+            margin-bottom: $grid-spacing * 2;
         }
     }
     @include respond-to('lg') {
