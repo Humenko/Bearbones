@@ -2,25 +2,23 @@
   display: inline-flex;
   flex-direction: column;
   .value {
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 1em;
-    color: #1b1c1d;
-    text-transform: uppercase;
+    font-size: $stat-font-size;
+    font-weight: $stat-value-font-weight;
+    line-height: $stat-line-height;
+    text-transform: $stat-text-transform;
     text-align: center;
     &.text {
-      line-height: 1em;
+      line-height: $stat-line-height;
       min-height: 2em;
-      font-weight: 700;
+      font-weight: $stat-text-font-weight;
       text-align: center;
-      font-size: 2rem;
+      font-size: $stat-font-size/2;
     }
   }
   .label {
-    font-size: 1em;
-    font-weight: 700;
-    color: rgba(0, 0, 0, .87);
-    text-transform: uppercase;
+    font-size: $stat-font-size/4;
+    font-weight: $stat-label-font-weight;
+    text-transform: $stat-text-transform;
     text-align: center;
   }
   &.horizontal {
@@ -28,7 +26,7 @@
     align-items: center;
     margin: 1em 0;
      :last-child {
-      margin-left: $padding;
+      margin-left: $stat-spacing/1.5;
     }
   }
   &.primary {
@@ -43,21 +41,16 @@
   &.negative {
     @include stat-variant($negative-variant-background);
   }
-}
-
-.bb-stats {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  .bb-stat {
-    margin: $padding;
+  &.xs {
+    @include stat-size($stat-font-size-xs);
   }
-  &.vertical {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin: 0;
-    max-width: none;
+  &.sm {
+    @include stat-size($stat-font-size-sm);
   }
+  &.lg {
+    @include stat-size($stat-font-size-lg);
+  }
+  &.xl {
+    @include stat-size($stat-font-size-xl);
+  }  
 }
