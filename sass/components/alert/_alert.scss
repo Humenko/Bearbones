@@ -2,7 +2,8 @@
     text-align: center;
     @include border-radius($alert-border-radius);
     position: relative;
-    @include alert-variant($base-variant-color, $base-variant-background);    
+    @include alert-variant($base-variant-color, $base-variant-background);   
+    padding: $alert-spacing; 
     &.invert {
         @include alert-variant($invert-variant-color, $invert-variant-background);
     }    
