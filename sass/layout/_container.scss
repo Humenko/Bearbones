@@ -1,6 +1,6 @@
 .container {
     padding: 0 $container-spacing;
-    max-width: 75rem;
+    max-width: $container-max-width;
     margin-right: auto;    
     margin-left: auto;
     &.full-x {
