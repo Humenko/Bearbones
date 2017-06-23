@@ -34,7 +34,7 @@
   }
 
   h5 {
-    font-size: $mod_1;
+    font-size: $mod_1 *1rem;
     @include heading-font-size($min_width, $max_width, $mod_1, $mod_2);
   }
 
