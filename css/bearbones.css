@@ -236,7 +236,7 @@ th {
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font: normal normal normal 1rem/1.4 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: normal normal normal 1rem/1.3 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 
@@ -257,7 +257,7 @@ body {
 body, p {
   margin: 0;
   padding: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 main {
@@ -321,6 +321,9 @@ a:hover {
 
 .container {
   padding: 0 1.5rem;
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container.full-x {
@@ -479,8 +482,7 @@ a:hover {
 
 .section {
   max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
   padding: 2rem 0;
 }
 
@@ -491,6 +493,7 @@ a:hover {
 
 .section.full-x {
   max-width: none;
+  margin: 0;
 }
 
 .section.invert {
@@ -652,7 +655,7 @@ a:hover {
 }
 
 .bb-grid .column:last-child {
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 .bb-grid.xs {
@@ -1976,6 +1979,16 @@ a:hover {
   color: #ffffff;
 }
 
+.bb-box.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bb-box.invert {
   background-color: #ffffff;
   color: #4a4a4a;
@@ -2143,49 +2156,74 @@ a:hover {
 }
 
 .bb-breadcrumb {
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.75rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.bb-breadcrumb ul {
   list-style: none;
   background-color: transparent;
   border-radius: 0.2rem;
 }
 
-.bb-breadcrumb::after {
+.bb-breadcrumb ul::after {
   display: block;
   clear: both;
   content: "";
 }
 
-.bb-breadcrumb .breadcrumb-item {
+.bb-breadcrumb ul .breadcrumb-item {
   float: left;
 }
 
-.bb-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+.bb-breadcrumb ul .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   color: #4a4a4a;
   content: "/";
 }
 
-.bb-breadcrumb .breadcrumb-item.active {
+.bb-breadcrumb ul .breadcrumb-item.active {
   color: #4a4a4a;
 }
 
-.bb-breadcrumb .breadcrumb-item.xs {
+.bb-breadcrumb ul .breadcrumb-item.xs {
   font-size: 0.7rem;
 }
 
-.bb-breadcrumb .breadcrumb-item.sm {
+.bb-breadcrumb ul .breadcrumb-item.sm {
   font-size: 0.85rem;
 }
 
-.bb-breadcrumb .breadcrumb-item.lg {
+.bb-breadcrumb ul .breadcrumb-item.lg {
   font-size: 1.15rem;
 }
 
-.bb-breadcrumb .breadcrumb-item.xl {
+.bb-breadcrumb ul .breadcrumb-item.xl {
   font-size: 1.3rem;
+}
+
+.bb-breadcrumb ul .breadcrumb-item a {
+  color: #24C2AB;
+}
+
+.bb-breadcrumb.scroll {
+  white-space: nowrap;
+  width: calc(100vw - 3rem);
+  max-width: 75rem;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.bb-breadcrumb.scroll ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.bb-breadcrumb.scroll .breadcrumb-item {
+  float: none;
+  display: inline;
 }
 
 .bb-btn, a.bb-btn {
@@ -2377,7 +2415,7 @@ a:hover {
 
 .outline.bb-btn {
   color: #4a4a4a;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #4a4a4a;
 }
@@ -2400,7 +2438,7 @@ a:hover {
 
 .outline.invert.bb-btn {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #ffffff;
 }
@@ -2423,7 +2461,7 @@ a:hover {
 
 .outline.primary.bb-btn {
   color: #24C2AB;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #24C2AB;
 }
@@ -2446,7 +2484,7 @@ a:hover {
 
 .outline.secondary.bb-btn {
   color: #FFB52F;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #FFB52F;
 }
@@ -2469,7 +2507,7 @@ a:hover {
 
 .outline.positive.bb-btn {
   color: #28D656;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #28D656;
 }
@@ -2492,7 +2530,7 @@ a:hover {
 
 .outline.negative.bb-btn {
   color: #FF1800;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #FF1800;
 }
@@ -3126,7 +3164,7 @@ a:hover {
 
 .outline.bb-btn {
   color: #4a4a4a;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #4a4a4a;
 }
@@ -3149,7 +3187,7 @@ a:hover {
 
 .outline.invert.bb-btn {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #ffffff;
 }
@@ -3172,7 +3210,7 @@ a:hover {
 
 .outline.primary.bb-btn {
   color: #24C2AB;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #24C2AB;
 }
@@ -3195,7 +3233,7 @@ a:hover {
 
 .outline.secondary.bb-btn {
   color: #FFB52F;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #FFB52F;
 }
@@ -3218,7 +3256,7 @@ a:hover {
 
 .outline.positive.bb-btn {
   color: #28D656;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #28D656;
 }
@@ -3241,7 +3279,7 @@ a:hover {
 
 .outline.negative.bb-btn {
   color: #FF1800;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #FF1800;
 }
@@ -4451,7 +4489,7 @@ h5 {
 
 .outline.bb-btn {
   color: #4a4a4a;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #4a4a4a;
 }
@@ -4474,7 +4512,7 @@ h5 {
 
 .outline.invert.bb-btn {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #ffffff;
 }
@@ -4497,7 +4535,7 @@ h5 {
 
 .outline.primary.bb-btn {
   color: #24C2AB;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #24C2AB;
 }
@@ -4520,7 +4558,7 @@ h5 {
 
 .outline.secondary.bb-btn {
   color: #FFB52F;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #FFB52F;
 }
@@ -4543,7 +4581,7 @@ h5 {
 
 .outline.positive.bb-btn {
   color: #28D656;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #28D656;
 }
@@ -4566,7 +4604,7 @@ h5 {
 
 .outline.negative.bb-btn {
   color: #FF1800;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
   border-color: #FF1800;
 }
