@@ -24,7 +24,7 @@
 
 @mixin outline-pagination-variant($background) {
         .item,.dot {
-            $outline-pagination-active-background: lighten($background, 50%);
+            $outline-pagination-active-background: lighten($background, 35%);
             color: $background;
             background-color: $white;
             border-color: $background;

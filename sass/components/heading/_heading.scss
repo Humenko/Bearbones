@@ -34,12 +34,12 @@
   }
 
   h5 {
-    font-size: $mod_1;
+    font-size: $mod_1 *1rem;
     @include heading-font-size($min_width, $max_width, $mod_1, $mod_2);
   }
 
   .title {
-    line-height: $title-line-height;     
+    line-height: $title-line-height;
   }
 
   .title:not(:last-child),
@@ -48,7 +48,7 @@
   }
 
   .title+.subtitle {
-      margin: -$title-spacing 0 0 0;
+    margin: -$title-spacing 0 0 0;
   }
 
   .subtitle {

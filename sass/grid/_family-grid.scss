@@ -52,10 +52,10 @@
             flex: none;
             width: 66.6666%;
         }
-        @for $i from 1 through $max-column {
+        @for $i from 1 through $grid-max-column {
             .column-#{$i} {
                 flex: none;
-                width: $i / $max-column * 100%;
+                width: $i / $grid-max-column * 100%;
             }
         }
     }

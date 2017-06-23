@@ -1,7 +1,7 @@
 html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+	font: $font-style $font-variant $font-weight #{$font-size}/#{$font-line-height} $font-family;
 	font-size: $font-size;
 }
 
@@ -17,7 +17,7 @@ body {
 body, p{
     margin: 0;
     padding: 0;
-    line-height: $line-height;	
+    line-height: $font-line-height;	
 }
 
 main {
@@ -67,5 +67,6 @@ a {
 	-webkit-text-decoration-skip: objects;
 	&:hover {
 		color: darken($link-color, 20%);
+		text-decoration: underline;
 	}
 }

@@ -1,11 +1,11 @@
 .bb-alert {
-    text-align: center;
     @include border-radius($alert-border-radius);
     position: relative;
-    @include alert-variant($base-variant-color, $base-variant-background);    
+    @include alert-variant($base-variant-color, $base-variant-background);
+    padding: $alert-spacing;
     &.invert {
         @include alert-variant($invert-variant-color, $invert-variant-background);
-    }    
+    }
     &.primary {
         @include alert-variant($primary-variant-color, $primary-variant-background);
     }
@@ -17,5 +17,10 @@
     }
     &.negative {
         @include alert-variant($negative-variant-color, $negative-variant-background);
-    }  
+    }
+    .close {
+        position: absolute;
+        right: $alert-spacing;
+        top: $alert-spacing;
+    }
 }

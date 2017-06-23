@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  overflow-x:auto;
+  overflow-x: auto;
   @include tab-size($font-size);
   &.primary {
     @include tab-variant($primary-variant-background);
@@ -46,6 +46,7 @@
         @include hover {
           @include border-bottom-color($base-color);
           color: $base-color;
+          text-decoration: none;
         }
       }
     }
@@ -78,7 +79,7 @@
         @include border-top-radius($border-radius);
         @include hover {
           background-color: $tab-background;
-        @include border-bottom-color($tab-background);
+          @include border-bottom-color($tab-background);
         }
       }
     }
@@ -93,6 +94,36 @@
     }
     &.negative {
       @include tab-outline-variant($negative-variant-background);
+    }
+  }
+  &.naked {
+    &.primary {
+      @include tab-naked-variant($primary-variant-background);
+    }
+    &.secondary {
+      @include tab-naked-variant($secondary-variant-background);
+    }
+    &.positive {
+      @include tab-naked-variant($positive-variant-background);
+    }
+    &.negative {
+      @include tab-naked-variant($negative-variant-background);
+    }
+    ul {
+      @include border-bottom-color(transparent);
+      li {
+        &.active {
+          a {
+            @include border-bottom-color(inherit);
+          }
+        }
+        a {
+          @include border-bottom-color(transparent);
+          @include hover {
+            @include border-bottom-color(inherit);
+          }
+        }
+      }
     }
   }
   &.xs {
@@ -112,5 +143,5 @@
       flex-grow: 1;
       flex-shrink: 0;
     }
-  }  
+  }
 }
