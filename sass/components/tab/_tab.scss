@@ -46,6 +46,7 @@
         @include hover {
           @include border-bottom-color($base-color);
           color: $base-color;
+          text-decoration: none;
         }
       }
     }

@@ -72,6 +72,9 @@
       &:not(:last-child) {
         @include border-right($border-width, $border-style, $card-border-color);
       }
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
