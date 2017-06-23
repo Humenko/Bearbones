@@ -1,5 +1,8 @@
 .container {
-    padding: 0 $layout-spacing * 1.5;
+    padding: 0 $container-spacing;
+    max-width: 75rem;
+    margin-right: auto;    
+    margin-left: auto;
     &.full-x {
         padding: 0;
     }
