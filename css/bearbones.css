@@ -481,7 +481,6 @@ a:hover {
 }
 
 .section {
-  max-width: 75rem;
   margin: 0;
   padding: 2rem 0;
 }
@@ -489,11 +488,6 @@ a:hover {
 .section.lg {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.section.full-x {
-  max-width: none;
-  margin: 0;
 }
 
 .section.invert {
