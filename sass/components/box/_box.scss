@@ -3,6 +3,11 @@
     @include border-radius($border-radius);
     position: relative;
     padding: $box-spacing-y $box-spacing-x;
+    &.center {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
     &.invert {
         @include box-variant($invert-variant-color, $invert-variant-background);
     }    
@@ -37,5 +42,5 @@
         position: absolute;
         right: $box-spacing-x;
         top: $box-spacing-y;
-    }
+    }  
 }
