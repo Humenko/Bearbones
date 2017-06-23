@@ -1,7 +1,6 @@
 .section {
     max-width: 75rem;    
-    margin-left: auto;
-    margin-right: auto;    
+    margin: 0;
     padding: $layout-spacing * 2 0;
     &.lg {
         padding-top: $layout-spacing-lg;
@@ -9,6 +8,7 @@
     }
     &.full-x {
         max-width: none;
+        margin: 0;
     }
     &.invert {
         @include layout-variant($invert-variant-color, $invert-variant-background);
