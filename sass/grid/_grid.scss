@@ -37,7 +37,7 @@
     padding-left: $grid-spacing;
     padding-right: $grid-spacing;
     &:last-child {
-      padding-bottom: 0;
+      padding-bottom: $padding;
     }
   }
   &.xs {
