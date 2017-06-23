@@ -59,6 +59,6 @@
 }
 
 @include text-variant('.text-primary', $primary-color);
-@include text-variant('.text-secondary', $primary-color);
-@include text-variant('.text-positive', $primary-color);
-@include text-variant('.text-negative', $primary-color);
+@include text-variant('.text-secondary', $secondary-color);
+@include text-variant('.text-positive', $positive-color);
+@include text-variant('.text-negative', $negative-color);
