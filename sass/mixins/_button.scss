@@ -30,7 +30,7 @@
 @mixin button-outline-variant($color) {
     $btn-active-color: darken($color, 20%);
     color: $color;
-    background-color: transparent;
+    background-color: $white;
     background-image: none;
     border-color: $color;
     @include hover {
