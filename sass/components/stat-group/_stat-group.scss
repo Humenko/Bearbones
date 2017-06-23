@@ -2,12 +2,13 @@
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin: $stat-spacing (-$stat-spacing);
   .bb-stat {
     margin: $stat-spacing;
   }
   &.vertical {
     flex-direction: column;
-    margin: 0;
+    margin: $stat-spacing (-$stat-spacing);  
     max-width: none;
   }
 }
