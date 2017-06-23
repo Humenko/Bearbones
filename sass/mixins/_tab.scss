@@ -60,3 +60,23 @@
         }
     }
 }
+
+@mixin tab-naked-variant($color) {
+    $light-color: lighten($color, 10%);
+    ul {
+      @include border-bottom-color(transparent);        
+        li {
+            &.active {
+                a {
+                    @include border-bottom-color($color);
+                }
+            }
+            a {
+                @include border-bottom-color(transparent);
+                @include hover {
+                    @include border-bottom-color($light-color);
+                }
+            }
+        }
+    }
+}
