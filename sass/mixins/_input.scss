@@ -11,6 +11,11 @@
 	input {
 		@include focus-active {
 			border-color: $border;
+			& + .bb-input-addon {
+				background-color: $input-background;
+				color: $color;
+				@include border-color($border);
+			}
 		}
 	}
 }

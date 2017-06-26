@@ -14,14 +14,53 @@
 	vertical-align: middle;
 }
 
+.bb-input {
+	&.left {
+		input {
+			@include border-left-radius(0);
+			border-left: 0;
+		}
+		.bb-input-addon,
+		.bb-input-btn,
+		.bb-btn {
+			@include border-right-radius(0);
+			border-right: 0;
+			order: -1;
+		}
+	}
+	&.right {
+		input {
+			@include border-right-radius(0);
+			border-right: 0;
+		}
+		.bb-input-addon,
+		.bb-input-btn,
+		.bb-btn {
+			@include border-left-radius(0);
+			border-left: 0;
+			order: 1;
+		}
+	}
+	input {
+		@include focus-active {
+			& + .bb-input-addon {
+				background-color: $input-addon-background-focus;
+				color: $input-addon-color-focus;
+				@include border-color($input-addon-border-color-focus);
+			}
+		}
+	}
+}
+
 .bb-input-addon {
 	padding: $input-padding-y $input-padding-x;
 	margin-bottom: 0;
 	line-height: $input-line-height;
 	color: $input-addon-color;
 	text-align: center;
-	background-color: $input-group-addon-background;
-	@include border($input-border-width, $border-style, $input-group-addon-border-color);
+	background-color: $input-addon-background;
+	@include border($input-border-width, $border-style, $input-addon-border-color);
+	@include transition($input-transition);
 	&.invert {
 		@include input-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
 	}
@@ -42,34 +81,4 @@
 	input[type='checkbox'] {
 		margin-top: 0;
 	}
-}
-
-.bb-input input:not(:last-child),
-.bb-input-addon:not(:last-child),
-.bb-input-btn:not(:last-child) > .bb-btn,
-.bb-input-btn:not(:last-child) > .bb-btn-group > .bb-btn,
-.bb-input-btn:not(:last-child) > .dropdown-toggle,
-.bb-input-btn:not(:first-child) > .bb-btn:not(:last-child):not(.dropdown-toggle),
-.bb-input-btn:not(:first-child) > .bb-btn-group:not(:last-child) > .bb-btn {
-	@include border-right-radius(0);
-	border-right: 0;
-}
-
-.bb-input-addon:not(:last-child) {
-	border-right: 0;
-}
-
-.bb-input input:not(:first-child),
-.bb-input-addon:not(:first-child),
-.bb-input-btn:not(:first-child) > .bb-btn,
-.bb-input-btn:not(:first-child) > .bb-btn-group > .bb-btn,
-.bb-input-btn:not(:first-child) > .dropdown-toggle,
-.bb-input-btn:not(:last-child) > .bb-btn:not(:first-child),
-.bb-input-btn:not(:last-child) > .bb-btn-group:not(:first-child) > .bb-btn {
-	@include border-left-radius(0);
-	border-left: 0;
-}
-
-input + .bb-input-addon:not(:first-child) {
-	border-left: 0;
 }

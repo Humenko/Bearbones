@@ -44,9 +44,9 @@
 		@include focus-active {
 			z-index: 3;
 			box-shadow: none;
-			border-color: $input-border-focus;
+			border-color: $input-border-color-focus;
 			&::placeholder {
-				color: $input-border-focus;
+				color: $input-border-color-focus;
 			}
 		}
 	}
