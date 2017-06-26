@@ -197,8 +197,9 @@ $card-spacing:                        $padding !default;
 
 // Divider //
 
+$divider-border-radius:               $border-width !default;
 $divider-border-style:                $border-style !default;
-$divider-border-width:                $border-width/2 !default;
+$divider-border-width:                $border-width !default;
 $divider-color:                       $lighter-grey !default;
 $divider-content-border-width:        $divider-border-width * 1.5 !default;
 $divider-content-color:               $light-grey !default;

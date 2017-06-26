@@ -6,6 +6,7 @@
 	user-select: none;
 	&:not(.divider-content) {
 		@include divider-border($divider-border-width, $divider-border-style, $divider-color);
+		border-radius: $divider-border-radius;
 	}
 	&.divider-content {
 		line-height: 1;

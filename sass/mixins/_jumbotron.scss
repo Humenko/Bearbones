@@ -10,7 +10,6 @@
 		color: $color;
 	}
 	.bb-divider {
-		border-top-color: darken($background, 12%);
-		border-bottom-color: darken($background, 12%);
+		border-color: darken($background, 12%);
 	}
 }
