@@ -14,12 +14,12 @@ $positive-pair:                       setInvertedColour($positive-color) !defaul
 $negative-color:                      #FF1800 !default;
 $negative-pair:                       setInvertedColour($negative-color) !default;
 
-$base-color:                          #4a4a4a !default;
-$base-pair:                           #ffffff !default;
+$base-color:                          #4A4A4A !default;
+$base-pair:                           #FFFFFF !default;
 
-$white:                               #ffffff !default;
-$light-grey:                          #7d7d7d !default;
-$lighter-grey:                        #f4f4f4 !default;
+$white:                               #FFFFFF !default;
+$light-grey:                          #7D7D7D !default;
+$lighter-grey:                        #F4F4F4 !default;
 
 // Base
 $base-variant-background:             $base-color !default;
@@ -56,6 +56,29 @@ $negative-variant-color:              $negative-pair !default;
 $padding:                             1rem !default;
 $margin:                              1.5rem !default;
 
+//// LAYOUT ////
+
+$container-max-width:                 75rem !default;
+$container-spacing:                   1.5rem !default;
+$layout-background:                   $lighter-grey !default;
+$layout-color:                        $base-color !default;
+$layout-spacing:                      $padding !default;
+$layout-spacing-lg:                   $padding * 4 !default;
+
+//// GRID ////
+
+$grid-spacing:                        .5rem !default;
+$grid-max-column:                     16 !default;
+
+// Breakpoints
+$breakpoints: (
+    sm:                               20rem,   // 320px
+    md:                               40rem,   // 640px
+    lg:                               57.5rem, // 920px
+    xl:                               75rem,   // 1200px
+) !default;
+
+
 // Border //
 
 $border-width:                        .125rem !default;
@@ -74,7 +97,7 @@ $link-hover-decoration:               underline !default;
 
 // Body
 $body-font-size:                      1rem !default;
-$font-color:                          #4a4a4a !default;
+$font-color:                          $base-color !default;
 $font-family:                         -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $font-line-height:                    1.3 !default;
 $font-size:                           1rem !default;
@@ -94,9 +117,14 @@ $heading-font-color:                  #4a4a4a !default;
 $heading-font-family:                 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $heading-font-weight:                 $font-weight-bold !default;
 $heading-line-height:                 1.2 !default;
+$heading-min-width:                   20rem !default;
+$heading-max-width:                   $container-max-width !default;
+$heading-min-font:                    1rem !default;
+$heading-min-modifier:                1.2 !default;
+$heading-max-modifier:                1.5 !default;
 
 // Title
-$subtitle-font-size:                  $font-size-xl;
+$subtitle-font-size:                  $font-size-xl !default;
 $title-line-height:                   $heading-line-height !default;
 $title-spacing:                       1.5rem !default;
 
@@ -104,28 +132,6 @@ $title-spacing:                       1.5rem !default;
 
 $transition-effect:                   ease-in-out !default;
 $transition-duration:                 .25s !default;
-
-//// LAYOUT ////
-$container-max-width:                 75rem !default;
-$container-spacing:                   1.5rem !default;
-$layout-background:                   $lighter-grey !default;
-$layout-color:                        $base-color !default;
-$layout-spacing:                      $padding !default;
-$layout-spacing-lg:                   $padding * 4 !default;
-
-//// GRID ////
-
-$grid-spacing:                        0.5rem !default;
-$grid-max-column:                     16 !default;
-
-// Breakpoints
-$breakpoints: (
-    sm:                               20rem,   // 320px
-    md:                               40rem,   // 640px
-    lg:                               57.5rem, // 920px
-    xl:                               75rem,   // 1200px
-) !default;
-
 
 //// COMPONENTS ////
 
@@ -143,7 +149,7 @@ $box-spacing-y:                       1.5rem !default;
 
 $breadcrumb-active-color:             $base-color !default;
 $breadcrumb-background:               transparent !default;
-$breadcrumb-divider:                  "/" !default;
+$breadcrumb-divider:                  '/' !default;
 $breadcrumb-divider-color:            $base-color !default;
 $breadcrumb-item-padding:             $padding !default;
 $breadcrumb-link-color:               $primary-color !default;
@@ -160,7 +166,7 @@ $btn-border-style:                    $border-style !default;
 $btn-border-width:                    $border-width !default;
 $btn-color:                           $base-pair !default;
 $btn-font-size:                       $font-size !default;
-$btn-font-weight:                     500 !default;
+$btn-font-weight:                     600 !default;
 $btn-line-height:                     1.25 !default;
 $btn-spacing:                         .5rem !default;
 $btn-text-transform:                  none !default;
@@ -186,7 +192,7 @@ $btn-loader-margin:                   $btn-loader-offset 0 0 $btn-loader-offset 
 
 $card-border-color:                   $lighter-grey !default;
 $card-border-radius:                  $border-radius !default;
-$card-box-shadow:                     0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !default;
+$card-box-shadow:                     0 3px 1px -2px rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 $card-spacing:                        $padding !default;
 
 // Divider //
@@ -219,7 +225,7 @@ $input-border-radius:                 $border-radius !default;
 $input-border-width:                  $border-width !default;
 $input-line-height:                   1.25 !default;
 $input-padding-x:                     1rem !default;
-$input-padding-y:                     0.5rem !default;
+$input-padding-y:                     .5rem !default;
 $input-height:                        (($font-size * $input-line-height) + ($input-padding-y * 2)) !default;
 $input-transition:                    border-color $transition-effect $transition-duration !default;
 
@@ -245,6 +251,12 @@ $loader-margin:                       $loader-offset 0 0 $btn-loader-offset !def
 
 $media-divider-color:                 $lighter-grey !default;
 $media-spacing:                       $padding !default;
+
+// Navbar //
+ 
+$navbar-font-weight:                  600 !default;
+$navbar-link-color:                   $light-grey !default;
+$navbar-link-hover-color:             $primary-color !default;
 
 // Pagination //
 
@@ -284,9 +296,9 @@ $tab-border-width:                    $border-width !default;
 
 // Spacing //
 
-$spacer:               $padding !default;
-$spacer-x:             $spacer !default;
-$spacer-y:             $spacer !default;
+$spacer:                              $padding !default;
+$spacer-x:                            $spacer !default;
+$spacer-y:                            $spacer !default;
 $spacers: (
   0: (
     x: 0,
