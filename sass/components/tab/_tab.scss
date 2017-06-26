@@ -1,147 +1,147 @@
 .bb-tab {
-  user-select: none;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  overflow-x: auto;
-  @include tab-size($font-size);
-  &.primary {
-    @include tab-variant($primary-variant-background);
-  }
-  &.secondary {
-    @include tab-variant($secondary-variant-background);
-  }
-  &.positive {
-    @include tab-variant($positive-variant-background);
-  }
-  &.negative {
-    @include tab-variant($negative-variant-background);
-  }
-  ul {
-    @include border-bottom($tab-border-width, $border-style, $tab-background);
-    display: flex;
-    padding: 0;
-    flex-grow: 1;
-    li {
-      display: block;
-      &.active {
-        a {
-          @include border-bottom-color($primary-color);
-          color: $primary-color;
-          @include hover {
-            @include border-bottom-color($primary-color);
-            color: $primary-color;
-          }
-        }
-      }
-      a {
-        align-items: center;
-        @include border-bottom($tab-border-width, $border-style, $tab-background);
-        display: flex;
-        justify-content: center;
-        margin-bottom: -$tab-border-width;
-        padding: $padding/2 $padding;
-        color: $light-grey;
-        cursor: pointer;
-        @include hover {
-          @include border-bottom-color($base-color);
-          color: $base-color;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  &.center {
-    ul {
-      justify-content: center;
-    }
-  }
-  &.right {
-    ul {
-      justify-content: flex-end;
-    }
-  }
-  &.outline {
-    li {
-      &.active {
-        a {
-          background-color: transparent;
-          @include border-color($tab-background);
-          @include border-bottom-color($white);
-          @include hover {
-            background-color: transparent;
-            @include border-bottom-color($white);
-          }
-        }
-      }
-      a {
-        @include border($tab-border-width, $border-style, transparent);
-        @include border-top-radius($border-radius);
-        @include hover {
-          background-color: $tab-background;
-          @include border-bottom-color($tab-background);
-        }
-      }
-    }
-    &.primary {
-      @include tab-outline-variant($primary-variant-background);
-    }
-    &.secondary {
-      @include tab-outline-variant($secondary-variant-background);
-    }
-    &.positive {
-      @include tab-outline-variant($positive-variant-background);
-    }
-    &.negative {
-      @include tab-outline-variant($negative-variant-background);
-    }
-  }
-  &.naked {
-    &.primary {
-      @include tab-naked-variant($primary-variant-background);
-    }
-    &.secondary {
-      @include tab-naked-variant($secondary-variant-background);
-    }
-    &.positive {
-      @include tab-naked-variant($positive-variant-background);
-    }
-    &.negative {
-      @include tab-naked-variant($negative-variant-background);
-    }
-    ul {
-      @include border-bottom-color(transparent);
-      li {
-        &.active {
-          a {
-            @include border-bottom-color(inherit);
-          }
-        }
-        a {
-          @include border-bottom-color(transparent);
-          @include hover {
-            @include border-bottom-color(inherit);
-          }
-        }
-      }
-    }
-  }
-  &.xs {
-    @include tab-size($font-size-xs);
-  }
-  &.sm {
-    @include tab-size($font-size-sm);
-  }
-  &.lg {
-    @include tab-size($font-size-lg);
-  }
-  &.xl {
-    @include tab-size($font-size-xl);
-  }
-  &.full-x {
-    li {
-      flex-grow: 1;
-      flex-shrink: 0;
-    }
-  }
+	user-select: none;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	overflow-x: auto;
+	@include tab-size($font-size);
+	&.primary {
+		@include tab-variant($primary-variant-background);
+	}
+	&.secondary {
+		@include tab-variant($secondary-variant-background);
+	}
+	&.positive {
+		@include tab-variant($positive-variant-background);
+	}
+	&.negative {
+		@include tab-variant($negative-variant-background);
+	}
+	ul {
+		@include border-bottom($tab-border-width, $border-style, $tab-background);
+		display: flex;
+		padding: 0;
+		flex-grow: 1;
+		li {
+			display: block;
+			&.active {
+				a {
+					@include border-bottom-color($primary-color);
+					color: $primary-color;
+					@include hover {
+						@include border-bottom-color($primary-color);
+						color: $primary-color;
+					}
+				}
+			}
+			a {
+				align-items: center;
+				@include border-bottom($tab-border-width, $border-style, $tab-background);
+				display: flex;
+				justify-content: center;
+				margin-bottom: -$tab-border-width;
+				padding: $padding/2 $padding;
+				color: $light-grey;
+				cursor: pointer;
+				@include hover {
+					@include border-bottom-color($base-color);
+					color: $base-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&.center {
+		ul {
+			justify-content: center;
+		}
+	}
+	&.right {
+		ul {
+			justify-content: flex-end;
+		}
+	}
+	&.outline {
+		li {
+			&.active {
+				a {
+					background-color: transparent;
+					@include border-color($tab-background);
+					@include border-bottom-color($white);
+					@include hover {
+						background-color: transparent;
+						@include border-bottom-color($white);
+					}
+				}
+			}
+			a {
+				@include border($tab-border-width, $border-style, transparent);
+				@include border-top-radius($border-radius);
+				@include hover {
+					background-color: $tab-background;
+					@include border-bottom-color($tab-background);
+				}
+			}
+		}
+		&.primary {
+			@include tab-outline-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include tab-outline-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include tab-outline-variant($positive-variant-background);
+		}
+		&.negative {
+			@include tab-outline-variant($negative-variant-background);
+		}
+	}
+	&.naked {
+		&.primary {
+			@include tab-naked-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include tab-naked-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include tab-naked-variant($positive-variant-background);
+		}
+		&.negative {
+			@include tab-naked-variant($negative-variant-background);
+		}
+		ul {
+			@include border-bottom-color(transparent);
+			li {
+				&.active {
+					a {
+						@include border-bottom-color(inherit);
+					}
+				}
+				a {
+					@include border-bottom-color(transparent);
+					@include hover {
+						@include border-bottom-color(inherit);
+					}
+				}
+			}
+		}
+	}
+	&.xs {
+		@include tab-size($font-size-xs);
+	}
+	&.sm {
+		@include tab-size($font-size-sm);
+	}
+	&.lg {
+		@include tab-size($font-size-lg);
+	}
+	&.xl {
+		@include tab-size($font-size-xl);
+	}
+	&.full-x {
+		li {
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+	}
 }

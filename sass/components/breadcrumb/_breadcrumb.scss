@@ -1,53 +1,52 @@
 .bb-breadcrumb {
-    padding: 0;
-    margin-bottom: $breadcrumb-spacing;    
-    ul {
-        list-style: none;
-        background-color: $breadcrumb-background;
-        @include border-radius($border-radius);
-        @include clearfix;
-        .breadcrumb-item {
-            float: left;
-            +.breadcrumb-item::before {
-                display: inline-block;
-                padding-right: $breadcrumb-item-padding;
-                padding-left: $breadcrumb-item-padding;
-                color: $breadcrumb-divider-color;
-                content: "#{$breadcrumb-divider}";
-            }
-            &.active {
-                color: $breadcrumb-active-color;
-            }
-            &.xs {
-                @include breadcrumb-size($font-size-xs)
-            }
-            &.sm {
-                @include breadcrumb-size($font-size-sm)
-            }
-            &.lg {
-                @include breadcrumb-size($font-size-lg)
-            }
-            &.xl {
-                @include breadcrumb-size($font-size-xl)
-            }
-            a {
-                color: $breadcrumb-link-color;
-            }
-        }
-    }
-    &.scroll {
-        white-space: nowrap;
-        width: calc(100vw - #{$container-spacing*2});
-        max-width: 75rem;
-        overflow: hidden;
-        overflow-x: scroll;
-        ul {
-            padding-left: 0;
-            margin-bottom: 0;
-        }
-        .breadcrumb-item {
-            float: none;
-            display: inline;
-        }
-    }
+	margin-bottom: $breadcrumb-spacing;
+	padding: 0;
+	ul {
+		list-style: none;
+		background-color: $breadcrumb-background;
+		@include clearfix;
+		@include border-radius($border-radius);
+		.breadcrumb-item {
+			float: left;
+			 + .breadcrumb-item::before {
+				display: inline-block;
+				padding-right: $breadcrumb-item-padding;
+				padding-left: $breadcrumb-item-padding;
+				content: '#{$breadcrumb-divider}';
+				color: $breadcrumb-divider-color;
+			}
+			&.active {
+				color: $breadcrumb-active-color;
+			}
+			&.xs {
+				@include breadcrumb-size($font-size-xs);
+			}
+			&.sm {
+				@include breadcrumb-size($font-size-sm);
+			}
+			&.lg {
+				@include breadcrumb-size($font-size-lg);
+			}
+			&.xl {
+				@include breadcrumb-size($font-size-xl);
+			}
+			a {
+				color: $breadcrumb-link-color;
+			}
+		}
+	}
+	&.scroll {
+		overflow: hidden;
+		overflow-x: scroll;
+		width: 100%;
+		white-space: nowrap;
+		ul {
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+		.breadcrumb-item {
+			display: inline;
+			float: none;
+		}
+	}
 }

@@ -1,46 +1,46 @@
 .bb-box {
-    @include box-variant($base-variant-color, $base-variant-background);
-    @include border-radius($border-radius);
-    position: relative;
-    padding: $box-spacing-y $box-spacing-x;
-    &.center {
-        display: flex;
-        text-align: center;
-        align-items: center;
-    }
-    &.invert {
-        @include box-variant($invert-variant-color, $invert-variant-background);
-    }    
-    &.primary {
-        @include box-variant($primary-variant-color, $primary-variant-background);
-    }
-    &.secondary {
-        @include box-variant($secondary-variant-color, $secondary-variant-background);
-    }
-    &.positive {
-        @include box-variant($positive-variant-color, $positive-variant-background);
-    }
-    &.negative {
-        @include box-variant($negative-variant-color, $negative-variant-background);
-    }
-    &.outline {  
-        @include box-outline-variant($base-variant-background);        
-        &.primary {
-            @include box-outline-variant($primary-variant-background);
-        }
-        &.secondary {
-            @include box-outline-variant($secondary-variant-background);
-        }
-        &.positive {
-            @include box-outline-variant($positive-variant-background);
-        }
-        &.negative {
-            @include box-outline-variant($negative-variant-background);
-        }      
-    }
-    .close {
-        position: absolute;
-        right: $box-spacing-x;
-        top: $box-spacing-y;
-    }  
+	position: relative;
+	padding: $box-spacing-y $box-spacing-x;
+	@include border-radius($border-radius);
+	@include box-variant($base-variant-color, $base-variant-background);
+	&.center {
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+	&.invert {
+		@include box-variant($invert-variant-color, $invert-variant-background);
+	}
+	&.primary {
+		@include box-variant($primary-variant-color, $primary-variant-background);
+	}
+	&.secondary {
+		@include box-variant($secondary-variant-color, $secondary-variant-background);
+	}
+	&.positive {
+		@include box-variant($positive-variant-color, $positive-variant-background);
+	}
+	&.negative {
+		@include box-variant($negative-variant-color, $negative-variant-background);
+	}
+	&.outline {
+		@include box-outline-variant($base-variant-background);
+		&.primary {
+			@include box-outline-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include box-outline-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include box-outline-variant($positive-variant-background);
+		}
+		&.negative {
+			@include box-outline-variant($negative-variant-background);
+		}
+	}
+	.close {
+		position: absolute;
+		top: $box-spacing-y;
+		right: $box-spacing-x;
+	}
 }

@@ -1,14 +1,14 @@
 .bb-stats {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: $stat-spacing (-$stat-spacing);
-  .bb-stat {
-    margin: $stat-spacing;
-  }
-  &.vertical {
-    flex-direction: column;
-    margin: $stat-spacing (-$stat-spacing);  
-    max-width: none;
-  }
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: $stat-spacing (-$stat-spacing);
+	.bb-stat {
+		margin: $stat-spacing;
+	}
+	&.vertical {
+		flex-direction: column;
+		max-width: none;
+		margin: $stat-spacing (-$stat-spacing);
+	}
 }

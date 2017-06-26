@@ -1,20 +1,20 @@
 %buttons {
-	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
-	-webkit-appearance: none;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
 	display: inline-block;
+	padding: $btn-spacing $btn-spacing + .75;
+	cursor: pointer;
+	user-select: none;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	text-transform: $btn-text-transform;
+	-webkit-appearance: none;
+	@include transition($btn-transition);
+	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	@include border($btn-border-width, $btn-border-style, $base-variant-border);
 	@include border-radius($btn-border-radius);
-	font-weight: $btn-font-weight;
 	@include button-size($btn-font-size);
-	text-transform: $btn-text-transform;
-	padding: $btn-spacing $btn-spacing + .75;
-	vertical-align: middle;
-	text-align: center;
-	cursor: pointer;
-	text-decoration: none;
-	line-height: $btn-line-height;
-	user-select: none;
-	@include transition($btn-transition);
 	&.xs {
 		@include button-size($font-size-xs);
 	}
@@ -88,22 +88,22 @@
 	&.loading {
 		position: relative;
 		cursor: default;
-		color: transparent !important;
 		pointer-events: none;
+		color: transparent !important;
 		&:after {
 			position: absolute;
-			content: '';
 			top: 50%;
 			left: 50%;
-			margin: $btn-loader-margin;
 			width: $btn-loader-size;
 			height: $btn-loader-size;
+			margin: $btn-loader-margin;
+			content: '';
 			animation: button-spin $transition-duration * 3 linear;
 			animation-iteration-count: infinite;
-			@include border-radius($btn-loader-circle);
-			@include button-loading-variant($base-variant-color);
-			border-style: solid;
 			border-width: $btn-loader-border;
+			border-style: solid;
+			@include button-loading-variant($base-variant-color);
+			@include border-radius($btn-loader-circle);
 		}
 		&.invert:after {
 			@include button-loading-variant($invert-variant-color);
@@ -142,16 +142,16 @@
 }
 
 .close {
-	border: 0;
-	@include border-radius($border-radius-circle);
-	cursor: pointer;
-	display: inline-block;
 	font-size: $font-size;
-	outline: none;
 	position: relative;
+	display: inline-block;
+	cursor: pointer;
 	vertical-align: top;
-	@include close-size($btn-close-size, $btn-close-size);
+	border: 0;
+	outline: none;
 	@include close-variant($base-variant-background, $base-variant-color);
+	@include close-size($btn-close-size, $btn-close-size);
+	@include border-radius($border-radius-circle);
 	&.invert {
 		@include close-variant($invert-variant-background, $invert-variant-color);
 	}
@@ -169,21 +169,21 @@
 	}
 	&:before,
 	&:after {
-		content: "";
-		display: block;
-		left: 50%;
 		position: absolute;
 		top: 50%;
+		left: 50%;
+		display: block;
+		content: '';
 		transform: $btn-close-transform;
 		transform-origin: center center;
 	}
 	&:before {
-		height: $btn-close-icon-size;
 		width: 50%;
+		height: $btn-close-icon-size;
 	}
 	&:after {
-		height: 50%;
 		width: $btn-close-icon-size;
+		height: 50%;
 	}
 	&.xs {
 		@include close-size($btn-close-size-xs, $btn-close-size-xs);
@@ -211,7 +211,7 @@
 #{$btn} {
 	@extend %buttons;
 	&::-moz-focus-inner {
-		border: 0;
 		padding: 0;
+		border: 0;
 	}
 }

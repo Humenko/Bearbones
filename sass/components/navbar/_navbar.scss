@@ -1,0 +1,139 @@
+$nav-height: 3.5rem !default;
+// Components
+// .nav-toggle {
+//   @include hamburger($nav-height);
+//   // Responsiveness
+//   @include tablet {
+//     display: none;
+//   }
+// }
+.nav-item {
+	align-items: center;
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	font-size: $body-font-size;
+	justify-content: center;
+	padding: .75rem .5rem;
+	a {
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+	img {
+		max-height: $nav-height/1.5;
+	}
+	// Responsiveness
+	//   @include mobile {
+	//     justify-content: flex-start;
+	//   }
+}
+
+.nav-item a,
+a.nav-item {
+	color: $navbar-link-color;
+	font-weight: $navbar-font-weight;
+	&:hover {
+		color: $navbar-link-hover-color;
+		text-decoration: none;
+	}
+	&.is-active {
+		// color: $link-active;
+	}
+	&.is-tab {
+		border-bottom: 1px solid transparent;
+		border-top: 1px solid transparent;
+		padding-bottom: calc(.75rem - 1px);
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: calc(.75rem - 1px);
+		&:hover {
+			border-bottom-color: $primary-color;
+			border-top-color: transparent;
+		}
+		&.is-active {
+			border-bottom: 3px solid $primary-color;
+			color: $primary-color;
+			padding-bottom: calc(.75rem - 3px);
+		}
+	} //   // Responsiveness
+	//   @include desktop {
+	//     &.is-brand {
+	//       padding-left: 0;
+	//     }
+	//   }
+}
+
+// Containers
+.nav-left,
+.nav-right {
+	//   @include overflow-touch;
+	align-items: stretch;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+	max-width: 100%;
+	overflow: auto; //   @include widescreen {
+	//     flex-basis: 0;
+	//   }
+}
+
+.nav-left {
+	justify-content: flex-start;
+	white-space: nowrap;
+}
+
+.nav-right {
+	justify-content: flex-end;
+}
+
+.nav-center {
+	align-items: stretch;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-menu {
+	//   // Responsiveness
+	//   @include mobile {
+	//     &.nav-right {
+	//       background-color: $white;
+	//       box-shadow: 0 4px 7px rgba($black, 0.1);
+	//       left: 0;
+	//       display: none;
+	//       right: 0;
+	//       top: 100%;
+	//       position: absolute;
+	//       .nav-item {
+	//         border-top: 1px solid rgba($border, 0.5);
+	//         padding: 0.75rem;
+	//       }
+	//       &.is-active {
+	//         display: block;
+	//       }
+	//     }
+	//   }
+}
+
+// Main container
+.bb-nav {
+	align-items: stretch;
+	background-color: $white;
+	display: flex;
+	height: $nav-height;
+	position: relative;
+	text-align: center;
+	z-index: 10;
+	& > .container {
+		align-items: stretch;
+		display: flex;
+		min-height: $nav-height;
+		width: 100%;
+	} // Modifiers
+	&.has-shadow {
+		box-shadow: 0 2px 3px rgba(#000000, .1);
+	}
+}

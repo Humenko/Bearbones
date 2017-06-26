@@ -1,26 +1,26 @@
 .bb-alert {
-    @include border-radius($alert-border-radius);
-    position: relative;
-    @include alert-variant($base-variant-color, $base-variant-background);
-    padding: $alert-spacing;
-    &.invert {
-        @include alert-variant($invert-variant-color, $invert-variant-background);
-    }
-    &.primary {
-        @include alert-variant($primary-variant-color, $primary-variant-background);
-    }
-    &.secondary {
-        @include alert-variant($secondary-variant-color, $secondary-variant-background);
-    }
-    &.positive {
-        @include alert-variant($positive-variant-color, $positive-variant-background);
-    }
-    &.negative {
-        @include alert-variant($negative-variant-color, $negative-variant-background);
-    }
-    .close {
-        position: absolute;
-        right: $alert-spacing;
-        top: $alert-spacing;
-    }
+	position: relative;
+	padding: $alert-spacing;
+	@include alert-variant($base-variant-color, $base-variant-background);
+	@include border-radius($alert-border-radius);
+	&.invert {
+		@include alert-variant($invert-variant-color, $invert-variant-background);
+	}
+	&.primary {
+		@include alert-variant($primary-variant-color, $primary-variant-background);
+	}
+	&.secondary {
+		@include alert-variant($secondary-variant-color, $secondary-variant-background);
+	}
+	&.positive {
+		@include alert-variant($positive-variant-color, $positive-variant-background);
+	}
+	&.negative {
+		@include alert-variant($negative-variant-color, $negative-variant-background);
+	}
+	.close {
+		position: absolute;
+		top: $alert-spacing;
+		right: $alert-spacing;
+	}
 }
