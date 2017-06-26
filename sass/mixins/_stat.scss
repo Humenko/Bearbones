@@ -1,17 +1,17 @@
 @mixin stat-size($font-size) {
-    .value {
-        font-size: $font-size;
-        &.text {
-            font-size: $font-size/2;
-        }
-    }
-    .label {
-        font-size: $font-size/4;
-    }
+	.value {
+		font-size: $font-size;
+		&.text {
+			font-size: $font-size/2;
+		}
+	}
+	.label {
+		font-size: $font-size/4;
+	}
 }
 
 @mixin stat-variant($color) {
-    .value {
-        color: $color;
-    }
+	.value {
+		color: $color;
+	}
 }

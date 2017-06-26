@@ -1,100 +1,100 @@
 @mixin button-size($font-size) {
-    font-size: $font-size;
+	font-size: $font-size;
 }
 
 @mixin button-variant($color, $background, $border) {
-    $btn-active-background: darken($background, 10%);
-    $btn-active-border: darken($border, 12%);
-    color: $color;
-    background-color: $background;
-    border-color: $border;
-    @include hover {
-        color: $color;
-        background-color: $btn-active-background;
-        border-color: $btn-active-border;
-    }
-    &.disabled,
-    &:disabled {
-        opacity: 0.7;
-        pointer-events: none;
-        cursor: not-allowed;
-    }
-    &:active,
-    &.active {
-        color: $color;
-        background-color: $btn-active-background;
-        border-color: $btn-active-border;
-    }
+	$btn-active-background: darken($background, 10%);
+	$btn-active-border: darken($border, 12%);
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+	@include hover {
+		color: $color;
+		background-color: $btn-active-background;
+		border-color: $btn-active-border;
+	}
+	&.disabled,
+	&:disabled {
+		opacity: .7;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	&:active,
+	&.active {
+		color: $color;
+		background-color: $btn-active-background;
+		border-color: $btn-active-border;
+	}
 }
 
 @mixin button-outline-variant($color) {
-    $btn-active-color: darken($color, 20%);
-    color: $color;
-    background-color: $white;
-    background-image: none;
-    border-color: $color;
-    @include hover {
-        color: $btn-active-color;
-        border-color: $btn-active-color;
-    }
-    &.disabled,
-    &:disabled {
-        opacity: 0.7;
-        pointer-events: none;
-        cursor: not-allowed;
-    }
-    &:active,
-    &.active {
-        color: $color;
-        border-color: $btn-active-color;
-    }
+	$btn-active-color: darken($color, 20%);
+	color: $color;
+	background-color: $white;
+	background-image: none;
+	border-color: $color;
+	@include hover {
+		color: $btn-active-color;
+		border-color: $btn-active-color;
+	}
+	&.disabled,
+	&:disabled {
+		opacity: .7;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	&:active,
+	&.active {
+		color: $color;
+		border-color: $btn-active-color;
+	}
 }
 
 @mixin button-inverted-variant($color, $background, $border) {
-    $btn-active-background: $color;
-    $btn-active-color: $background;    
-    color: $color;
-    background-color: $background;
-    border-color: $border;
-    @include hover {
-        background-color: $btn-active-background;
-        color: $btn-active-color;  
-    }
-    &.disabled,
-    &:disabled {
-        opacity: 0.7;
-        pointer-events: none;
-        cursor: not-allowed;
-    }
-    &:active,
-    &.active {
-        background-color: $btn-active-background;
-        color: $btn-active-color;        
-    }
+	$btn-active-background: $color;
+	$btn-active-color: $background;
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+	@include hover {
+		background-color: $btn-active-background;
+		color: $btn-active-color;
+	}
+	&.disabled,
+	&:disabled {
+		opacity: .7;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	&:active,
+	&.active {
+		background-color: $btn-active-background;
+		color: $btn-active-color;
+	}
 }
 
 @mixin button-loading-variant($color) {
 	border-color: $color transparent transparent;
-    &.disabled,
-    &:disabled {
-        opacity: 0.7;
-        pointer-events: none;
-        cursor: not-allowed;
-    }
+	&.disabled,
+	&:disabled {
+		opacity: .7;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
 }
 
 @mixin close-variant($background, $color) {
-    background-color: darken($background, 10%);   
+	background-color: darken($background, 10%);
 	&:before,
 	&:after {
 		background-color: $color;
-    }    
-    @include hover-focus-active {
-        background-color: darken($background, 20%);   
-    } 
+	}
+	@include hover-focus-active {
+		background-color: darken($background, 20%);
+	}
 }
 
 @mixin close-size($width, $height) {
-    width: $width;
-    height: $height;
+	width: $width;
+	height: $height;
 }

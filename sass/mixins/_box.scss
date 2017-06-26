@@ -1,29 +1,29 @@
 @mixin box-variant($color, $background) {
-    background-color: $background;   
-    color: $color;     
-    @include border($border-width, $border-style, $background);      
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    a {
-        color: $color;
-    } 
+	background-color: $background;
+	color: $color;
+	@include border($border-width, $border-style, $background);
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	a {
+		color: $color;
+	}
 }
 
 @mixin box-outline-variant($color) {
-    background-color: #ffffff;
-    color: $color;   
-    @include border($border-width, $border-style, $color);  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    a {
-        color: $color;
-    } 
+	background-color: #FFFFFF;
+	color: $color;
+	@include border($border-width, $border-style, $color);
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	a {
+		color: $color;
+	}
 }

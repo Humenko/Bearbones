@@ -1,12 +1,12 @@
 @mixin alert-variant($color, $background) {
-    background-color: $background;   
-    color: $color;     
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        color: $color;
-    } 
+	background-color: $background;
+	color: $color;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p {
+		color: $color;
+	}
 }

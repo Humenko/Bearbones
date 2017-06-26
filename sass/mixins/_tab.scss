@@ -1,82 +1,82 @@
 @mixin tab-size($font-size) {
-    font-size: $font-size;
+	font-size: $font-size;
 }
 
 @mixin tab-variant($color) {
-    $light-color: lighten($color, 10%);
-    $lighter-color: lighten($color, 35%);
-    ul {
-        @include border-bottom-color($lighter-color);
-        li {
-            &.active {
-                a {
-                    @include border-bottom-color($color);
-                    color: $color;
-                    @include hover {
-                        @include border-bottom-color($color);
-                        color: $color;
-                    }
-                }
-            }
-            a {
-                @include border-bottom-color($lighter-color);
-                color: $light-color;
-                @include hover {
-                    @include border-bottom-color($light-color);
-                    color: $color;
-                }
-            }
-        }
-    }
+	$light-color: lighten($color, 10%);
+	$lighter-color: lighten($color, 35%);
+	ul {
+		@include border-bottom-color($lighter-color);
+		li {
+			&.active {
+				a {
+					@include border-bottom-color($color);
+					color: $color;
+					@include hover {
+						@include border-bottom-color($color);
+						color: $color;
+					}
+				}
+			}
+			a {
+				@include border-bottom-color($lighter-color);
+				color: $light-color;
+				@include hover {
+					@include border-bottom-color($light-color);
+					color: $color;
+				}
+			}
+		}
+	}
 }
 
 @mixin tab-outline-variant($color) {
-    $light-color: lighten($color, 10%);
-    $lighter-color: lighten($color, 35%);
-    ul {
-        @include border-bottom-color($lighter-color);
-        li {
-            &.active {
-                a {
-                    @include border-color($lighter-color);
-                    @include border-bottom-color($white);
-                    color: $color;
-                    @include hover {
-                        background-color: transparent;
-                        @include border-bottom-color($white);
-                        color: $color;
-                    }
-                }
-            }
-            a {
-                @include border-bottom-color($lighter-color);
-                color: $light-color;
-                @include hover {
-                    @include border-bottom-color($lighter-color);
-                    color: $color;
-                    background-color: $lighter-color;
-                }
-            }
-        }
-    }
+	$light-color: lighten($color, 10%);
+	$lighter-color: lighten($color, 35%);
+	ul {
+		@include border-bottom-color($lighter-color);
+		li {
+			&.active {
+				a {
+					@include border-color($lighter-color);
+					@include border-bottom-color($white);
+					color: $color;
+					@include hover {
+						background-color: transparent;
+						@include border-bottom-color($white);
+						color: $color;
+					}
+				}
+			}
+			a {
+				@include border-bottom-color($lighter-color);
+				color: $light-color;
+				@include hover {
+					@include border-bottom-color($lighter-color);
+					color: $color;
+					background-color: $lighter-color;
+				}
+			}
+		}
+	}
 }
 
 @mixin tab-naked-variant($color) {
-    $light-color: lighten($color, 10%);
-    ul {
-      @include border-bottom-color(transparent);        
-        li {
-            &.active {
-                a {
-                    @include border-bottom-color($color);
-                }
-            }
-            a {
-                @include border-bottom-color(transparent);
-                @include hover {
-                    @include border-bottom-color($light-color);
-                }
-            }
-        }
-    }
+	$light-color: lighten($color, 10%);
+	ul {
+		@include border-bottom-color(transparent);
+		li {
+			&.active {
+				a {
+					@include border-bottom-color($color);
+				}
+			}
+			a {
+				@include border-bottom-color(transparent);
+				@include hover {
+					@include border-bottom-color($light-color);
+				}
+			}
+		}
+	}
 }
