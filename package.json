@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
+    "csscomb": "^4.2.0",
     "cssnano": "^3.10.0",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1",
