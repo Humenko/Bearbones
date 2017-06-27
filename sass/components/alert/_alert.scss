@@ -1,6 +1,7 @@
 .bb-alert {
 	position: relative;
 	padding: $alert-spacing;
+
 	@include alert-variant($base-variant-color, $base-variant-background);
 	@include border-radius($alert-border-radius);
 	&.invert {
