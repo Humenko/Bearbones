@@ -31,19 +31,19 @@
 }
 
 .text-xs {
-	@include text-size($font-size-xs);
+	@include text-font-size($font-size-xs);
 }
 
 .text-sm {
-	@include text-size($font-size-sm);
+	@include text-font-size($font-size-sm);
 }
 
 .text-lg {
-	@include text-size($font-size-lg);
+	@include text-font-size($font-size-lg);
 }
 
 .text-xl {
-	@include text-size($font-size-xl);
+	@include text-font-size($font-size-xl);
 }
 
 .font-weight-normal {

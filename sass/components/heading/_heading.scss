@@ -10,31 +10,31 @@ h5 {
 h1 {
 	font-size: $heading-min-modifier*$heading-min-modifier*$heading-min-modifier*$heading-min-modifier *1rem;
 
-	@include heading-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier*$heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier*$heading-max-modifier*$heading-max-modifier *$heading-min-font);
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier*$heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier*$heading-max-modifier*$heading-max-modifier *$heading-min-font);
 }
 
 h2 {
 	font-size: $heading-min-modifier*$heading-min-modifier*$heading-min-modifier *1rem;
 
-	@include heading-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier*$heading-max-modifier *$heading-min-font);
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier*$heading-max-modifier *$heading-min-font);
 }
 
 h3 {
 	font-size: $heading-min-modifier*$heading-min-modifier *1rem;
 
-	@include heading-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier *$heading-min-font);
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier *$heading-min-font);
 }
 
 h4 {
 	font-size: $heading-min-modifier *1rem;
 
-	@include heading-font-size($heading-min-width, $heading-max-width, $heading-min-modifier *$heading-min-font, $heading-max-modifier *$heading-min-font);
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier *$heading-min-font, $heading-max-modifier *$heading-min-font);
 }
 
 h5 {
 	font-size: $heading-min-modifier *1rem;
 
-	@include heading-font-size($heading-min-width, $heading-max-width, $heading-min-modifier, $heading-max-modifier);
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier, $heading-max-modifier);
 }
 
 .title {

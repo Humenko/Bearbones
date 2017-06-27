@@ -20,16 +20,16 @@
 				color: $breadcrumb-active-color;
 			}
 			&.xs {
-				@include breadcrumb-size($font-size-xs);
+				@include breadcrumb-font-size($font-size-xs);
 			}
 			&.sm {
-				@include breadcrumb-size($font-size-sm);
+				@include breadcrumb-font-size($font-size-sm);
 			}
 			&.lg {
-				@include breadcrumb-size($font-size-lg);
+				@include breadcrumb-font-size($font-size-lg);
 			}
 			&.xl {
-				@include breadcrumb-size($font-size-xl);
+				@include breadcrumb-font-size($font-size-xl);
 			}
 			a {
 				color: $breadcrumb-link-color;

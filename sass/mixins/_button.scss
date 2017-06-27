@@ -1,4 +1,4 @@
-@mixin button-size($font-size) {
+@mixin button-font-size($font-size) {
 	font-size: $font-size;
 }
 
@@ -94,7 +94,7 @@
 	}
 }
 
-@mixin close-size($width, $height) {
+@mixin close-font-size($width, $height) {
 	width: $width;
 	height: $height;
 }

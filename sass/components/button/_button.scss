@@ -14,19 +14,19 @@
 	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	@include border($btn-border-width, $btn-border-style, $base-variant-border);
 	@include border-radius($btn-border-radius);
-	@include button-size($btn-font-size);
+	@include button-font-size($btn-font-size);
 	user-select: none;
 	&.xs {
-		@include button-size($font-size-xs);
+		@include button-font-size($font-size-xs);
 	}
 	&.sm {
-		@include button-size($font-size-sm);
+		@include button-font-size($font-size-sm);
 	}
 	&.lg {
-		@include button-size($font-size-lg);
+		@include button-font-size($font-size-lg);
 	}
 	&.xl {
-		@include button-size($font-size-xl);
+		@include button-font-size($font-size-xl);
 	}
 	&.full-x {
 		display: block;
@@ -153,7 +153,7 @@
 	cursor: pointer;
 
 	@include close-variant($base-variant-background, $base-variant-color);
-	@include close-size($btn-close-size, $btn-close-size);
+	@include close-font-size($btn-close-size, $btn-close-size);
 	@include border-radius($border-radius-circle);
 	&.invert {
 		@include close-variant($invert-variant-background, $invert-variant-color);
@@ -189,16 +189,16 @@
 		height: 50%;
 	}
 	&.xs {
-		@include close-size($btn-close-size-xs, $btn-close-size-xs);
+		@include close-font-size($btn-close-size-xs, $btn-close-size-xs);
 	}
 	&.sm {
-		@include close-size($btn-close-size-sm, $btn-close-size-sm);
+		@include close-font-size($btn-close-size-sm, $btn-close-size-sm);
 	}
 	&.lg {
-		@include close-size($btn-close-size-lg, $btn-close-size-lg);
+		@include close-font-size($btn-close-size-lg, $btn-close-size-lg);
 	}
 	&.xl {
-		@include close-size($btn-close-size-xl, $btn-close-size-xl);
+		@include close-font-size($btn-close-size-xl, $btn-close-size-xl);
 	}
 }
 

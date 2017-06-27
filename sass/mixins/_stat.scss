@@ -1,4 +1,4 @@
-@mixin stat-size($font-size) {
+@mixin stat-font-size($font-size) {
 	.value {
 		font-size: $font-size;
 		&.text {

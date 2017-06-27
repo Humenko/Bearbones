@@ -42,15 +42,15 @@
 		@include stat-variant($negative-variant-background);
 	}
 	&.xs {
-		@include stat-size($stat-font-size-xs);
+		@include stat-font-size($stat-font-size-xs);
 	}
 	&.sm {
-		@include stat-size($stat-font-size-sm);
+		@include stat-font-size($stat-font-size-sm);
 	}
 	&.lg {
-		@include stat-size($stat-font-size-lg);
+		@include stat-font-size($stat-font-size-lg);
 	}
 	&.xl {
-		@include stat-size($stat-font-size-xl);
+		@include stat-font-size($stat-font-size-xl);
 	}
 }

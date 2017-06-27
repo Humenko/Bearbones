@@ -1,4 +1,4 @@
-@mixin heading-font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
+@mixin heading-font-font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
 	$min-vw-unit: unit($min-vw);
 	$max-vw-unit: unit($max-vw);
 	$min-font-size-unit: unit($min-font-size);

@@ -17,16 +17,16 @@
 		@include input-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
 	}
 	&.xs {
-		@include input-size($font-size-xs);
+		@include input-font-size($font-size-xs);
 	}
 	&.sm {
-		@include input-size($font-size-sm);
+		@include input-font-size($font-size-sm);
 	}
 	&.lg {
-		@include input-size($font-size-lg);
+		@include input-font-size($font-size-lg);
 	}
 	&.xl {
-		@include input-size($font-size-xl);
+		@include input-font-size($font-size-xl);
 	}
 	input {
 		position: relative;
@@ -36,9 +36,6 @@
 		padding: $input-padding-y $input-padding-x;
 		width: 1%;
 
-		@include border($input-border-width, $border-style, $input-border-color);
-		@include border-radius($input-border-radius);
-		@include transition($input-transition);
 		@include focus-active {
 			z-index: 3;
 			border-color: $input-border-color-focus;
@@ -47,6 +44,9 @@
 				color: $input-border-color-focus;
 			}
 		}
+		@include transition($input-transition);
+		@include border-radius($input-border-radius);
+		@include border($input-border-width, $border-style, $input-border-color);
 		&::placeholder {
 			color: $input-color-placeholder;
 		}
