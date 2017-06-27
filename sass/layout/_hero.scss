@@ -21,8 +21,8 @@
 	&.full-y {
 		min-height: 100vh;
 		.body {
-			align-items: center;
 			display: flex;
+			align-items: center;
 			& > .container {
 				flex-grow: 1;
 				flex-shrink: 1;

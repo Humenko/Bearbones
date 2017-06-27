@@ -1,10 +1,11 @@
 .bb-tab {
-	user-select: none;
 	display: flex;
-	justify-content: space-between;
 	overflow: hidden;
 	overflow-x: auto;
+	justify-content: space-between;
+
 	@include tab-size($font-size);
+	user-select: none;
 	&.primary {
 		@include tab-variant($primary-variant-background);
 	}
@@ -18,35 +19,40 @@
 		@include tab-variant($negative-variant-background);
 	}
 	ul {
-		@include border-bottom($tab-border-width, $border-style, $tab-background);
 		display: flex;
-		padding: 0;
 		flex-grow: 1;
+		padding: 0;
+
+		@include border-bottom($tab-border-width, $border-style, $tab-background);
 		li {
 			display: block;
 			&.active {
 				a {
-					@include border-bottom-color($primary-color);
 					color: $primary-color;
+
+					@include border-bottom-color($primary-color);
 					@include hover {
-						@include border-bottom-color($primary-color);
 						color: $primary-color;
+
+						@include border-bottom-color($primary-color);
 					}
 				}
 			}
 			a {
-				align-items: center;
-				@include border-bottom($tab-border-width, $border-style, $tab-background);
 				display: flex;
+				align-items: center;
 				justify-content: center;
 				margin-bottom: -$tab-border-width;
 				padding: $padding/2 $padding;
 				color: $light-grey;
 				cursor: pointer;
+
+				@include border-bottom($tab-border-width, $border-style, $tab-background);
 				@include hover {
-					@include border-bottom-color($base-color);
 					color: $base-color;
 					text-decoration: none;
+
+					@include border-bottom-color($base-color);
 				}
 			}
 		}
@@ -66,10 +72,12 @@
 			&.active {
 				a {
 					background-color: transparent;
+
 					@include border-color($tab-background);
 					@include border-bottom-color($white);
 					@include hover {
 						background-color: transparent;
+
 						@include border-bottom-color($white);
 					}
 				}
@@ -79,6 +87,7 @@
 				@include border-top-radius($border-radius);
 				@include hover {
 					background-color: $tab-background;
+
 					@include border-bottom-color($tab-background);
 				}
 			}

@@ -1,15 +1,17 @@
 .bb-pagination {
 	display: inline-flex;
 	margin: 0;
-	user-select: none;
 	vertical-align: middle;
+
 	@include pagination-variant($base-variant-color, $base-variant-background);
+	user-select: none;
 	.item {
-		font-weight: $pagination-font-weight;
 		padding: $pagination-padding $pagination-padding + .5;
-		cursor: pointer;
 		text-align: center;
 		text-decoration: none;
+		font-weight: $pagination-font-weight;
+		cursor: pointer;
+
 		@include transition($pagination-transition);
 		@include border-left($pagination-border-width, $pagination-border-style, $base-variant-border);
 		@include border-bottom($pagination-border-width, $pagination-border-style, $base-variant-border);
@@ -25,8 +27,8 @@
 	}
 	.dot {
 		padding: $dot-padding;
-		cursor: pointer;
 		text-decoration: none;
+		cursor: pointer;
 
 		@include transition($pagination-transition);
 		@include border-radius($dot-border-radius);

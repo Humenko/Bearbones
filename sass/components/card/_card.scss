@@ -3,6 +3,7 @@
 	max-width: 100%;
 	background-color: $white;
 	box-shadow: $card-box-shadow;
+
 	@include border-radius($card-border-radius);
 	&.no-shadow {
 		box-shadow: none;
@@ -31,13 +32,14 @@
 	.card-header {
 		display: flex;
 		align-items: stretch;
+
 		@include border-bottom($border-width, $border-style, $card-border-color);
 		.header-title {
-			font-weight: $font-weight-bold;
 			display: flex;
 			align-items: center;
 			flex-grow: 1;
 			padding: $card-spacing;
+			font-weight: $font-weight-bold;
 		}
 	}
 	.card-image {
@@ -45,6 +47,7 @@
 		display: block;
 		img {
 			width: 100%;
+
 			@include border-top-radius($card-border-radius);
 		}
 	}
@@ -60,6 +63,7 @@
 	.card-footer {
 		display: flex;
 		align-items: stretch;
+
 		@include border-top($btn-border-width, $btn-border-style, $card-border-color);
 		.footer-item {
 			display: flex;

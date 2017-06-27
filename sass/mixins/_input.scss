@@ -1,8 +1,8 @@
 @mixin input-variant($color, $input-background, $border) {
 	.bb-input-addon {
-		color: $color;
-		background-color: $input-background;
 		border-color: $border;
+		background-color: $input-background;
+		color: $color;
 		&.disabled,
 		&:disabled {
 			opacity: .7;
@@ -14,6 +14,7 @@
 			& + .bb-input-addon {
 				background-color: $input-background;
 				color: $color;
+
 				@include border-color($border);
 			}
 		}
@@ -25,7 +26,7 @@
 }
 
 @mixin input-addon-variant($color, $background, $border) {
-	color: $color;
-	background-color: $background;
 	border-color: $border;
+	background-color: $background;
+	color: $color;
 }

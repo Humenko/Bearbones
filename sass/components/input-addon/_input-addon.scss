@@ -10,35 +10,39 @@
 
 .bb-input-addon,
 .bb-input-btn {
-	white-space: nowrap;
 	vertical-align: middle;
+	white-space: nowrap;
 }
 
 .bb-input {
 	&.left {
 		input {
-			@include border-left-radius(0);
 			border-left: 0;
+
+			@include border-left-radius(0);
 		}
 		.bb-input-addon,
 		.bb-input-btn,
 		.bb-btn {
-			@include border-right-radius(0);
-			border-right: 0;
 			order: -1;
+			border-right: 0;
+
+			@include border-right-radius(0);
 		}
 	}
 	&.right {
 		input {
-			@include border-right-radius(0);
 			border-right: 0;
+
+			@include border-right-radius(0);
 		}
 		.bb-input-addon,
 		.bb-input-btn,
 		.bb-btn {
-			@include border-left-radius(0);
-			border-left: 0;
 			order: 1;
+			border-left: 0;
+
+			@include border-left-radius(0);
 		}
 	}
 	input {
@@ -46,6 +50,7 @@
 			& + .bb-input-addon {
 				background-color: $input-addon-background-focus;
 				color: $input-addon-color-focus;
+
 				@include border-color($input-addon-border-color-focus);
 			}
 		}
@@ -53,14 +58,16 @@
 }
 
 .bb-input-addon {
-	padding: $input-padding-y $input-padding-x;
 	margin-bottom: 0;
-	line-height: $input-line-height;
+	padding: $input-padding-y $input-padding-x;
+	background-color: $input-addon-background;
 	color: $input-addon-color;
 	text-align: center;
-	background-color: $input-addon-background;
+	line-height: $input-line-height;
+
 	@include border($input-border-width, $border-style, $input-addon-border-color);
 	@include transition($input-transition);
+	@include border-radius($input-border-radius);
 	&.invert {
 		@include input-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
 	}
@@ -76,7 +83,6 @@
 	&.negative {
 		@include input-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
 	}
-	@include border-radius($input-border-radius);
 	input[type='radio'],
 	input[type='checkbox'] {
 		margin-top: 0;

@@ -30,24 +30,25 @@
 	}
 	input {
 		position: relative;
-		padding: $input-padding-y $input-padding-x;
 		z-index: 2;
 		flex: 1 1 auto;
-		width: 1%;
 		margin-bottom: 0;
+		padding: $input-padding-y $input-padding-x;
+		width: 1%;
+
 		@include border($input-border-width, $border-style, $input-border-color);
 		@include border-radius($input-border-radius);
 		@include transition($input-transition);
-		&::placeholder {
-			color: $input-color-placeholder;
-		}
 		@include focus-active {
 			z-index: 3;
-			box-shadow: none;
 			border-color: $input-border-color-focus;
+			box-shadow: none;
 			&::placeholder {
 				color: $input-border-color-focus;
 			}
+		}
+		&::placeholder {
+			color: $input-color-placeholder;
 		}
 	}
 }

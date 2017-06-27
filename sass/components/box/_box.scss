@@ -1,6 +1,7 @@
 .bb-box {
 	position: relative;
 	padding: $box-spacing-y $box-spacing-x;
+
 	@include border-radius($border-radius);
 	@include box-variant($base-variant-color, $base-variant-background);
 	&.center {

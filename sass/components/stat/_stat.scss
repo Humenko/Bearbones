@@ -2,28 +2,28 @@
 	display: inline-flex;
 	flex-direction: column;
 	.value {
-		font-size: $stat-font-size;
-		font-weight: $stat-value-font-weight;
-		line-height: $stat-line-height;
-		text-transform: $stat-text-transform;
 		text-align: center;
+		text-transform: $stat-text-transform;
+		font-weight: $stat-value-font-weight;
+		font-size: $stat-font-size;
+		line-height: $stat-line-height;
 		&.text {
-			line-height: $stat-line-height;
 			min-height: 2em;
-			font-weight: $stat-text-font-weight;
 			text-align: center;
+			font-weight: $stat-text-font-weight;
 			font-size: $stat-font-size/2;
+			line-height: $stat-line-height;
 		}
 	}
 	.label {
-		font-size: $stat-font-size/4;
-		font-weight: $stat-label-font-weight;
-		text-transform: $stat-text-transform;
 		text-align: center;
+		text-transform: $stat-text-transform;
+		font-weight: $stat-label-font-weight;
+		font-size: $stat-font-size/4;
 	}
 	&.horizontal {
-		flex-direction: row;
 		align-items: center;
+		flex-direction: row;
 		margin: 1em 0;
 		:last-child {
 			margin-left: $stat-spacing/1.5;

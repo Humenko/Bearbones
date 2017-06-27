@@ -2,8 +2,9 @@
 	margin-bottom: $breadcrumb-spacing;
 	padding: 0;
 	ul {
-		list-style: none;
 		background-color: $breadcrumb-background;
+		list-style: none;
+
 		@include clearfix;
 		@include border-radius($border-radius);
 		.breadcrumb-item {
@@ -12,8 +13,8 @@
 				display: inline-block;
 				padding-right: $breadcrumb-item-padding;
 				padding-left: $breadcrumb-item-padding;
-				content: '#{$breadcrumb-divider}';
 				color: $breadcrumb-divider-color;
+				content: '#{$breadcrumb-divider}';
 			}
 			&.active {
 				color: $breadcrumb-active-color;

@@ -1,27 +1,30 @@
 .bb-divider {
+	margin: $divider-margin;
+	height: 0;
 	font-weight: $divider-font-weight;
 	line-height: 1;
-	height: 0;
-	margin: $divider-margin;
+
 	user-select: none;
 	&:not(.divider-content) {
-		@include divider-border($divider-border-width, $divider-border-style, $divider-color);
 		border-radius: $divider-border-radius;
+
+		@include divider-border($divider-border-width, $divider-border-style, $divider-color);
 	}
 	&.divider-content {
-		line-height: 1;
 		display: table;
 		height: auto;
 		text-align: center;
 		white-space: nowrap;
+		line-height: 1;
 		&:before,
 		&:after {
 			position: relative;
 			top: 50%;
 			display: table-cell;
 			width: 50%;
-			content: '';
 			background-repeat: no-repeat;
+			content: '';
+
 			@include divider-content-border($divider-content-border-width, $divider-color);
 		}
 		&:before {
@@ -32,10 +35,10 @@
 		}
 	}
 	& > .icon {
-		font-size: $divider-icon-font;
-		height: 1rem;
 		margin: $divider-icon-margin;
+		height: 1rem;
 		vertical-align: middle;
+		font-size: $divider-icon-font;
 	}
 	&.hidden {
 		@include divider-border($divider-border-width, $divider-border-style, $divider-hidden-color);

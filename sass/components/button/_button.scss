@@ -1,20 +1,21 @@
 %buttons {
-	font-weight: $btn-font-weight;
-	line-height: $btn-line-height;
 	display: inline-block;
 	padding: $btn-spacing $btn-spacing + .75;
-	cursor: pointer;
-	user-select: none;
-	text-align: center;
 	vertical-align: middle;
+	text-align: center;
 	text-decoration: none;
 	text-transform: $btn-text-transform;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
+	cursor: pointer;
+
 	-webkit-appearance: none;
 	@include transition($btn-transition);
 	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
 	@include border($btn-border-width, $btn-border-style, $base-variant-border);
 	@include border-radius($btn-border-radius);
 	@include button-size($btn-font-size);
+	user-select: none;
 	&.xs {
 		@include button-size($font-size-xs);
 	}
@@ -87,21 +88,22 @@
 	}
 	&.loading {
 		position: relative;
+		color: transparent !important;
 		cursor: default;
 		pointer-events: none;
-		color: transparent !important;
 		&:after {
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			margin: $btn-loader-margin;
 			width: $btn-loader-size;
 			height: $btn-loader-size;
-			margin: $btn-loader-margin;
+			border-width: $btn-loader-border;
+			border-style: solid;
 			content: '';
 			animation: button-spin $transition-duration * 3 linear;
 			animation-iteration-count: infinite;
-			border-width: $btn-loader-border;
-			border-style: solid;
+
 			@include button-loading-variant($base-variant-color);
 			@include border-radius($btn-loader-circle);
 		}
@@ -142,13 +144,14 @@
 }
 
 .close {
-	font-size: $font-size;
 	position: relative;
 	display: inline-block;
-	cursor: pointer;
-	vertical-align: top;
-	border: 0;
 	outline: none;
+	border: 0;
+	vertical-align: top;
+	font-size: $font-size;
+	cursor: pointer;
+
 	@include close-variant($base-variant-background, $base-variant-color);
 	@include close-size($btn-close-size, $btn-close-size);
 	@include border-radius($border-radius-circle);

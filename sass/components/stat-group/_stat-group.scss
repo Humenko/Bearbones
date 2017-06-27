@@ -8,7 +8,7 @@
 	}
 	&.vertical {
 		flex-direction: column;
-		max-width: none;
 		margin: $stat-spacing (-$stat-spacing);
+		max-width: none;
 	}
 }

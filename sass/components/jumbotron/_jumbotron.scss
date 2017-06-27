@@ -1,6 +1,7 @@
 .bb-jumbotron {
-	padding: $jumbotron-spacing ($jumbotron-spacing / 2);
 	margin-bottom: $jumbotron-spacing;
+	padding: $jumbotron-spacing ($jumbotron-spacing / 2);
+
 	@include border-radius($jumbotron-border-radius);
 	@include jumbotron-variant($base-variant-color, $base-variant-background);
 	@include respond-to('md') {
@@ -9,6 +10,7 @@
 	&.full-x {
 		padding-right: 0;
 		padding-left: 0;
+
 		@include border-radius(0);
 	}
 	&.invert {

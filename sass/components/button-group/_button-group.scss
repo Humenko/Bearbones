@@ -1,9 +1,10 @@
 .bb-btns {
 	display: inline-flex;
 	flex-direction: row;
-	width: 100%;
 	margin: 0 $btn-spacing/2 0 0;
+	width: 100%;
 	vertical-align: baseline;
+
 	@include respond-to('md') {
 		width: auto;
 	}
@@ -23,6 +24,7 @@
 	}
 	%buttons {
 		flex: 1;
+
 		@include border-radius($no-border-radius);
 		&:first-child {
 			@include border-left-radius($btn-border-radius);
@@ -36,6 +38,7 @@
 		flex-direction: column;
 		%buttons {
 			margin: 0;
+
 			@include border-radius($no-border-radius);
 			&:first-child {
 				@include border-top-radius($btn-border-radius);

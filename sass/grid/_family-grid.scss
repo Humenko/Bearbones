@@ -1,33 +1,11 @@
 .bb-family-grid {
-	align-items: stretch;
 	display: block;
+	align-items: stretch;
 	flex-basis: 0;
 	flex-grow: 1;
 	flex-shrink: 1;
 	min-height: min-content;
-	&.grand-parent {
-		margin-left: -$grid-spacing;
-		margin-right: -$grid-spacing;
-		margin-top: -$grid-spacing;
-		&:last-child {
-			margin-bottom: -$grid-spacing;
-		}
-		&:not(:last-child) {
-			margin-bottom: $grid-spacing;
-		}
-	}
-	&.child {
-		margin: 0;
-	}
-	&.parent {
-		padding: $grid-spacing;
-	}
-	&.vertical {
-		flex-direction: column;
-		& > .bb-family-grid.child:not(:last-child) {
-			margin-bottom: $grid-spacing * 2;
-		}
-	}
+
 	@include respond-to('lg') {
 		&:not(.child) {
 			display: flex;
@@ -57,6 +35,29 @@
 				flex: none;
 				width: $i / $grid-max-column * 100%;
 			}
+		}
+	}
+	&.grand-parent {
+		margin-top: -$grid-spacing;
+		margin-right: -$grid-spacing;
+		margin-left: -$grid-spacing;
+		&:last-child {
+			margin-bottom: -$grid-spacing;
+		}
+		&:not(:last-child) {
+			margin-bottom: $grid-spacing;
+		}
+	}
+	&.child {
+		margin: 0;
+	}
+	&.parent {
+		padding: $grid-spacing;
+	}
+	&.vertical {
+		flex-direction: column;
+		& > .bb-family-grid.child:not(:last-child) {
+			margin-bottom: $grid-spacing * 2;
 		}
 	}
 }
