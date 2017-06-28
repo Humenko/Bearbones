@@ -5,7 +5,6 @@
 	justify-content: space-between;
 
 	@include tab-font-size($font-size);
-	@include transition($tab-transition);
 	user-select: none;
 	&.primary {
 		@include tab-variant($primary-variant-background);
@@ -27,16 +26,17 @@
 		@include border-bottom($tab-border-width, $border-style, $tab-background);
 		li {
 			display: block;
+
 			&.active {
 				a {
 					color: $primary-color;
 
+					@include border-bottom-color($primary-color);
 					@include hover {
 						color: $primary-color;
 
 						@include border-bottom-color($primary-color);
 					}
-					@include border-bottom-color($primary-color);
 				}
 			}
 			a {
@@ -48,13 +48,14 @@
 				color: $light-grey;
 				cursor: pointer;
 
+				@include border-bottom($tab-border-width, $border-style, $tab-background);
+				@include transition($tab-transition);
 				@include hover {
 					color: $base-color;
 					text-decoration: none;
 
 					@include border-bottom-color($base-color);
 				}
-				@include border-bottom($tab-border-width, $border-style, $tab-background);
 			}
 		}
 	}
@@ -74,23 +75,23 @@
 				a {
 					background-color: transparent;
 
+					@include border-color($tab-background);
+					@include border-bottom-color($white);
 					@include hover {
 						background-color: transparent;
 
 						@include border-bottom-color($white);
 					}
-					@include border-bottom-color($white);
-					@include border-color($tab-background);
 				}
 			}
 			a {
+				@include border($tab-border-width, $border-style, transparent);
+				@include border-top-radius($border-radius);
 				@include hover {
 					background-color: $tab-background;
 
 					@include border-bottom-color($tab-background);
 				}
-				@include border-top-radius($border-radius);
-				@include border($tab-border-width, $border-style, transparent);
 			}
 		}
 		&.primary {
@@ -128,10 +129,10 @@
 					}
 				}
 				a {
+					@include border-bottom-color(transparent);
 					@include hover {
 						@include border-bottom-color(inherit);
 					}
-					@include border-bottom-color(transparent);
 				}
 			}
 		}

@@ -170,7 +170,7 @@ $btn-font-weight:                     600 !default;
 $btn-line-height:                     1.25 !default;
 $btn-spacing:                         .5rem !default;
 $btn-text-transform:                  none !default;
-$btn-transition:                      $transition-duration all $transition-effect !default;
+$btn-transition:                      all $transition-effect $transition-duration !default;
 
 // Close button
 $btn-close-icon-size:                 .125rem !default;
@@ -213,6 +213,7 @@ $divider-margin:                      $margin 0 !default;
 // Footer // 
 
 $footer-background:                   $lighter-grey !default;
+$footer-divider-color:                $light-grey !default;
 $footer-padding:                      3rem 0 4rem 0 !default;
 
 // Input //
@@ -275,7 +276,7 @@ $navbar-tab-border-hover-color:       $navbar-link-hover-color !default;
 $navbar-tab-border-active-color:      $navbar-link-active-color !default;
 $navbar-tab-border-width:             $border-width !default;
 $navbar-tab-spacing:                  $padding !default;
-$navbar-tab-transition:               border-color $transition-effect, $transition-duration, 
+$navbar-tab-transition:               border-color $transition-effect $transition-duration, 
                                       color $transition-effect $transition-duration;
 
 // Pagination //
@@ -287,7 +288,7 @@ $pagination-font-size:                $font-size !default;
 $pagination-font-weight:              500 !default;
 $pagination-padding:                  $padding/2 !default;
 $pagination-margin:                   $margin/10 !default;
-$pagination-transition:               $transition-duration all $transition-effect !default;
+$pagination-transition:               all $transition-effect $transition-duration  !default;
 
 // Dots 
 $dot-border-radius:                   $border-radius-circle !default;
@@ -311,8 +312,7 @@ $stat-text-transform:                 uppercase !default;
 
 $tab-background:                      $lighter-grey !default;
 $tab-border-width:                    $border-width !default;
-$tab-transition:                      border-color $transition-effect, $transition-duration, 
-                                      color $transition-effect $transition-duration;
+$tab-transition:                      all $transition-effect $transition-duration;
 
 //// UTILITIES ///
 
