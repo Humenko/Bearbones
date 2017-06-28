@@ -1981,6 +1981,9 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -4138,13 +4141,13 @@ h5 {
   display: inline-flex;
 }
 
-.bb-input.invert .bb-input-addon {
+.bb-input.invert .input-addon {
   border-color: #FFFFFF;
   background-color: #FFFFFF;
   color: #4A4A4A;
 }
 
-.bb-input.invert .bb-input-addon.disabled, .bb-input.invert .bb-input-addon:disabled {
+.bb-input.invert .input-addon.disabled, .bb-input.invert .input-addon:disabled {
   opacity: .7;
 }
 
@@ -4152,19 +4155,19 @@ h5 {
   border-color: #FFFFFF;
 }
 
-.bb-input.invert input:focus + .bb-input-addon, .bb-input.invert input:active + .bb-input-addon {
+.bb-input.invert input:focus + .input-addon, .bb-input.invert input:active + .input-addon {
   background-color: #FFFFFF;
   color: #4A4A4A;
   border-color: #FFFFFF;
 }
 
-.bb-input.primary .bb-input-addon {
+.bb-input.primary .input-addon {
   border-color: #24C2AB;
   background-color: #24C2AB;
   color: #FFFFFF;
 }
 
-.bb-input.primary .bb-input-addon.disabled, .bb-input.primary .bb-input-addon:disabled {
+.bb-input.primary .input-addon.disabled, .bb-input.primary .input-addon:disabled {
   opacity: .7;
 }
 
@@ -4172,19 +4175,19 @@ h5 {
   border-color: #24C2AB;
 }
 
-.bb-input.primary input:focus + .bb-input-addon, .bb-input.primary input:active + .bb-input-addon {
+.bb-input.primary input:focus + .input-addon, .bb-input.primary input:active + .input-addon {
   background-color: #24C2AB;
   color: #FFFFFF;
   border-color: #24C2AB;
 }
 
-.bb-input.secondary .bb-input-addon {
+.bb-input.secondary .input-addon {
   border-color: #FFB52F;
   background-color: #FFB52F;
   color: #4A4A4A;
 }
 
-.bb-input.secondary .bb-input-addon.disabled, .bb-input.secondary .bb-input-addon:disabled {
+.bb-input.secondary .input-addon.disabled, .bb-input.secondary .input-addon:disabled {
   opacity: .7;
 }
 
@@ -4192,19 +4195,19 @@ h5 {
   border-color: #FFB52F;
 }
 
-.bb-input.secondary input:focus + .bb-input-addon, .bb-input.secondary input:active + .bb-input-addon {
+.bb-input.secondary input:focus + .input-addon, .bb-input.secondary input:active + .input-addon {
   background-color: #FFB52F;
   color: #4A4A4A;
   border-color: #FFB52F;
 }
 
-.bb-input.positive .bb-input-addon {
+.bb-input.positive .input-addon {
   border-color: #28D656;
   background-color: #28D656;
   color: #FFFFFF;
 }
 
-.bb-input.positive .bb-input-addon.disabled, .bb-input.positive .bb-input-addon:disabled {
+.bb-input.positive .input-addon.disabled, .bb-input.positive .input-addon:disabled {
   opacity: .7;
 }
 
@@ -4212,19 +4215,19 @@ h5 {
   border-color: #28D656;
 }
 
-.bb-input.positive input:focus + .bb-input-addon, .bb-input.positive input:active + .bb-input-addon {
+.bb-input.positive input:focus + .input-addon, .bb-input.positive input:active + .input-addon {
   background-color: #28D656;
   color: #FFFFFF;
   border-color: #28D656;
 }
 
-.bb-input.negative .bb-input-addon {
+.bb-input.negative .input-addon {
   border-color: #FF1800;
   background-color: #FF1800;
   color: #FFFFFF;
 }
 
-.bb-input.negative .bb-input-addon.disabled, .bb-input.negative .bb-input-addon:disabled {
+.bb-input.negative .input-addon.disabled, .bb-input.negative .input-addon:disabled {
   opacity: .7;
 }
 
@@ -4232,7 +4235,7 @@ h5 {
   border-color: #FF1800;
 }
 
-.bb-input.negative input:focus + .bb-input-addon, .bb-input.negative input:active + .bb-input-addon {
+.bb-input.negative input:focus + .input-addon, .bb-input.negative input:active + .input-addon {
   background-color: #FF1800;
   color: #FFFFFF;
   border-color: #FF1800;
@@ -5043,13 +5046,13 @@ h5 {
   display: inline-flex;
 }
 
-.bb-input.invert .bb-input-addon {
+.bb-input.invert .input-addon {
   border-color: #FFFFFF;
   background-color: #FFFFFF;
   color: #4A4A4A;
 }
 
-.bb-input.invert .bb-input-addon.disabled, .bb-input.invert .bb-input-addon:disabled {
+.bb-input.invert .input-addon.disabled, .bb-input.invert .input-addon:disabled {
   opacity: .7;
 }
 
@@ -5057,19 +5060,19 @@ h5 {
   border-color: #FFFFFF;
 }
 
-.bb-input.invert input:focus + .bb-input-addon, .bb-input.invert input:active + .bb-input-addon {
+.bb-input.invert input:focus + .input-addon, .bb-input.invert input:active + .input-addon {
   background-color: #FFFFFF;
   color: #4A4A4A;
   border-color: #FFFFFF;
 }
 
-.bb-input.primary .bb-input-addon {
+.bb-input.primary .input-addon {
   border-color: #24C2AB;
   background-color: #24C2AB;
   color: #FFFFFF;
 }
 
-.bb-input.primary .bb-input-addon.disabled, .bb-input.primary .bb-input-addon:disabled {
+.bb-input.primary .input-addon.disabled, .bb-input.primary .input-addon:disabled {
   opacity: .7;
 }
 
@@ -5077,19 +5080,19 @@ h5 {
   border-color: #24C2AB;
 }
 
-.bb-input.primary input:focus + .bb-input-addon, .bb-input.primary input:active + .bb-input-addon {
+.bb-input.primary input:focus + .input-addon, .bb-input.primary input:active + .input-addon {
   background-color: #24C2AB;
   color: #FFFFFF;
   border-color: #24C2AB;
 }
 
-.bb-input.secondary .bb-input-addon {
+.bb-input.secondary .input-addon {
   border-color: #FFB52F;
   background-color: #FFB52F;
   color: #4A4A4A;
 }
 
-.bb-input.secondary .bb-input-addon.disabled, .bb-input.secondary .bb-input-addon:disabled {
+.bb-input.secondary .input-addon.disabled, .bb-input.secondary .input-addon:disabled {
   opacity: .7;
 }
 
@@ -5097,19 +5100,19 @@ h5 {
   border-color: #FFB52F;
 }
 
-.bb-input.secondary input:focus + .bb-input-addon, .bb-input.secondary input:active + .bb-input-addon {
+.bb-input.secondary input:focus + .input-addon, .bb-input.secondary input:active + .input-addon {
   background-color: #FFB52F;
   color: #4A4A4A;
   border-color: #FFB52F;
 }
 
-.bb-input.positive .bb-input-addon {
+.bb-input.positive .input-addon {
   border-color: #28D656;
   background-color: #28D656;
   color: #FFFFFF;
 }
 
-.bb-input.positive .bb-input-addon.disabled, .bb-input.positive .bb-input-addon:disabled {
+.bb-input.positive .input-addon.disabled, .bb-input.positive .input-addon:disabled {
   opacity: .7;
 }
 
@@ -5117,19 +5120,19 @@ h5 {
   border-color: #28D656;
 }
 
-.bb-input.positive input:focus + .bb-input-addon, .bb-input.positive input:active + .bb-input-addon {
+.bb-input.positive input:focus + .input-addon, .bb-input.positive input:active + .input-addon {
   background-color: #28D656;
   color: #FFFFFF;
   border-color: #28D656;
 }
 
-.bb-input.negative .bb-input-addon {
+.bb-input.negative .input-addon {
   border-color: #FF1800;
   background-color: #FF1800;
   color: #FFFFFF;
 }
 
-.bb-input.negative .bb-input-addon.disabled, .bb-input.negative .bb-input-addon:disabled {
+.bb-input.negative .input-addon.disabled, .bb-input.negative .input-addon:disabled {
   opacity: .7;
 }
 
@@ -5137,7 +5140,7 @@ h5 {
   border-color: #FF1800;
 }
 
-.bb-input.negative input:focus + .bb-input-addon, .bb-input.negative input:active + .bb-input-addon {
+.bb-input.negative input:focus + .input-addon, .bb-input.negative input:active + .input-addon {
   background-color: #FF1800;
   color: #FFFFFF;
   border-color: #FF1800;
@@ -5203,37 +5206,14 @@ h5 {
   color: #7D7D7D;
 }
 
-.bb-input-addon,
-.bb-input-btn,
-.bb-input input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bb-input-addon:not(:first-child):not(:last-child),
-.bb-input-btn:not(:first-child):not(:last-child),
-.bb-input input:not(:first-child):not(:last-child) {
-  border-radius: 0;
-}
-
-.bb-input-addon,
-.bb-input-btn {
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
 .bb-input.left input {
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.bb-input.left .bb-input-addon,
-.bb-input.left .bb-input-btn,
+.bb-input.left .input-addon,
+.bb-input.left .input-btn,
 .bb-input.left .bb-btn {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -5249,8 +5229,8 @@ h5 {
   border-bottom-right-radius: 0;
 }
 
-.bb-input.right .bb-input-addon,
-.bb-input.right .bb-input-btn,
+.bb-input.right .input-addon,
+.bb-input.right .input-btn,
 .bb-input.right .bb-btn {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -5260,57 +5240,107 @@ h5 {
   border-bottom-left-radius: 0;
 }
 
-.bb-input input:focus + .bb-input-addon, .bb-input input:active + .bb-input-addon {
+.bb-input.left-right input {
+  border-right: 0;
+  border-left: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.bb-input.left-right .input-addon:first-child,
+.bb-input.left-right .input-btn:first-child,
+.bb-input.left-right .bb-btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.bb-input.left-right .input-addon:last-child,
+.bb-input.left-right .input-btn:last-child,
+.bb-input.left-right .bb-btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.bb-input input:focus + .input-addon, .bb-input input:active + .input-addon {
   background-color: #4A4A4A;
   color: #F4F4F4;
   border-color: #4A4A4A;
 }
 
-.bb-input-addon {
+.bb-input .input-addon,
+.bb-input .input-btn,
+.bb-input .input input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bb-input .input-addon:not(:first-child):not(:last-child),
+.bb-input .input-btn:not(:first-child):not(:last-child),
+.bb-input .input input:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.bb-input .input-addon,
+.bb-input .input-btn {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.bb-input .input-addon {
   margin-bottom: 0;
   padding: 0.5rem 1rem;
   background-color: #F4F4F4;
   color: #4A4A4A;
   text-align: center;
   line-height: 1.25;
-  border: 0.125rem solid #F4F4F4;
-  transition: border-color ease-in-out 0.25s, background-color ease-in-out 0.25s, color ease-in-out 0.25s;
   border-radius: 0.2rem;
+  transition: border-color ease-in-out 0.25s, background-color ease-in-out 0.25s, color ease-in-out 0.25s;
+  border: 0.125rem solid #F4F4F4;
 }
 
-.bb-input-addon.invert {
+.bb-input .input-addon.invert {
   border-color: #FFFFFF;
   background-color: #FFFFFF;
   color: #4A4A4A;
 }
 
-.bb-input-addon.primary {
+.bb-input .input-addon.primary {
   border-color: #24C2AB;
   background-color: #24C2AB;
   color: #FFFFFF;
 }
 
-.bb-input-addon.secondary {
+.bb-input .input-addon.secondary {
   border-color: #FFB52F;
   background-color: #FFB52F;
   color: #4A4A4A;
 }
 
-.bb-input-addon.positive {
+.bb-input .input-addon.positive {
   border-color: #28D656;
   background-color: #28D656;
   color: #FFFFFF;
 }
 
-.bb-input-addon.negative {
+.bb-input .input-addon.negative {
   border-color: #FF1800;
   background-color: #FF1800;
   color: #FFFFFF;
 }
 
-.bb-input-addon input[type='radio'],
-.bb-input-addon input[type='checkbox'] {
+.bb-input .input-addon input[type='radio'],
+.bb-input .input-addon input[type='checkbox'] {
   margin-top: 0;
+}
+
+.bb-input .bb-btn {
+  padding: 0.5rem 1rem;
 }
 
 .bb-jumbotron {
