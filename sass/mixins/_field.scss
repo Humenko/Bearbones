@@ -1,7 +1,7 @@
-@mixin input-variant($color, $input-background, $border) {
-	.input-addon {
+@mixin field-variant($color, $background, $border) {
+	.field-addon {
 		@include border-color($border);
-		background-color: $input-background;
+		background-color: $background;
 		color: $color;
 		&.disabled,
 		&:disabled {
@@ -11,8 +11,8 @@
 	input {
 		@include focus-active {
 			@include border-color($border);
-			& + .input-addon {
-				background-color: $input-background;
+			& + .field-addon {
+				background-color: $background;
 				color: $color;
 
 				@include border-color($border);
@@ -21,11 +21,11 @@
 	}
 }
 
-@mixin input-font-size($font-size) {
+@mixin field-font-size($font-size) {
 	font-size: $font-size;
 }
 
-@mixin input-addon-variant($color, $background, $border) {
+@mixin field-addon-variant($color, $background, $border) {
 	@include border-color($border);
 	background-color: $background;
 	color: $color;

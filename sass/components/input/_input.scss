@@ -1,54 +1,58 @@
-.bb-input {
+.bb-field {
 	position: relative;
 	display: inline-flex;
+    height: 40px;
 	&.invert {
-		@include input-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+		@include field-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
 	}
 	&.primary {
-		@include input-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
+		@include field-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
 	}
 	&.secondary {
-		@include input-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
+		@include field-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
 	}
 	&.positive {
-		@include input-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
+		@include field-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
 	}
 	&.negative {
-		@include input-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+		@include field-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
 	}
 	&.xs {
-		@include input-font-size($font-size-xs);
+		@include field-font-size($font-size-xs);
 	}
 	&.sm {
-		@include input-font-size($font-size-sm);
+		@include field-font-size($font-size-sm);
 	}
 	&.lg {
-		@include input-font-size($font-size-lg);
+		@include field-font-size($font-size-lg);
 	}
 	&.xl {
-		@include input-font-size($font-size-xl);
+		@include field-font-size($font-size-xl);
 	}
-	input {
+	input,
+	select {
 		position: relative;
 		z-index: 2;
 		flex: 1 1 auto;
 		margin-bottom: 0;
-		padding: $input-padding-y $input-padding-x;
-		width: 1%;
+		padding: $field-padding-y $field-padding-x;
+		background-color: $field-background-color;
 
-		@include focus-active {
+		appearance: none;
+        -webkit-appearance: none;	
+		@include border($field-border-width, $border-style, $field-border-color);
+		@include border-radius($field-border-radius);
+		@include transition($field-transition);@include focus-active {
 			z-index: 3;
-			@include border-color($input-border-color-focus);
 			box-shadow: none;
+
+			@include border-color($field-border-color-focus);
 			&::placeholder {
-				color: $input-border-color-focus;
+				color: $field-border-color-focus;
 			}
 		}
-		@include transition($input-transition);
-		@include border-radius($input-border-radius);
-		@include border($input-border-width, $border-style, $input-border-color);
 		&::placeholder {
-			color: $input-color-placeholder;
+			color: $field-color-placeholder;
 		}
 	}
 }
