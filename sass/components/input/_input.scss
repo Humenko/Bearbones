@@ -38,7 +38,7 @@
 
 		@include focus-active {
 			z-index: 3;
-			border-color: $input-border-color-focus;
+			@include border-color($input-border-color-focus);
 			box-shadow: none;
 			&::placeholder {
 				color: $input-border-color-focus;

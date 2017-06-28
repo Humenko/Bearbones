@@ -4,7 +4,7 @@
 		$pagination-active-background: darken($background, 10%);
 		color: $color;
 		background-color: $background;
-		border-color: $pagination-active-background;
+		@include border-color($pagination-active-background);
 		@include hover {
 			color: $color;
 			background-color: $pagination-active-background;
@@ -29,7 +29,7 @@
 		$outline-pagination-active-background: lighten($background, 35%);
 		color: $background;
 		background-color: $white;
-		border-color: $background;
+		@include border-color($background);
 		@include hover {
 			background-color: $outline-pagination-active-background;
 			text-decoration: none;

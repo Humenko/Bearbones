@@ -7,11 +7,11 @@
 	$btn-active-border: darken($border, 12%);
 	color: $color;
 	background-color: $background;
-	border-color: $border;
+	@include border-color($border);
 	@include hover {
 		color: $color;
 		background-color: $btn-active-background;
-		border-color: $btn-active-border;
+		@include border-color($btn-active-border);
 	}
 	&.disabled,
 	&:disabled {
@@ -23,7 +23,7 @@
 	&.active {
 		color: $color;
 		background-color: $btn-active-background;
-		border-color: $btn-active-border;
+		@include border-color($btn-active-border);
 	}
 }
 
@@ -32,10 +32,10 @@
 	color: $color;
 	background-color: $white;
 	background-image: none;
-	border-color: $color;
+	@include border-color($color);
 	@include hover {
 		color: $btn-active-color;
-		border-color: $btn-active-color;
+		@include border-color($btn-active-color);
 	}
 	&.disabled,
 	&:disabled {
@@ -46,7 +46,7 @@
 	&:active,
 	&.active {
 		color: $color;
-		border-color: $btn-active-color;
+		@include border-color($btn-active-color);
 	}
 }
 
@@ -55,7 +55,7 @@
 	$btn-active-color: $background;
 	color: $color;
 	background-color: $background;
-	border-color: $border;
+	@include border-color($border);
 	@include hover {
 		background-color: $btn-active-background;
 		color: $btn-active-color;
@@ -74,7 +74,7 @@
 }
 
 @mixin button-loading-variant($color) {
-	border-color: $color transparent transparent;
+	@include border-color($color transparent transparent);
 	&.disabled,
 	&:disabled {
 		opacity: .7;
