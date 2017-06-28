@@ -6,8 +6,7 @@
 
 	user-select: none;
 	&:not(.divider-content) {
-		border-radius: $divider-border-radius;
-
+		@include border-radius($divider-border-radius);
 		@include divider-border($divider-border-width, $divider-border-style, $divider-color);
 	}
 	&.divider-content {
