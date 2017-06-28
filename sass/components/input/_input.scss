@@ -1,53 +1,54 @@
 .bb-input {
-    position: relative;
-    display: inline-flex;
-    &.invert {
-        @include input-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
-    }    
-    &.primary {
-        @include input-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
-    }
-    &.secondary {
-        @include input-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
-    }
-    &.positive {
-        @include input-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
-    }
-    &.negative {
-        @include input-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
-    }
+	position: relative;
+	display: inline-flex;
+	&.invert {
+		@include input-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+	}
+	&.primary {
+		@include input-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
+	}
+	&.secondary {
+		@include input-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
+	}
+	&.positive {
+		@include input-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
+	}
+	&.negative {
+		@include input-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+	}
 	&.xs {
-		@include input-size($font-size-xs)
+		@include input-font-size($font-size-xs);
 	}
 	&.sm {
-		@include input-size($font-size-sm)
+		@include input-font-size($font-size-sm);
 	}
 	&.lg {
-		@include input-size($font-size-lg)
+		@include input-font-size($font-size-lg);
 	}
 	&.xl {
-		@include input-size($font-size-xl)
-	} 
-    input {
-        position: relative;
-        padding: $input-padding-y $input-padding-x;
-        z-index: 2;
-        flex: 1 1 auto;
-        width: 1%;
-        margin-bottom: 0;
-        @include border($input-border-width, $border-style, $input-border-color);	        
-        @include border-radius($input-border-radius);
-        @include transition($input-transition);
-        &::placeholder {
-            color: $input-color-placeholder;
-        }
-        @include focus-active {
-            z-index: 3;
-            box-shadow: none;
-            border-color: $input-border-focus;
-            &::placeholder {
-                color: $input-border-focus;
-            }
-        }
-    }
+		@include input-font-size($font-size-xl);
+	}
+	input {
+		position: relative;
+		z-index: 2;
+		flex: 1 1 auto;
+		margin-bottom: 0;
+		padding: $input-padding-y $input-padding-x;
+		width: 1%;
+
+		@include focus-active {
+			z-index: 3;
+			@include border-color($input-border-color-focus);
+			box-shadow: none;
+			&::placeholder {
+				color: $input-border-color-focus;
+			}
+		}
+		@include transition($input-transition);
+		@include border-radius($input-border-radius);
+		@include border($input-border-width, $border-style, $input-border-color);
+		&::placeholder {
+			color: $input-color-placeholder;
+		}
+	}
 }

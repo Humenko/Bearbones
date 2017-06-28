@@ -1,50 +1,52 @@
 @mixin pagination-variant($color, $background) {
-        .item,.dot {
-            $pagination-active-background: darken($background, 10%);
-            color: $color;
-            background-color: $background;
-            border-color: $pagination-active-background;
-            @include hover {
-                color: $color;
-                background-color: $pagination-active-background;
-                text-decoration: none;
-            }
-            &.disabled,
-            &:disabled {
-                pointer-events: none;
-                cursor: not-allowed;
-            }
-            &:active,
-            &.active {
-                color: $color;
-                background-color: $pagination-active-background;
-            }
-        }
+	.item,
+	.dot {
+		$pagination-active-background: darken($background, 10%);
+		color: $color;
+		background-color: $background;
+		@include border-color($pagination-active-background);
+		@include hover {
+			color: $color;
+			background-color: $pagination-active-background;
+			text-decoration: none;
+		}
+		&.disabled,
+		&:disabled {
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+		&:active,
+		&.active {
+			color: $color;
+			background-color: $pagination-active-background;
+		}
+	}
 }
 
 @mixin outline-pagination-variant($background) {
-        .item,.dot {
-            $outline-pagination-active-background: lighten($background, 35%);
-            color: $background;
-            background-color: $white;
-            border-color: $background;
-            @include hover {
-                background-color: $outline-pagination-active-background;
-                text-decoration: none;
-            }
-            &.disabled,
-            &:disabled {
-                pointer-events: none;
-                cursor: not-allowed;
-            }
-            &:active,
-            &.active {
-                background-color: $outline-pagination-active-background;
-            }
-        }
+	.item,
+	.dot {
+		$outline-pagination-active-background: lighten($background, 35%);
+		color: $background;
+		background-color: $white;
+		@include border-color($background);
+		@include hover {
+			background-color: $outline-pagination-active-background;
+			text-decoration: none;
+		}
+		&.disabled,
+		&:disabled {
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+		&:active,
+		&.active {
+			background-color: $outline-pagination-active-background;
+		}
+	}
 }
 
-@mixin pagination-size($font-size, $min-width) {
-    font-size: $font-size;
-    min-width: $min-width;
+@mixin pagination-font-size($font-size, $min-width) {
+	font-size: $font-size;
+	min-width: $min-width;
 }

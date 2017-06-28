@@ -1,0 +1,23 @@
+@mixin navbar-variant($color) {
+	$light-color: lighten($color, 10%);
+	.item a:not(.bb-btn),
+	a.item:not(.bb-btn) {
+		color: $light-color;
+		&:hover {
+			color: $color;
+		}
+		&.active {
+			color: $color;
+		}
+		&.tab {
+			&:hover {
+				@include border-bottom-color($light-color);
+			}
+			&.active {
+				color: $color;
+
+				@include border-bottom-color($color);
+			}
+		}
+	}
+}

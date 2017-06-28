@@ -1,26 +1,32 @@
 @mixin input-variant($color, $input-background, $border) {
-    .bb-input-addon {
-        color: $color;
-        background-color: $input-background;
-        border-color: $border;
-        &.disabled,
-        &:disabled {
-            opacity: 0.7;
-        }
-    }
-    input {
-        @include focus-active {
-            border-color: $border;
-        }
-    }
+	.input-addon {
+		@include border-color($border);
+		background-color: $input-background;
+		color: $color;
+		&.disabled,
+		&:disabled {
+			opacity: .7;
+		}
+	}
+	input {
+		@include focus-active {
+			@include border-color($border);
+			& + .input-addon {
+				background-color: $input-background;
+				color: $color;
+
+				@include border-color($border);
+			}
+		}
+	}
 }
 
-@mixin input-size($font-size) {
-    font-size: $font-size;
+@mixin input-font-size($font-size) {
+	font-size: $font-size;
 }
 
 @mixin input-addon-variant($color, $background, $border) {
-    color: $color;
-    background-color: $background;
-    border-color: $border;
+	@include border-color($border);
+	background-color: $background;
+	color: $color;
 }

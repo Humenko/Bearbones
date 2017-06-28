@@ -1,75 +1,113 @@
-.bb-input-addon,
-.bb-input-btn,
-.bb-input input {
-    display: flex;
-    align-items: center;
-    &:not(:first-child):not(:last-child) {
-        @include border-radius(0);
-    }
-}
+.bb-input {
+	&.left {
+		input {
+			border-left: 0;
 
-.bb-input-addon,
-.bb-input-btn {
-    white-space: nowrap;
-    vertical-align: middle;
-}
+			@include border-left-radius(0);
+		}
+		.input-addon,
+		.input-btn,
+		.bb-btn {
+			order: -1;
+			border-right: 0;
 
-.bb-input-addon {
-    padding: $input-padding-y $input-padding-x;
-    margin-bottom: 0;
-    line-height: $input-line-height;
-    color: $input-addon-color;
-    text-align: center;
-    background-color: $input-group-addon-background;
-    @include border($input-border-width, $border-style, $input-group-addon-border-color);	    
-    &.invert {
-        @include input-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
-    }    
-    &.primary {
-        @include input-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
-    }
-    &.secondary {
-        @include input-addon-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
-    }
-    &.positive {
-        @include input-addon-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
-    }
-    &.negative {
-        @include input-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
-    }
-    @include border-radius($input-border-radius); 
-    input[type="radio"],
-    input[type="checkbox"] {
-        margin-top: 0;
-    }
-}
+			@include border-right-radius(0);
+		}
+	}
+	&.right {
+		input {
+			border-right: 0;
 
-.bb-input input:not(:last-child),
-.bb-input-addon:not(:last-child),
-.bb-input-btn:not(:last-child)>.bb-btn,
-.bb-input-btn:not(:last-child)>.bb-btn-group>.bb-btn,
-.bb-input-btn:not(:last-child)>.dropdown-toggle,
-.bb-input-btn:not(:first-child)>.bb-btn:not(:last-child):not(.dropdown-toggle),
-.bb-input-btn:not(:first-child)>.bb-btn-group:not(:last-child)>.bb-btn {
-    @include border-right-radius(0);
-    border-right: 0;
-}
+			@include border-right-radius(0);
+		}
+		.input-addon,
+		.input-btn,
+		.bb-btn {
+			order: 1;
+			border-left: 0;
 
-.bb-input-addon:not(:last-child) {
-    border-right: 0;
-}
+			@include border-left-radius(0);
+		}
+	}
+	&.left-right {
+		input {
+			border-right: 0;
+			border-left: 0;
 
-.bb-input input:not(:first-child),
-.bb-input-addon:not(:first-child),
-.bb-input-btn:not(:first-child)>.bb-btn,
-.bb-input-btn:not(:first-child)>.bb-btn-group>.bb-btn,
-.bb-input-btn:not(:first-child)>.dropdown-toggle,
-.bb-input-btn:not(:last-child)>.bb-btn:not(:first-child),
-.bb-input-btn:not(:last-child)>.bb-btn-group:not(:first-child)>.bb-btn {
-    @include border-left-radius(0);
-    border-left: 0;
-}
+			@include border-right-radius(0);
+			@include border-left-radius(0);			
+		}
+		.input-addon:first-child,
+		.input-btn:first-child,
+		.bb-btn:first-child {
 
-input+.bb-input-addon:not(:first-child) {
-    border-left: 0;
+			@include border-right-radius(0);
+		}
+		.input-addon:last-child,
+		.input-btn:last-child,
+		.bb-btn:last-child {
+
+			@include border-left-radius(0);
+		}		
+	}	
+	input {
+		@include focus-active {
+			& + .input-addon {
+				background-color: $input-addon-background-focus;
+				color: $input-addon-color-focus;
+
+				@include border-color($input-addon-border-color-focus);
+			}
+		}
+	}
+	.input-addon,
+	.input-btn,
+	.input input {
+		display: flex;
+		align-items: center;
+		&:not(:first-child):not(:last-child) {
+			@include border-radius(0);
+		}
+	}
+
+	.input-addon,
+	.input-btn {
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	.input-addon {
+		margin-bottom: 0;
+		padding: $input-padding-y $input-padding-x;
+		background-color: $input-addon-background;
+		color: $input-addon-color;
+		text-align: center;
+		line-height: $input-line-height;
+
+		@include border-radius($input-border-radius);
+		@include transition($input-transition);
+		@include border($input-border-width, $border-style, $input-addon-border-color);
+		&.invert {
+			@include input-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+		}
+		&.primary {
+			@include input-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
+		}
+		&.secondary {
+			@include input-addon-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
+		}
+		&.positive {
+			@include input-addon-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
+		}
+		&.negative {
+			@include input-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+		}
+		input[type='radio'],
+		input[type='checkbox'] {
+			margin-top: 0;
+		}
+	}
+	.bb-btn {
+		padding: $input-padding-y $input-padding-x;		
+	}
 }

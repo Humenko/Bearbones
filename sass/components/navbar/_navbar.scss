@@ -1,0 +1,104 @@
+.bb-navbar {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	align-items: stretch;
+	height: $navbar-height;
+	background-color: $navbar-background-color;
+	text-align: center;
+	& > .container {
+		display: flex;
+		align-items: stretch;
+		padding: $navbar-container-spacing;
+		min-height: $navbar-height;
+		width: 100%;
+	}
+	&.shadow {
+		box-shadow: $navbar-box-shadow;
+	}
+	&.primary {
+		@include navbar-variant($primary-variant-background);
+	}
+	&.secondary {
+		@include navbar-variant($secondary-variant-background);
+	}
+	&.positive {
+		@include navbar-variant($positive-variant-background);
+	}
+	&.negative {
+		@include navbar-variant($negative-variant-background);
+	}	
+	.left,
+	.right {
+		display: flex;
+		overflow: auto;
+		align-items: stretch;
+		flex-grow: 1;
+		flex-shrink: 0;
+		max-width: 100%;
+	}
+	.left {
+		justify-content: flex-start;
+		white-space: nowrap;
+	}
+	.right {
+		justify-content: flex-end;
+		white-space: nowrap;
+	}
+	.center {
+		display: flex;
+		align-items: stretch;
+		flex-grow: 1;
+		flex-shrink: 0;
+		justify-content: center;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.item {
+		display: flex;
+		align-items: center;
+		flex-grow: 0;
+		flex-shrink: 0;
+		justify-content: center;
+		justify-content: flex-start;
+		padding: $navbar-item-spacing-y $navbar-item-spacing-x;
+		font-size: $body-font-size;
+		a {
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+		img {
+			max-height: $navbar-image-max-height;
+		}
+	}
+	.item a:not(.bb-btn),
+	a.item:not(.bb-btn) {
+		color: $navbar-link-color;
+		font-weight: $navbar-font-weight;
+
+		@include transition($navbar-tab-transition);
+		&:hover {
+			color: $navbar-link-hover-color;
+			text-decoration: none;
+		}
+		&.active {
+			color: $navbar-link-active-color;
+		}
+		&.tab {
+			padding-right: $navbar-tab-spacing;
+			padding-left: $navbar-tab-spacing;
+
+			@include border-bottom($navbar-tab-border-width, $border-style, transparent);
+			&:hover {
+				@include border-bottom-color($navbar-tab-border-hover-color);
+				@include border-top-color(transparent);
+			}
+			&.active {
+				padding-bottom: calc(#{$navbar-item-spacing-y} - #{$navbar-tab-border-width});
+				color: $primary-color;
+
+				@include border-bottom($navbar-tab-border-width, $border-style, $navbar-tab-border-active-color);
+			}
+		}
+	}
+}

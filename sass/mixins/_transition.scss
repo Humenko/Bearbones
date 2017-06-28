@@ -1,7 +1,7 @@
 @mixin transition($transition) {
-    @if length($transition) == 0 {
-      transition: none;
-    } @else {
-      transition: $transition;
-    }
+	@if length($transition) == 0 {
+		transition: none;
+	} @else {
+		transition: $transition;
+	}
 }

@@ -1,14 +1,14 @@
-@mixin text-size($font-size) {
-    font-size: $font-size;
+@mixin text-font-size($font-size) {
+	font-size: $font-size;
 }
 
 @mixin text-variant($parent, $color) {
-    #{$parent} {
-        color: $color;
-    }
-    a#{$parent} {
-        @include hover-focus {
-            color: darken($color, 20%);
-        }
-    }
+	#{$parent} {
+		color: $color;
+	}
+	a#{$parent} {
+		@include hover-focus {
+			color: darken($color, 20%);
+		}
+	}
 }

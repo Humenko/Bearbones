@@ -1,23 +1,25 @@
 html {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	font: $font-style $font-variant $font-weight #{$font-size}/#{$font-line-height} $font-family;
 	font-size: $font-size;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-	color: $font-color;
-	background: $white;
-	font-size: $body-font-size;
 	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
-	flex-direction: column;	
+	background: $white;
+	color: $font-color;
+	font-size: $body-font-size;
 }
 
-body, p{
-    margin: 0;
-    padding: 0;
-    line-height: $font-line-height;	
+body,
+p {
+	margin: 0;
+	padding: 0;
+	line-height: $font-line-height;
 }
 
 main {
@@ -45,10 +47,10 @@ h2,
 h3,
 h4,
 h5 {
+	color: inherit;
 	font-weight: $heading-font-weight;
 	font-family: $heading-font-family;
 	line-height: $heading-line-height;
-	color: inherit;
 	&:not(:first-child) {
 		margin: 1.5rem 0;
 	}
@@ -61,9 +63,10 @@ h3:not(:first-child) {
 }
 
 a {
+	background-color: transparent;
 	color: $link-color;
 	text-decoration: $link-decoration;
-	background-color: transparent;
+
 	-webkit-text-decoration-skip: objects;
 	&:hover {
 		color: darken($link-color, 20%);

@@ -1,48 +1,51 @@
 .bb-btns {
-    display: inline-flex;
-    flex-direction: row;
-    vertical-align: baseline;
-    margin: 0 $btn-spacing/2 0 0;
-    width: 100%;
-    @include respond-to('md') {
-        width: auto;
-    }
-    &.full-x {
-        width: 100%;
-    }
-    &.no-border-radius {
-        @include border-radius($no-border-radius);
-        %buttons {
-            &:first-child {
-                @include border-left-radius($no-border-radius);
-            }
-            &:last-child {
-                @include border-right-radius($no-border-radius);
-            }
-        }
-    }
-    %buttons {
-        @include border-radius($no-border-radius);
-        flex: 1;
-        &:first-child {
-            @include border-left-radius($btn-border-radius);
-        }
-        &:last-child {
-            @include border-right-radius($btn-border-radius);
-        }
-    }
-    &.vertical {
-        display: inline-flex;
-        flex-direction: column;
-        %buttons {
-            @include border-radius($no-border-radius);
-            margin: 0;
-            &:first-child {
-                @include border-top-radius($btn-border-radius);
-            }
-            &:last-child {
-                @include border-bottom-radius($btn-border-radius);
-            }
-        }
-    }    
+	display: inline-flex;
+	flex-direction: row;
+	margin: 0 $btn-spacing/2 0 0;
+	width: 100%;
+	vertical-align: baseline;
+
+	@include respond-to('md') {
+		width: auto;
+	}
+	&.full-x {
+		width: 100%;
+	}
+	&.no-border-radius {
+		@include border-radius($no-border-radius);
+		%buttons {
+			&:first-child {
+				@include border-left-radius($no-border-radius);
+			}
+			&:last-child {
+				@include border-right-radius($no-border-radius);
+			}
+		}
+	}
+	#{$btn} {
+		flex: 1;
+
+		@include border-radius($no-border-radius);
+		&:first-child {
+			@include border-left-radius($btn-border-radius);
+		}
+		&:last-child {
+			@include border-right-radius($btn-border-radius);
+		}
+	}
+	&.vertical {
+		display: inline-flex;
+		flex-direction: column;
+		%buttons {
+			margin: 0;
+
+			@include border-radius($no-border-radius);
+			&:first-child {
+				@include border-top-radius($btn-border-radius);
+			}
+			&:last-child {
+				@include border-bottom-radius($btn-border-radius);
+			}
+		}
+	}
 }

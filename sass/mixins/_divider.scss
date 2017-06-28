@@ -1,8 +1,7 @@
  @mixin divider-border($divider-border-width, $divider-border-style, $divider-color) {
-     @include border-top($divider-border-width, $divider-border-style, $divider-color);     
-     @include border-bottom($divider-border-width, $divider-border-style, $divider-color);     
- }
+	@include border($divider-border-width, $divider-border-style, $divider-color);
+}
 
- @mixin divider-content-border($divider-content-border-width, $divider-color) {
-     background-image: linear-gradient(180deg, transparent calc(50% - #{$divider-content-border-width}), $divider-color calc(50%), transparent calc(50% + #{$divider-content-border-width}));
- }
+@mixin divider-content-border($divider-content-border-width, $divider-color) {
+	background-image: linear-gradient(180deg, transparent calc(50% - #{$divider-content-border-width}), $divider-color calnpm run watchc(50%), transparent calc(50% + #{$divider-content-border-width}));
+}

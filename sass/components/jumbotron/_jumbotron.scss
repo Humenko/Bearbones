@@ -1,29 +1,31 @@
 .bb-jumbotron {
-    padding: $jumbotron-spacing ($jumbotron-spacing / 2);
-    margin-bottom: $jumbotron-spacing;
-    @include border-radius($jumbotron-border-radius);
-    @include jumbotron-variant($base-variant-color, $base-variant-background);
-    @include respond-to('md') {
-        padding: ($jumbotron-spacing * 3) ($jumbotron-spacing * 2);
-    }
-    &.full-x {
-        padding-right: 0;
-        padding-left: 0;
-        @include border-radius(0);
-    }
-    &.invert {
-        @include jumbotron-variant($invert-variant-color, $invert-variant-background);
-    } 
-    &.primary {
-        @include jumbotron-variant($primary-variant-color, $primary-variant-background);
-    }
-    &.secondary {
-        @include jumbotron-variant($secondary-variant-color, $secondary-variant-background);
-    }
-    &.positive {
-        @include jumbotron-variant($positive-variant-color, $positive-variant-background);
-    }
-    &.negative {
-        @include jumbotron-variant($negative-variant-color, $negative-variant-background);
-    }    
+	margin-bottom: $jumbotron-spacing;
+	padding: $jumbotron-spacing ($jumbotron-spacing / 2);
+
+	@include border-radius($jumbotron-border-radius);
+	@include jumbotron-variant($base-variant-color, $base-variant-background);
+	@include respond-to('md') {
+		padding: ($jumbotron-spacing * 3) ($jumbotron-spacing * 2);
+	}
+	&.full-x {
+		padding-right: 0;
+		padding-left: 0;
+
+		@include border-radius(0);
+	}
+	&.invert {
+		@include jumbotron-variant($invert-variant-color, $invert-variant-background);
+	}
+	&.primary {
+		@include jumbotron-variant($primary-variant-color, $primary-variant-background);
+	}
+	&.secondary {
+		@include jumbotron-variant($secondary-variant-color, $secondary-variant-background);
+	}
+	&.positive {
+		@include jumbotron-variant($positive-variant-color, $positive-variant-background);
+	}
+	&.negative {
+		@include jumbotron-variant($negative-variant-color, $negative-variant-background);
+	}
 }

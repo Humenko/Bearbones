@@ -1,4 +1,9 @@
 .DS_store
+
 node_modules/
 npm-debug.log
+
+.csscomb.json
+package-lock.json
+
 *.html

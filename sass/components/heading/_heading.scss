@@ -1,56 +1,55 @@
-  $min_width: 20rem;
-  $max_width: 75rem;
-  $min_font: 1rem;
-  $max_font: 1.5rem;
-  $mod_1: 1.2;
-  $mod_2: 1.5;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    line-height: 1.2;
-    margin: 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+	line-height: 1.2;
+}
 
-  h1 {
-    font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
-    @include heading-font-size($min_width, $max_width, $mod_1*$mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2 *$min_font);
-  }
+h1 {
+	font-size: $heading-min-modifier*$heading-min-modifier*$heading-min-modifier*$heading-min-modifier *1rem;
 
-  h2 {
-    font-size: $mod_1*$mod_1*$mod_1 *1rem;
-    @include heading-font-size($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-  }
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier*$heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier*$heading-max-modifier*$heading-max-modifier *$heading-min-font);
+}
 
-  h3 {
-    font-size: $mod_1*$mod_1 *1rem;
-    @include heading-font-size($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
-  }
+h2 {
+	font-size: $heading-min-modifier*$heading-min-modifier*$heading-min-modifier *1rem;
 
-  h4 {
-    font-size: $mod_1 *1rem;
-    @include heading-font-size($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
-  }
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier*$heading-max-modifier *$heading-min-font);
+}
 
-  h5 {
-    font-size: $mod_1 *1rem;
-    @include heading-font-size($min_width, $max_width, $mod_1, $mod_2);
-  }
+h3 {
+	font-size: $heading-min-modifier*$heading-min-modifier *1rem;
 
-  .title {
-    line-height: $title-line-height;
-  }
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier*$heading-min-modifier *$heading-min-font, $heading-max-modifier*$heading-max-modifier *$heading-min-font);
+}
 
-  .title:not(:last-child),
-  .subtitle:not(:last-child) {
-    margin: 0 0 $title-spacing 0;
-  }
+h4 {
+	font-size: $heading-min-modifier *1rem;
 
-  .title+.subtitle {
-    margin: -$title-spacing 0 0 0;
-  }
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier *$heading-min-font, $heading-max-modifier *$heading-min-font);
+}
 
-  .subtitle {
-    font-size: $subtitle-font-size;
-  }
+h5 {
+	font-size: $heading-min-modifier *1rem;
+
+	@include heading-font-font-size($heading-min-width, $heading-max-width, $heading-min-modifier, $heading-max-modifier);
+}
+
+.title {
+	line-height: $title-line-height;
+}
+
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+	margin: 0 0 $title-spacing 0;
+}
+
+.title + .subtitle {
+	margin: -$title-spacing 0 0 0;
+}
+
+.subtitle {
+	font-size: $subtitle-font-size;
+}

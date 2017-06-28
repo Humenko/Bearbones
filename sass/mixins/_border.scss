@@ -1,39 +1,39 @@
 @mixin border($width, $style, $color) {
-    border: $width $style $color;
+	border: $width $style $color;
 }
 
 @mixin border-top($width, $style, $color) {
-    border-top: $width $style $color;
+	border-top: $width $style $color;
 }
 
 @mixin border-right($width, $style, $color) {
-    border-right: $width $style $color;
+	border-right: $width $style $color;
 }
 
 @mixin border-bottom($width, $style, $color) {
-    border-bottom: $width $style $color;
+	border-bottom: $width $style $color;
 }
 
 @mixin border-left($width, $style, $color) {
-    border-left: $width $style $color;
+	border-left: $width $style $color;
 }
 
 @mixin border-color($color) {
-    border-color: $color;
+	border-color: $color;
 }
 
 @mixin border-top-color($color) {
-    border-top-color: $color;
+	border-top-color: $color;
 }
 
 @mixin border-right-color($color) {
-    border-right-color: $color;
+	border-right-color: $color;
 }
 
 @mixin border-bottom-color($color) {
-    border-bottom-color: $color;
+	border-bottom-color: $color;
 }
 
 @mixin border-left-color($color) {
-    border-left-color: $color;
+	border-left-color: $color;
 }

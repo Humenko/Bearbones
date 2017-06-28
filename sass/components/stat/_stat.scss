@@ -1,56 +1,56 @@
 .bb-stat {
-  display: inline-flex;
-  flex-direction: column;
-  .value {
-    font-size: $stat-font-size;
-    font-weight: $stat-value-font-weight;
-    line-height: $stat-line-height;
-    text-transform: $stat-text-transform;
-    text-align: center;
-    &.text {
-      line-height: $stat-line-height;
-      min-height: 2em;
-      font-weight: $stat-text-font-weight;
-      text-align: center;
-      font-size: $stat-font-size/2;
-    }
-  }
-  .label {
-    font-size: $stat-font-size/4;
-    font-weight: $stat-label-font-weight;
-    text-transform: $stat-text-transform;
-    text-align: center;
-  }
-  &.horizontal {
-    flex-direction: row;
-    align-items: center;
-    margin: 1em 0;
-     :last-child {
-      margin-left: $stat-spacing/1.5;
-    }
-  }
-  &.primary {
-    @include stat-variant($primary-variant-background);
-  }
-  &.secondary {
-    @include stat-variant($secondary-variant-background);
-  }
-  &.positive {
-    @include stat-variant($positive-variant-background);
-  }
-  &.negative {
-    @include stat-variant($negative-variant-background);
-  }
-  &.xs {
-    @include stat-size($stat-font-size-xs);
-  }
-  &.sm {
-    @include stat-size($stat-font-size-sm);
-  }
-  &.lg {
-    @include stat-size($stat-font-size-lg);
-  }
-  &.xl {
-    @include stat-size($stat-font-size-xl);
-  }  
+	display: inline-flex;
+	flex-direction: column;
+	.value {
+		text-align: center;
+		text-transform: $stat-text-transform;
+		font-weight: $stat-value-font-weight;
+		font-size: $stat-font-size;
+		line-height: $stat-line-height;
+		&.text {
+			min-height: 2em;
+			text-align: center;
+			font-weight: $stat-text-font-weight;
+			font-size: $stat-font-size/2;
+			line-height: $stat-line-height;
+		}
+	}
+	.label {
+		text-align: center;
+		text-transform: $stat-text-transform;
+		font-weight: $stat-label-font-weight;
+		font-size: $stat-font-size/4;
+	}
+	&.horizontal {
+		align-items: center;
+		flex-direction: row;
+		margin: 1em 0;
+		:last-child {
+			margin-left: $stat-spacing/1.5;
+		}
+	}
+	&.primary {
+		@include stat-variant($primary-variant-background);
+	}
+	&.secondary {
+		@include stat-variant($secondary-variant-background);
+	}
+	&.positive {
+		@include stat-variant($positive-variant-background);
+	}
+	&.negative {
+		@include stat-variant($negative-variant-background);
+	}
+	&.xs {
+		@include stat-font-size($stat-font-size-xs);
+	}
+	&.sm {
+		@include stat-font-size($stat-font-size-sm);
+	}
+	&.lg {
+		@include stat-font-size($stat-font-size-lg);
+	}
+	&.xl {
+		@include stat-font-size($stat-font-size-xl);
+	}
 }
