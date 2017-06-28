@@ -1,5 +1,5 @@
 @mixin input-variant($color, $input-background, $border) {
-	.bb-input-addon {
+	.input-addon {
 		@include border-color($border);
 		background-color: $input-background;
 		color: $color;
@@ -11,7 +11,7 @@
 	input {
 		@include focus-active {
 			@include border-color($border);
-			& + .bb-input-addon {
+			& + .input-addon {
 				background-color: $input-background;
 				color: $color;
 
