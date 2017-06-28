@@ -22,7 +22,7 @@
 			}
 		}
 	}
-	%buttons {
+	#{$btn} {
 		flex: 1;
 
 		@include border-radius($no-border-radius);
