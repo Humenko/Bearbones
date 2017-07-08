@@ -107,12 +107,13 @@
 			margin-top: calc(-#{$field-select-arrow-size} - -#{$border-width});
 			width: $field-select-arrow-size;
 			height: $field-select-arrow-size;
-			@include border($border-width, $border-style, $field-color-placeholder);
 			border-top: 0;
 			border-right: 0;
 			content: ' ';
 			transform: rotate(-45deg);
 			pointer-events: none;
+
+			@include border($border-width, $border-style, $field-color-placeholder);
 		}
 	}
 	label {
