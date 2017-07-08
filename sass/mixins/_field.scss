@@ -8,7 +8,9 @@
 			opacity: .7;
 		}
 	}
-	input {
+	input, 
+	select,
+	textarea {
 		@include focus-active {
 			@include border-color($border);
 			& + .field-addon {
@@ -18,6 +20,26 @@
 				@include border-color($border);
 			}
 		}
+	}
+	.bb-select {
+		@include hover {
+			&:after {
+				@include border-color($background);
+			}
+		}
+	}	
+}
+
+@mixin field-validation-variant($color) {
+	input, 
+	select, 
+	textarea, 
+	.text {
+		@include border-color($color);
+		color: $color;
+		&::placeholder {
+			color: $color;
+		}		
 	}
 }
 
