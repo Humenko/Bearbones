@@ -13,7 +13,7 @@
 	}
 	&.no-border-radius {
 		@include border-radius($no-border-radius);
-		%buttons {
+		.bb-btn {
 			&:first-child {
 				@include border-left-radius($no-border-radius);
 			}
@@ -22,7 +22,24 @@
 			}
 		}
 	}
-	#{$btn} {
+	&.vertical {
+		display: inline-flex;
+		flex-direction: column;
+		.bb-btn {
+			margin: 0;
+
+			@include border-radius($no-border-radius);
+			&:first-child {
+				@include border-top-radius($btn-border-radius);
+				@include border-bottom-radius($no-border-radius);				
+			}
+			&:last-child {
+				@include border-top-radius($no-border-radius);								
+				@include border-bottom-radius($btn-border-radius);
+			}
+		}
+	}
+	.bb-btn {
 		flex: 1;
 
 		@include border-radius($no-border-radius);
@@ -32,20 +49,5 @@
 		&:last-child {
 			@include border-right-radius($btn-border-radius);
 		}
-	}
-	&.vertical {
-		display: inline-flex;
-		flex-direction: column;
-		%buttons {
-			margin: 0;
-
-			@include border-radius($no-border-radius);
-			&:first-child {
-				@include border-top-radius($btn-border-radius);
-			}
-			&:last-child {
-				@include border-bottom-radius($btn-border-radius);
-			}
-		}
-	}
+	}	
 }

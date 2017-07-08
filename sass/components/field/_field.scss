@@ -1,0 +1,133 @@
+.bb-field {
+	&:not(.xs):not(.sm):not(.lg):not(.xl) {
+		input,
+		select {
+			height: $field-height;
+		}
+	}
+	&:not(:last-child) {
+		margin-bottom: $field-margin-bottom;
+	}
+	&.invert {
+		@include field-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+	}
+	&.primary {
+		@include field-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
+	}
+	&.secondary {
+		@include field-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
+	}
+	&.positive {
+		@include field-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
+	}
+	&.negative {
+		@include field-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+	}
+	&.success {
+		@include field-validation-variant($positive-variant-background);
+	}
+	&.error {
+		@include field-validation-variant($negative-variant-background);
+	}
+	&.xs {
+		height: auto;
+
+		@include field-font-size($font-size-xs);
+	}
+	&.sm {
+		height: auto;
+
+		@include field-font-size($font-size-sm);
+	}
+	&.lg {
+		height: auto;
+
+		@include field-font-size($font-size-lg);
+	}
+	&.xl {
+		height: auto;
+
+		@include field-font-size($font-size-xl);
+	}
+	.input-group {
+		display: inline-flex;
+		width: 100%;
+	}
+	input,
+	select,
+	textarea {
+		position: relative;
+		z-index: 2;
+		display: block;
+		flex: 1 1 auto;
+		margin-bottom: 0;
+		padding: $field-padding-y $field-padding-x;
+		width: 100%;
+		background-color: $field-background-color;
+		color: $field-color-placeholder;
+
+		appearance: none;
+		@include border($field-border-width, $border-style, $field-border-color);
+		@include border-radius($field-border-radius);
+		@include transition($field-transition);
+		@include focus-active {
+			z-index: 3;
+			outline: none;
+			box-shadow: none;
+			color: $field-border-color-focus;
+
+			@include border-color($field-border-color-focus);
+			&::placeholder {
+				color: $field-border-color-focus;
+			}
+		}
+		&::placeholder {
+			color: $field-color-placeholder;
+		}
+	}
+	.bb-select {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+
+		@include hover {
+			&:after {
+				@include border-color($primary-color);
+			}
+		}
+		select {
+			cursor: pointer;
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			right: $field-padding-x;
+			z-index: 5;
+			display: block;
+			margin-top: calc(-#{$field-select-arrow-size} - -#{$border-width});
+			width: $field-select-arrow-size;
+			height: $field-select-arrow-size;
+			border-top: 0;
+			border-right: 0;
+			content: ' ';
+			transform: rotate(-45deg);
+			pointer-events: none;
+
+			@include border($border-width, $border-style, $field-color-placeholder);
+		}
+	}
+	label {
+		display: block;
+		width: 100%;
+		font-weight: $field-label-font-weight;
+		font-size: $field-label-font-size;
+		&:not(:last-child) {
+			margin-bottom: $field-label-margin-bottom;
+		}
+	}
+	.text {
+		display: block;
+		margin-top: $field-text-margin-top;
+		font-size: $field-text-font-size;
+	}
+}

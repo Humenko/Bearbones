@@ -1,13 +1,13 @@
 @mixin pagination-variant($color, $background) {
 	.item,
 	.dot {
-		$pagination-active-background: darken($background, 10%);
+		$active-background: darken($background, 10%);
 		color: $color;
 		background-color: $background;
-		@include border-color($pagination-active-background);
+		@include border-color($active-background);
 		@include hover {
 			color: $color;
-			background-color: $pagination-active-background;
+			background-color: $active-background;
 			text-decoration: none;
 		}
 		&.disabled,
@@ -18,7 +18,7 @@
 		&:active,
 		&.active {
 			color: $color;
-			background-color: $pagination-active-background;
+			background-color: $active-background;
 		}
 	}
 }
@@ -26,12 +26,12 @@
 @mixin outline-pagination-variant($background) {
 	.item,
 	.dot {
-		$outline-pagination-active-background: lighten($background, 35%);
+		$active-background: lighten($background, 35%);
 		color: $background;
 		background-color: $white;
 		@include border-color($background);
 		@include hover {
-			background-color: $outline-pagination-active-background;
+			background-color: $active-background;
 			text-decoration: none;
 		}
 		&.disabled,
@@ -41,7 +41,7 @@
 		}
 		&:active,
 		&.active {
-			background-color: $outline-pagination-active-background;
+			background-color: $active-background;
 		}
 	}
 }

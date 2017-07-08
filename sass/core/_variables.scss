@@ -104,7 +104,7 @@ $font-size:                           1rem !default;
 $font-style:                          normal !default;
 $font-variant:                        normal !default;
 $font-weight:                         normal !default;
-$font-weight-bold:                    700 !default;
+$font-weight-bold:                    600 !default;
 
 // Variant 
 $font-size-xs:                        .7rem !default;
@@ -216,30 +216,39 @@ $footer-background:                   $lighter-grey !default;
 $footer-divider-color:                $light-grey !default;
 $footer-padding:                      3rem 0 4rem 0 !default;
 
-// Input //
+// Field //
 
-$input-color:                         $base-color !default;
-$input-color-focus:                   $input-color !default;
-$input-color-placeholder:             $light-grey !default;
-$input-border-color:                  $lighter-grey !default;
-$input-border-color-focus:            $input-color !default;
-$input-border-radius:                 $border-radius !default;
-$input-border-width:                  $border-width !default;
-$input-line-height:                   1.25 !default;
-$input-padding-x:                     1rem !default;
-$input-padding-y:                     .5rem !default;
-$input-height:                        (($font-size * $input-line-height) + ($input-padding-y * 2)) !default;
-$input-transition:                    border-color $transition-effect $transition-duration, 
+$field-background-color:              $white !default;
+$field-color:                         $base-color !default;
+$field-color-focus:                   $field-color !default;
+$field-color-placeholder:             $light-grey !default;
+$field-border-color:                  $lighter-grey !default;
+$field-border-color-focus:            $field-color !default;
+$field-border-radius:                 $border-radius !default;
+$field-border-width:                  $border-width !default;
+$field-height:                        2.5rem !default;
+$field-label-font-weight:             600 !default;
+$field-label-font-size:               $font-size !default;
+$field-label-margin-bottom:           .5rem !default;
+$field-line-height:                   1.25 !default;
+$field-padding-x:                     1rem !default;
+$field-padding-y:                     .5rem !default;
+$field-margin-bottom:                 .5rem !default;
+$field-text-margin-top:               .25rem !default;
+$field-text-font-size:                $font-size-xs !default;
+$field-height:                        (($font-size * $field-line-height) + ($field-padding-y * 2)) !default;
+$field-transition:                    border-color $transition-effect $transition-duration, 
                                       background-color $transition-effect $transition-duration, 
                                       color $transition-effect $transition-duration !default;
+$field-select-arrow-size:             .5rem !default;                                      
 
 // Addon
-$input-addon-color:                   $base-color !default;
-$input-addon-background:              $lighter-grey !default;
-$input-addon-border-color:            $input-border-color !default;
-$input-addon-color-focus:             $lighter-grey !default;
-$input-addon-background-focus:        $input-color-focus !default;
-$input-addon-border-color-focus:      $input-border-color-focus !default;
+$field-addon-color:                   $base-color !default;
+$field-addon-background:              $lighter-grey !default;
+$field-addon-border-color:            $field-border-color !default;
+$field-addon-color-focus:             $lighter-grey !default;
+$field-addon-background-focus:        $field-color-focus !default;
+$field-addon-border-color-focus:      $field-border-color-focus !default;
 
 // Jumbotron //
 
@@ -301,8 +310,8 @@ $stat-font-size-xs:                   $stat-font-size - 1.5rem !default;
 $stat-font-size-sm:                   $stat-font-size - .75rem !default;
 $stat-font-size-lg:                   $stat-font-size + .75rem !default;
 $stat-font-size-xl:                   $stat-font-size + 1.5rem !default;
-$stat-label-font-weight:              700 !default;
-$stat-text-font-weight:               700 !default;
+$stat-label-font-weight:              600 !default;
+$stat-text-font-weight:               600 !default;
 $stat-value-font-weight:              400 !default;
 $stat-line-height:                    1em !default;
 $stat-spacing:                        $padding !default;

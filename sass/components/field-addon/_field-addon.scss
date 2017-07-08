@@ -1,0 +1,116 @@
+.bb-field {
+	&.left {
+		input,
+		select {
+			border-left: 0;
+
+			@include border-left-radius(0);
+		}
+		.field-addon,
+		.field-btn,
+		.bb-btn {
+			order: -1;
+			border-right: 0;
+
+			@include border-right-radius(0);
+		}
+	}
+	&.right {
+		input,
+		select {
+			border-right: 0;
+
+			@include border-right-radius(0);
+		}
+		.field-addon,
+		.field-btn,
+		.bb-btn {
+			order: 1;
+			border-left: 0;
+
+			@include border-left-radius(0);
+		}
+	}
+	&.left-right {
+		input,
+		select {
+			border-right: 0;
+			border-left: 0;
+
+			@include border-left-radius(0);
+			@include border-right-radius(0);
+		}
+		.field-addon:first-child,
+		.field-btn:first-child,
+		.bb-btn:first-child {
+			@include border-right-radius(0);
+		}
+		.field-addon:last-child,
+		.field-btn:last-child,
+		.bb-btn:last-child {
+			@include border-left-radius(0);
+		}
+	}
+	input,
+	select {
+		@include focus-active {
+			& + .field-addon {
+				background-color: $field-addon-background-focus;
+				color: $field-addon-color-focus;
+
+				@include border-color($field-addon-border-color-focus);
+			}
+		}
+	}
+	.field-addon,
+	.field-btn,
+	.bb-field input,
+	.bb-field select {
+		display: flex;
+		align-items: center;
+		&:not(:first-child):not(:last-child) {
+			@include border-radius(0);
+		}
+	}
+
+	.field-addon,
+	.field-btn {
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	.field-addon {
+		margin-bottom: 0;
+		padding: $field-padding-y $field-padding-x;
+		background-color: $field-addon-background;
+		color: $field-addon-color;
+		text-align: center;
+		line-height: $field-line-height;
+
+		@include border($field-border-width, $border-style, $field-addon-border-color);
+		@include transition($field-transition);
+		@include border-radius($field-border-radius);
+		&.invert {
+			@include field-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
+		}
+		&.primary {
+			@include field-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
+		}
+		&.secondary {
+			@include field-addon-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
+		}
+		&.positive {
+			@include field-addon-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
+		}
+		&.negative {
+			@include field-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+		}
+		input[type='radio'],
+		input[type='checkbox'] {
+			margin-top: 0;
+		}
+	}
+	.bb-btn {
+		padding: $field-padding-y $field-padding-x;
+	}
+}

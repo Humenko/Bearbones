@@ -147,6 +147,28 @@
 	}
 }
 
+.link {
+	border: 0;
+
+	@include border-radius($no-border-radius);
+	@include link-variant($base-variant-background);
+	&.invert {
+		@include link-variant($invert-variant-background);
+	}
+	&.primary {
+		@include link-variant($primary-variant-background);
+	}
+	&.secondary {
+		@include link-variant($secondary-variant-background);
+	}
+	&.positive {
+		@include link-variant($positive-variant-background);
+	}
+	&.negative {
+		@include link-variant($negative-variant-background);
+	}
+}
+
 .close {
 	position: relative;
 	display: inline-block;
