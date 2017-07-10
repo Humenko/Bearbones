@@ -4461,13 +4461,13 @@ a:hover {
   margin-top: calc(-0.5rem - -0.125rem);
   width: 0.5rem;
   height: 0.5rem;
-  border-top: 0;
-  border-right: 0;
   content: ' ';
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   pointer-events: none;
   border: 0.125rem solid #7D7D7D;
+  border-top: 0;
+  border-right: 0;
 }
 
 .bb-field label {
@@ -5646,13 +5646,13 @@ a:hover {
   margin-top: calc(-0.5rem - -0.125rem);
   width: 0.5rem;
   height: 0.5rem;
-  border-top: 0;
-  border-right: 0;
   content: ' ';
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   pointer-events: none;
   border: 0.125rem solid #7D7D7D;
+  border-top: 0;
+  border-right: 0;
 }
 
 .bb-field label {
