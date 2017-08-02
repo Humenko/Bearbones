@@ -1,0 +1,27 @@
+@mixin burger($dimensions) {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: $dimensions;
+    position: relative;
+    width: $dimensions;
+    span {
+        background-color: $base-color;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        transition: none 2s ease-in-out;
+        transition-property: background, left, opacity, transform;
+        width: 2rem;
+        &:nth-child(1) {
+            margin-top: -.6rem;
+        }
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+        &:nth-child(3) {
+            margin-top: .6rem;
+        }
+    }
+}
