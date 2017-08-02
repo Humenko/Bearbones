@@ -1,0 +1,19 @@
+.bb-transition {
+    transition-duration: $transition-duration;
+    &.up {
+        transform: translateY(100vh);
+        transition-property: transform;
+        transition-timing-function: $transition-effect;
+        &.slide {
+            transform: translate(0);
+        }
+    }
+    &.down {
+        transform: translateY(-100vh);
+        transition-property: transform;
+        transition-timing-function: $transition-effect;
+        &.slide {
+            transform: translate(0);
+        }
+    }    
+}
