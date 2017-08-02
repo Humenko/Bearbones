@@ -38,6 +38,10 @@
 	@include text-font-size($font-size-sm);
 }
 
+.text-md {
+	@include text-font-size($body-font-size);
+}
+
 .text-lg {
 	@include text-font-size($font-size-lg);
 }
