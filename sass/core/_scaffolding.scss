@@ -66,6 +66,7 @@ a {
 	background-color: transparent;
 	color: $link-color;
 	text-decoration: $link-decoration;
+	cursor: pointer;
 
 	-webkit-text-decoration-skip: objects;
 	&:hover {
