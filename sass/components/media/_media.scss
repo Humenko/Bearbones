@@ -5,13 +5,15 @@
 	&.vertical-align {
 		align-items: center;
 	}
+	.media-container {
+		flex: 1;
+	}
 	.media {
 		display: flex;
 		padding-top: $media-spacing/1.5;
-
 		@include border-top($border-width, $border-style, $media-divider-color);
 	}
-	& + .media {
+	&+.media {
 		margin-top: $media-spacing/1.5;
 	}
 	.media-left,
