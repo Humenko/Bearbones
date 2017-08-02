@@ -1,0 +1,64 @@
+    .bb-animation {
+	transition-duration: $transition-duration;
+	&.up {
+		transition-timing-function: $transition-effect;
+		transition-property: transform;
+		transform: translateY(100vh);
+		&.slide {
+			transform: translate(0);
+		}
+	}
+	&.down {
+		transition-timing-function: $transition-effect;
+		transition-property: transform;
+		transform: translateY(-100vh);
+		&.slide {
+			transform: translate(0);
+		}
+	}
+	&.loader {
+		position: relative;
+		width: $loader-size;
+		height: $loader-size;
+		color: transparent !important;
+		cursor: default;
+		pointer-events: none;
+		&:after {
+			display: block;
+			width: $loader-size;
+			height: $loader-size;
+			border-width: $loader-border;
+			border-style: solid;
+			content: '';
+			animation: loader-spin $transition-duration * 4 linear;
+			animation-iteration-count: infinite;
+
+			@include border-radius($loader-border-radius);
+			@include loader-variant($base-variant-background);
+		}
+		&.invert:after {
+			@include loader-variant($invert-variant-background);
+		}
+		&.primary:after {
+			@include loader-variant($primary-variant-background);
+		}
+		&.secondary:after {
+			@include loader-variant($secondary-variant-background);
+		}
+		&.positive:after {
+			@include loader-variant($positive-variant-background);
+		}
+		&.negative:after {
+			@include loader-variant($negative-variant-background);
+		}
+	}
+}
+
+@keyframes loader-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
