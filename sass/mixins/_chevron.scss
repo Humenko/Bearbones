@@ -1,0 +1,13 @@
+@mixin chevron-down($color) {
+    z-index: 5;
+    display: block;
+    width: $chevron-size;
+    height: $chevron-size;
+    content: ' ';
+    transform: rotate(-45deg);
+    pointer-events: none;
+    @include border($border-width, $border-style, $color);
+    border-top: 0;
+    border-right: 0;
+    margin-left: .5rem;
+}
