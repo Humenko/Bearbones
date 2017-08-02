@@ -140,6 +140,13 @@ $transition-duration:                 .25s !default;
 $alert-border-radius:                 $border-radius !default;
 $alert-spacing:                       1rem !default;
 
+// Animation //
+
+$loader-border:                       .5rem !default;
+$loader-border-radius:                50% !default;
+$loader-size:                         4rem !default;
+$loader-offset:                       -($loader-size / 2) !default;
+
 // Box //
 
 $box-spacing-x:                       1rem !default;
