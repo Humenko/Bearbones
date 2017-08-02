@@ -1,7 +1,6 @@
 @mixin navbar-variant($color) {
 	$light-color: lighten($color, 10%);
-	.item a:not(.bb-btn),
-	a.item:not(.bb-btn) {
+	.item {
 		color: $light-color;
 		&:hover {
 			color: $color;
