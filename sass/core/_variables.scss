@@ -271,23 +271,39 @@ $media-spacing:                       $padding !default;
 // Navbar //
 
 $navbar-background-color:             $white !default;
-$navbar-box-shadow:                   0 2px 1 0 rgba(0, 0, 0, .1) !default;
+$navbar-box-shadow:                   0 3px 1px 0 rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 $navbar-item-spacing-x:               .5rem !default;
 $navbar-item-spacing-y:               .75rem !default;
 $navbar-font-weight:                  600 !default;
 $navbar-container-spacing:            0 1rem !default;
-$navbar-height:                       3.5rem !default;
+$navbar-height:                       3rem !default;
 $navbar-image-max-height:             $navbar-height/1.5 !default;
-$navbar-link-color:                   $light-grey !default;
-$navbar-link-hover-color:             $base-color !default;
-$navbar-link-active-color:            $primary-color !default;
-$navbar-tab-border-hover-color:       $navbar-link-hover-color !default;
-$navbar-tab-border-active-color:      $navbar-link-active-color !default;
+$navbar-item-color:                   $light-grey !default;
+$navbar-item-hover-color:             $base-color !default;
+$navbar-item-hover-background:        transparent !default;
+$navbar-item-active-color:            $primary-color !default;
+$navbar-item-active-background:       $base-pair !default;
+$navbar-dropdown-background:          $base-pair !default;
+$navbar-dropdown-chevron:             $primary-color !default;
+$navbar-dropdown-border:              $border-width $border-style transparent !default;
+$navbar-dropdown-border-radius:       $border-radius !default;
+$navbar-dropdown-item-hover:          $primary-color !default;
+$navbar-dropdown-item-hover-background: $lighter-grey !default;
+$navbar-dropdown-item-active:         $primary-color !default;
+$navbar-dropdown-item-active-background: red !default;
+$navbar-dropdown-radius:              $base-pair !default;
+$navbar-dropdown-offset:              -.125rem !default;
+$navbar-fixed-margin-top:             4rem !default;
+$navbar-tab-border-hover-color:       $navbar-item-hover-color !default;
+$navbar-tab-border-active-color:      $navbar-item-active-color !default;
 $navbar-tab-border-width:             $border-width !default;
 $navbar-tab-spacing:                  $padding !default;
 $navbar-tab-transition:               border-color $transition-effect $transition-duration, 
-                                      color $transition-effect $transition-duration;
+                                      color $transition-effect $transition-duration !default;
+$navbar-dropdown-transition:          opacity $transition-effect $transition-duration, 
+                                      transform $transition-effect $transition-duration !default;
 
+                                      
 // Pagination //
 
 $pagination-border-radius:            $border-radius !default;
@@ -356,3 +372,7 @@ $spacers: (
     y: ($spacer-y * 3)
   )
 ) !default;
+
+// Chevron 
+
+$chevron-size:                        .5rem !default;                                      
