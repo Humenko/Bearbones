@@ -1957,6 +1957,104 @@ a:hover {
   right: 1rem;
 }
 
+.bb-animation {
+  transition-duration: 0.25s;
+}
+
+.bb-animation.up {
+  transition-timing-function: ease-in-out;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transform: translateY(100vh);
+          transform: translateY(100vh);
+}
+
+.bb-animation.up.slide {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.bb-animation.down {
+  transition-timing-function: ease-in-out;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+}
+
+.bb-animation.down.slide {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.bb-animation.loader {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  color: transparent !important;
+  cursor: default;
+  pointer-events: none;
+}
+
+.bb-animation.loader:after {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-width: 0.5rem;
+  border-style: solid;
+  content: '';
+  -webkit-animation: loader-spin 1s linear;
+          animation: loader-spin 1s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 50%;
+  border-color: #4A4A4A transparent transparent;
+}
+
+.bb-animation.loader.invert:after {
+  border-color: #FFFFFF transparent transparent;
+}
+
+.bb-animation.loader.primary:after {
+  border-color: #24C2AB transparent transparent;
+}
+
+.bb-animation.loader.secondary:after {
+  border-color: #FFB52F transparent transparent;
+}
+
+.bb-animation.loader.positive:after {
+  border-color: #28D656 transparent transparent;
+}
+
+.bb-animation.loader.negative:after {
+  border-color: #FF1800 transparent transparent;
+}
+
+@-webkit-keyframes loader-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .bb-box {
   position: relative;
   padding: 1.5rem 1rem;
