@@ -13,7 +13,7 @@
 	@include button-font-size($btn-font-size);
 	@include border-radius($btn-border-radius);
 	@include border($btn-border-width, $btn-border-style, $base-variant-border);
-	@include button-variant($base-variant-color, $base-variant-background, $base-variant-border);
+	@include button-variant($btn-color, $btn-background, $btn-border-color);
 	@include transition($btn-transition);
 	user-select: none;
 	&::-moz-focus-inner {
