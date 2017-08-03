@@ -1957,101 +1957,228 @@ a:hover {
   right: 1rem;
 }
 
-.bb-animation {
-  transition-duration: 0.25s;
-}
-
 .bb-animation.up {
+  -webkit-transform: translateY(100vh);
+          transform: translateY(100vh);
+  visibility: hidden;
   transition-timing-function: ease-in-out;
+  transition-duration: 2s;
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transform: translateY(100vh);
-          transform: translateY(100vh);
-}
-
-.bb-animation.up.slide {
-  -webkit-transform: translate(0);
-          transform: translate(0);
 }
 
 .bb-animation.down {
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  visibility: hidden;
   transition-timing-function: ease-in-out;
+  transition-duration: 2s;
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transform: translateY(-100vh);
-          transform: translateY(-100vh);
 }
 
-.bb-animation.down.slide {
+.bb-animation.right {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  visibility: hidden;
+  transition-timing-function: ease-in-out;
+  transition-duration: 2s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.bb-animation.left {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  visibility: hidden;
+  transition-timing-function: ease-in-out;
+  transition-duration: 2s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.bb-animation.up.slide, .bb-animation.down.slide, .bb-animation.right.slide, .bb-animation.left.slide {
+  visibility: visible;
   -webkit-transform: translate(0);
           transform: translate(0);
 }
 
-.bb-animation.loader {
+.bb-animation.spinner {
   position: relative;
-  width: 4rem;
-  height: 4rem;
-  color: transparent !important;
-  cursor: default;
-  pointer-events: none;
-}
-
-.bb-animation.loader:after {
   display: block;
   width: 4rem;
   height: 4rem;
   border-width: 0.5rem;
   border-style: solid;
-  content: '';
+  color: transparent !important;
+  cursor: default;
   -webkit-animation: loader-spin 1s linear;
           animation: loader-spin 1s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  pointer-events: none;
   border-radius: 50%;
   border-color: #4A4A4A transparent transparent;
 }
 
-.bb-animation.loader.invert:after {
+.bb-animation.spinner.invert {
   border-color: #FFFFFF transparent transparent;
 }
 
-.bb-animation.loader.primary:after {
+.bb-animation.spinner.primary {
   border-color: #24C2AB transparent transparent;
 }
 
-.bb-animation.loader.secondary:after {
+.bb-animation.spinner.secondary {
   border-color: #FFB52F transparent transparent;
 }
 
-.bb-animation.loader.positive:after {
+.bb-animation.spinner.positive {
   border-color: #28D656 transparent transparent;
 }
 
-.bb-animation.loader.negative:after {
+.bb-animation.spinner.negative {
   border-color: #FF1800 transparent transparent;
 }
 
+.bb-animation.pulse {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  color: transparent !important;
+  cursor: default;
+  -webkit-animation: loader-pulse 1.75s infinite ease-in-out;
+          animation: loader-pulse 1.75s infinite ease-in-out;
+  pointer-events: none;
+  border-radius: 50%;
+  background-color: #4A4A4A;
+}
+
+.bb-animation.pulse.invert {
+  background-color: #FFFFFF;
+}
+
+.bb-animation.pulse.primary {
+  background-color: #24C2AB;
+}
+
+.bb-animation.pulse.secondary {
+  background-color: #FFB52F;
+}
+
+.bb-animation.pulse.positive {
+  background-color: #28D656;
+}
+
+.bb-animation.pulse.negative {
+  background-color: #FF1800;
+}
+
+.bb-animation.bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 0.5rem;
+  background-color: #F4F4F4;
+  color: transparent !important;
+  cursor: default;
+  pointer-events: none;
+}
+
+.bb-animation.bar span {
+  background-color: #4A4A4A;
+}
+
+.bb-animation.bar.invert span {
+  background-color: #FFFFFF;
+}
+
+.bb-animation.bar.primary span {
+  background-color: #24C2AB;
+}
+
+.bb-animation.bar.secondary span {
+  background-color: #FFB52F;
+}
+
+.bb-animation.bar.positive span {
+  background-color: #28D656;
+}
+
+.bb-animation.bar.negative span {
+  background-color: #FF1800;
+}
+
+.bb-animation.bar span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0;
+  -webkit-animation: loader-bar 5s forwards ease-in-out;
+          animation: loader-bar 5s forwards ease-in-out;
+}
+
 @-webkit-keyframes loader-spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  to {
+  100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 
 @keyframes loader-spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  to {
+  100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-pulse {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes loader-pulse {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes loader-bar {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loader-bar {
+  100% {
+    width: 100%;
   }
 }
 
