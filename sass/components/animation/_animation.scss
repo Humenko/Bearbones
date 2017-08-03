@@ -1,64 +1,147 @@
     .bb-animation {
-	transition-duration: $transition-duration;
 	&.up {
-		transition-timing-function: $transition-effect;
-		transition-property: transform;
 		transform: translateY(100vh);
-		&.slide {
-			transform: translate(0);
-		}
+
+		@include slide-variant;
 	}
 	&.down {
-		transition-timing-function: $transition-effect;
-		transition-property: transform;
 		transform: translateY(-100vh);
+
+		@include slide-variant;
+		;
+	}
+	&.right {
+		transform: translateX(100vw);
+
+		@include slide-variant;
+	}
+	&.left {
+		transform: translateX(-100vw);
+
+		@include slide-variant;
+	}
+	&.up,
+	&.down,
+	&.right,
+	&.left {
 		&.slide {
+			visibility: visible;
 			transform: translate(0);
 		}
 	}
-	&.loader {
+	&.spinner {
 		position: relative;
-		width: $loader-size;
-		height: $loader-size;
+		display: block;
+		width: $loader-spinner-size;
+		height: $loader-spinner-size;
+		border-width: $loader-spinner-border;
+		border-style: solid;
+		color: transparent !important;
+		cursor: default;
+		animation: loader-spin $loader-spinner-transition-duration linear;
+		animation-iteration-count: infinite;
+		pointer-events: none;
+
+		@include border-radius($loader-spinner-border-radius);
+		@include spinner-variant($base-variant-background);
+		&.invert {
+			@include spinner-variant($invert-variant-background);
+		}
+		&.primary {
+			@include spinner-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include spinner-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include spinner-variant($positive-variant-background);
+		}
+		&.negative {
+			@include spinner-variant($negative-variant-background);
+		}
+	}
+	&.pulse {
+		position: relative;
+		width: $loader-pulse-size;
+		height: $loader-pulse-size;
+		color: transparent !important;
+		cursor: default;
+		animation: loader-pulse $loader-pulse-transition-duration infinite ease-in-out;
+		pointer-events: none;
+
+		@include border-radius($loader-pulse-border-radius);
+		@include pulse-variant($base-variant-background);
+		&.invert {
+			@include pulse-variant($invert-variant-background);
+		}
+		&.primary {
+			@include pulse-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include pulse-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include pulse-variant($positive-variant-background);
+		}
+		&.negative {
+			@include pulse-variant($negative-variant-background);
+		}
+	}
+	&.bar {
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: $loader-bar-size;
+		background-color: $loader-bar-background-color;
 		color: transparent !important;
 		cursor: default;
 		pointer-events: none;
-		&:after {
-			display: block;
-			width: $loader-size;
-			height: $loader-size;
-			border-width: $loader-border;
-			border-style: solid;
-			content: '';
-			animation: loader-spin $transition-duration * 4 linear;
-			animation-iteration-count: infinite;
 
-			@include border-radius($loader-border-radius);
-			@include loader-variant($base-variant-background);
+		@include bar-variant($base-variant-background);
+		&.invert {
+			@include bar-variant($invert-variant-background);
 		}
-		&.invert:after {
-			@include loader-variant($invert-variant-background);
+		&.primary {
+			@include bar-variant($primary-variant-background);
 		}
-		&.primary:after {
-			@include loader-variant($primary-variant-background);
+		&.secondary {
+			@include bar-variant($secondary-variant-background);
 		}
-		&.secondary:after {
-			@include loader-variant($secondary-variant-background);
+		&.positive {
+			@include bar-variant($positive-variant-background);
 		}
-		&.positive:after {
-			@include loader-variant($positive-variant-background);
+		&.negative {
+			@include bar-variant($negative-variant-background);
 		}
-		&.negative:after {
-			@include loader-variant($negative-variant-background);
+		span {
+			display: flex;
+			width: 0;
+			animation: loader-bar $loader-bar-transition-duration forwards ease-in-out;
 		}
 	}
 }
 
 @keyframes loader-spin {
-	from {
+	0% {
 		transform: rotate(0deg);
 	}
-	to {
+	100% {
 		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader-pulse {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.0);
+	}
+}
+
+@keyframes loader-bar {
+	100% {
+		width: 100%;
 	}
 }
