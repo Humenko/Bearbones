@@ -1,3 +1,20 @@
-@mixin loader-variant($color) {
+@mixin slide-variant {
+	visibility: hidden;
+	transition-timing-function: $slide-transition-effect;
+	transition-duration: $slide-transition-duration;
+	transition-property: transform;
+}
+
+@mixin spinner-variant($color) {
 	@include border-color($color transparent transparent);
+}
+
+@mixin pulse-variant($color) {
+	background-color: $color;
+}
+
+@mixin bar-variant($color) {
+	span {
+		background-color: $color;
+	}
 }
