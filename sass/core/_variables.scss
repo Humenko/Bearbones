@@ -142,10 +142,24 @@ $alert-spacing:                       1rem !default;
 
 // Animation //
 
-$loader-border:                       .5rem !default;
-$loader-border-radius:                50% !default;
-$loader-size:                         4rem !default;
-$loader-offset:                       -($loader-size / 2) !default;
+$slide-transition-duration:           2s !default;
+$slide-transition-effect:             $transition-effect !default;
+
+$loader-bar-background-color:         $lighter-grey !default;
+$loader-bar-border:                   .5rem !default;
+$loader-bar-border-radius:            50% !default;
+$loader-bar-size:                     .5rem !default;
+$loader-bar-transition-duration:      5s !default;
+
+$loader-pulse-border-radius:          50% !default;
+$loader-pulse-size:                   2rem !default;
+$loader-pulse-transition-duration:    1.75s !default;
+
+$loader-spinner-border:               .5rem !default;
+$loader-spinner-border-radius:        50% !default;
+$loader-spinner-size:                 4rem !default;
+$loader-spinner-offset:               -($loader-spinner-size / 2) !default;
+$loader-spinner-transition-duration:  1s !default;
 
 // Box //
 
