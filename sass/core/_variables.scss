@@ -271,11 +271,6 @@ $field-addon-color-focus:             $lighter-grey !default;
 $field-addon-background-focus:        $field-color-focus !default;
 $field-addon-border-color-focus:      $field-border-color-focus !default;
 
-// Jumbotron //
-
-$jumbotron-border-radius:             $border-radius * 2 !default;
-$jumbotron-spacing:                   $padding !default;
-
 // Loader //
 
 $loader-border:                       .1rem !default;
@@ -321,9 +316,9 @@ $navbar-tab-border-width:             $border-width !default;
 $navbar-tab-spacing:                  $padding !default;
 $navbar-tab-transition:               border-color $transition-effect $transition-duration, 
                                       color $transition-effect $transition-duration !default;
-$navbar-dropdown-transition:          opacity $transition-effect $transition-duration, 
+$navbar-dropdown-transition:          color 0s,
+                                      opacity $transition-effect $transition-duration, 
                                       transform $transition-effect $transition-duration !default;
-
                                       
 // Pagination //
 
