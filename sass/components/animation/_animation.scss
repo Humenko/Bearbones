@@ -8,7 +8,6 @@
 		transform: translateY(-100vh);
 
 		@include slide-variant;
-		;
 	}
 	&.right {
 		transform: translateX(100vw);
@@ -25,7 +24,6 @@
 	&.right,
 	&.left {
 		&.slide {
-			visibility: visible;
 			transform: translate(0);
 		}
 	}

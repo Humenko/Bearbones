@@ -26,6 +26,9 @@
 	}
 	&.shadow {
 		box-shadow: $navbar-box-shadow;
+		.items {
+			box-shadow: $navbar-box-shadow;
+		}
 	}
 	&.primary {
 		@include navbar-variant($primary-variant-background);
@@ -120,19 +123,19 @@
 		font-weight: $navbar-font-weight;
 		font-size: $body-font-size;
 
-		@include transition($navbar-tab-transition);
 		@include respond-to('lg') {
 			display: flex;
 			align-items: center;
 		}
+		@include transition($navbar-tab-transition);
 		&.tab {
 			padding-right: $navbar-tab-spacing;
 			padding-left: $navbar-tab-spacing;
 
 			@include border-bottom($navbar-tab-border-width, $border-style, transparent);
 			&:hover {
-				@include border-bottom-color($navbar-tab-border-hover-color);
 				@include border-top-color(transparent);
+				@include border-bottom-color($navbar-tab-border-hover-color);
 			}
 			&.active {
 				padding-bottom: calc(#{$navbar-item-spacing-y} - #{$navbar-tab-border-width});
@@ -165,8 +168,8 @@
 			transform: translateY(#{$navbar-dropdown-offset});
 			pointer-events: none;
 
-			@include transition($navbar-dropdown-transition);
 			@include border-bottom-radius($navbar-dropdown-border-radius);
+			@include transition($navbar-dropdown-transition);
 			&.static {
 				top: 100%;
 				transform: translateY(0);
@@ -193,6 +196,7 @@
 				padding: $navbar-item-spacing-y / 2 $navbar-item-spacing-x * 2;
 				white-space: nowrap;
 			}
+			@include transition($navbar-dropdown-transition);
 		}
 	}
 	.bb-divider {
@@ -202,10 +206,10 @@
 		align-self: center;
 		margin-left: auto;
 
-		@include burger($navbar-height);
 		@include respond-to('lg') {
 			display: none;
 		}
+		@include burger($navbar-height);
 	}
 }
 
