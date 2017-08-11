@@ -264,7 +264,9 @@ $field-height:                        (($font-size * $field-line-height) + ($fie
 $field-transition:                    border-color $transition-effect $transition-duration, 
                                       background-color $transition-effect $transition-duration, 
                                       color $transition-effect $transition-duration !default;
-$field-select-arrow-size:             .5rem !default;                                      
+$field-select-arrow-size:             .5rem !default;                                                                            
+$field-select-arrow-color:            $light-grey !default;                                      
+$field-select-arrow-color-hover:      $light-grey !default;                                      
 
 // Addon
 $field-addon-color:                   $base-color !default;

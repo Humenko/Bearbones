@@ -100,7 +100,7 @@
 
 		@include hover {
 			&:after {
-				@include border-color($primary-color);
+				@include border-color($field-select-arrow-color-hover);
 			}
 		}
 		select {
@@ -119,7 +119,7 @@
 			transform: rotate(-45deg);
 			pointer-events: none;
 
-			@include border($border-width, $border-style, $field-placeholder-color);
+			@include border($border-width, $border-style, $field-select-arrow-color);
 			border-top: 0;
 			border-right: 0;			
 		}
