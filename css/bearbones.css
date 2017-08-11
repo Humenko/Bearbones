@@ -2437,7 +2437,7 @@ a:hover {
 
 .bb-btn, a.bb-btn {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -3254,7 +3254,7 @@ a:hover {
 
 .bb-btn, a.bb-btn {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -4066,7 +4066,7 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 0.25rem 0 0;
+  margin: 0 0.5rem 0 0;
   width: 100%;
   vertical-align: baseline;
 }
@@ -4587,7 +4587,7 @@ a:hover {
   padding: 0.5rem 1rem;
   width: 100%;
   background-color: #FFFFFF;
-  color: #7D7D7D;
+  color: #4A4A4A;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -4604,7 +4604,6 @@ a:hover {
   z-index: 3;
   outline: none;
   box-shadow: none;
-  color: #4A4A4A;
   border-color: #4A4A4A;
 }
 
@@ -4613,7 +4612,7 @@ a:hover {
 .bb-field select:active::-webkit-input-placeholder,
 .bb-field textarea:focus::-webkit-input-placeholder,
 .bb-field textarea:active::-webkit-input-placeholder {
-  color: #4A4A4A;
+  color: #7D7D7D;
 }
 
 .bb-field input:focus:-ms-input-placeholder, .bb-field input:active:-ms-input-placeholder,
@@ -4621,7 +4620,7 @@ a:hover {
 .bb-field select:active:-ms-input-placeholder,
 .bb-field textarea:focus:-ms-input-placeholder,
 .bb-field textarea:active:-ms-input-placeholder {
-  color: #4A4A4A;
+  color: #7D7D7D;
 }
 
 .bb-field input:focus::placeholder, .bb-field input:active::placeholder,
@@ -4629,7 +4628,7 @@ a:hover {
 .bb-field select:active::placeholder,
 .bb-field textarea:focus::placeholder,
 .bb-field textarea:active::placeholder {
-  color: #4A4A4A;
+  color: #7D7D7D;
 }
 
 .bb-field input::-webkit-input-placeholder,
@@ -4647,6 +4646,22 @@ a:hover {
 .bb-field input::placeholder,
 .bb-field select::placeholder,
 .bb-field textarea::placeholder {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus, .bb-field .input:active {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus::-webkit-input-placeholder, .bb-field .input:active::-webkit-input-placeholder {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus:-ms-input-placeholder, .bb-field .input:active:-ms-input-placeholder {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus::placeholder, .bb-field .input:active::placeholder {
   color: #7D7D7D;
 }
 
@@ -4701,7 +4716,7 @@ a:hover {
 
 .bb-btn, a.bb-btn {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -5772,7 +5787,7 @@ a:hover {
   padding: 0.5rem 1rem;
   width: 100%;
   background-color: #FFFFFF;
-  color: #7D7D7D;
+  color: #4A4A4A;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -5789,7 +5804,6 @@ a:hover {
   z-index: 3;
   outline: none;
   box-shadow: none;
-  color: #4A4A4A;
   border-color: #4A4A4A;
 }
 
@@ -5798,7 +5812,7 @@ a:hover {
 .bb-field select:active::-webkit-input-placeholder,
 .bb-field textarea:focus::-webkit-input-placeholder,
 .bb-field textarea:active::-webkit-input-placeholder {
-  color: #4A4A4A;
+  color: #7D7D7D;
 }
 
 .bb-field input:focus:-ms-input-placeholder, .bb-field input:active:-ms-input-placeholder,
@@ -5806,7 +5820,7 @@ a:hover {
 .bb-field select:active:-ms-input-placeholder,
 .bb-field textarea:focus:-ms-input-placeholder,
 .bb-field textarea:active:-ms-input-placeholder {
-  color: #4A4A4A;
+  color: #7D7D7D;
 }
 
 .bb-field input:focus::placeholder, .bb-field input:active::placeholder,
@@ -5814,7 +5828,7 @@ a:hover {
 .bb-field select:active::placeholder,
 .bb-field textarea:focus::placeholder,
 .bb-field textarea:active::placeholder {
-  color: #4A4A4A;
+  color: #7D7D7D;
 }
 
 .bb-field input::-webkit-input-placeholder,
@@ -5832,6 +5846,22 @@ a:hover {
 .bb-field input::placeholder,
 .bb-field select::placeholder,
 .bb-field textarea::placeholder {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus, .bb-field .input:active {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus::-webkit-input-placeholder, .bb-field .input:active::-webkit-input-placeholder {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus:-ms-input-placeholder, .bb-field .input:active:-ms-input-placeholder {
+  color: #7D7D7D;
+}
+
+.bb-field .input:focus::placeholder, .bb-field .input:active::placeholder {
   color: #7D7D7D;
 }
 
@@ -6318,7 +6348,7 @@ h5 {
   box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.bb-navbar.shadow .items {
+.bb-navbar.shadow .items.active {
   box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 

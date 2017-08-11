@@ -64,7 +64,7 @@
 		padding: $field-spacing-y $field-spacing-x;
 		width: 100%;
 		background-color: $field-background-color;
-		color: $field-placeholder-color;
+		color: $field-placeholder-color-active;
 
 		appearance: none;
 		@include border($field-border-width, $border-style, $field-border-color);
@@ -74,7 +74,6 @@
 			z-index: 3;
 			outline: none;
 			box-shadow: none;
-			color: $field-placeholder-color-focus;
 
 			@include border-color($field-border-color-focus);
 			&::placeholder {
@@ -84,6 +83,15 @@
 		&::placeholder {
 			color: $field-placeholder-color;
 		}
+	}
+	.input {
+		@include focus-active {
+			color: $field-placeholder-color-focus;
+
+			&::placeholder {
+				color: $field-placeholder-color-focus;
+			}
+		}		
 	}
 	.bb-select {
 		position: relative;
