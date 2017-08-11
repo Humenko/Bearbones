@@ -61,7 +61,7 @@
 		display: block;
 		flex: 1 1 auto;
 		margin-bottom: 0;
-		padding: $field-padding-y $field-padding-x;
+		padding: $field-spacing-y $field-spacing-x;
 		width: 100%;
 		background-color: $field-background-color;
 		color: $field-placeholder-color;
@@ -101,7 +101,7 @@
 		&:after {
 			position: absolute;
 			top: 50%;
-			right: $field-padding-x;
+			right: $field-spacing-x;
 			z-index: 5;
 			display: block;
 			margin-top: calc(-#{$field-select-arrow-size} - -#{$border-width});

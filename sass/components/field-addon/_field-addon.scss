@@ -81,7 +81,7 @@
 
 	.field-addon {
 		margin-bottom: 0;
-		padding: $field-padding-y $field-padding-x;
+		padding: $field-spacing-y $field-spacing-x;
 		background-color: $field-addon-background;
 		color: $field-addon-color;
 		text-align: center;
@@ -111,6 +111,6 @@
 		}
 	}
 	.bb-btn {
-		padding: $field-padding-y $field-padding-x;
+		padding: $field-spacing-y $field-spacing-x;
 	}
 }

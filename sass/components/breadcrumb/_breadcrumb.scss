@@ -11,8 +11,8 @@
 			float: left;
 			 + .breadcrumb-item::before {
 				display: inline-block;
-				padding-right: $breadcrumb-item-padding;
-				padding-left: $breadcrumb-item-padding;
+				padding-right: $breadcrumb-item-spacing;
+				padding-left: $breadcrumb-item-spacing;
 				color: $breadcrumb-divider-color;
 				content: '#{$breadcrumb-divider}';
 			}

@@ -172,7 +172,7 @@ $breadcrumb-active-color:             $base-color !default;
 $breadcrumb-background:               transparent !default;
 $breadcrumb-divider:                  '/' !default;
 $breadcrumb-divider-color:            $base-color !default;
-$breadcrumb-item-padding:             $padding !default;
+$breadcrumb-item-spacing:             $padding !default;
 $breadcrumb-link-color:               $primary-color !default;
 $breadcrumb-spacing:                  $padding !default;
 
@@ -189,7 +189,8 @@ $btn-color:                           $base-pair !default;
 $btn-font-size:                       $font-size !default;
 $btn-font-weight:                     600 !default;
 $btn-line-height:                     1.3 !default;
-$btn-spacing:                         .5rem !default;
+$btn-spacing-x:                       .5rem !default;
+$btn-spacing-y:                       .5rem !default;
 $btn-text-transform:                  none !default;
 $btn-transition:                      all $transition-effect $transition-duration !default;
 
@@ -235,7 +236,7 @@ $divider-margin:                      $margin 0 !default;
 
 $footer-background:                   $lighter-grey !default;
 $footer-divider-color:                $light-grey !default;
-$footer-padding:                      3rem 0 4rem 0 !default;
+$footer-spacing:                      3rem 0 4rem 0 !default;
 
 // Field //
 
@@ -253,12 +254,12 @@ $field-label-font-weight:             600 !default;
 $field-label-font-size:               $font-size !default;
 $field-label-margin-bottom:           .5rem !default;
 $field-line-height:                   1.3 !default;
-$field-padding-x:                     1rem !default;
-$field-padding-y:                     .5rem !default;
+$field-spacing-x:                     1rem !default;
+$field-spacing-y:                     .5rem !default;
 $field-margin-bottom:                 .5rem !default;
 $field-text-margin-top:               .25rem !default;
 $field-text-font-size:                $font-size-xs !default;
-$field-height:                        (($font-size * $field-line-height) + ($field-padding-y * 2)) !default;
+$field-height:                        (($font-size * $field-line-height) + ($field-spacing-y * 2)) !default;
 $field-transition:                    border-color $transition-effect $transition-duration, 
                                       background-color $transition-effect $transition-duration, 
                                       color $transition-effect $transition-duration !default;
@@ -328,13 +329,13 @@ $pagination-border-style:             $border-style !default;
 $pagination-border-width:             $border-width/2 !default;
 $pagination-font-size:                $font-size !default;
 $pagination-font-weight:              500 !default;
-$pagination-padding:                  $padding/2 !default;
+$pagination-spacing:                  $padding/2 !default;
 $pagination-margin:                   $margin/10 !default;
 $pagination-transition:               all $transition-effect $transition-duration  !default;
 
 // Dots 
 $dot-border-radius:                   $border-radius-circle !default;
-$dot-padding:                         $padding/3 !default;
+$dot-spacing:                         $padding/3 !default;
 
 // Stat //
 

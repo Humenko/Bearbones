@@ -1,5 +1,5 @@
 .bb-footer {
-	padding: $footer-padding;
+	padding: $footer-spacing;
 	background: $footer-background;
 	&.primary {
 		@include footer-variant($primary-variant-color, $primary-variant-background);
