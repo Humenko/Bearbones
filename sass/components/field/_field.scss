@@ -78,7 +78,7 @@
 
 			@include border-color($field-border-color-focus);
 			&::placeholder {
-				color: $field-border-color-focus;
+				color: $field-placeholder-color-focus;
 			}
 		}
 		&::placeholder {
