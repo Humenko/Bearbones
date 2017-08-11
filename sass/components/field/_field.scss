@@ -64,7 +64,7 @@
 		padding: $field-padding-y $field-padding-x;
 		width: 100%;
 		background-color: $field-background-color;
-		color: $field-color-placeholder;
+		color: $field-placeholder-color;
 
 		appearance: none;
 		@include border($field-border-width, $border-style, $field-border-color);
@@ -74,7 +74,7 @@
 			z-index: 3;
 			outline: none;
 			box-shadow: none;
-			color: $field-border-color-focus;
+			color: $field-placeholder-color-focus;
 
 			@include border-color($field-border-color-focus);
 			&::placeholder {
@@ -82,7 +82,7 @@
 			}
 		}
 		&::placeholder {
-			color: $field-color-placeholder;
+			color: $field-placeholder-color;
 		}
 	}
 	.bb-select {
@@ -111,7 +111,7 @@
 			transform: rotate(-45deg);
 			pointer-events: none;
 
-			@include border($border-width, $border-style, $field-color-placeholder);
+			@include border($border-width, $border-style, $field-placeholder-color);
 			border-top: 0;
 			border-right: 0;			
 		}

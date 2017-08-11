@@ -26,7 +26,7 @@
 	}
 	&.shadow {
 		box-shadow: $navbar-box-shadow;
-		.items {
+		.items.active {
 			box-shadow: $navbar-box-shadow;
 		}
 	}
