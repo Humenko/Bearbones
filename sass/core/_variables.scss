@@ -59,10 +59,10 @@ $margin:                              1.5rem !default;
 //// LAYOUT ////
 
 $container-max-width:                 75rem !default;
-$container-spacing:                   1.5rem !default;
 $layout-background:                   $lighter-grey !default;
 $layout-color:                        $base-color !default;
-$layout-spacing:                      $padding !default;
+$layout-spacing-x:                    1.5rem !default;
+$layout-spacing-y:                    2rem !default;
 $layout-spacing-lg:                   $padding * 4 !default;
 
 //// GRID ////

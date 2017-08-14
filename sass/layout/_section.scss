@@ -1,6 +1,6 @@
 .section {
 	margin: 0;
-	padding: $layout-spacing * 2 0;
+	padding: $layout-spacing-y $layout-spacing-x;
 	&.lg {
 		padding-top: $layout-spacing-lg;
 		padding-bottom: $layout-spacing-lg;
