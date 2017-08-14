@@ -14,12 +14,12 @@
 		z-index: 20;
 		display: block;
 		padding: $dropdown-item-spacing-y 0;
-		min-width: 100px; ///
+		min-width: $dropdown-min-width;
 		border-top: $dropdown-border;
 		background-color: $dropdown-background;
 		box-shadow: $dropdown-box-shadow;
 		list-style: none;
-		font-size: $font-size-sm;
+		font-size: $dropdown-font-size;
 		opacity: 0;
 		transform: translateY(#{$dropdown-offset});
 		pointer-events: none;
@@ -36,8 +36,8 @@
 			flex-grow: 0;
 			flex-shrink: 0;
 			justify-content: flex-start;
-			padding: $dropdown-item-spacing-y/2 $dropdown-item-spacing-x; ////
-			color: $base-color; ///        
+			padding: $dropdown-item-spacing-y/2 $dropdown-item-spacing-x;
+			color: $dropdown-item-color;       
 			&:hover {
 				background-color: $dropdown-item-hover-background;
 				color: $dropdown-item-hover;

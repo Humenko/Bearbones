@@ -109,6 +109,7 @@ $font-weight-bold:                    600 !default;
 // Variant 
 $font-size-xs:                        .7rem !default;
 $font-size-sm:                        .85rem !default;
+$font-size-md:                        1rem !default;
 $font-size-lg:                        1.15rem !default;
 $font-size-xl:                        1.30rem !default;
 
@@ -235,21 +236,19 @@ $divider-margin:                      $margin 0 !default;
 // Dropdown //
 
 $dropdown-box-shadow:                 0 3px 1px 0 rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
-// $dropdown-item-color:                 $light-grey !default;
-$dropdown-item-hover-color:           $base-color !default;
-// $dropdown-item-hover-background:      transparent !default;
 $dropdown-item-active-color:          $primary-color !default;
-// $dropdown-item-active-background:     $base-pair !default;
 $dropdown-background:                 $base-pair !default;
 $dropdown-border:                     $border-width $border-style transparent !default;
+$dropdown-font-size:                   $font-size !default;
 $dropdown-border-radius:              $border-radius !default;
 $dropdown-item-spacing-x:             .5rem !default;
 $dropdown-item-spacing-y:             .75rem !default;
+$dropdown-item-color:                 $secondary-color !default;
 $dropdown-item-hover:                 $primary-color !default;
 $dropdown-item-hover-background:      $lighter-grey !default;
 $dropdown-item-active:                $primary-color !default;
 $dropdown-item-active-background:     $lighter-grey !default;
-// $dropdown-radius:                    $base-pair !default;
+$dropdown-min-width:                  10rem !default;
 $dropdown-offset:                     -.125rem !default;
 $dropdown-transition:                 color 0s,
                                       opacity $transition-effect $transition-duration, 
