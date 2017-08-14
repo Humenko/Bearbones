@@ -6689,6 +6689,10 @@ h5 {
   transition-property: background, left, opacity, transform;
   transition-property: background, left, opacity, transform, -webkit-transform;
   width: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .bb-navbar .toggle span:nth-child(1) {
