@@ -324,7 +324,6 @@ a:hover {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: 0 1.5rem;
   max-width: 75rem;
 }
 
@@ -480,7 +479,7 @@ a:hover {
 
 .section {
   margin: 0;
-  padding: 2rem 0;
+  padding: 2rem 1.5rem;
 }
 
 .section.lg {
@@ -6753,7 +6752,7 @@ h5 {
   transition-property: background, left, opacity, -webkit-transform;
   transition-property: background, left, opacity, transform;
   transition-property: background, left, opacity, transform, -webkit-transform;
-  width: 2rem;
+  width: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -6761,7 +6760,7 @@ h5 {
 }
 
 .bb-navbar .toggle span:nth-child(1) {
-  margin-top: -.6rem;
+  margin-top: -.45rem;
 }
 
 .bb-navbar .toggle span:nth-child(2) {
@@ -6769,7 +6768,7 @@ h5 {
 }
 
 .bb-navbar .toggle span:nth-child(3) {
-  margin-top: .6rem;
+  margin-top: .45rem;
 }
 
 .items {
