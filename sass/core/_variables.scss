@@ -232,6 +232,29 @@ $divider-icon-font:                   1rem !default;
 $divider-icon-margin:                 0rem !default;
 $divider-margin:                      $margin 0 !default;
 
+// Dropdown //
+
+$dropdown-box-shadow:                 0 3px 1px 0 rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+// $dropdown-item-color:                 $light-grey !default;
+$dropdown-item-hover-color:           $base-color !default;
+// $dropdown-item-hover-background:      transparent !default;
+$dropdown-item-active-color:          $primary-color !default;
+// $dropdown-item-active-background:     $base-pair !default;
+$dropdown-background:                 $base-pair !default;
+$dropdown-border:                     $border-width $border-style transparent !default;
+$dropdown-border-radius:              $border-radius !default;
+$dropdown-item-spacing-x:             .5rem !default;
+$dropdown-item-spacing-y:             .75rem !default;
+$dropdown-item-hover:                 $primary-color !default;
+$dropdown-item-hover-background:      $lighter-grey !default;
+$dropdown-item-active:                $primary-color !default;
+$dropdown-item-active-background:     $lighter-grey !default;
+// $dropdown-radius:                    $base-pair !default;
+$dropdown-offset:                     -.125rem !default;
+$dropdown-transition:                 color 0s,
+                                      opacity $transition-effect $transition-duration, 
+                                      transform $transition-effect $transition-duration !default;
+
 // Footer // 
 
 $footer-background:                   $lighter-grey !default;
@@ -311,7 +334,7 @@ $navbar-dropdown-border-radius:       $border-radius !default;
 $navbar-dropdown-item-hover:          $primary-color !default;
 $navbar-dropdown-item-hover-background: $lighter-grey !default;
 $navbar-dropdown-item-active:         $primary-color !default;
-$navbar-dropdown-item-active-background: red !default;
+$navbar-dropdown-item-active-background: $white !default;
 $navbar-dropdown-radius:              $base-pair !default;
 $navbar-dropdown-offset:              -.125rem !default;
 $navbar-fixed-margin-top:             4rem !default;
