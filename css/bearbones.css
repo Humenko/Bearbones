@@ -6552,7 +6552,7 @@ h5 {
             align-items: stretch;
   }
   .bb-navbar .item.bb-dropdown .link {
-    padding: 0.75rem 0.5rem;
+    padding: 0.5rem;
   }
   .bb-navbar .item.active .dropdown-menu, .bb-navbar .item.hover:hover .dropdown-menu {
     display: block;

@@ -1,8 +1,8 @@
 .bb-dropdown {
-    display: inline-block;
+	display: inline-block;
 	&.active,
 	&.hover:hover {
-		 .dropdown-menu {
+		.dropdown-menu {
 			display: block;
 			opacity: 1;
 			transform: translateY(0);
@@ -37,7 +37,7 @@
 			flex-shrink: 0;
 			justify-content: flex-start;
 			padding: $dropdown-item-spacing-y/2 $dropdown-item-spacing-x;
-			color: $dropdown-item-color;       
+			color: $dropdown-item-color;
 			&:hover {
 				background-color: $dropdown-item-hover-background;
 				color: $dropdown-item-hover;
