@@ -258,7 +258,7 @@ $dropdown-transition:                 color 0s,
 
 $footer-background:                   $lighter-grey !default;
 $footer-divider-color:                $light-grey !default;
-$footer-spacing:                      3rem 0 4rem 0 !default;
+$footer-spacing:                      3rem $layout-spacing-x 4rem $layout-spacing-x !default;
 
 // Field //
 
