@@ -474,7 +474,7 @@ a:hover {
           flex-grow: 1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 2rem 0;
+  padding: 2rem 1.5rem;
 }
 
 .section {
@@ -6123,7 +6123,7 @@ a:hover {
 }
 
 .bb-footer {
-  padding: 3rem 0 4rem 0;
+  padding: 3rem 1.5rem 4rem 1.5rem;
   background: #F4F4F4;
 }
 
