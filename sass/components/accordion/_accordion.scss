@@ -1,0 +1,54 @@
+.bb-accordion {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: $padding $padding $padding 0;
+		background-color: $accordion-heading-background;
+		font-weight: $accordion-heading-font-weight;
+		font-size: $accordion-heading-font-size;
+		font-family: $accordion-heading-font-family;
+		cursor: pointer;
+		span,
+		:before,
+		:after {
+			transition: all .3s ease-in-out;
+		}
+		.toggle {
+			margin-right: $padding;
+
+			@include plus(1rem);
+		}
+		&:not(:first-child) {
+			border-top: $accordion-heading-border-width $accordion-heading-border-style $accordion-heading-border-color;
+		}
+		.chevron {
+			@include chevron-down($base-color);
+		}
+	}
+	.content {
+		display: none;
+		// padding-bottom: $padding;
+		.header {
+			justify-content: flex-start;
+			padding: $padding / 2 $padding $padding / 2 0;
+			font-size: $font-size-lg;
+			&:first-child {
+				border-top: $accordion-heading-border-width $accordion-heading-border-style $accordion-heading-border-color;
+			}
+		}
+		.content {
+			padding: 0 0 $padding $padding * 2;
+		}
+	}
+	.active {
+		.chevron {
+			@include chevron-up($base-color);
+		}
+		.toggle {
+			margin-right: $padding;
+
+			@include minus(1rem);
+		}
+	}
+}
