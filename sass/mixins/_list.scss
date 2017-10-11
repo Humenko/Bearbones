@@ -2,3 +2,14 @@
 	padding-left: 0;
 	list-style: none;
 }
+
+@mixin list-font-size($font-size) {
+	font-size: $font-size;
+}
+
+@mixin list-icon-font-size($font-size) {
+	font-size: $font-size;
+	i {
+		margin-left: -$font-size - .5;
+	}
+}

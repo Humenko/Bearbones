@@ -8,3 +8,51 @@ ul.inline {
 		display: inline-block;
 	}
 }
+
+ul {
+	&.xs,
+	.xs {
+		@include list-font-size($font-size-xs);
+	}
+	&.sm,
+	.sm {
+		@include list-font-size($font-size-sm);
+	}
+	&.lg,
+	.lg {
+		@include list-font-size($font-size-lg);
+	}
+	&.xl,
+	.xl {
+		@include list-font-size($font-size-xl);
+	}
+	li {
+		padding-bottom: $padding;
+	}
+}
+
+ul.icon {
+	padding-left: $padding * 2;
+	&.xs,
+	.xs {
+		@include list-icon-font-size($font-size-xs);
+	}
+	&.sm,
+	.sm {
+		@include list-icon-font-size($font-size-sm);
+	}
+	&.lg,
+	.lg {
+		@include list-icon-font-size($font-size-lg);
+	}
+	&.xl,
+	.xl {
+		@include list-icon-font-size($font-size-xl);
+	}
+	li {
+		i {
+			margin-left: -$font-size - .5;
+			padding-right: $padding / 2;
+		}
+	}
+}
