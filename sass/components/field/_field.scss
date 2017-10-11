@@ -110,7 +110,7 @@
 			position: absolute;
 			top: 50%;
 			right: $field-spacing-x;
-			margin-top: calc(-#{$chevron-size} - -#{$field-border-width});
+			margin-top: calc(-#{$icon-size} - -#{$field-border-width});
 
 			@include chevron-down($light-grey);
 		}
