@@ -15,30 +15,30 @@
 		}
 	}
 	&.invert {
-		@include card-variant($border-width, $border-style, $invert-variant-color);
+		@include card-variant($card-border-width, $card-border-style, $invert-variant-color);
 	}
 	&.primary {
-		@include card-variant($border-width, $border-style, $primary-variant-background);
+		@include card-variant($card-border-width, $card-border-style, $primary-variant-background);
 	}
 	&.secondary {
-		@include card-variant($border-width, $border-style, $secondary-variant-background);
+		@include card-variant($card-border-width, $card-border-style, $secondary-variant-background);
 	}
 	&.positive {
-		@include card-variant($border-width, $border-style, $positive-variant-background);
+		@include card-variant($card-border-width, $card-border-style, $positive-variant-background);
 	}
 	&.negative {
-		@include card-variant($border-width, $border-style, $negative-variant-background);
+		@include card-variant($card-border-width, $card-border-style, $negative-variant-background);
 	}
 	.card-header {
 		display: flex;
 		align-items: stretch;
 
-		@include border-bottom($border-width, $border-style, $card-border-color);
+		@include border-bottom($card-border-width, $card-border-style, $card-border-color);
 		.header-title {
 			display: flex;
 			align-items: center;
 			flex-grow: 1;
-			padding: $card-spacing;
+			padding: $card-spacing-y $card-content-spacing $card-content-spacing;
 			font-weight: $font-weight-bold;
 		}
 	}
@@ -52,29 +52,32 @@
 		}
 	}
 	.card-content {
-		padding: $card-spacing;
+		padding: $card-content-spacing;
 		& + .card-content {
 			padding-top: 0;
 		}
 		.media:not(:last-child) {
-			margin-bottom: $card-spacing;
+			margin-bottom: $card-content-spacing;
+		}
+		&:last-child {
+			padding-bottom: $card-spacing-y;
 		}
 	}
 	.card-footer {
 		display: flex;
 		align-items: stretch;
 
-		@include border-top($btn-border-width, $btn-border-style, $card-border-color);
-		.footer-item {
+		@include border-top($btn-border-width, $btn-border-style, $card-footer-border-color);
+		.item {
 			display: flex;
 			align-items: center;
 			flex-basis: 0;
 			flex-grow: 1;
 			flex-shrink: 0;
 			justify-content: center;
-			padding: $card-spacing / 2;
+			padding: $card-content-spacing / 2;
 			&:not(:last-child) {
-				@include border-right($border-width, $border-style, $card-border-color);
+				@include border-right($card-border-width, $card-border-style, $card-item-border-color);
 			}
 			&:hover {
 				text-decoration: none;

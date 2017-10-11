@@ -6,9 +6,10 @@
 		text-transform: $stat-text-transform;
 		font-weight: $stat-value-font-weight;
 		font-size: $stat-font-size;
+		font-family: $stat-value-font-family;
 		line-height: $stat-line-height;
 		&.text {
-			min-height: 2em;
+			min-height: 2rem;
 			text-align: center;
 			font-weight: $stat-text-font-weight;
 			font-size: $stat-font-size/2;
@@ -20,11 +21,12 @@
 		text-transform: $stat-text-transform;
 		font-weight: $stat-label-font-weight;
 		font-size: $stat-font-size/4;
+		font-family: $stat-label-font-family;
 	}
 	&.horizontal {
 		align-items: center;
 		flex-direction: row;
-		margin: 1em 0;
+		margin: 1rem 0;
 		:last-child {
 			margin-left: $stat-spacing/1.5;
 		}

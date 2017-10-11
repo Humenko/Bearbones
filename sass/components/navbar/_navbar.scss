@@ -104,6 +104,7 @@
 				right: $navbar-item-spacing-x;
 
 				@include chevron-down($navbar-dropdown-chevron);
+				margin-left: .5rem;				
 			}
 		}
 	}

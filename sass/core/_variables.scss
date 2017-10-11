@@ -136,6 +136,17 @@ $transition-duration:                 .25s !default;
 
 //// COMPONENTS ////
 
+// Accordion //
+
+$accordion-heading-background:        transparent !default;
+$accordion-heading-border-color:      $lighter-grey !default;
+$accordion-heading-border-style:      $border-style !default;
+$accordion-heading-border-width:      $border-width !default;
+$accordion-heading-font-family:       $font-family !default;
+$accordion-heading-font-size:         $font-size-xl !default;
+$accordion-heading-font-weight:       $font-weight-bold !default;
+$accordion-toggle-transition:         transform $transition-effect $transition-duration !default;
+
 // Alert //
 
 $alert-border-radius:                 $border-radius !default;
@@ -187,6 +198,7 @@ $btn-border-radius:                   $border-radius !default;
 $btn-border-style:                    $border-style !default;
 $btn-border-width:                    $border-width !default;
 $btn-color:                           $base-pair !default;
+$btn-font-family:                     $heading-font-family !default;
 $btn-font-size:                       $font-size !default;
 $btn-font-weight:                     600 !default;
 $btn-line-height:                     1.3 !default;
@@ -214,9 +226,15 @@ $btn-loader-margin:                   $btn-loader-offset 0 0 $btn-loader-offset 
 // Card //
 
 $card-border-color:                   $lighter-grey !default;
+$card-border-style:                   $border-style !default;
+$card-border-width:                   $border-width !default;
 $card-border-radius:                  $border-radius !default;
+$card-footer-border-color:            $card-border-color !default;
+$card-item-border-color:              $card-border-color !default;
 $card-box-shadow:                     0 3px 1px -2px rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
-$card-spacing:                        $padding !default;
+$card-content-spacing:                $padding !default;
+$card-spacing-x:                      $padding !default;
+$card-spacing-y:                      $padding !default;
 
 // Divider //
 
@@ -369,8 +387,10 @@ $stat-font-size-xs:                   $stat-font-size - 1.5rem !default;
 $stat-font-size-sm:                   $stat-font-size - .75rem !default;
 $stat-font-size-lg:                   $stat-font-size + .75rem !default;
 $stat-font-size-xl:                   $stat-font-size + 1.5rem !default;
+$stat-label-font-family:              $heading-font-family !default;
 $stat-label-font-weight:              600 !default;
 $stat-text-font-weight:               600 !default;
+$stat-value-font-family:              $heading-font-family !default;
 $stat-value-font-weight:              400 !default;
 $stat-line-height:                    1em !default;
 $stat-spacing:                        $padding !default;
@@ -419,3 +439,7 @@ $spacers: (
 // Chevron 
 
 $chevron-size:                        .5rem !default;                                      
+
+$icon-border-color:                   $light-grey !default;
+$icon-border-width:                   .0625rem !default;
+$icon-border-style:                   $border-style !default;

@@ -91,7 +91,7 @@
 			&::placeholder {
 				color: $field-placeholder-color-focus;
 			}
-		}		
+		}
 	}
 	.bb-select {
 		position: relative;
@@ -110,18 +110,9 @@
 			position: absolute;
 			top: 50%;
 			right: $field-spacing-x;
-			z-index: 5;
-			display: block;
-			margin-top: calc(-#{$field-select-arrow-size} - -#{$border-width});
-			width: $field-select-arrow-size;
-			height: $field-select-arrow-size;
-			content: ' ';
-			transform: rotate(-45deg);
-			pointer-events: none;
+			margin-top: calc(-#{$chevron-size} - -#{$field-border-width});
 
-			@include border($border-width, $border-style, $field-select-arrow-color);
-			border-top: 0;
-			border-right: 0;			
+			@include chevron-down($light-grey);
 		}
 	}
 	label {
