@@ -254,6 +254,10 @@ body {
   font-size: 1rem;
 }
 
+body p:not(:first-child) {
+  padding-top: 0.5rem;
+}
+
 body,
 p {
   margin: 0;
@@ -1883,6 +1887,7 @@ a:hover {
 }
 
 .bb-accordion .header .toggle {
+  min-width: 1rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2570,6 +2575,7 @@ a:hover {
   cursor: pointer;
   -webkit-appearance: none;
   font-size: 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.2rem;
   border: 0.125rem solid #4A4A4A;
   color: #FFFFFF;
@@ -2607,18 +2613,22 @@ a:hover {
 
 .bb-btn.xs, a.bb-btn.xs {
   font-size: 0.7rem;
+  padding: 0.2rem 0.2rem;
 }
 
 .bb-btn.sm, a.bb-btn.sm {
   font-size: 0.85rem;
+  padding: 0.35rem 0.35rem;
 }
 
 .bb-btn.lg, a.bb-btn.lg {
   font-size: 1.15rem;
+  padding: 0.65rem 0.65rem;
 }
 
 .bb-btn.xl, a.bb-btn.xl {
   font-size: 1.3rem;
+  padding: 0.8rem 0.8rem;
 }
 
 .bb-btn.full-x, a.bb-btn.full-x {
@@ -3159,6 +3169,27 @@ a:hover {
   opacity: .7;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+.bb-btn.icon, a.bb-btn.icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bb-btn.icon span, a.bb-btn.icon span {
+  margin-left: 0.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
 }
 
 .link {
@@ -3388,6 +3419,7 @@ a:hover {
   cursor: pointer;
   -webkit-appearance: none;
   font-size: 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.2rem;
   border: 0.125rem solid #4A4A4A;
   color: #FFFFFF;
@@ -3425,18 +3457,22 @@ a:hover {
 
 .bb-btn.xs, a.bb-btn.xs {
   font-size: 0.7rem;
+  padding: 0.2rem 0.2rem;
 }
 
 .bb-btn.sm, a.bb-btn.sm {
   font-size: 0.85rem;
+  padding: 0.35rem 0.35rem;
 }
 
 .bb-btn.lg, a.bb-btn.lg {
   font-size: 1.15rem;
+  padding: 0.65rem 0.65rem;
 }
 
 .bb-btn.xl, a.bb-btn.xl {
   font-size: 1.3rem;
+  padding: 0.8rem 0.8rem;
 }
 
 .bb-btn.full-x, a.bb-btn.full-x {
@@ -3977,6 +4013,27 @@ a:hover {
   opacity: .7;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+.bb-btn.icon, a.bb-btn.icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bb-btn.icon span, a.bb-btn.icon span {
+  margin-left: 0.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
 }
 
 .link {
@@ -4920,6 +4977,7 @@ a:hover {
   cursor: pointer;
   -webkit-appearance: none;
   font-size: 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.2rem;
   border: 0.125rem solid #4A4A4A;
   color: #FFFFFF;
@@ -4957,18 +5015,22 @@ a:hover {
 
 .bb-btn.xs, a.bb-btn.xs {
   font-size: 0.7rem;
+  padding: 0.2rem 0.2rem;
 }
 
 .bb-btn.sm, a.bb-btn.sm {
   font-size: 0.85rem;
+  padding: 0.35rem 0.35rem;
 }
 
 .bb-btn.lg, a.bb-btn.lg {
   font-size: 1.15rem;
+  padding: 0.65rem 0.65rem;
 }
 
 .bb-btn.xl, a.bb-btn.xl {
   font-size: 1.3rem;
+  padding: 0.8rem 0.8rem;
 }
 
 .bb-btn.full-x, a.bb-btn.full-x {
@@ -5509,6 +5571,27 @@ a:hover {
   opacity: .7;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+.bb-btn.icon, a.bb-btn.icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bb-btn.icon span, a.bb-btn.icon span {
+  margin-left: 0.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
 }
 
 .link {
@@ -7988,6 +8071,39 @@ h5 {
       flex-shrink: 0;
 }
 
+.bb-table {
+  border-radius: 0.4rem;
+  background-color: rgba(125, 125, 125, 0.05);
+}
+
+.bb-table tbody {
+  border-radius: 0.2rem;
+}
+
+.bb-table.full-x {
+  width: 100%;
+}
+
+.bb-table tr:not(:last-child) {
+  border-bottom: 0.0625rem solid rgba(125, 125, 125, 0.3);
+}
+
+.bb-table td {
+  width: 50%;
+}
+
+.bb-table td:nth-child(even) {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.bb-table td:first-child {
+  padding: 1rem 0.5rem 1rem 1rem;
+}
+
+.bb-table td:last-child {
+  padding: 1rem 1rem 1rem 0.5rem;
+}
+
 .d-none {
   display: none;
 }
@@ -8702,6 +8818,10 @@ ul.icon li i {
   text-transform: capitalize;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .text-xs {
   font-size: 0.7rem;
 }
@@ -8732,6 +8852,14 @@ ul.icon li i {
 
 .font-style-italic {
   font-style: italic;
+}
+
+.font-family-body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.font-family-heading {
+  font-family: "Itim", cursive;
 }
 
 .text-primary {
