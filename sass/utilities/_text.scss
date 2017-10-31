@@ -30,6 +30,10 @@
 	text-transform: capitalize;
 }
 
+.text-underline {
+	text-decoration: underline;
+}
+
 .text-xs {
 	@include text-font-size($font-size-xs);
 }
@@ -60,6 +64,14 @@
 
 .font-style-italic {
 	font-style: italic;
+}
+
+.font-family-body {
+	font-family: $font-family;
+}
+
+.font-family-heading {
+	font-family: $heading-font-family;
 }
 
 @include text-variant('.text-primary', $primary-color);

@@ -146,6 +146,17 @@
 			@include button-loading-variant($negative-variant-background);
 		}
 	}
+	&.icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		span {
+			margin-left: $padding / 2;
+			display: inline-flex;
+			width: 1rem;
+			height: 1rem;			
+		}		
+	}	
 }
 
 .link {

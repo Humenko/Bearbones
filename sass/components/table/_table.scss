@@ -1,0 +1,27 @@
+.bb-table {
+	@include border-radius($border-radius * 2);
+	background-color: rgba($light-grey, .05);
+	tbody {
+		@include border-radius($border-radius);
+	}
+	&.full-x {
+		width: 100%;
+	}
+	tr {
+		&:not(:last-child) {
+			@include border-bottom($border-width / 2, $border-style, rgba($light-grey, .3));
+		}
+	}
+	td {
+		width: 50%;
+		&:nth-child(even) {
+			padding: $padding $padding / 2 $padding $padding / 2;
+		}
+		&:first-child {
+			padding: $padding $padding / 2 $padding $padding;
+		}
+		&:last-child {
+			padding: $padding $padding $padding $padding / 2;
+		}
+	}
+}

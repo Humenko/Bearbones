@@ -9,7 +9,7 @@
 		font-family: $accordion-heading-font-family;
 		cursor: pointer;
 		&:not(:first-child) {
-			border-top: $accordion-heading-border-width $accordion-heading-border-style $accordion-heading-border-color;
+			@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
 		}
 		span {
 			margin: 0 $padding / 2 0 0;
@@ -20,6 +20,8 @@
 			transition: $accordion-toggle-transition;
 		}        
 		.toggle {
+			min-width: $font-size;
+
 			@include plus($light-grey);
 		}
 		.chevron {
@@ -32,7 +34,7 @@
 		.header {
 			padding: $padding / 2 $padding;
 			&:first-child {
-				border-top: $accordion-heading-border-width $accordion-heading-border-style $accordion-heading-border-color;
+				@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
 			}
 		}
 		.content {

@@ -13,6 +13,9 @@ body {
 	background: $white;
 	color: $font-color;
 	font-size: $body-font-size;
+	p:not(:first-child) {
+		padding-top: $body-spacing-y;
+	}	
 }
 
 body,
