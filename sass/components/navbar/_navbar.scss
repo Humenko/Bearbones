@@ -148,10 +148,10 @@
 	}
 	.dropdown-menu {
 		position: relative;
-		padding: $dropdown-item-spacing-y $dropdown-item-spacing-x;
+		padding: $dropdown-menu-spacing-y $dropdown-item-spacing-x;
 		border-top: none;
 		box-shadow: none;
-		font-size: $font-size-sm;
+		font-size: $dropdown-menu-font-size;
 		opacity: 1;
 
 		@include border-bottom-radius($navbar-dropdown-border-radius);

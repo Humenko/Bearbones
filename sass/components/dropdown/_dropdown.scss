@@ -13,7 +13,7 @@
 		position: absolute;
 		z-index: 20;
 		display: block;
-		padding: $dropdown-item-spacing-y 0;
+		padding: $dropdown-menu-spacing-y $dropdown-menu-spacing-x;
 		min-width: $dropdown-min-width;
 		border-top: $dropdown-border;
 		background-color: $dropdown-background;

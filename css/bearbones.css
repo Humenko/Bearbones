@@ -4555,7 +4555,7 @@ a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0 0;
+  padding: 0.375rem 0.5rem;
   color: #FFB52F;
 }
 
@@ -6862,7 +6862,7 @@ h5 {
 
 .bb-navbar .dropdown-menu {
   position: relative;
-  padding: 0 0;
+  padding: 0 0.5rem;
   border-top: none;
   box-shadow: none;
   font-size: 0.85rem;
