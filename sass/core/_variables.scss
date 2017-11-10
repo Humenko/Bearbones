@@ -258,10 +258,10 @@ $dropdown-box-shadow:                 0 3px 1px 0 rgba(0, 0, 0, .1), 0 2px 2px 0
 $dropdown-item-active-color:          $primary-color !default;
 $dropdown-background:                 $base-pair !default;
 $dropdown-border:                     $border-width $border-style transparent !default;
-$dropdown-font-size:                   $font-size !default;
+$dropdown-font-size:                  $font-size !default;
 $dropdown-border-radius:              $border-radius !default;
-$dropdown-item-spacing-x:             .5rem !default;
-$dropdown-item-spacing-y:             .75rem !default;
+$dropdown-item-spacing-x:             0 !default;
+$dropdown-item-spacing-y:             0 !default;
 $dropdown-item-color:                 $secondary-color !default;
 $dropdown-item-hover:                 $primary-color !default;
 $dropdown-item-hover-background:      $lighter-grey !default;

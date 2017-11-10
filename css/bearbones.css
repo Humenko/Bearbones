@@ -4521,7 +4521,7 @@ a:hover {
   position: absolute;
   z-index: 20;
   display: block;
-  padding: 0.75rem 0;
+  padding: 0 0;
   min-width: 10rem;
   border-top: 0.125rem solid transparent;
   background-color: #FFFFFF;
@@ -4555,7 +4555,7 @@ a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0.375rem 0.5rem;
+  padding: 0 0;
   color: #FFB52F;
 }
 
@@ -6862,7 +6862,7 @@ h5 {
 
 .bb-navbar .dropdown-menu {
   position: relative;
-  padding: 0.75rem 1rem;
+  padding: 0 0;
   border-top: none;
   box-shadow: none;
   font-size: 0.85rem;
