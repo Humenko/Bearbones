@@ -151,10 +151,10 @@
 		align-items: center;
 		justify-content: center;
 		span {
-			margin-left: $padding / 2;
+			margin-left: $btn-spacing-x;
 			display: inline-flex;
-			width: 1rem;
-			height: 1rem;			
+			width: $btn-icon-size;
+			height: $btn-icon-size;			
 		}		
 	}	
 }
