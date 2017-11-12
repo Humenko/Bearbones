@@ -2,7 +2,7 @@
 	.header {
 		display: flex;
 		align-items: center;
-		padding: $padding $padding $padding 0;
+		padding: $accordion-heading-spacing $accordion-heading-spacing $accordion-heading-spacing 0;
 		background-color: $accordion-heading-background;
 		font-weight: $accordion-heading-font-weight;
 		font-size: $accordion-heading-font-size;
@@ -12,15 +12,15 @@
 			@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
 		}
 		span {
-			margin: 0 $padding / 2 0 0;
-        }
+			margin: 0 $accordion-heading-spacing / 2 0 0;
+		}
 		span,
 		:before,
 		:after {
 			transition: $accordion-toggle-transition;
-		}        
+		}
 		.toggle {
-			min-width: $font-size;
+			min-width: 1rem;
 
 			@include plus($light-grey);
 		}
@@ -30,15 +30,15 @@
 	}
 	.content {
 		display: none;
-		padding-bottom: $padding;
+		padding-bottom: $accordion-content-spacing;
 		.header {
-			padding: $padding / 2 $padding;
+			padding: $accordion-heading-spacing / 2 $accordion-heading-spacing;
 			&:first-child {
 				@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
 			}
 		}
 		.content {
-			padding: 0 0 $padding $padding;
+			padding: 0 0 $accordion-content-spacing $accordion-content-spacing;
 		}
 	}
 	.active {
