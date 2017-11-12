@@ -1,7 +1,7 @@
 .bb-card {
 	position: relative;
 	max-width: 100%;
-	background-color: $white;
+	background-color: $card-background-color;
 	box-shadow: $card-box-shadow;
 
 	@include border-radius($card-border-radius);
@@ -38,8 +38,8 @@
 			display: flex;
 			align-items: center;
 			flex-grow: 1;
-			padding: $card-spacing-y $card-content-spacing $card-content-spacing;
-			font-weight: $font-weight-bold;
+			padding: $card-header-spacing-y $card-header-spacing-x $card-header-spacing-y $card-header-spacing-x;
+			font-weight: $card-heading-font-weight;
 		}
 	}
 	.card-image {
@@ -52,15 +52,15 @@
 		}
 	}
 	.card-content {
-		padding: $card-content-spacing;
+		padding: $card-content-spacing-y $card-content-spacing-x;
 		& + .card-content {
 			padding-top: 0;
 		}
 		.media:not(:last-child) {
-			margin-bottom: $card-content-spacing;
+			margin-bottom: $card-content-spacing-y;
 		}
 		&:last-child {
-			padding-bottom: $card-spacing-y;
+			padding-bottom: $card-content-spacing-y;
 		}
 	}
 	.card-footer {
@@ -75,7 +75,7 @@
 			flex-grow: 1;
 			flex-shrink: 0;
 			justify-content: center;
-			padding: $card-content-spacing / 2;
+			padding: $card-content-spacing-y / 2 $card-content-spacing-x / 2;
 			&:not(:last-child) {
 				@include border-right($card-border-width, $card-border-style, $card-item-border-color);
 			}
