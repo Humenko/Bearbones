@@ -1,4 +1,16 @@
 .bb-accordion {
+	&.primary {
+		@include accordion-variant($primary-color);
+	}
+	&.secondary {
+		@include accordion-variant($secondary-color);
+	}
+	&.positive {
+		@include accordion-variant($positive-color);
+	}
+	&.negative {
+		@include accordion-variant($negative-color);
+	}			
 	.header {
 		display: flex;
 		align-items: center;
