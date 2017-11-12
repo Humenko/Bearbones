@@ -1,5 +1,4 @@
 @mixin grid {
-	display: flex;
 	.one-quarter {
 		flex: none;
 		width: 25%;
@@ -41,6 +40,53 @@
 			width: $i / $grid-max-column * 100%;
 		}
 		.column-offset-#{$i} {
+			margin-left: $i / $grid-max-column * 100%;
+		}
+	}
+}
+
+@mixin grid-responsive($breakpoint) {
+	.one-quarter-#{$breakpoint} {
+		flex: none;
+		width: 25%;
+	}
+	.half-#{$breakpoint} {
+		flex: none;
+		width: 50%;
+	}
+	.three-quarters-#{$breakpoint} {
+		flex: none;
+		width: 75%;
+	}
+	.one-third-#{$breakpoint} {
+		flex: none;
+		width: 33.3333%;
+	}
+	.two-thirds-#{$breakpoint} {
+		flex: none;
+		width: 66.6666%;
+	}
+	.offset-one-quarter-#{$breakpoint} {
+		margin-left: 25%;
+	}
+	.offset-half-#{$breakpoint} {
+		margin-left: 50%;
+	}
+	.offset-three-quarters-#{$breakpoint} {
+		margin-left: 75%;
+	}
+	.offset-one-third-#{$breakpoint} {
+		margin-left: 33.3333%;
+	}
+	.offset-two-thirds-#{$breakpoint} {
+		margin-left: 66.6666%;
+	}
+	@for $i from 1 through $grid-max-column {
+		.column-#{$i}-#{$breakpoint} {
+			flex: none;
+			width: $i / $grid-max-column * 100%;
+		}
+		.column-offset-#{$i}-#{$breakpoint} {
 			margin-left: $i / $grid-max-column * 100%;
 		}
 	}

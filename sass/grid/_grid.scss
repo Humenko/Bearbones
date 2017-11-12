@@ -11,6 +11,7 @@
 	@include respond-to('lg') {
 		display: flex;
 	}
+	@include grid;
 	&:last-child {
 		margin-bottom: -$grid-spacing;
 	}
@@ -38,15 +39,15 @@
 		padding-bottom: $grid-spacing * 2;
 		padding-left: $grid-spacing;
 		&:last-child {
-			padding-bottom: $padding;
+			padding-bottom: 0;
 		}
-	}
-	&.xs {
-		@include grid;
 	}
 	@each $breakpoint in map-keys($breakpoints) {
 		@include respond-to($breakpoint) {
+			@include grid-responsive($breakpoint);
 			&.#{$breakpoint} {
+				display: flex;
+
 				@include grid;
 			}
 		}
