@@ -253,9 +253,9 @@ $divider-content-border-width:        $divider-border-width * 1.5 !default;
 $divider-content-color:               $light-grey !default;
 $divider-font-weight:                 500 !default;
 $divider-hidden-color:                transparent !default;
-$divider-horizontal-margin:           1rem !default;
-$divider-icon-font:                   1rem !default;
-$divider-icon-margin:                 0rem !default;
+$divider-spacing-x:                   1rem !default;
+$divider-icon-font-size:              1rem !default;
+$divider-icon-spacing:                0 !default;
 $divider-margin:                      $margin 0 !default;
 
 // Dropdown //

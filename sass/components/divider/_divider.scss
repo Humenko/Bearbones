@@ -27,17 +27,17 @@
 			@include divider-content-border($divider-content-border-width, $divider-color);
 		}
 		&:before {
-			background-position: right $divider-horizontal-margin top 50%;
+			background-position: right $divider-spacing-x top 50%;
 		}
 		&:after {
-			background-position: left $divider-horizontal-margin top 50%;
+			background-position: left $divider-spacing-x top 50%;
 		}
 	}
 	& > .icon {
-		margin: $divider-icon-margin;
+		margin: $divider-icon-spacing;
 		height: 1rem;
 		vertical-align: middle;
-		font-size: $divider-icon-font;
+		font-size: $divider-icon-font-size;
 	}
 	&.hidden {
 		@include divider-border($divider-border-width, $divider-border-style, $divider-hidden-color);
