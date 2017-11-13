@@ -6,7 +6,7 @@
 	@include pagination-variant($base-variant-color, $base-variant-background);
 	user-select: none;
 	.item {
-		padding: $pagination-spacing $pagination-spacing + .5;
+		padding: $pagination-spacing-y $pagination-spacing-x;
 		text-align: center;
 		text-decoration: none;
 		font-weight: $pagination-font-weight;
@@ -26,15 +26,15 @@
 		}
 	}
 	.dot {
-		padding: $dot-spacing;
+		padding: $pagination-dot-size;
 		text-decoration: none;
 		cursor: pointer;
 
 		@include transition($pagination-transition);
-		@include border-radius($dot-border-radius);
+		@include border-radius($pagination-dot-border-radius);
 		&:not(:first-child),
 		&:not(:last-child) {
-			margin: 0 $pagination-margin;
+			margin: 0 $pagination-dot-spacing;
 		}
 	}
 	&.no-border {

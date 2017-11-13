@@ -225,7 +225,7 @@ $btn-loader-border:                   .1rem !default;
 $btn-loader-circle:                   50% !default;
 $btn-loader-size:                     .75rem !default;
 $btn-loader-offset:                   -($btn-loader-size / 2) !default;
-$btn-loader-margin:                   $btn-loader-offset 0 0 $btn-loader-offset !default;
+$btn-loader-spacing:                  $btn-loader-offset 0 0 $btn-loader-offset !default;
 
 // Card //
 
@@ -323,14 +323,6 @@ $field-addon-color-focus:             $lighter-grey !default;
 $field-addon-background-focus:        $field-color-focus !default;
 $field-addon-border-color-focus:      $field-border-color-focus !default;
 
-// Loader //
-
-$loader-border:                       .1rem !default;
-$loader-circle:                       50% !default;
-$loader-size:                         .75rem !default;
-$loader-offset:                       -($loader-size / 2) !default;
-$loader-margin:                       $loader-offset 0 0 $btn-loader-offset !default;
-
 // Media object //
 
 $media-divider-color:                 $lighter-grey !default;
@@ -361,7 +353,7 @@ $navbar-dropdown-item-active:         $primary-color !default;
 $navbar-dropdown-item-active-background: $white !default;
 $navbar-dropdown-radius:              $base-pair !default;
 $navbar-dropdown-offset:              -.125rem !default;
-$navbar-fixed-margin-top:             4rem !default;
+$navbar-fixed-spacing-y:              4rem !default;
 $navbar-tab-border-hover-color:       $navbar-item-hover-color !default;
 $navbar-tab-border-active-color:      $navbar-item-active-color !default;
 $navbar-tab-border-width:             $border-width !default;
@@ -379,13 +371,14 @@ $pagination-border-style:             $border-style !default;
 $pagination-border-width:             $border-width/2 !default;
 $pagination-font-size:                $font-size !default;
 $pagination-font-weight:              500 !default;
-$pagination-spacing:                  $padding/2 !default;
-$pagination-margin:                   $margin/10 !default;
+$pagination-spacing-y:                $padding/2 !default;
+$pagination-spacing-x:                $padding !default;
 $pagination-transition:               all $transition-effect $transition-duration  !default;
 
 // Dots 
-$dot-border-radius:                   $border-radius-circle !default;
-$dot-spacing:                         $padding/3 !default;
+$pagination-dot-border-radius:        $border-radius-circle !default;
+$pagination-dot-size:                 .3rem !default;
+$pagination-dot-spacing:              .1rem !default;
 
 // Stat //
 
