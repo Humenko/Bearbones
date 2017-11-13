@@ -256,7 +256,7 @@ $divider-hidden-color:                transparent !default;
 $divider-spacing-x:                   1rem !default;
 $divider-icon-font-size:              1rem !default;
 $divider-icon-spacing:                0 !default;
-$divider-margin:                      $margin 0 !default;
+$divider-spacing:                     $margin 0 !default;
 
 // Dropdown //
 
@@ -303,12 +303,9 @@ $field-border-width:                  $border-width !default;
 $field-height:                        2.5rem !default;
 $field-label-font-weight:             600 !default;
 $field-label-font-size:               $font-size !default;
-$field-label-margin-bottom:           .5rem !default;
 $field-line-height:                   1.3 !default;
 $field-spacing-x:                     1rem !default;
 $field-spacing-y:                     .5rem !default;
-$field-margin-bottom:                 .5rem !default;
-$field-text-margin-top:               .25rem !default;
 $field-text-font-size:                $font-size-xs !default;
 $field-height:                        (($font-size * $field-line-height) + ($field-spacing-y * 2)) !default;
 $field-transition:                    border-color $transition-effect $transition-duration, 

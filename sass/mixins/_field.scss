@@ -1,14 +1,15 @@
 @mixin field-variant($color, $background, $border) {
 	.field-addon {
-		@include border-color($border);
 		background-color: $background;
 		color: $color;
+
+		@include border-color($border);
 		&.disabled,
 		&:disabled {
 			opacity: .7;
 		}
 	}
-	input, 
+	input,
 	select,
 	textarea {
 		@include focus-active {
@@ -27,28 +28,36 @@
 				@include border-color($background);
 			}
 		}
-	}	
+	}
 }
 
 @mixin field-validation-variant($color) {
-	input, 
-	select, 
-	textarea, 
+	input,
+	select,
+	textarea,
 	.text {
-		@include border-color($color);
 		color: $color;
+
+		@include border-color($color);
 		&::placeholder {
 			color: $color;
-		}		
+		}
 	}
 }
 
 @mixin field-font-size($font-size) {
-	font-size: $font-size;
+	input,
+	select,
+	textarea,
+	.field-addon {
+		padding: $field-spacing-y + ($font-size - 1rem) $field-spacing-x;
+		font-size: $font-size;
+	}
 }
 
 @mixin field-addon-variant($color, $background, $border) {
-	@include border-color($border);
 	background-color: $background;
 	color: $color;
+
+	@include border-color($border);
 }

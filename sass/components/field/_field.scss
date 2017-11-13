@@ -1,13 +1,9 @@
 .bb-field {
-	&:not(.xs):not(.sm):not(.lg):not(.xl) {
-		input,
-		select {
-			height: $field-height;
-		}
-	}
 	&:not(:last-child) {
-		margin-bottom: $field-margin-bottom;
+		margin-bottom: $field-spacing-y*2;
 	}
+	height: auto;
+	@include field-font-size($font-size-md);
 	&.invert {
 		@include field-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
 	}
@@ -31,22 +27,18 @@
 	}
 	&.xs {
 		height: auto;
-
 		@include field-font-size($font-size-xs);
 	}
 	&.sm {
 		height: auto;
-
 		@include field-font-size($font-size-sm);
 	}
 	&.lg {
 		height: auto;
-
 		@include field-font-size($font-size-lg);
 	}
 	&.xl {
 		height: auto;
-
 		@include field-font-size($font-size-xl);
 	}
 	.input-group {
@@ -61,11 +53,9 @@
 		display: block;
 		flex: 1 1 auto;
 		margin-bottom: 0;
-		padding: $field-spacing-y $field-spacing-x;
 		width: 100%;
 		background-color: $field-background-color;
 		color: $field-placeholder-color-active;
-
 		appearance: none;
 		@include border($field-border-width, $border-style, $field-border-color);
 		@include border-radius($field-border-radius);
@@ -74,7 +64,6 @@
 			z-index: 3;
 			outline: none;
 			box-shadow: none;
-
 			@include border-color($field-border-color-focus);
 			&::placeholder {
 				color: $field-placeholder-color-focus;
@@ -87,7 +76,6 @@
 	.input {
 		@include focus-active {
 			color: $field-placeholder-color-focus;
-
 			&::placeholder {
 				color: $field-placeholder-color-focus;
 			}
@@ -97,7 +85,6 @@
 		position: relative;
 		display: inline-block;
 		width: 100%;
-
 		@include hover {
 			&:after {
 				@include border-color($field-select-arrow-color-hover);
@@ -111,7 +98,6 @@
 			top: 50%;
 			right: $field-spacing-x;
 			margin-top: calc(-#{$icon-size} - -#{$field-border-width});
-
 			@include chevron-down($light-grey);
 		}
 	}
@@ -121,12 +107,13 @@
 		font-weight: $field-label-font-weight;
 		font-size: $field-label-font-size;
 		&:not(:last-child) {
-			margin-bottom: $field-label-margin-bottom;
+			margin-bottom: $field-spacing-y;
 		}
 	}
 	.text {
 		display: block;
-		margin-top: $field-text-margin-top;
+		margin-top: $field-spacing-y;
 		font-size: $field-text-font-size;
+		padding: 0;
 	}
 }
