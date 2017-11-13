@@ -119,7 +119,7 @@ $heading-font-color:                  $base-color !default;
 $heading-font-family:                 'Itim', cursive !default;
 $heading-font-weight:                 $font-weight-bold !default;
 $heading-line-height:                 1.3 !default;
-$heading-min-width:                   20rem !default;
+$heading-min-width:                   28rem !default;
 $heading-max-width:                   $container-max-width !default;
 $heading-min-font:                    1rem !default;
 $heading-min-modifier:                1.2 !default;
@@ -128,7 +128,7 @@ $heading-max-modifier:                1.5 !default;
 // Title
 $subtitle-font-size:                  $font-size-xl !default;
 $title-line-height:                   $heading-line-height !default;
-$title-spacing:                       1.5rem !default;
+$title-spacing-y:                     1.5rem !default;
 
 // Transition //
 

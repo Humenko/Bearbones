@@ -6,10 +6,10 @@
 	@if $min-vw-unit==$max-vw-unit and $min-vw-unit==$min-font-size-unit and $min-vw-unit==$max-font-size-unit {
 		& {
 			font-size: $min-font-size;
-			@media screen and (min-width: $min-vw) {
+			@include respond-to('sm') {
 				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 			}
-			@media screen and (min-width: $max-vw) {
+			@include respond-to('xl') {
 				font-size: $max-font-size;
 			}
 		}
