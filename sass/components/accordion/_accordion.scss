@@ -1,15 +1,18 @@
 .bb-accordion {
+	&.invert {
+		@include accordion-variant($invert-variant-background);
+	}	
 	&.primary {
-		@include accordion-variant($primary-color);
+		@include accordion-variant($primary-variant-background);
 	}
 	&.secondary {
-		@include accordion-variant($secondary-color);
+		@include accordion-variant($secondary-variant-background);
 	}
 	&.positive {
-		@include accordion-variant($positive-color);
+		@include accordion-variant($positive-variant-background);
 	}
 	&.negative {
-		@include accordion-variant($negative-color);
+		@include accordion-variant($negative-variant-background);
 	}			
 	.header {
 		display: flex;
