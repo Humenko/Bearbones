@@ -16,7 +16,7 @@
 		@include border-left($pagination-border-width, $pagination-border-style, $base-variant-border);
 		@include border-bottom($pagination-border-width, $pagination-border-style, $base-variant-border);
 		@include border-top($pagination-border-width, $pagination-border-style, $base-variant-border);
-		@include pagination-font-size($pagination-font-size, 3rem);
+		@include pagination-font-size($pagination-font-size, $pagination-min-width);
 		&:first-child {
 			@include border-left-radius($pagination-border-radius);
 		}
@@ -75,14 +75,24 @@
 			@include outline-pagination-variant($negative-variant-background);
 		}
 	}
+	&.xs {
+		.item {
+			@include pagination-font-size($font-size-xs, $pagination-min-width - 2);
+		}
+	}	
 	&.sm {
 		.item {
-			@include pagination-font-size($font-size-sm, 2rem);
+			@include pagination-font-size($font-size-sm, $pagination-min-width - 1);
 		}
 	}
 	&.lg {
 		.item {
-			@include pagination-font-size($font-size-lg, 4rem);
+			@include pagination-font-size($font-size-lg, $pagination-min-width + 1);
 		}
 	}
+	&.xl {
+		.item {
+			@include pagination-font-size($font-size-xl, $pagination-min-width + 2);
+		}
+	}	
 }

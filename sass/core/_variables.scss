@@ -325,8 +325,10 @@ $field-addon-border-color-focus:      $field-border-color-focus !default;
 
 // Media object //
 
+$media-divider-width:                 $border-width !default;
 $media-divider-color:                 $lighter-grey !default;
-$media-spacing:                       $padding !default;
+$media-spacing-x:                     $padding !default;
+$media-spacing-y:                     $padding / 1.5 !default;
 
 // Navbar //
 
@@ -371,6 +373,7 @@ $pagination-border-style:             $border-style !default;
 $pagination-border-width:             $border-width/2 !default;
 $pagination-font-size:                $font-size !default;
 $pagination-font-weight:              500 !default;
+$pagination-min-width:                3rem !default;
 $pagination-spacing-y:                $padding/2 !default;
 $pagination-spacing-x:                $padding !default;
 $pagination-transition:               all $transition-effect $transition-duration  !default;
