@@ -54,7 +54,7 @@
 		flex: 1 1 auto;
 		margin-bottom: 0;
 		width: 100%;
-		background-color: $field-background-color;
+		background: $field-background;
 		color: $field-placeholder-color-active;
 		appearance: none;
 		@include border($field-border-width, $border-style, $field-border-color);

@@ -1,7 +1,7 @@
 .bb-card {
 	position: relative;
 	max-width: 100%;
-	background-color: $card-background-color;
+	background: $card-background;
 	box-shadow: $card-box-shadow;
 
 	@include border-radius($card-border-radius);

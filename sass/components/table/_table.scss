@@ -1,6 +1,6 @@
 .bb-table {
 	@include border-radius($border-radius * 2);
-	background-color: rgba($light-grey, .05);
+	background: rgba($light-grey, .05);
 	tbody {
 		@include border-radius($border-radius);
 	}

@@ -1,6 +1,6 @@
 @mixin field-variant($color, $background, $border) {
 	.field-addon {
-		background-color: $background;
+		background: $background;
 		color: $color;
 
 		@include border-color($border);
@@ -15,7 +15,7 @@
 		@include focus-active {
 			@include border-color($border);
 			& + .field-addon {
-				background-color: $background;
+				background: $background;
 				color: $color;
 
 				@include border-color($border);
@@ -56,7 +56,7 @@
 }
 
 @mixin field-addon-variant($color, $background, $border) {
-	background-color: $background;
+	background: $background;
 	color: $color;
 
 	@include border-color($border);

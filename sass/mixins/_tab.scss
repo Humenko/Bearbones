@@ -42,7 +42,7 @@
 					@include border-bottom-color($white);
 					color: $color;
 					@include hover {
-						background-color: transparent;
+						background: transparent;
 						@include border-bottom-color($white);
 						color: $color;
 					}
@@ -54,7 +54,7 @@
 				@include hover {
 					@include border-bottom-color($lighter-color);
 					color: $color;
-					background-color: $lighter-color;
+					background: $lighter-color;
 				}
 			}
 		}

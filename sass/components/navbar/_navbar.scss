@@ -2,7 +2,7 @@
 	position: relative;
 	z-index: 6;
 	min-height: $navbar-height;
-	background-color: $navbar-background-color;
+	background: $navbar-background;
 
 	@include respond-to('lg') {
 		&,
@@ -61,7 +61,7 @@
 				color: $navbar-item-active-color;
 			}
 			&.active:not(:hover) {
-				background-color: $navbar-item-active-background;
+				background: $navbar-item-active-background;
 			}
 		}
 		&:hover:not(.active) {
@@ -165,7 +165,7 @@
 			padding: $navbar-item-spacing-y/2 0;
 			min-width: 100%;
 			border-top: $navbar-dropdown-border;
-			background-color: $navbar-dropdown-background;
+			background: $navbar-dropdown-background;
 			box-shadow: $navbar-box-shadow;
 			opacity: 0;
 			transform: translateY(#{$navbar-dropdown-offset});
@@ -180,11 +180,11 @@
 				padding-right: 3rem;
 				white-space: wrap;
 				&:hover {
-					background-color: $navbar-dropdown-item-hover-background;
+					background: $navbar-dropdown-item-hover-background;
 					color: $navbar-dropdown-item-hover;
 				}
 				&.active {
-					background-color: $navbar-dropdown-item-active-background;
+					background: $navbar-dropdown-item-active-background;
 					color: $navbar-dropdown-item-active;
 				}
 			}

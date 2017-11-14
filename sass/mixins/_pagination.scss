@@ -3,11 +3,11 @@
 	.dot {
 		$active-background: darken($background, 10%);
 		color: $color;
-		background-color: $background;
+		background: $background;
 		@include border-color($active-background);
 		@include hover {
 			color: $color;
-			background-color: $active-background;
+			background: $active-background;
 			text-decoration: none;
 		}
 		&.disabled,
@@ -18,7 +18,7 @@
 		&:active,
 		&.active {
 			color: $color;
-			background-color: $active-background;
+			background: $active-background;
 		}
 	}
 }
@@ -28,10 +28,10 @@
 	.dot {
 		$active-background: lighten($background, 35%);
 		color: $background;
-		background-color: $white;
+		background: $white;
 		@include border-color($background);
 		@include hover {
-			background-color: $active-background;
+			background: $active-background;
 			text-decoration: none;
 		}
 		&.disabled,
@@ -41,7 +41,7 @@
 		}
 		&:active,
 		&.active {
-			background-color: $active-background;
+			background: $active-background;
 		}
 	}
 }

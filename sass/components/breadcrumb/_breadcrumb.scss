@@ -2,7 +2,7 @@
 	margin-bottom: $breadcrumb-spacing;
 	padding: 0;
 	ul {
-		background-color: $breadcrumb-background;
+		background: $breadcrumb-background;
 		list-style: none;
 
 		@include clearfix;

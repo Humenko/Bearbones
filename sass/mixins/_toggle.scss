@@ -15,7 +15,7 @@
 		margin-left: auto;
 		width: 1.5rem;
 		height: 2px;
-		background-color: $base-color;
+		background: $base-color;
 		transition: none 2s ease-in-out;
 		transition-property: background, left, opacity, transform;
 		&:nth-child(1) {

@@ -9,11 +9,11 @@
 }
 
 @mixin pulse-variant($color) {
-	background-color: $color;
+	background: $color;
 }
 
 @mixin bar-variant($color) {
 	span {
-		background-color: $color;
+		background: $color;
 	}
 }

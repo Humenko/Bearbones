@@ -16,7 +16,7 @@
 		padding: $dropdown-menu-spacing-y $dropdown-menu-spacing-x;
 		min-width: $dropdown-min-width;
 		border-top: $dropdown-border;
-		background-color: $dropdown-background;
+		background: $dropdown-background;
 		box-shadow: $dropdown-box-shadow;
 		list-style: none;
 		font-size: $dropdown-font-size;
@@ -39,12 +39,12 @@
 			padding: $dropdown-item-spacing-y/2 $dropdown-item-spacing-x;
 			color: $dropdown-item-color;
 			&:hover {
-				background-color: $dropdown-item-hover-background;
+				background: $dropdown-item-hover-background;
 				color: $dropdown-item-hover;
 				text-decoration: none;
 			}
 			&.active {
-				background-color: $dropdown-item-active-background;
+				background: $dropdown-item-active-background;
 				color: $dropdown-item-active;
 			}
 		}

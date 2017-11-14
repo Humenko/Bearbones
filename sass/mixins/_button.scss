@@ -7,11 +7,11 @@
 	$active-background: darken($background, 10%);
 	$active-border: darken($border, 12%);
 	color: $color;
-	background-color: $background;
+	background: $background;
 	@include border-color($border);
 	@include hover {
 		color: $color;
-		background-color: $active-background;
+		background: $active-background;
 		@include border-color($active-border);
 	}
 	&.disabled,
@@ -23,7 +23,7 @@
 	&:active,
 	&.active {
 		color: $color;
-		background-color: $active-background;
+		background: $active-background;
 		@include border-color($active-border);
 	}
 }
@@ -31,7 +31,7 @@
 @mixin button-outline-variant($color) {
 	$active-color: darken($color, 20%);
 	color: $color;
-	background-color: $white;
+	background: $white;
 	background-image: none;
 	@include border-color($color);
 	@include hover {
@@ -55,10 +55,10 @@
 	$active-background: $color;
 	$active-color: $background;
 	color: $color;
-	background-color: $background;
+	background: $background;
 	@include border-color($border);
 	@include hover {
-		background-color: $active-background;
+		background: $active-background;
 		color: $active-color;
 	}
 	&.disabled,
@@ -69,7 +69,7 @@
 	}
 	&:active,
 	&.active {
-		background-color: $active-background;
+		background: $active-background;
 		color: $active-color;
 	}
 }
@@ -86,23 +86,23 @@
 
 @mixin link-variant($color) {
 	color: $color;
-	background-color: transparent;	
+	background: transparent;	
 	$hover-color: darken($color, 20%);	
 	@include hover-focus-active {
 		color: $hover-color;		
-		background-color: transparent;
+		background: transparent;
 		text-decoration: underline;		
 	}	
 }
 
 @mixin close-variant($background, $color) {
-	background-color: darken($background, 10%);
+	background: darken($background, 10%);
 	&:before,
 	&:after {
-		background-color: $color;
+		background: $color;
 	}
 	@include hover-focus-active {
-		background-color: darken($background, 20%);
+		background: darken($background, 20%);
 	}
 }
 

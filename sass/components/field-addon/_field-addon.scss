@@ -55,7 +55,7 @@
 	select {
 		@include focus-active {
 			& + .field-addon {
-				background-color: $field-addon-background-focus;
+				background: $field-addon-background-focus;
 				color: $field-addon-color-focus;
 
 				@include border-color($field-addon-border-color-focus);
@@ -82,7 +82,7 @@
 	.field-addon {
 		margin-bottom: 0;
 		padding: $field-spacing-y $field-spacing-x;
-		background-color: $field-addon-background;
+		background: $field-addon-background;
 		color: $field-addon-color;
 		text-align: center;
 		line-height: $field-line-height;

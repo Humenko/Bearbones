@@ -160,7 +160,7 @@ $alert-spacing:                       1rem !default;
 $slide-transition-duration:           2s !default;
 $slide-transition-effect:             $transition-effect !default;
 
-$loader-bar-background-color:         $lighter-grey !default;
+$loader-bar-background:               $lighter-grey !default;
 $loader-bar-border:                   .5rem !default;
 $loader-bar-border-radius:            50% !default;
 $loader-bar-size:                     .5rem !default;
@@ -229,7 +229,7 @@ $btn-loader-spacing:                  $btn-loader-offset 0 0 $btn-loader-offset 
 
 // Card //
 
-$card-background-color:               $white !default;
+$card-background:                     $white !default;
 $card-border-color:                   $lighter-grey !default;
 $card-border-style:                   $border-style !default;
 $card-border-width:                   $border-width !default;
@@ -290,7 +290,7 @@ $footer-spacing:                      3rem $layout-spacing-x 4rem $layout-spacin
 
 // Field //
 
-$field-background-color:              $white !default;
+$field-background:                    $white !default;
 $field-color:                         $base-color !default;
 $field-color-focus:                   $field-color !default;
 $field-placeholder-color:             $light-grey !default;
@@ -332,7 +332,7 @@ $media-spacing-y:                     $padding / 1.5 !default;
 
 // Navbar //
 
-$navbar-background-color:             $white !default;
+$navbar-background:                   $white !default;
 $navbar-box-shadow:                   0 3px 1px 0 rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 $navbar-item-spacing-x:               .5rem !default;
 $navbar-item-spacing-y:               .75rem !default;
@@ -384,6 +384,7 @@ $pagination-dot-size:                 .3rem !default;
 $pagination-dot-spacing:              .1rem !default;
 
 // Stat //
+
 $stat-value-font-family:              $heading-font-family !default;
 $stat-value-font-weight:              400 !default;
 $stat-value-font-size:                3rem !default;
@@ -401,12 +402,13 @@ $stat-value-font-size-sm:             $stat-value-font-size - .75rem !default;
 $stat-value-font-size-lg:             $stat-value-font-size + .75rem !default;
 $stat-value-font-size-xl:             $stat-value-font-size + 1.5rem !default;
 
-
 // Tab //
 
 $tab-background:                      $lighter-grey !default;
 $tab-border-width:                    $border-width !default;
-$tab-transition:                      all $transition-effect $transition-duration;
+$tab-transition:                      all $transition-effect $transition-duration !default;
+$tab-item-spacing-x:                  $padding !default;
+$tab-item-spacing-y:                  $padding / 2 !default;
 
 //// UTILITIES ///
 
