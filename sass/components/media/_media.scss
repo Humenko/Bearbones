@@ -10,11 +10,11 @@
 	}
 	.media {
 		display: flex;
-		padding-top: $media-spacing/1.5;
-		@include border-top($border-width, $border-style, $media-divider-color);
+		padding-top: $media-spacing-y;
+		@include border-top($media-divider-width, $border-style, $media-divider-color);
 	}
 	&+.media {
-		margin-top: $media-spacing/1.5;
+		margin-top: $media-spacing-y;
 	}
 	.media-left,
 	.media-right {
@@ -23,13 +23,13 @@
 		flex-shrink: 0;
 	}
 	.media-left {
-		margin-right: $media-spacing;
+		margin-right: $media-spacing-x;
 	}
 	.media-right {
-		margin-left: $media-spacing;
+		margin-left: $media-spacing-x;
 	}
 	.media-content:not(:last-child) {
-		padding-bottom: $media-spacing/1.5;
+		padding-bottom: $media-spacing-y;
 	}
 	p {
 		margin: 0;
