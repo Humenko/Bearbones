@@ -3,24 +3,24 @@
 	flex-direction: column;
 	.value {
 		text-align: center;
-		text-transform: $stat-text-transform;
+		text-transform: $stat-value-text-transform;
 		font-weight: $stat-value-font-weight;
-		font-size: $stat-font-size;
+		font-size: $stat-value-font-size;
 		font-family: $stat-value-font-family;
 		line-height: $stat-line-height;
 		&.text {
 			min-height: 2rem;
 			text-align: center;
 			font-weight: $stat-text-font-weight;
-			font-size: $stat-font-size/2;
+			font-size: $stat-text-font-size;
 			line-height: $stat-line-height;
 		}
 	}
 	.label {
 		text-align: center;
-		text-transform: $stat-text-transform;
+		text-transform: $stat-label-text-transform;
 		font-weight: $stat-label-font-weight;
-		font-size: $stat-font-size/4;
+		font-size: $stat-label-font-size;
 		font-family: $stat-label-font-family;
 	}
 	&.horizontal {
@@ -44,15 +44,15 @@
 		@include stat-variant($negative-variant-background);
 	}
 	&.xs {
-		@include stat-font-size($stat-font-size-xs);
+		@include stat-font-size($stat-value-font-size-xs);
 	}
 	&.sm {
-		@include stat-font-size($stat-font-size-sm);
+		@include stat-font-size($stat-value-font-size-sm);
 	}
 	&.lg {
-		@include stat-font-size($stat-font-size-lg);
+		@include stat-font-size($stat-value-font-size-lg);
 	}
 	&.xl {
-		@include stat-font-size($stat-font-size-xl);
+		@include stat-font-size($stat-value-font-size-xl);
 	}
 }

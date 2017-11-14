@@ -384,20 +384,23 @@ $pagination-dot-size:                 .3rem !default;
 $pagination-dot-spacing:              .1rem !default;
 
 // Stat //
-
-$stat-font-size:                      3rem !default;
-$stat-font-size-xs:                   $stat-font-size - 1.5rem !default;
-$stat-font-size-sm:                   $stat-font-size - .75rem !default;
-$stat-font-size-lg:                   $stat-font-size + .75rem !default;
-$stat-font-size-xl:                   $stat-font-size + 1.5rem !default;
-$stat-label-font-family:              $heading-font-family !default;
-$stat-label-font-weight:              600 !default;
-$stat-text-font-weight:               600 !default;
 $stat-value-font-family:              $heading-font-family !default;
 $stat-value-font-weight:              400 !default;
+$stat-value-font-size:                3rem !default;
+$stat-value-text-transform:           uppercase !default;
+$stat-label-font-family:              $heading-font-family !default;
+$stat-label-font-weight:              600 !default;
+$stat-label-font-size:                $stat-value-font-size / 4 !default;
+$stat-label-text-transform:           uppercase !default;
+$stat-text-font-weight:               600 !default;
+$stat-text-font-size:                 $stat-value-font-size / 2 !default;
 $stat-line-height:                    1em !default;
 $stat-spacing:                        $padding !default;
-$stat-text-transform:                 uppercase !default;
+$stat-value-font-size-xs:             $stat-value-font-size - 1.5rem !default;
+$stat-value-font-size-sm:             $stat-value-font-size - .75rem !default;
+$stat-value-font-size-lg:             $stat-value-font-size + .75rem !default;
+$stat-value-font-size-xl:             $stat-value-font-size + 1.5rem !default;
+
 
 // Tab //
 
