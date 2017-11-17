@@ -1,27 +1,159 @@
 .bb-table {
-	@include border-radius($border-radius * 2);
-	background: rgba($light-grey, .05);
-	tbody {
-		@include border-radius($border-radius);
-	}
+	background: $table-background;
+	@include border-radius($table-border-radius);
 	&.full-x {
 		width: 100%;
 	}
+	&.no-border-radius {
+		@include border-radius($no-border-radius);
+	}
+	&.naked {
+		tr {
+			&:not(:last-child) {
+				border: none;
+			}
+		}
+	}
 	tr {
+		&:first-child {
+			@include border-top-radius($table-border-radius);
+			td:first-child {
+				border-top-left-radius: $table-border-radius;
+			}
+			td:last-child {
+				border-top-right-radius: $table-border-radius;
+			}
+		}
+		&:last-child {
+			@include border-bottom-radius($table-border-radius);
+			td:first-child {
+				border-bottom-left-radius: $table-border-radius;
+			}
+			td:last-child {
+				border-bottom-right-radius: $table-border-radius;
+			}
+		}
 		&:not(:last-child) {
-			@include border-bottom($border-width / 2, $border-style, rgba($light-grey, .3));
+			@include border-bottom($table-border-width, $border-style, $table-border-color);
 		}
 	}
 	td {
-		width: 50%;
-		&:nth-child(even) {
-			padding: $padding $padding / 2 $padding $padding / 2;
+		padding: $table-spacing-y $table-spacing-x $table-spacing-y $table-spacing-x;
+	}
+	&.primary,
+	.primary {
+		@include table-variant($primary-variant-background);
+	}
+	&.secondary,
+	.secondary {
+		@include table-variant($secondary-variant-background);
+	}
+	&.positive,
+	.positive {
+		@include table-variant($positive-variant-background);
+	}
+	&.negative,
+	.negative {
+		@include table-variant($negative-variant-background);
+	}
+	&.success,
+	.success {
+		@include table-variant($positive-variant-background);
+	}
+	&.error,
+	.error {
+		@include table-variant($negative-variant-background);
+	}
+	&.striped {
+		@include table-striped-variant($table-background);
+		&.primary {
+			@include table-striped-variant($primary-variant-background);
 		}
-		&:first-child {
-			padding: $padding $padding / 2 $padding $padding;
+		&.secondary {
+			@include table-striped-variant($secondary-variant-background);
 		}
-		&:last-child {
-			padding: $padding $padding $padding $padding / 2;
+		&.positive {
+			@include table-striped-variant($positive-variant-background);
+		}
+		&.negative {
+			@include table-striped-variant($negative-variant-background);
+		}
+		&.success {
+			@include table-striped-variant($positive-variant-background);
+		}
+		&.error {
+			@include table-striped-variant($negative-variant-background);
+		}
+	}
+	&.hover {
+		cursor: pointer;
+		@include table-hover-variant($table-background-hover);
+		&,
+		tr {
+			&.primary {
+				@include table-hover-variant($primary-variant-background);
+			}
+			&.secondary {
+				@include table-hover-variant($secondary-variant-background);
+			}
+			&.positive {
+				@include table-hover-variant($positive-variant-background);
+			}
+			&.negative {
+				@include table-hover-variant($negative-variant-background);
+			}
+			&.success {
+				@include table-hover-variant($positive-variant-background);
+			}
+			&.error {
+				@include table-hover-variant($negative-variant-background);
+			}
+		}
+		td {
+			&.primary {
+				@include table-cell-hover-variant($primary-variant-background);
+			}
+			&.secondary {
+				@include table-cell-hover-variant($secondary-variant-background);
+			}
+			&.positive {
+				@include table-cell-hover-variant($positive-variant-background);
+			}
+			&.negative {
+				@include table-cell-hover-variant($negative-variant-background);
+			}
+			&.success {
+				@include table-cell-hover-variant($positive-variant-background);
+			}
+			&.error {
+				@include table-cell-hover-variant($negative-variant-background);
+			}
+		}
+	}
+	.selected {
+		&.primary,
+		.primary {
+			@include table-selected-variant($primary-variant-background);
+		}
+		&.secondary,
+		.secondary {
+			@include table-selected-variant($secondary-variant-background);
+		}
+		&.positive,
+		.positive {
+			@include table-selected-variant($positive-variant-background);
+		}
+		&.negative,
+		.negative {
+			@include table-selected-variant($negative-variant-background);
+		}
+		&.success,
+		.success {
+			@include table-selected-variant($positive-variant-background);
+		}
+		&.error,
+		.error {
+			@include table-selected-variant($negative-variant-background);
 		}
 	}
 }

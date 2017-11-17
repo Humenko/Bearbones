@@ -237,8 +237,10 @@ $card-border-radius:                  $border-radius !default;
 $card-footer-border-color:            $card-border-color !default;
 $card-item-border-color:              $card-border-color !default;
 $card-box-shadow:                     0 3px 1px -2px rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$card-card-font-family:               $font-family !default;
 $card-content-spacing-x:              $padding !default;
 $card-content-spacing-y:              $padding !default;
+$card-heading-font-family:            $heading-font-family !default;
 $card-heading-font-weight:            $font-weight-bold !default;
 $card-header-spacing-x:               $padding !default;
 $card-header-spacing-y:               $padding !default;
@@ -409,6 +411,17 @@ $tab-border-width:                    $border-width !default;
 $tab-transition:                      all $transition-effect $transition-duration !default;
 $tab-item-spacing-x:                  $padding !default;
 $tab-item-spacing-y:                  $padding / 2 !default;
+
+// Table //
+
+$table-background:                    $lighter-grey !default;
+$table-background-hover:              lighten($primary-color, 30%) !default;
+$table-border-width:                  $border-width / 2 !default;
+$table-border-radius:                 $border-radius * 2 !default;
+$table-border-color:                  darken($table-background, 5) !default;
+$table-transition:                    all $transition-effect $transition-duration !default;
+$table-spacing-x:                     .75rem !default;
+$table-spacing-y:                     .75rem !default;
 
 //// UTILITIES ///
 
