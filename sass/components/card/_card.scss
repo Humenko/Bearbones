@@ -3,6 +3,7 @@
 	max-width: 100%;
 	background: $card-background;
 	box-shadow: $card-box-shadow;
+	font-family: $card-content-font-family;
 
 	@include border-radius($card-border-radius);
 	&.no-shadow {
@@ -40,6 +41,7 @@
 			flex-grow: 1;
 			padding: $card-header-spacing-y $card-header-spacing-x $card-header-spacing-y $card-header-spacing-x;
 			font-weight: $card-heading-font-weight;
+			font-family: $card-heading-font-family;
 		}
 	}
 	.card-image {
