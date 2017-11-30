@@ -1,7 +1,7 @@
 .bb-accordion {
 	&.invert {
 		@include accordion-variant($invert-variant-background);
-	}	
+	}
 	&.primary {
 		@include accordion-variant($primary-variant-background);
 	}
@@ -13,7 +13,17 @@
 	}
 	&.negative {
 		@include accordion-variant($negative-variant-background);
-	}			
+	}
+	&.left {
+		.header {
+			justify-content: flex-start;
+		}
+	}
+	&.right {
+		.header {
+			justify-content: flex-end;
+		}
+	}
 	.header {
 		display: flex;
 		align-items: center;
@@ -36,7 +46,6 @@
 		}
 		.toggle {
 			min-width: 1rem;
-
 			@include plus($light-grey);
 		}
 		.chevron {

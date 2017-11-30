@@ -41,6 +41,12 @@
 		&:last-child {
 			padding-bottom: 0;
 		}
+		&.full-y {
+			flex: 1;
+			 > div {
+				height: 100%;
+			}
+		}
 	}
 	@each $breakpoint in map-keys($breakpoints) {
 		@include respond-to($breakpoint) {

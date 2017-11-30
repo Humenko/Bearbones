@@ -7,6 +7,11 @@
 	h4,
 	h5,
 	p {
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+			color: $color;
+		}
+	}
+	a:not(.ob-btn):not(.link) {
 		color: $color;
 	}
 	.bb-divider {

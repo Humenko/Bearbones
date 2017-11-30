@@ -7,7 +7,9 @@
 	h4,
 	h5,
 	p {
-		color: $color;
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+			color: $color;
+		}
 	}
 	.bb-divider {
 		@include border-color(darken($background, 12%));

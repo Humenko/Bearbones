@@ -1,15 +1,18 @@
 @mixin box-variant($color, $background) {
 	background: $background;
 	color: $color;
-
 	@include border($border-width, $border-style, $background);
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
-	p,
-	a {
+	p {
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+			color: $color;
+		}
+	}
+	a:not(.ob-btn):not(.link) {
 		color: $color;
 	}
 }
@@ -17,15 +20,18 @@
 @mixin box-outline-variant($color) {
 	background: #FFFFFF;
 	color: $color;
-
 	@include border($border-width, $border-style, $color);
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
-	p,
-	a {
+	p {
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+			color: $color;
+		}
+	}
+	a:not(.ob-btn):not(.link) {
 		color: $color;
 	}
 }
