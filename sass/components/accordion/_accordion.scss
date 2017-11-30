@@ -37,7 +37,7 @@
 			@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
 		}
 		span {
-			margin: 0 $accordion-heading-spacing / 2 0 0;
+			margin: $accordion-toggle-spacing;
 		}
 		span,
 		:before,
