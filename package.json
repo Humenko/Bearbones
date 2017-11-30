@@ -1,6 +1,6 @@
 {
   "name": "bearbones",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "description": "",
   "main": "bearbones.scss",
   "author": "Daniel Humenko",
@@ -19,8 +19,8 @@
     "build-minify": "postcss --use cssnano --output css/bearbones.min.css css/bearbones.css",
     "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
     "clean": "rimraf css",
-    "deploy": "npm run build && git push --tags && npm publish",    
+    "deploy": "npm run build && git push --tags && npm publish",
     "watch": "npm run build-sass -- --watch",
     "server": "http-server"
-    }
+  }
 }
