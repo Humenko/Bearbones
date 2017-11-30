@@ -3,6 +3,7 @@
 	max-width: 100%;
 	background: $card-background;
 	box-shadow: $card-box-shadow;
+	color: $base-color;
 	font-family: $card-content-font-family;
 
 	@include border-radius($card-border-radius);

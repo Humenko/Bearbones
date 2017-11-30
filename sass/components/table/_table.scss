@@ -1,5 +1,7 @@
 .bb-table {
 	background: $table-background;
+	color: $base-color;
+
 	@include border-radius($table-border-radius);
 	&.full-x {
 		width: 100%;
@@ -87,6 +89,7 @@
 	}
 	&.hover {
 		cursor: pointer;
+
 		@include table-hover-variant($table-background-hover);
 		&,
 		tr {
