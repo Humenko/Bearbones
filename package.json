@@ -14,12 +14,13 @@
     "rimraf": "^2.6.1"
   },
   "scripts": {
-    "deploy": "npm run build && git push --tags && npm publish",
     "build": "npm run clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
     "build-minify": "postcss --use cssnano --output css/bearbones.min.css css/bearbones.css",
     "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
     "clean": "rimraf css",
-    "watch": "npm run build-sass -- --watch"
-  }
+    "deploy": "npm run build && git push --tags && npm publish",    
+    "watch": "npm run build-sass -- --watch",
+    "server": "http-server"
+    }
 }
