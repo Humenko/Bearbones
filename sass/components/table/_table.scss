@@ -1,6 +1,6 @@
 .bb-table {
 	background: $table-background;
-	color: $base-color;
+	color: $table-color;
 
 	@include border-radius($table-border-radius);
 	&.full-x {

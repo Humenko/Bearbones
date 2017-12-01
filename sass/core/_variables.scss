@@ -235,6 +235,7 @@ $card-border-color:                   $lighter-grey !default;
 $card-border-style:                   $border-style !default;
 $card-border-width:                   $border-width !default;
 $card-border-radius:                  $border-radius !default;
+$card-color:                          $base-color !default;
 $card-footer-border-color:            $card-border-color !default;
 $card-item-border-color:              $card-border-color !default;
 $card-box-shadow:                     0 3px 1px -2px rgba(0, 0, 0, .1), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
@@ -287,6 +288,7 @@ $dropdown-transition:                 color 0s,
 
 // Footer // 
 
+$footer-color:                        $base-color !default;
 $footer-background:                   $lighter-grey !default;
 $footer-divider-color:                $light-grey !default;
 $footer-spacing:                      3rem $layout-spacing-x 4rem $layout-spacing-x !default;
@@ -420,6 +422,7 @@ $table-background-hover:              lighten($primary-color, 30%) !default;
 $table-border-width:                  $border-width / 2 !default;
 $table-border-radius:                 $border-radius * 2 !default;
 $table-border-color:                  darken($table-background, 5) !default;
+$table-color:                         $base-color !default;
 $table-transition:                    all $transition-effect $transition-duration !default;
 $table-spacing-x:                     .75rem !default;
 $table-spacing-y:                     .75rem !default;
