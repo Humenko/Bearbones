@@ -87,6 +87,9 @@
 			}
 		}
 		&.bb-dropdown {
+			&.mega {
+				position: static;
+			}
 			.link {
 				padding: $navbar-item-spacing-x;
 				background: $navbar-dropdown-item-hover-background;
