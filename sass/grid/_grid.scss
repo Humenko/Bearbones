@@ -10,8 +10,8 @@
 
 	@include respond-to('lg') {
 		display: flex;
+		@include grid;		
 	}
-	@include grid;
 	&:last-child {
 		margin-bottom: -$grid-spacing;
 	}
