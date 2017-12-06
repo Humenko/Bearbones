@@ -1,6 +1,6 @@
 {
   "name": "bearbones",
-  "version": "0.25.1",
+  "version": "0.25.2",
   "description": "",
   "author": "Daniel Humenko",
   "license": "MIT",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build:prod": "npm run build-sass && npm run build-autoprefix && npm run build-minify",
-    "build:dev": "npm run clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",    
+    "build:dev": "npm run clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
     "build-minify": "postcss --use cssnano --output css/bearbones.min.css css/bearbones.css",
     "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",

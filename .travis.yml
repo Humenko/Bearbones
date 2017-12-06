@@ -23,12 +23,7 @@ deploy:
     email: $NPM_EMAIL
     skip_cleanup: true    
     on:
-      branch: master
-    provider: script
-    script: git push --tags
-    skip_cleanup: true
-    on:
-      branch: master    
+      branch: master 
 
 notifications:
   email:
