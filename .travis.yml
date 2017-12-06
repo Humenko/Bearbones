@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+script:
+  - npm run build:prod
+
+notifications:
+  email:
+    on_failure: change
+
+after_success: 'npm publish'
+
+cache:
+  directories:
+    - node_modules
