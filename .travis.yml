@@ -10,13 +10,11 @@ cache:
 script:
   - npm run build:prod
 
-notifications:
-  email:
-    on_failure: change
-
 deploy:
   provider: npm
   email: $NPM_EMAIL
   api_key: $NPM_TOKEN
-  on:
-    branch: master
+
+notifications:
+  email:
+    on_failure: change
