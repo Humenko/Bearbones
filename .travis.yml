@@ -14,9 +14,6 @@ notifications:
   email:
     on_failure: change
 
-after_script: 
-  - npm publish
-
 deploy:
   provider: npm
   email: $NPM_EMAIL
