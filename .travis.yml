@@ -19,8 +19,8 @@ script:
 
 deploy:
     provider: npm
-    api_key: YOUR_AUTH_TOKEN
-    email: YOUR_EMAIL_ADDRESS
+    api_key: $NPM_TOKEN
+    email: $NPM_EMAIL
     skip_cleanup: true    
     on:
       branch: master
