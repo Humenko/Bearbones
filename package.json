@@ -15,7 +15,8 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "build": "npm run clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
+    "build:dev": "npm run clean && npm run build-sass && npm run build-autoprefix && npm run build-minify",
+    "build:prod": "npm run node-sass --output-style expanded --source-map false sass/bearbones.scss css/bearbones.css && npm run build-autoprefix && npm run build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
     "build-minify": "postcss --use cssnano --output css/bearbones.min.css css/bearbones.css",
     "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
@@ -23,7 +24,7 @@
     "watch": "npm run build-sass -- --watch",
     "server": "http-server",
     "start": "npm-run-all --parallel watch server",
-    "test": "npm run test-size",    
+    "test": "npm run test-size",
     "test-size": "bundlesize"
   },
   "bundlesize": [
