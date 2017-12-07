@@ -1,9 +1,28 @@
 {
   "name": "bearbones",
-  "version": "0.25.2",
+  "version": "0.26.0",
+  "homepage": "https://bearbon.es",  
   "description": "",
   "author": "Daniel Humenko",
   "license": "MIT",
+  "main": "sass/bearbones.sass",
+  "style": "css/bearbones.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humenko/bearbones.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "flexbox", 
+    "responsive",
+    "front-end",
+    "framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/humenko/bearbones/issues"
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.1",
     "bundlesize": "^0.15.3",
