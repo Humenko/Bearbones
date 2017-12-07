@@ -9,6 +9,7 @@ cache:
 
 script:
   - npm run build:prod
+  - npm run test
 
 deploy:
     provider: npm

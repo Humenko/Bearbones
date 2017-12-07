@@ -6,6 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.2.1",
+    "bundlesize": "^0.15.3",
     "csscomb": "^4.2.0",
     "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
@@ -22,6 +23,18 @@
     "clean": "rimraf css",
     "watch": "npm run build-sass -- --watch",
     "server": "http-server",
-    "start": "npm-run-all --parallel watch server"
-  }
+    "start": "npm-run-all --parallel watch server",
+    "test": "npm run test-size",    
+    "test-size": "bundlesize"
+  },
+  "bundlesize": [
+    {
+      "path": "./css/bearbones.css",
+      "maxSize": "25 kB"
+    },
+    {
+      "path": "./css/bearbones.min.css",
+      "maxSize": "20 kB"
+    }
+  ]
 }
