@@ -40,7 +40,7 @@
     "build-minify": "node-sass --output-style compressed css/bearbones.css css/bearbones.min.css",
     "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
     "clean": "rimraf css",
-    "watch": "npm run build-sass --watch",
+    "watch": "npm run build-sass -- --watch",
     "server": "http-server",
     "start": "run-p watch server",
     "test": "npm run test-size",

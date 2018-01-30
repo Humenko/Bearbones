@@ -9,7 +9,7 @@
 	color: $color;
 	background: $background;
 	@include border-color($border);
-	@include hover {
+	@include hover-focus {
 		color: $color;
 		background: $active-background;
 		@include border-color($active-border);
@@ -34,7 +34,7 @@
 	background: $white;
 	background-image: none;
 	@include border-color($color);
-	@include hover {
+	@include hover-focus {
 		color: $active-color;
 		@include border-color($active-color);
 	}
@@ -57,7 +57,7 @@
 	color: $color;
 	background: $background;
 	@include border-color($border);
-	@include hover {
+	@include hover-focus {
 		background: $active-background;
 		color: $active-color;
 	}
