@@ -1,6 +1,6 @@
 {
   "name": "bearbones",
-  "version": "0.26.4",
+  "version": "0.26.5",
   "homepage": "https://bearbon.es",
   "description": "",
   "author": "Daniel Humenko",
@@ -46,7 +46,8 @@
     "test": "npm run test-size",
     "test-size": "bundlesize"
   },
-  "bundlesize": [{
+  "bundlesize": [
+    {
       "path": "./css/bearbones.css",
       "maxSize": "50 kB"
     },
