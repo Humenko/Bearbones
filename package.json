@@ -24,13 +24,13 @@
     "url": "https://github.com/humenko/bearbones/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.1",
-    "bundlesize": "^0.15.3",
+    "autoprefixer": "^7.2.5",
+    "bundlesize": "^0.16.0",
     "csscomb": "^4.2.0",
     "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
-    "postcss-cli": "^4.1.1",
+    "postcss-cli": "^5.0.0",
     "rimraf": "^2.6.2"
   },
   "scripts": {
