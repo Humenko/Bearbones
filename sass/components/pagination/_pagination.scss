@@ -3,7 +3,13 @@
 	margin: 0;
 	vertical-align: middle;
 
-	@include pagination-variant($base-variant-color, $base-variant-background);
+	@include pagination-variant(
+	$base-variant-color,
+	$base-variant-background,
+	$base-variant-border,
+	$base-variant-hover,
+	$base-variant-active
+	);
 	user-select: none;
 	.item {
 		padding: $pagination-spacing-y $pagination-spacing-x;
@@ -13,23 +19,63 @@
 		cursor: pointer;
 
 		@include transition($pagination-transition);
-		@include border-left($pagination-border-width, $pagination-border-style, $base-variant-border);
-		@include border-bottom($pagination-border-width, $pagination-border-style, $base-variant-border);
-		@include border-top($pagination-border-width, $pagination-border-style, $base-variant-border);
-		@include pagination-font-size($pagination-font-size, $pagination-min-width);
-		&:first-child {
-			@include border-left-radius($pagination-border-radius);
-		}
-		&:last-child {
-			@include border-right($pagination-border-width, $pagination-border-style, $base-variant-border);
-			@include border-right-radius($pagination-border-radius);
+	}
+	&:not(.connected) {
+		.item {
+			@include border(
+			$pagination-border-width,
+			$pagination-border-style,
+			$base-variant-border
+			);
+			@include border-radius($pagination-border-radius);
+			&:not(:last-child) {
+				margin-right: $pagination-spacing-x/2;
+			}
 		}
 	}
+	&.connected {
+		.item {
+			@include border-left(
+			$pagination-border-width,
+			$pagination-border-style,
+			$base-variant-border
+			);
+			@include border-bottom(
+			$pagination-border-width,
+			$pagination-border-style,
+			$base-variant-border
+			);
+			@include border-top(
+			$pagination-border-width,
+			$pagination-border-style,
+			$base-variant-border
+			);
+			@include pagination-font-size(
+			$pagination-font-size,
+			$pagination-min-width
+			);
+			&:first-child {
+				@include border-left-radius($pagination-border-radius);
+			}
+			&:last-child {
+				border-right-width: $pagination-border-width;
+				border-right-style: $pagination-border-style;
+
+				@include border-right-radius($pagination-border-radius);
+			}
+		}
+	}
+
 	.dot {
 		padding: $pagination-dot-size;
 		text-decoration: none;
 		cursor: pointer;
 
+		@include border(
+		$pagination-border-width,
+		$pagination-border-style,
+		$base-variant-border
+		);
 		@include transition($pagination-transition);
 		@include border-radius($pagination-dot-border-radius);
 		&:not(:first-child),
@@ -39,47 +85,113 @@
 	}
 	&.no-border {
 		.item {
-			border: 0;
+			border: 0 !important;
 		}
 	}
 	&.invert {
-		@include pagination-variant($invert-variant-color, $invert-variant-background);
+		@include pagination-variant(
+		$invert-variant-color,
+		$invert-variant-background,
+		$invert-variant-border,
+		$invert-variant-hover,
+		$invert-variant-active
+		);
 	}
 	&.primary {
-		@include pagination-variant($primary-variant-color, $primary-variant-background);
+		@include pagination-variant(
+		$primary-variant-color,
+		$primary-variant-background,
+		$primary-variant-border,
+		$primary-variant-hover,
+		$primary-variant-active
+		);
 	}
 	&.secondary {
-		@include pagination-variant($secondary-variant-color, $secondary-variant-background);
+		@include pagination-variant(
+		$secondary-variant-color,
+		$secondary-variant-background,
+		$secondary-variant-border,
+		$secondary-variant-hover,
+		$secondary-variant-active
+		);
 	}
 	&.positive {
-		@include pagination-variant($positive-variant-color, $positive-variant-background);
+		@include pagination-variant(
+		$positive-variant-color,
+		$positive-variant-background,
+		$positive-variant-border,
+		$positive-variant-hover,
+		$positive-variant-active
+		);
 	}
 	&.negative {
-		@include pagination-variant($negative-variant-color, $negative-variant-background);
+		@include pagination-variant(
+		$negative-variant-color,
+		$negative-variant-background,
+		$negative-variant-border,
+		$negative-variant-hover,
+		$negative-variant-active
+		);
 	}
 	&.outline {
-		@include outline-pagination-variant($base-variant-background);
+		@include outline-pagination-variant(
+		$base-variant-color,
+		$base-variant-background,
+		$base-variant-border,
+		$base-variant-hover,
+		$base-variant-active
+		);
 		&.invert {
-			@include outline-pagination-variant($invert-variant-background);
+			@include outline-pagination-variant(
+			$invert-variant-color,
+			$invert-variant-background,
+			$invert-variant-border,
+			$invert-variant-hover,
+			$invert-variant-active
+			);
 		}
 		&.primary {
-			@include outline-pagination-variant($primary-variant-background);
+			@include outline-pagination-variant(
+			$primary-variant-color,
+			$primary-variant-background,
+			$primary-variant-border,
+			$primary-variant-hover,
+			$primary-variant-active
+			);
 		}
 		&.secondary {
-			@include outline-pagination-variant($secondary-variant-background);
+			@include outline-pagination-variant(
+			$secondary-variant-color,
+			$secondary-variant-background,
+			$secondary-variant-border,
+			$secondary-variant-hover,
+			$secondary-variant-active
+			);
 		}
 		&.positive {
-			@include outline-pagination-variant($positive-variant-background);
+			@include outline-pagination-variant(
+			$positive-variant-color,
+			$positive-variant-background,
+			$positive-variant-border,
+			$positive-variant-hover,
+			$positive-variant-active
+			);
 		}
 		&.negative {
-			@include outline-pagination-variant($negative-variant-background);
+			@include outline-pagination-variant(
+			$negative-variant-color,
+			$negative-variant-background,
+			$negative-variant-border,
+			$negative-variant-hover,
+			$negative-variant-active
+			);
 		}
 	}
 	&.xs {
 		.item {
 			@include pagination-font-size($font-size-xs, $pagination-min-width - 2);
 		}
-	}	
+	}
 	&.sm {
 		.item {
 			@include pagination-font-size($font-size-sm, $pagination-min-width - 1);
@@ -94,5 +206,5 @@
 		.item {
 			@include pagination-font-size($font-size-xl, $pagination-min-width + 2);
 		}
-	}	
+	}
 }

@@ -1,52 +1,62 @@
-@mixin pagination-variant($color, $background) {
+@mixin pagination-variant($color, $background, $border, $hover, $active) {
 	.item,
 	.dot {
-		$active-background: darken($background, 10%);
-		color: $color;
 		background: $background;
-		@include border-color($active-background);
+		color: $color;
+
+		@include border-color($border);
 		@include hover {
+			background: $hover;
 			color: $color;
-			background: $active-background;
 			text-decoration: none;
 		}
 		&.disabled,
 		&:disabled {
-			pointer-events: none;
 			cursor: not-allowed;
+			pointer-events: none;
 		}
 		&:active,
 		&.active {
+			border-color: $active;
+			background: $active;
 			color: $color;
-			background: $active-background;
 		}
 	}
 }
 
-@mixin outline-pagination-variant($background) {
+@mixin outline-pagination-variant(
+  $color,
+  $background,
+  $border,
+  $hover,
+  $active
+) {
 	.item,
 	.dot {
-		$active-background: lighten($background, 35%);
+		background: $color;
 		color: $background;
-		background: $white;
-		@include border-color($background);
+
+		@include border-color($border);
 		@include hover {
-			background: $active-background;
+			background: $hover;
+			color: $color;
 			text-decoration: none;
 		}
 		&.disabled,
 		&:disabled {
-			pointer-events: none;
 			cursor: not-allowed;
+			pointer-events: none;
 		}
 		&:active,
 		&.active {
-			background: $active-background;
+			border-color: $active;
+			background: $active;
+			color: $color;
 		}
 	}
 }
 
 @mixin pagination-font-size($font-size, $min-width) {
-	font-size: $font-size;
 	min-width: $min-width;
+	font-size: $font-size;
 }
