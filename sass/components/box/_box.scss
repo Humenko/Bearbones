@@ -2,8 +2,13 @@
 	position: relative;
 	padding: $box-spacing-y $box-spacing-x;
 
-	@include border-radius($border-radius);
-	@include box-variant($base-variant-color, $base-variant-background);
+	@include border($box-border-width, $box-border-style, $box-variant-border);
+	@include border-radius($box-border-radius);
+	@include box-variant(
+	$box-variant-color,
+	$box-variant-background,
+	$box-variant-border
+	);
 	&.center {
 		display: flex;
 		align-items: center;
@@ -11,33 +16,71 @@
 		text-align: center;
 	}
 	&.invert {
-		@include box-variant($invert-variant-color, $invert-variant-background);
+		@include box-variant(
+		$invert-variant-color,
+		$invert-variant-background,
+		$invert-variant-border
+		);
 	}
 	&.primary {
-		@include box-variant($primary-variant-color, $primary-variant-background);
+		@include box-variant(
+		$primary-variant-color,
+		$primary-variant-background,
+		$primary-variant-border
+		);
 	}
 	&.secondary {
-		@include box-variant($secondary-variant-color, $secondary-variant-background);
+		@include box-variant(
+		$secondary-variant-color,
+		$secondary-variant-background,
+		$secondary-variant-border
+		);
 	}
 	&.positive {
-		@include box-variant($positive-variant-color, $positive-variant-background);
+		@include box-variant(
+		$positive-variant-color,
+		$positive-variant-background,
+		$positive-variant-border
+		);
 	}
 	&.negative {
-		@include box-variant($negative-variant-color, $negative-variant-background);
+		@include box-variant(
+		$negative-variant-color,
+		$negative-variant-background,
+		$negative-variant-border
+		);
 	}
 	&.outline {
-		@include box-outline-variant($base-variant-background);
+		@include box-outline-variant($box-variant-background, $box-variant-border);
 		&.primary {
-			@include box-outline-variant($primary-variant-background);
+			@include box-outline-variant(
+			$primary-variant-background,
+			$primary-variant-border
+			);
 		}
 		&.secondary {
-			@include box-outline-variant($secondary-variant-background);
+			@include box-outline-variant(
+			$secondary-variant-background,
+			$secondary-variant-border
+			);
 		}
 		&.positive {
-			@include box-outline-variant($positive-variant-background);
+			@include box-outline-variant(
+			$positive-variant-background,
+			$positive-variant-border
+			);
 		}
 		&.negative {
-			@include box-outline-variant($negative-variant-background);
+			@include box-outline-variant(
+			$negative-variant-background,
+			$negative-variant-border
+			);
+		}
+		&.invert {
+			@include box-outline-variant(
+			$invert-variant-background,
+			$invert-variant-border
+			);
 		}
 	}
 	.close {

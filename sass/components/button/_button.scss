@@ -126,7 +126,7 @@
 		}
 		&.negative {
 			@include button-outline-variant(
-			$negative-variant-color,
+			$negative-variant-background,
 			$negative-variant-border
 			);
 		}
