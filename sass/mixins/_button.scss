@@ -1,112 +1,118 @@
 @mixin button-font-size($font-size) {
-	font-size: $font-size;
-	padding: $btn-spacing-y + ($font-size - 1rem) $btn-spacing-x + ($font-size - 1rem);	
+  font-size: $font-size;
+  padding: $button-spacing-y + ($font-size - 1rem) $button-spacing-x +
+    ($font-size - 1rem);
 }
 
-@mixin button-variant($color, $background, $border) {
-	$active-background: darken($background, 10%);
-	$active-border: darken($border, 12%);
-	color: $color;
-	background: $background;
-	@include border-color($border);
-	@include hover-focus {
-		color: $color;
-		background: $active-background;
-		@include border-color($active-border);
-	}
-	&.disabled,
-	&:disabled {
-		opacity: .7;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
-	&:active,
-	&.active {
-		color: $color;
-		background: $active-background;
-		@include border-color($active-border);
-	}
+@mixin button-variant($color, $background, $border, $hover, $active) {
+  color: $color;
+  background: $background;
+  @include border-color($border);
+  @include hover-focus {
+    background: $hover;
+    @include border-color($hover);
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &:active,
+  &.active {
+    background: $active;
+    @include border-color($active);
+  }
 }
 
 @mixin button-outline-variant($color) {
-	$active-color: darken($color, 20%);
-	color: $color;
-	background: $white;
-	background-image: none;
-	@include border-color($color);
-	@include hover-focus {
-		color: $active-color;
-		@include border-color($active-color);
-	}
-	&.disabled,
-	&:disabled {
-		opacity: .7;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
-	&:active,
-	&.active {
-		color: $color;
-		@include border-color($active-color);
-	}
+  $hover: darken($color, 20%);
+  color: $color;
+  background: transparent;
+  background-image: none;
+  @include border-color($color);
+  @include hover-focus {
+    color: $hover;
+    @include border-color($hover);
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &:active,
+  &.active {
+    color: $hover;
+    @include border-color($hover);
+  }
 }
 
 @mixin button-inverted-variant($color, $background, $border) {
-	$active-background: $color;
-	$active-color: $background;
-	color: $color;
-	background: $background;
-	@include border-color($border);
-	@include hover-focus {
-		background: $active-background;
-		color: $active-color;
-	}
-	&.disabled,
-	&:disabled {
-		opacity: .7;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
-	&:active,
-	&.active {
-		background: $active-background;
-		color: $active-color;
-	}
+  color: $color;
+  background: $background;
+  @include border-color($border);
+  @include hover-focus {
+    background: $color;
+    color: $background;
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &:active,
+  &.active {
+    background: $background;
+    color: $color;
+  }
 }
 
-@mixin button-loading-variant($color) {
-	@include border-color($color transparent transparent);
-	&.disabled,
-	&:disabled {
-		opacity: .7;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
+@mixin button-loading-variant($color, $background) {
+  background: $background;
+  @include border-color($background);
+  &:after {
+    @include border-color($color transparent transparent);
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &.outline {
+    color: $color;
+    background: transparent;
+    @include border-color(darken($background, 20%));
+    &:after {
+      @include border-color($background transparent transparent);
+    }
+  }
 }
 
-@mixin link-variant($color) {
-	color: $color;
-	background: transparent;	
-	$hover-color: darken($color, 20%);	
-	@include hover-focus-active {
-		color: $hover-color;		
-		background: transparent;
-		text-decoration: underline;		
-	}	
+@mixin link-variant($color, $hover) {
+  color: $color;
+  background: transparent;
+  @include hover-focus-active {
+    color: $hover;
+    background: transparent;
+    text-decoration: underline;
+  }
 }
 
 @mixin close-variant($background, $color) {
-	background: darken($background, 10%);
-	&:before,
-	&:after {
-		background: $color;
-	}
-	@include hover-focus-active {
-		background: darken($background, 20%);
-	}
+  background: darken($background, 10%);
+  &:before,
+  &:after {
+    background: $color;
+  }
+  @include hover-focus-active {
+    background: darken($background, 20%);
+  }
 }
 
 @mixin close-font-size($width, $height) {
-	width: $width;
-	height: $height;
+  width: $width;
+  height: $height;
 }
