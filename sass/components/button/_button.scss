@@ -96,21 +96,39 @@
 		);
 	}
 	&.outline {
-		@include button-outline-variant($button-variant-border);
+		@include button-outline-variant(
+		$button-variant-background,
+		$button-variant-border
+		);
 		&.invert {
-			@include button-outline-variant($invert-variant-border);
+			@include button-outline-variant(
+			$invert-variant-background,
+			$invert-variant-border
+			);
 		}
 		&.primary {
-			@include button-outline-variant($primary-variant-border);
+			@include button-outline-variant(
+			$primary-variant-background,
+			$primary-variant-border
+			);
 		}
 		&.secondary {
-			@include button-outline-variant($secondary-variant-border);
+			@include button-outline-variant(
+			$secondary-variant-background,
+			$secondary-variant-border
+			);
 		}
 		&.positive {
-			@include button-outline-variant($positive-variant-border);
+			@include button-outline-variant(
+			$positive-variant-background,
+			$positive-variant-border
+			);
 		}
 		&.negative {
-			@include button-outline-variant($negative-variant-border);
+			@include button-outline-variant(
+			$negative-variant-color,
+			$negative-variant-border
+			);
 		}
 	}
 	&.inverted {

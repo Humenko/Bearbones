@@ -25,12 +25,12 @@
   }
 }
 
-@mixin button-outline-variant($color) {
-  $hover: darken($color, 20%);
+@mixin button-outline-variant($color, $border) {
+  $hover: darken($border, 20%);
   color: $color;
   background: transparent;
   background-image: none;
-  @include border-color($color);
+  @include border-color($border);
   @include hover-focus {
     color: $hover;
     @include border-color($hover);
