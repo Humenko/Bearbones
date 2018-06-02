@@ -1,13 +1,31 @@
 .bb-divider {
-	margin: $divider-spacing;
+	margin: $divider-spacing-y 0;
 	height: 0;
 	font-weight: $divider-font-weight;
 	line-height: 1;
 
 	user-select: none;
 	&:not(.divider-content) {
+		border-width: $divider-border-width;
+		border-style: $divider-border-style;
+
 		@include border-radius($divider-border-radius);
-		@include divider-border($divider-border-width, $divider-border-style, $divider-color);
+		@include divider-variant($divider-variant-border);
+	}
+	&.invert {
+		@include divider-variant($invert-variant-background);
+	}
+	&.primary {
+		@include divider-variant($primary-variant-background);
+	}
+	&.secondary {
+		@include divider-variant($secondary-variant-background);
+	}
+	&.positive {
+		@include divider-variant($positive-variant-background);
+	}
+	&.negative {
+		@include divider-variant($negative-variant-background);
 	}
 	&.divider-content {
 		display: table;
@@ -24,7 +42,10 @@
 			background-repeat: no-repeat;
 			content: '';
 
-			@include divider-content-border($divider-content-border-width, $divider-color);
+			@include divider-content-border(
+			$divider-content-border-width,
+			$divider-variant-border
+			);
 		}
 		&:before {
 			background-position: right $divider-spacing-x top 50%;
@@ -40,6 +61,6 @@
 		font-size: $divider-icon-font-size;
 	}
 	&.hidden {
-		@include divider-border($divider-border-width, $divider-border-style, $divider-hidden-color);
+		@include divider-variant(transparent);
 	}
 }
