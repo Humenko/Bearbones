@@ -4,11 +4,11 @@
 	vertical-align: middle;
 
 	@include pagination-variant(
-	$base-variant-color,
-	$base-variant-background,
-	$base-variant-border,
-	$base-variant-hover,
-	$base-variant-active
+	$pagination-variant-color,
+	$pagination-variant-background,
+	$pagination-variant-border,
+	$pagination-variant-hover,
+	$pagination-variant-active
 	);
 	user-select: none;
 	.item {
@@ -25,7 +25,7 @@
 			@include border(
 			$pagination-border-width,
 			$pagination-border-style,
-			$base-variant-border
+			$pagination-variant-border
 			);
 			@include border-radius($pagination-border-radius);
 			&:not(:last-child) {
@@ -38,17 +38,17 @@
 			@include border-left(
 			$pagination-border-width,
 			$pagination-border-style,
-			$base-variant-border
+			$pagination-variant-border
 			);
 			@include border-bottom(
 			$pagination-border-width,
 			$pagination-border-style,
-			$base-variant-border
+			$pagination-variant-border
 			);
 			@include border-top(
 			$pagination-border-width,
 			$pagination-border-style,
-			$base-variant-border
+			$pagination-variant-border
 			);
 			@include pagination-font-size(
 			$pagination-font-size,
@@ -74,7 +74,7 @@
 		@include border(
 		$pagination-border-width,
 		$pagination-border-style,
-		$base-variant-border
+		$pagination-variant-border
 		);
 		@include transition($pagination-transition);
 		@include border-radius($pagination-dot-border-radius);
@@ -135,11 +135,11 @@
 	}
 	&.outline {
 		@include outline-pagination-variant(
-		$base-variant-color,
-		$base-variant-background,
-		$base-variant-border,
-		$base-variant-hover,
-		$base-variant-active
+		$pagination-variant-color,
+		$pagination-variant-background,
+		$pagination-variant-border,
+		$pagination-variant-hover,
+		$pagination-variant-active
 		);
 		&.invert {
 			@include outline-pagination-variant(
