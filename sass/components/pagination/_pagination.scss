@@ -68,7 +68,10 @@
 
 	.dot {
 		padding: $pagination-dot-size;
+		color: transparent;
 		text-decoration: none;
+		font-size: 0;
+		line-height: 0;
 		cursor: pointer;
 
 		@include border(
@@ -143,8 +146,8 @@
 		);
 		&.invert {
 			@include outline-pagination-variant(
-			$invert-variant-color,
 			$invert-variant-background,
+			$invert-variant-color,
 			$invert-variant-border,
 			$invert-variant-hover,
 			$invert-variant-active

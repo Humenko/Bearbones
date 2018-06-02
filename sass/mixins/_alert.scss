@@ -1,6 +1,8 @@
-@mixin alert-variant($color, $background) {
+@mixin alert-variant($color, $background, $border) {
 	background: $background;
 	color: $color;
+
+	@include border-color($border);
 	h1,
 	h2,
 	h3,

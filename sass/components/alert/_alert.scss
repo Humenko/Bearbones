@@ -2,22 +2,51 @@
 	position: relative;
 	padding: $alert-spacing;
 
-	@include alert-variant($base-variant-color, $base-variant-background);
+	@include border(
+	$alert-border-width,
+	$alert-border-style,
+	$alert-variant-border
+	);
+	@include alert-variant(
+	$alert-variant-color,
+	$alert-variant-background,
+	$alert-variant-border
+	);
 	@include border-radius($alert-border-radius);
 	&.invert {
-		@include alert-variant($invert-variant-color, $invert-variant-background);
+		@include alert-variant(
+		$invert-variant-color,
+		$invert-variant-background,
+		$invert-variant-border
+		);
 	}
 	&.primary {
-		@include alert-variant($primary-variant-color, $primary-variant-background);
+		@include alert-variant(
+		$primary-variant-color,
+		$primary-variant-background,
+		$primary-variant-border
+		);
 	}
 	&.secondary {
-		@include alert-variant($secondary-variant-color, $secondary-variant-background);
+		@include alert-variant(
+		$secondary-variant-color,
+		$secondary-variant-background,
+		$secondary-variant-border
+		);
 	}
 	&.positive {
-		@include alert-variant($positive-variant-color, $positive-variant-background);
+		@include alert-variant(
+		$positive-variant-color,
+		$positive-variant-background,
+		$positive-variant-border
+		);
 	}
 	&.negative {
-		@include alert-variant($negative-variant-color, $negative-variant-background);
+		@include alert-variant(
+		$negative-variant-color,
+		$negative-variant-background,
+		$negative-variant-border
+		);
 	}
 	.close {
 		position: absolute;
