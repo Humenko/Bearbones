@@ -1,6 +1,7 @@
 .bb-footer {
 	z-index: 10;
 	padding: $footer-spacing;
+	width: 100%;
 	box-shadow: $footer-box-shadow;
 
 	@include footer-variant($footer-variant-color, $footer-variant-background);
