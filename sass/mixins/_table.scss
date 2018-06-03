@@ -1,34 +1,34 @@
-@mixin table-variant($color) {
-    $light-color: lighten($color, 10%);
-    $lighter-color: lighten($color, 35%);
-    background: $lighter-color;
-    color: $color;
-    tr {
-        @include border-color($light-color);
-    }
+@mixin table-variant($color, $background, $border) {
+	background: lighten($background, 15%);
+	color: $color;
+	tr {
+		@include border-color($border);
+	}
 }
 
 @mixin table-striped-variant($color) {
-    tr:nth-child(even) {
-        background: $white;
-    }
+	tr:nth-child(even) {
+		background: $white;
+		color: $color;
+	}
 }
 
 @mixin table-hover-variant($color) {
-    $light-color: lighten($color, 10%);
-    td:hover {
-        background: $light-color;
-    }
+	td {
+		@include hover {
+			background: $color;
+		}
+	}
 }
 
 @mixin table-cell-hover-variant($color) {
-    $light-color: lighten($color, 10%);
-    &:hover {
-        background: $light-color;
-    }
+	& {
+		@include hover {
+			background: $color;
+		}
+	}
 }
 
 @mixin table-selected-variant($color) {
-    $light-color: lighten($color, 10%);
-    background: $light-color;
+	background: $color;
 }

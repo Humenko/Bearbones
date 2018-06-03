@@ -1,13 +1,17 @@
 .bb-table {
-	background: $table-background;
-	color: $table-color;
+	background: $table-variant-background;
+	color: $table-variant-color;
 
+	@include border-color($table-variant-border);
 	@include border-radius($table-border-radius);
 	&.full-x {
 		width: 100%;
 	}
 	&.no-border-radius {
 		@include border-radius($no-border-radius);
+		* {
+			border-radius: 0 !important;
+		}
 	}
 	&.naked {
 		tr {
@@ -36,7 +40,11 @@
 			}
 		}
 		&:not(:last-child) {
-			@include border-bottom($table-border-width, $border-style, $table-border-color);
+			@include border-bottom(
+			$table-border-width,
+			$table-border-style,
+			$table-variant-border
+			);
 		}
 	}
 	td {
@@ -44,30 +52,54 @@
 	}
 	&.primary,
 	.primary {
-		@include table-variant($primary-variant-background);
+		@include table-variant(
+		$primary-variant-color,
+		$primary-variant-background,
+		$primary-variant-border
+		);
 	}
 	&.secondary,
 	.secondary {
-		@include table-variant($secondary-variant-background);
+		@include table-variant(
+		$secondary-variant-color,
+		$secondary-variant-background,
+		$secondary-variant-border
+		);
 	}
 	&.positive,
 	.positive {
-		@include table-variant($positive-variant-background);
+		@include table-variant(
+		$positive-variant-color,
+		$positive-variant-background,
+		$positive-variant-border
+		);
 	}
 	&.negative,
 	.negative {
-		@include table-variant($negative-variant-background);
+		@include table-variant(
+		$negative-variant-color,
+		$negative-variant-background,
+		$negative-variant-border
+		);
 	}
 	&.success,
 	.success {
-		@include table-variant($positive-variant-background);
+		@include table-variant(
+		$positive-variant-color,
+		$positive-variant-background,
+		$positive-variant-border
+		);
 	}
 	&.error,
 	.error {
-		@include table-variant($negative-variant-background);
+		@include table-variant(
+		$negative-variant-color,
+		$negative-variant-background,
+		$negative-variant-border
+		);
 	}
 	&.striped {
-		@include table-striped-variant($table-background);
+		@include table-striped-variant($table-variant-color);
 		&.primary {
 			@include table-striped-variant($primary-variant-background);
 		}
@@ -90,7 +122,7 @@
 	&.hover {
 		cursor: pointer;
 
-		@include table-hover-variant($table-background-hover);
+		@include table-hover-variant($table-variant-hover);
 		&,
 		tr {
 			&.primary {
@@ -134,6 +166,7 @@
 		}
 	}
 	.selected {
+		@include table-selected-variant($table-variant-hover);
 		&.primary,
 		.primary {
 			@include table-selected-variant($primary-variant-background);
