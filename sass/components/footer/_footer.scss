@@ -1,24 +1,33 @@
 .bb-footer {
-	padding: $footer-spacing;
-	background: $footer-background;
-	color: $footer-color;
 	z-index: 10;
+	padding: $footer-spacing;
+	background: $footer-variant-background;
+	box-shadow: $footer-box-shadow;
 	&.invert {
 		@include footer-variant($invert-variant-color, $invert-variant-background);
 	}
 	&.primary {
-		@include footer-variant($primary-variant-color, $primary-variant-background);
+		@include footer-variant(
+		$primary-variant-color,
+		$primary-variant-background
+		);
 	}
 	&.secondary {
-		@include footer-variant($secondary-variant-color, $secondary-variant-background);
+		@include footer-variant(
+		$secondary-variant-color,
+		$secondary-variant-background
+		);
 	}
 	&.positive {
-		@include footer-variant($positive-variant-color, $positive-variant-background);
+		@include footer-variant(
+		$positive-variant-color,
+		$positive-variant-background
+		);
 	}
 	&.negative {
-		@include footer-variant($negative-variant-color, $negative-variant-background);
-	}
-	.bb-divider {
-		@include border-color($footer-divider-color);
+		@include footer-variant(
+		$negative-variant-color,
+		$negative-variant-background
+		);
 	}
 }
