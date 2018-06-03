@@ -1,8 +1,9 @@
 .bb-footer {
 	z-index: 10;
 	padding: $footer-spacing;
-	background: $footer-variant-background;
 	box-shadow: $footer-box-shadow;
+
+	@include footer-variant($footer-variant-color, $footer-variant-background);
 	&.invert {
 		@include footer-variant($invert-variant-color, $invert-variant-background);
 	}
