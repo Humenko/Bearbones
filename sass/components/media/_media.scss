@@ -2,18 +2,27 @@
 	display: flex;
 	align-items: flex-start;
 	text-align: left;
-	&.vertical-align {
+	&.center {
 		align-items: center;
+	}
+	&.bottom {
+		align-items: flex-end;
 	}
 	.media-container {
 		flex: 1;
 	}
 	.media {
 		display: flex;
+		margin-top: $media-spacing-y - $media-border-width;
 		padding-top: $media-spacing-y;
-		@include border-top($media-divider-width, $border-style, $media-divider-color);
+
+		@include border-top(
+		$media-border-width,
+		$media-border-style,
+		$media-variant-border
+		);
 	}
-	&+.media {
+	& + .media {
 		margin-top: $media-spacing-y;
 	}
 	.media-left,
