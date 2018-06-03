@@ -232,10 +232,12 @@
 	&.icon {
 		display: inline-flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 		span {
 			display: inline-flex;
-			margin-left: $button-spacing-x;
+			margin: 0;
+			width: auto;
+			height: auto;
 		}
 	}
 }

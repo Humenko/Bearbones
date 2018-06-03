@@ -5,6 +5,9 @@
 	line-height: 1;
 
 	user-select: none;
+	& + p:not(:first-child) {
+		padding-top: 0;
+	}
 	&:not(.divider-content) {
 		border-width: $divider-border-width;
 		border-style: $divider-border-style;
@@ -53,12 +56,6 @@
 		&:after {
 			background-position: left $divider-spacing-x top 50%;
 		}
-	}
-	& > .icon {
-		margin: $divider-icon-spacing;
-		height: 1rem;
-		vertical-align: middle;
-		font-size: $divider-icon-font-size;
 	}
 	&.hidden {
 		@include divider-variant(transparent);
