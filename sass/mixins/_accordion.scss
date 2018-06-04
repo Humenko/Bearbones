@@ -1,12 +1,13 @@
 @mixin accordion-variant($color) {
-    .header{
-        .toggle {
-            @include plus($color);
-        }
-        .chevron {
-            @include chevron-down($color);
-        }
-    }
+	.header {
+		color: $color;
+		.toggle {
+			@include plus($color);
+		}
+		.chevron {
+			@include chevron-down($color);
+		}
+	}
 	.active {
 		.chevron {
 			@include chevron-up($color);
@@ -14,5 +15,5 @@
 		.toggle {
 			@include minus($color);
 		}
-	}    
+	}
 }

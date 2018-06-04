@@ -1,4 +1,9 @@
 .bb-accordion {
+	@include border-bottom(
+	$accordion-border-width,
+	$accordion-border-style,
+	$accordion-variant-border
+	);
 	&.invert {
 		@include accordion-variant($invert-variant-background);
 	}
@@ -14,28 +19,22 @@
 	&.negative {
 		@include accordion-variant($negative-variant-background);
 	}
-	&.left {
-		.header {
-			justify-content: flex-start;
-		}
-	}
-	&.right {
-		.header {
-			justify-content: flex-end;
-		}
-	}
 	.header {
 		display: flex;
 		align-items: center;
-		padding: $accordion-heading-spacing $accordion-heading-spacing $accordion-heading-spacing 0;
-		background: $accordion-heading-background;
+		justify-content: space-between;
+		padding: $accordion-heading-spacing-y $accordion-heading-spacing-x;
+		background: $accordion-variant-background;
 		font-weight: $accordion-heading-font-weight;
 		font-size: $accordion-heading-font-size;
 		font-family: $accordion-heading-font-family;
 		cursor: pointer;
-		&:not(:first-child) {
-			@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
-		}
+
+		@include border-top(
+		$accordion-border-width,
+		$accordion-border-style,
+		$accordion-variant-border
+		);
 		span {
 			margin: $accordion-toggle-spacing;
 		}
@@ -46,31 +45,46 @@
 		}
 		.toggle {
 			min-width: 1rem;
-			@include plus($light-grey);
+
+			@include plus($accordion-variant-toggle);
 		}
 		.chevron {
-			@include chevron-down($light-grey);
+			margin-right: .25rem;
+
+			@include chevron-down($accordion-variant-toggle);
 		}
 	}
 	.content {
 		display: none;
-		padding-bottom: $accordion-content-spacing;
+		margin-top: 0;
+		padding-bottom: $accordion-content-spacing-y;
+		&.active {
+			display: block;
+		}
 		.header {
-			padding: $accordion-heading-spacing / 2 $accordion-heading-spacing;
+			justify-content: flex-start;
+			padding: $accordion-heading-spacing-y / 2 $accordion-heading-spacing-x;
+			font-weight: $accordion-subheading-font-weight;
+			font-size: $accordion-subheading-font-size;
+			font-family: $accordion-subheading-font-family;
 			&:first-child {
-				@include border-top($accordion-heading-border-width, $accordion-heading-border-style, $accordion-heading-border-color);
+				@include border-top(
+				$accordion-border-width,
+				$accordion-border-style,
+				$accordion-variant-border
+				);
 			}
 		}
 		.content {
-			padding: 0 0 $accordion-content-spacing $accordion-content-spacing;
+			padding: 0 0 $accordion-content-spacing-y 0;
 		}
 	}
-	.active {
+	.header.active {
 		.chevron {
-			@include chevron-up($light-grey);
+			@include chevron-up($accordion-variant-active);
 		}
 		.toggle {
-			@include minus($light-grey);
+			@include minus($accordion-variant-active);
 		}
 	}
 }
