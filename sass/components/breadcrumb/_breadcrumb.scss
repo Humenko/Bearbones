@@ -2,39 +2,39 @@
 	margin-bottom: $breadcrumb-spacing;
 	padding: 0;
 	ul {
-		background: $breadcrumb-background;
+		padding: 0;
+		background: $breadcrumb-variant-background;
 		list-style: none;
 
 		@include clearfix;
-		@include border-radius($border-radius);
 		.breadcrumb-item {
 			float: left;
 			 + .breadcrumb-item::before {
 				display: inline-block;
 				padding-right: $breadcrumb-item-spacing;
 				padding-left: $breadcrumb-item-spacing;
-				color: $breadcrumb-divider-color;
+				color: $breadcrumb-variant-divider;
 				content: '#{$breadcrumb-divider}';
 			}
 			&.active {
-				color: $breadcrumb-active-color;
-			}
-			&.xs {
-				@include breadcrumb-font-size($font-size-xs);
-			}
-			&.sm {
-				@include breadcrumb-font-size($font-size-sm);
-			}
-			&.lg {
-				@include breadcrumb-font-size($font-size-lg);
-			}
-			&.xl {
-				@include breadcrumb-font-size($font-size-xl);
+				color: $breadcrumb-variant-active;
 			}
 			a {
-				color: $breadcrumb-link-color;
+				color: $breadcrumb-variant-color;
 			}
 		}
+	}
+	&.xs {
+		@include breadcrumb-font-size($font-size-xs);
+	}
+	&.sm {
+		@include breadcrumb-font-size($font-size-sm);
+	}
+	&.lg {
+		@include breadcrumb-font-size($font-size-lg);
+	}
+	&.xl {
+		@include breadcrumb-font-size($font-size-xl);
 	}
 	&.scroll {
 		overflow: hidden;
