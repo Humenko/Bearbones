@@ -74,7 +74,9 @@
 	font-family: $heading-font-family;
 }
 
-@include text-variant('.text-primary', $primary-color);
-@include text-variant('.text-secondary', $secondary-color);
-@include text-variant('.text-positive', $positive-color);
-@include text-variant('.text-negative', $negative-color);
+@include text-variant('.text-primary', $primary-variant-background);
+@include text-variant('.text-secondary', $secondary-variant-background);
+@include text-variant('.text-positive', $positive-variant-background);
+@include text-variant('.text-negative', $negative-variant-background);
+@include text-variant('.text-invert', $invert-variant-background);
+@include text-variant('.text-white', $white);

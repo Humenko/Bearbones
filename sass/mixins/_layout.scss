@@ -7,14 +7,11 @@
 	h4,
 	h5,
 	p {
-		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative):not(.text-white) {
 			color: $color;
 		}
 	}
 	a:not(.bb-btn):not(.link):not(.item) {
 		color: $color;
-	}
-	.bb-divider {
-		@include border-color(darken($background, 12%));
 	}
 }

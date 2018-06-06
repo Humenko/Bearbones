@@ -3,20 +3,34 @@
 	align-items: stretch;
 	flex-direction: column;
 	justify-content: space-between;
+
+	@include layout-variant($layout-variant-color, $layout-variant-background);
 	&.invert {
 		@include layout-variant($invert-variant-color, $invert-variant-background);
 	}
 	&.primary {
-		@include layout-variant($primary-variant-color, $primary-variant-background);
+		@include layout-variant(
+		$primary-variant-color,
+		$primary-variant-background
+		);
 	}
 	&.secondary {
-		@include layout-variant($secondary-variant-color, $secondary-variant-background);
+		@include layout-variant(
+		$secondary-variant-color,
+		$secondary-variant-background
+		);
 	}
 	&.positive {
-		@include layout-variant($positive-variant-color, $positive-variant-background);
+		@include layout-variant(
+		$positive-variant-color,
+		$positive-variant-background
+		);
 	}
 	&.negative {
-		@include layout-variant($negative-variant-color, $negative-variant-background);
+		@include layout-variant(
+		$negative-variant-color,
+		$negative-variant-background
+		);
 	}
 	&.full-y {
 		min-height: 100vh;

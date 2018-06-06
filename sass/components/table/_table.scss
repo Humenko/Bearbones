@@ -47,8 +47,12 @@
 			);
 		}
 	}
-	td {
+	td,
+	th {
 		padding: $table-spacing-y $table-spacing-x $table-spacing-y $table-spacing-x;
+	}
+	th {
+		text-align: left;
 	}
 	&.primary,
 	.primary {
@@ -144,7 +148,8 @@
 				@include table-hover-variant($negative-variant-background);
 			}
 		}
-		td {
+		td,
+		th {
 			&.primary {
 				@include table-cell-hover-variant($primary-variant-background);
 			}

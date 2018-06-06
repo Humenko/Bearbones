@@ -1,16 +1,17 @@
 @each $breakpoint in map-keys($breakpoints) {
-    .hidden-#{$breakpoint}-up {
-        @include respond-to-up($breakpoint) {
-            display: none !important;
-        }
-    }
-    .hidden-#{$breakpoint}-down {
-        @include respond-to-down($breakpoint) {
-            display: none !important;
-        }
-    }
+	.hidden-#{$breakpoint}-up {
+		@include respond-to-up($breakpoint) {
+			display: none !important;
+		}
+	}
+	.hidden-#{$breakpoint}-down {
+		@include respond-to-down($breakpoint) {
+			display: none !important;
+		}
+	}
 }
 
-.invisible {
+.invisible,
+.hidden {
 	visibility: hidden;
 }

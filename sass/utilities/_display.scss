@@ -2,24 +2,12 @@
 	display: none;
 }
 
-.d-inline {
-	display: inline;
-}
-
-.d-inline-block {
-	display: inline-block;
-}
-
 .d-block {
 	display: block;
 }
 
-.d-table {
-	display: table;
-}
-
-.d-table-cell {
-	display: table-cell;
+.d-inline-block {
+	display: inline-block;
 }
 
 .d-flex {
@@ -28,4 +16,16 @@
 
 .d-inline-flex {
 	display: inline-flex;
+}
+
+.d-inline {
+	display: inline;
+}
+
+.d-table {
+	display: table;
+}
+
+.d-table-cell {
+	display: table-cell;
 }
