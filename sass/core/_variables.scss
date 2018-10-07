@@ -63,6 +63,47 @@ $negative-variant-color: $negative-pair !default;
 $negative-variant-hover: darken($negative-variant-background, 10%) !default;
 $negative-variant-active: darken($negative-variant-background, 12%) !default;
 
+//
+$variants: (
+  (
+    invert: (
+      $invert-variant-background,
+      $invert-variant-border,
+      $invert-variant-color,
+      $invert-variant-hover,
+      $invert-variant-active
+    ),
+    primary: (
+      $primary-variant-background,
+      $primary-variant-border,
+      $primary-variant-color,
+      $primary-variant-hover,
+      $primary-variant-active
+    ),
+    secondary: (
+      $secondary-variant-background,
+      $secondary-variant-border,
+      $secondary-variant-color,
+      $secondary-variant-hover,
+      $secondary-variant-active
+    ),
+    positive: (
+      $positive-variant-background,
+      $positive-variant-border,
+      $positive-variant-color,
+      $positive-variant-hover,
+      $positive-variant-active
+    ),
+    negative: (
+      $negative-variant-background,
+      $negative-variant-border,
+      $negative-variant-color,
+      $negative-variant-hover,
+      $negative-variant-active
+    )
+  )
+);
+
 // Spacing //
 
 $padding: 1rem !default;
@@ -111,7 +152,7 @@ $link-hover-decoration: underline !default;
 //******************Body
 $body-font-size: 1rem !default;
 $font-color: $base-color !default;
-$font-family: 'Inter-UI', sans-serif !default;
+$font-family: 'Inter-UI', 'Helvetica', 'Arial', sans-serif !default;
 $font-line-height: 1.3 !default;
 $font-size: 1rem !default;
 $font-style: normal !default;
@@ -126,9 +167,17 @@ $font-size-md: 1rem !default;
 $font-size-lg: 1.25rem !default;
 $font-size-xl: 1.5rem !default;
 
+//
+$font-sizes: (
+  xs: $font-size-xs,
+  sm: $font-size-sm,
+  lg: $font-size-lg,
+  xl: $font-size-xl
+) !default;
+
 //******************Heading
 $heading-font-color: $base-color !default;
-$heading-font-family: 'Inter-UI', sans-serif !default;
+$heading-font-family: 'Inter-UI', 'Helvetica', 'Arial', sans-serif !default;
 $heading-font-weight: $font-weight-bold !default;
 $heading-line-height: 1.3 !default;
 $heading-min-width: 20rem !default;
@@ -312,13 +361,13 @@ $dropdown-background: $base-pair !default;
 $dropdown-border: $border-width $border-style transparent !default;
 $dropdown-font-size: $font-size !default;
 $dropdown-border-radius: $border-radius !default;
-$dropdown-menu-font-size: $font-size-sm !default;
+$dropdown-menu-font-size: $font-size-md !default;
 $dropdown-menu-spacing-x: 0 !default;
 $dropdown-menu-spacing-y: 0 !default;
-$dropdown-item-spacing-x: .5rem !default;
+$dropdown-item-spacing-x: .75rem !default;
 $dropdown-item-spacing-y: .75rem !default;
 $dropdown-item-color: $primary-color !default;
-$dropdown-item-hover: $secondary-color !default;
+$dropdown-item-hover: $primary-color !default;
 $dropdown-item-hover-background: $lighter-grey !default;
 $dropdown-item-active: $primary-color !default;
 $dropdown-item-active-background: $lighter-grey !default;
@@ -386,7 +435,7 @@ $media-spacing-y: 1rem !default;
 
 //******************Navbar //
 
-$navbar-background: rgba(255, 255, 255, .95) !default;
+$navbar-background: $base-pair !default;
 $navbar-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .1),
   0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 $navbar-item-spacing-x: .5rem !default;
@@ -396,7 +445,7 @@ $navbar-container-spacing: 0 1rem !default;
 $navbar-height: 3rem !default;
 $navbar-image-max-height: $navbar-height/1.5 !default;
 $navbar-item-color: $primary-color !default;
-$navbar-item-hover-color: $secondary-color !default;
+$navbar-item-hover-color: $primary-color !default;
 $navbar-item-hover-background: transparent !default;
 $navbar-item-active-color: $primary-color !default;
 $navbar-item-active-background: $base-pair !default;

@@ -31,17 +31,10 @@
 		padding: 0;
 		border: 0;
 	}
-	&.xs {
-		@include button-font-size($font-size-xs);
-	}
-	&.sm {
-		@include button-font-size($font-size-sm);
-	}
-	&.lg {
-		@include button-font-size($font-size-lg);
-	}
-	&.xl {
-		@include button-font-size($font-size-xl);
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include button-font-size($value);
+		}
 	}
 	&.full-x {
 		display: block;
@@ -50,85 +43,26 @@
 	&.no-border-radius {
 		@include border-radius($no-border-radius);
 	}
-	&.invert {
-		@include button-variant(
-		$invert-variant-color,
-		$invert-variant-background,
-		$invert-variant-border,
-		$invert-variant-hover,
-		$invert-variant-active
-		);
-	}
-	&.primary {
-		@include button-variant(
-		$primary-variant-color,
-		$primary-variant-background,
-		$primary-variant-border,
-		$primary-variant-hover,
-		$primary-variant-active
-		);
-	}
-	&.secondary {
-		@include button-variant(
-		$secondary-variant-color,
-		$secondary-variant-background,
-		$secondary-variant-border,
-		$secondary-variant-hover,
-		$secondary-variant-active
-		);
-	}
-	&.positive {
-		@include button-variant(
-		$positive-variant-color,
-		$positive-variant-background,
-		$positive-variant-border,
-		$positive-variant-hover,
-		$positive-variant-active
-		);
-	}
-	&.negative {
-		@include button-variant(
-		$negative-variant-color,
-		$negative-variant-background,
-		$negative-variant-border,
-		$negative-variant-hover,
-		$negative-variant-active
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include button-variant(
+			nth($value, 3),
+			nth($value, 1),
+			nth($value, 2),
+			nth($value, 4),
+			nth($value, 5)
+			);
+		}
 	}
 	&.outline {
 		@include button-outline-variant(
 		$button-variant-background,
 		$button-variant-border
 		);
-		&.invert {
-			@include button-outline-variant(
-			$invert-variant-background,
-			$invert-variant-border
-			);
-		}
-		&.primary {
-			@include button-outline-variant(
-			$primary-variant-background,
-			$primary-variant-border
-			);
-		}
-		&.secondary {
-			@include button-outline-variant(
-			$secondary-variant-background,
-			$secondary-variant-border
-			);
-		}
-		&.positive {
-			@include button-outline-variant(
-			$positive-variant-background,
-			$positive-variant-border
-			);
-		}
-		&.negative {
-			@include button-outline-variant(
-			$negative-variant-background,
-			$negative-variant-border
-			);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include button-outline-variant(nth($value, 1), nth($value, 2));
+			}
 		}
 	}
 	&.inverted {
@@ -137,40 +71,14 @@
 		$button-variant-background,
 		$button-variant-border
 		);
-		&.invert {
-			@include button-inverted-variant(
-			$invert-variant-color,
-			$invert-variant-background,
-			$invert-variant-border
-			);
-		}
-		&.primary {
-			@include button-inverted-variant(
-			$primary-variant-color,
-			$primary-variant-background,
-			$primary-variant-border
-			);
-		}
-		&.secondary {
-			@include button-inverted-variant(
-			$secondary-variant-color,
-			$secondary-variant-background,
-			$secondary-variant-border
-			);
-		}
-		&.positive {
-			@include button-inverted-variant(
-			$positive-variant-color,
-			$positive-variant-background,
-			$positive-variant-border
-			);
-		}
-		&.negative {
-			@include button-inverted-variant(
-			$negative-variant-color,
-			$negative-variant-background,
-			$negative-variant-border
-			);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include button-inverted-variant(
+				nth($value, 3),
+				nth($value, 1),
+				nth($value, 2)
+				);
+			}
 		}
 	}
 	&.loading {
@@ -198,35 +106,10 @@
 
 			@include border-radius($button-loader-circle);
 		}
-		&.invert {
-			@include button-loading-variant(
-			$invert-variant-color,
-			$invert-variant-active
-			);
-		}
-		&.primary {
-			@include button-loading-variant(
-			$primary-variant-color,
-			$primary-variant-active
-			);
-		}
-		&.secondary {
-			@include button-loading-variant(
-			$secondary-variant-color,
-			$secondary-variant-active
-			);
-		}
-		&.positive {
-			@include button-loading-variant(
-			$positive-variant-color,
-			$positive-variant-active
-			);
-		}
-		&.negative {
-			@include button-loading-variant(
-			$negative-variant-color,
-			$negative-variant-active
-			);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include button-loading-variant(nth($value, 3), nth($value, 5));
+			}
 		}
 	}
 	&.icon {
@@ -247,29 +130,10 @@
 
 	@include border-radius($no-border-radius);
 	@include link-variant($button-variant-background, $button-variant-hover);
-	&.invert {
-		@include link-variant($invert-variant-background, $invert-variant-hover);
-	}
-	&.primary {
-		@include link-variant($primary-variant-background, $negative-variant-hover);
-	}
-	&.secondary {
-		@include link-variant(
-		$secondary-variant-background,
-		$secondary-variant-hover
-		);
-	}
-	&.positive {
-		@include link-variant(
-		$positive-variant-background,
-		$positive-variant-hover
-		);
-	}
-	&.negative {
-		@include link-variant(
-		$negative-variant-background,
-		$negative-variant-hover
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include link-variant(nth($value, 1), nth($value, 4));
+		}
 	}
 }
 
@@ -285,23 +149,10 @@
 	@include border-radius($border-radius-circle);
 	@include close-font-size($button-close-size, $button-close-size);
 	@include close-variant($button-variant-background, $button-variant-color);
-	&.invert {
-		@include close-variant($invert-variant-background, $invert-variant-color);
-	}
-	&.primary {
-		@include close-variant($primary-variant-background, $primary-variant-color);
-	}
-	&.secondary {
-		@include close-variant(
-		$secondary-variant-background,
-		$secondary-variant-color
-		);
-	}
-	&.positive {
-		@include close-variant(
-		$positive-variant-background,
-		$positive-variant-color
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include close-variant(nth($value, 1), nth($value, 3));
+		}
 	}
 	&.negative {
 		@include close-variant(

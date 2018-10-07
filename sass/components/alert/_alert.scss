@@ -13,40 +13,10 @@
 	$alert-variant-border
 	);
 	@include border-radius($alert-border-radius);
-	&.invert {
-		@include alert-variant(
-		$invert-variant-color,
-		$invert-variant-background,
-		$invert-variant-border
-		);
-	}
-	&.primary {
-		@include alert-variant(
-		$primary-variant-color,
-		$primary-variant-background,
-		$primary-variant-border
-		);
-	}
-	&.secondary {
-		@include alert-variant(
-		$secondary-variant-color,
-		$secondary-variant-background,
-		$secondary-variant-border
-		);
-	}
-	&.positive {
-		@include alert-variant(
-		$positive-variant-color,
-		$positive-variant-background,
-		$positive-variant-border
-		);
-	}
-	&.negative {
-		@include alert-variant(
-		$negative-variant-color,
-		$negative-variant-background,
-		$negative-variant-border
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include alert-variant(nth($value, 3), nth($value, 1), nth($value, 2));
+		}
 	}
 	.close {
 		position: absolute;

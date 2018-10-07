@@ -48,7 +48,11 @@
 				color: $light-grey;
 				cursor: pointer;
 
-				@include border-bottom($tab-border-width, $border-style, $tab-background);
+				@include border-bottom(
+				$tab-border-width,
+				$border-style,
+				$tab-background
+				);
 				@include transition($tab-transition);
 				@include hover {
 					color: $base-color;
@@ -137,17 +141,10 @@
 			}
 		}
 	}
-	&.xs {
-		@include tab-font-size($font-size-xs);
-	}
-	&.sm {
-		@include tab-font-size($font-size-sm);
-	}
-	&.lg {
-		@include tab-font-size($font-size-lg);
-	}
-	&.xl {
-		@include tab-font-size($font-size-xl);
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include tab-font-size($value);
+		}
 	}
 	&.full-x {
 		li {

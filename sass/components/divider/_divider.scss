@@ -15,20 +15,10 @@
 		@include border-radius($divider-border-radius);
 		@include divider-variant($divider-variant-border);
 	}
-	&.invert {
-		@include divider-variant($invert-variant-background);
-	}
-	&.primary {
-		@include divider-variant($primary-variant-background);
-	}
-	&.secondary {
-		@include divider-variant($secondary-variant-background);
-	}
-	&.positive {
-		@include divider-variant($positive-variant-background);
-	}
-	&.negative {
-		@include divider-variant($negative-variant-background);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include divider-variant(nth($value, 1));
+		}
 	}
 	&.divider-content {
 		display: table;

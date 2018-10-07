@@ -54,37 +54,11 @@
 	th {
 		text-align: left;
 	}
-	&.primary,
-	.primary {
-		@include table-variant(
-		$primary-variant-color,
-		$primary-variant-background,
-		$primary-variant-border
-		);
-	}
-	&.secondary,
-	.secondary {
-		@include table-variant(
-		$secondary-variant-color,
-		$secondary-variant-background,
-		$secondary-variant-border
-		);
-	}
-	&.positive,
-	.positive {
-		@include table-variant(
-		$positive-variant-color,
-		$positive-variant-background,
-		$positive-variant-border
-		);
-	}
-	&.negative,
-	.negative {
-		@include table-variant(
-		$negative-variant-color,
-		$negative-variant-background,
-		$negative-variant-border
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant},
+		.#{$variant} {
+			@include table-variant(nth($value, 3), nth($value, 1), nth($value, 2));
+		}
 	}
 	&.success,
 	.success {
@@ -104,17 +78,10 @@
 	}
 	&.striped {
 		@include table-striped-variant($table-variant-color);
-		&.primary {
-			@include table-striped-variant($primary-variant-background);
-		}
-		&.secondary {
-			@include table-striped-variant($secondary-variant-background);
-		}
-		&.positive {
-			@include table-striped-variant($positive-variant-background);
-		}
-		&.negative {
-			@include table-striped-variant($negative-variant-background);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include table-striped-variant(nth($value, 1));
+			}
 		}
 		&.success {
 			@include table-striped-variant($positive-variant-background);
@@ -129,17 +96,10 @@
 		@include table-hover-variant($table-variant-hover);
 		&,
 		tr {
-			&.primary {
-				@include table-hover-variant($primary-variant-background);
-			}
-			&.secondary {
-				@include table-hover-variant($secondary-variant-background);
-			}
-			&.positive {
-				@include table-hover-variant($positive-variant-background);
-			}
-			&.negative {
-				@include table-hover-variant($negative-variant-background);
+			@each $variant, $value in $variants {
+				&.#{$variant} {
+					@include table-hover-variant(nth($value, 1));
+				}
 			}
 			&.success {
 				@include table-hover-variant($positive-variant-background);
@@ -150,17 +110,10 @@
 		}
 		td,
 		th {
-			&.primary {
-				@include table-cell-hover-variant($primary-variant-background);
-			}
-			&.secondary {
-				@include table-cell-hover-variant($secondary-variant-background);
-			}
-			&.positive {
-				@include table-cell-hover-variant($positive-variant-background);
-			}
-			&.negative {
-				@include table-cell-hover-variant($negative-variant-background);
+			@each $variant, $value in $variants {
+				&.#{$variant} {
+					@include table-cell-hover-variant(nth($value, 1));
+				}
 			}
 			&.success {
 				@include table-cell-hover-variant($positive-variant-background);
@@ -172,21 +125,11 @@
 	}
 	.selected {
 		@include table-selected-variant($table-variant-hover);
-		&.primary,
-		.primary {
-			@include table-selected-variant($primary-variant-background);
-		}
-		&.secondary,
-		.secondary {
-			@include table-selected-variant($secondary-variant-background);
-		}
-		&.positive,
-		.positive {
-			@include table-selected-variant($positive-variant-background);
-		}
-		&.negative,
-		.negative {
-			@include table-selected-variant($negative-variant-background);
+		@each $variant, $value in $variants {
+			&.#{$variant},
+			.#{$variant} {
+				@include table-selected-variant(nth($value, 1));
+			}
 		}
 		&.success,
 		.success {

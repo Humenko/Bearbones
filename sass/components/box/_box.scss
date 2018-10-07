@@ -15,72 +15,17 @@
 		justify-content: center;
 		text-align: center;
 	}
-	&.invert {
-		@include box-variant(
-		$invert-variant-color,
-		$invert-variant-background,
-		$invert-variant-border
-		);
-	}
-	&.primary {
-		@include box-variant(
-		$primary-variant-color,
-		$primary-variant-background,
-		$primary-variant-border
-		);
-	}
-	&.secondary {
-		@include box-variant(
-		$secondary-variant-color,
-		$secondary-variant-background,
-		$secondary-variant-border
-		);
-	}
-	&.positive {
-		@include box-variant(
-		$positive-variant-color,
-		$positive-variant-background,
-		$positive-variant-border
-		);
-	}
-	&.negative {
-		@include box-variant(
-		$negative-variant-color,
-		$negative-variant-background,
-		$negative-variant-border
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include box-variant(nth($value, 3), nth($value, 1), nth($value, 2));
+		}
 	}
 	&.outline {
 		@include box-outline-variant($box-variant-background, $box-variant-border);
-		&.primary {
-			@include box-outline-variant(
-			$primary-variant-background,
-			$primary-variant-border
-			);
-		}
-		&.secondary {
-			@include box-outline-variant(
-			$secondary-variant-background,
-			$secondary-variant-border
-			);
-		}
-		&.positive {
-			@include box-outline-variant(
-			$positive-variant-background,
-			$positive-variant-border
-			);
-		}
-		&.negative {
-			@include box-outline-variant(
-			$negative-variant-background,
-			$negative-variant-border
-			);
-		}
-		&.invert {
-			@include box-outline-variant(
-			$invert-variant-background,
-			$invert-variant-border
-			);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include box-outline-variant(nth($value, 1), nth($value, 2));
+			}
 		}
 	}
 }

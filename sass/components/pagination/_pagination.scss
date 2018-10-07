@@ -91,50 +91,16 @@
 			border: 0 !important;
 		}
 	}
-	&.invert {
-		@include pagination-variant(
-		$invert-variant-color,
-		$invert-variant-background,
-		$invert-variant-border,
-		$invert-variant-hover,
-		$invert-variant-active
-		);
-	}
-	&.primary {
-		@include pagination-variant(
-		$primary-variant-color,
-		$primary-variant-background,
-		$primary-variant-border,
-		$primary-variant-hover,
-		$primary-variant-active
-		);
-	}
-	&.secondary {
-		@include pagination-variant(
-		$secondary-variant-color,
-		$secondary-variant-background,
-		$secondary-variant-border,
-		$secondary-variant-hover,
-		$secondary-variant-active
-		);
-	}
-	&.positive {
-		@include pagination-variant(
-		$positive-variant-color,
-		$positive-variant-background,
-		$positive-variant-border,
-		$positive-variant-hover,
-		$positive-variant-active
-		);
-	}
-	&.negative {
-		@include pagination-variant(
-		$negative-variant-color,
-		$negative-variant-background,
-		$negative-variant-border,
-		$negative-variant-hover,
-		$negative-variant-active
-		);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include pagination-variant(
+			nth($value, 3),
+			nth($value, 1),
+			nth($value, 2),
+			nth($value, 4),
+			nth($value, 5)
+			);
+		}
 	}
 	&.outline {
 		@include outline-pagination-variant(
@@ -144,50 +110,16 @@
 		$pagination-variant-hover,
 		$pagination-variant-active
 		);
-		&.invert {
-			@include outline-pagination-variant(
-			$invert-variant-background,
-			$invert-variant-color,
-			$invert-variant-border,
-			$invert-variant-hover,
-			$invert-variant-active
-			);
-		}
-		&.primary {
-			@include outline-pagination-variant(
-			$primary-variant-color,
-			$primary-variant-background,
-			$primary-variant-border,
-			$primary-variant-hover,
-			$primary-variant-active
-			);
-		}
-		&.secondary {
-			@include outline-pagination-variant(
-			$secondary-variant-color,
-			$secondary-variant-background,
-			$secondary-variant-border,
-			$secondary-variant-hover,
-			$secondary-variant-active
-			);
-		}
-		&.positive {
-			@include outline-pagination-variant(
-			$positive-variant-color,
-			$positive-variant-background,
-			$positive-variant-border,
-			$positive-variant-hover,
-			$positive-variant-active
-			);
-		}
-		&.negative {
-			@include outline-pagination-variant(
-			$negative-variant-color,
-			$negative-variant-background,
-			$negative-variant-border,
-			$negative-variant-hover,
-			$negative-variant-active
-			);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include outline-pagination-variant(
+				nth($value, 3),
+				nth($value, 1),
+				nth($value, 2),
+				nth($value, 4),
+				nth($value, 5)
+				);
+			}
 		}
 	}
 	&.xs {

@@ -33,28 +33,14 @@
 			margin-left: $stat-spacing/1.5;
 		}
 	}
-	&.primary {
-		@include stat-variant($primary-variant-background);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include stat-variant(nth($value, 1));
+		}
 	}
-	&.secondary {
-		@include stat-variant($secondary-variant-background);
-	}
-	&.positive {
-		@include stat-variant($positive-variant-background);
-	}
-	&.negative {
-		@include stat-variant($negative-variant-background);
-	}
-	&.xs {
-		@include stat-font-size($stat-value-font-size-xs);
-	}
-	&.sm {
-		@include stat-font-size($stat-value-font-size-sm);
-	}
-	&.lg {
-		@include stat-font-size($stat-value-font-size-lg);
-	}
-	&.xl {
-		@include stat-font-size($stat-value-font-size-xl);
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include stat-font-size($value);
+		}
 	}
 }

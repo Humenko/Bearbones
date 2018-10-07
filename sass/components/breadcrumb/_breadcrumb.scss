@@ -24,17 +24,10 @@
 			}
 		}
 	}
-	&.xs {
-		@include breadcrumb-font-size($font-size-xs);
-	}
-	&.sm {
-		@include breadcrumb-font-size($font-size-sm);
-	}
-	&.lg {
-		@include breadcrumb-font-size($font-size-lg);
-	}
-	&.xl {
-		@include breadcrumb-font-size($font-size-xl);
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include breadcrumb-font-size($value);
+		}
 	}
 	&.scroll {
 		overflow: hidden;

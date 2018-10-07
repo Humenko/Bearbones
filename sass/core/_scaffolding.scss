@@ -1,5 +1,6 @@
 html {
-	font: $font-style $font-variant $font-weight #{$font-size}/#{$font-line-height} $font-family;
+	font: $font-style $font-variant $font-weight #{$font-size}/#{$font-line-height}
+	$font-family;
 	font-size: $font-size;
 
 	-webkit-font-smoothing: antialiased;
@@ -15,7 +16,7 @@ body {
 	font-size: $body-font-size;
 	p:not(:first-child) {
 		padding-top: $body-spacing-y;
-	}	
+	}
 }
 
 body,

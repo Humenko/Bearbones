@@ -4,20 +4,10 @@
 	$accordion-border-style,
 	$accordion-variant-border
 	);
-	&.invert {
-		@include accordion-variant($invert-variant-background);
-	}
-	&.primary {
-		@include accordion-variant($primary-variant-background);
-	}
-	&.secondary {
-		@include accordion-variant($secondary-variant-background);
-	}
-	&.positive {
-		@include accordion-variant($positive-variant-background);
-	}
-	&.negative {
-		@include accordion-variant($negative-variant-background);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include accordion-variant(nth($value, 1));
+		}
 	}
 	.header {
 		display: flex;
