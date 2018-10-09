@@ -14,12 +14,13 @@ $positive-pair: #FFFFFF !default;
 $negative-color: #CC493D !default;
 $negative-pair: #FFFFFF !default;
 //
-$base-color: #424242 !default;
+$base-color: #030303 !default;
 $base-pair: #FFFFFF !default;
 //
 $white: #FFFFFF !default;
 $light-grey: #A0A0A0 !default;
 $lighter-grey: #FAFAFA !default;
+$black: #000000 !default;
 
 // Base
 $base-variant-background: $base-color !default;
@@ -112,7 +113,7 @@ $body-spacing-y: .5rem !default;
 
 ////****************** LAYOUT ////
 
-$layout-variant-background: $lighter-grey !default;
+$layout-variant-background: darken($base-pair, 2%) !default;
 $layout-variant-color: $base-color !default;
 //
 $container-max-width: 75rem !default;
@@ -161,8 +162,8 @@ $font-weight: normal !default;
 $font-weight-bold: 600 !default;
 
 // Variant
-$font-size-xs: .7rem !default;
-$font-size-sm: .85rem !default;
+$font-size-xs: .5rem !default;
+$font-size-sm: .75rem !default;
 $font-size-md: 1rem !default;
 $font-size-lg: 1.25rem !default;
 $font-size-xl: 1.5rem !default;
@@ -526,7 +527,7 @@ $tab-item-spacing-y: $padding / 2 !default;
 
 // Table //
 
-$table-variant-background: $lighter-grey !default;
+$table-variant-background: darken($base-variant-color, 2%) !default;
 $table-variant-color: $base-variant-background !default;
 $table-variant-border: darken($table-variant-background, 12%) !default;
 $table-variant-hover: darken($table-variant-background, 12%) !default;
