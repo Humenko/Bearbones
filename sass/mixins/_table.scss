@@ -8,7 +8,7 @@
 
 @mixin table-striped-variant($color) {
 	tr:nth-child(even) {
-		background: $white;
+		background: darken($table-variant-background, 10%);
 		color: $color;
 	}
 }

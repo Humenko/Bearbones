@@ -382,7 +382,7 @@ $dropdown-transition: color 0s, opacity $transition-effect $transition-duration,
 $footer-variant-background: $lighter-grey !default;
 $footer-variant-color: $base-color !default;
 //
-$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, .1);
+$footer-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .12);
 //
 $footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
 
@@ -437,8 +437,7 @@ $media-spacing-y: 1rem !default;
 //******************Navbar //
 
 $navbar-background: $base-pair !default;
-$navbar-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .1),
-  0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$navbar-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 $navbar-item-spacing-x: .5rem !default;
 $navbar-item-spacing-y: .75rem !default;
 $navbar-font-weight: 600 !default;
@@ -519,7 +518,7 @@ $stat-value-font-size-xl: $stat-value-font-size + 1.5rem !default;
 
 //******************Tab //
 
-$tab-background: $lighter-grey !default;
+$tab-background: darken($base-pair, 2%) !default;
 $tab-border-width: $border-width !default;
 $tab-transition: all $transition-effect $transition-duration !default;
 $tab-item-spacing-x: $padding !default;

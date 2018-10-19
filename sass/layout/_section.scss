@@ -1,6 +1,11 @@
 .section {
 	margin: 0;
 	padding: $layout-spacing-y $layout-spacing-x;
+
+	@include respond-to('lg') {
+		padding-top: $layout-spacing-lg;
+		padding-bottom: $layout-spacing-lg;
+	}
 	&.lg {
 		padding-top: $layout-spacing-lg;
 		padding-bottom: $layout-spacing-lg;

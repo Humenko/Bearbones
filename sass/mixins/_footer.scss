@@ -11,4 +11,7 @@
 			color: $color;
 		}
 	}
+	a:not(.bb-btn):not(.link) {
+		color: $color;
+	}
 }
