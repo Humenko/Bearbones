@@ -10,4 +10,10 @@
 			@include layout-variant(nth($value, 3), nth($value, 1));
 		}
 	}
+	&.full-y {
+		padding: 0 $layout-spacing-x;
+	}
+	&.full-x {
+		padding: $layout-spacing-y 0;
+	}
 }

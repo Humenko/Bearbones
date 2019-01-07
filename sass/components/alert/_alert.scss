@@ -1,6 +1,6 @@
 .bb-alert {
 	position: relative;
-	padding: $alert-spacing;
+	padding: $alert-spacing-y $alert-spacing-x;
 
 	@include border(
 	$alert-border-width,
