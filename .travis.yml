@@ -8,11 +8,11 @@ cache:
     - node_modules
 
 script:
-  - npm run build:prod
-  - npm run test
+  - yarn build:prod
+  - yarn test
 
 deploy:
-    provider: npm
+    provider: yarn
     api_key: $NPM_TOKEN
     email: $NPM_EMAIL
     skip_cleanup: true    

@@ -390,40 +390,41 @@ $footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
 
 //******************Field //
 
-$field-background: $white !default;
-$field-color: $base-color !default;
-$field-color-focus: $field-color !default;
-$field-placeholder-color: $light-grey !default;
-$field-placeholder-color-focus: $light-grey !default;
-$field-placeholder-color-active: $base-color !default;
-$field-border-color: $lighter-grey !default;
-$field-border-color-focus: $field-color !default;
+//
+$field-variant-background: $white !default;
+$field-variant-color: $base-variant-background !default;
+$field-variant-border: $lighter-grey !default;
+$field-variant-active: $base-variant-active !default;
+$field-variant-focus: $field-variant-active !default;
+//
 $field-border-radius: $border-radius !default;
+$field-border-style: $border-style !default;
 $field-border-width: $border-width !default;
-$field-height: 2.5rem !default;
-$field-label-font-weight: 600 !default;
-$field-label-font-size: $font-size !default;
-$field-line-height: 1.3 !default;
-$field-spacing-x: 1rem !default;
+//
+$field-font-family: $heading-font-family !default;
+$field-font-size: $font-size !default;
+$field-font-weight: 400 !default;
+//
+$field-spacing-x: .5rem !default;
 $field-spacing-y: .5rem !default;
+//
+$field-select-spacing-x: .75rem !default;
+$field-select-width: .5rem !default;
+$field-select-height: .5rem !default;
+$field-select-color: $field-variant-active !default;
+$field-select-color-active: $field-select-color !default;
+//
+$field-placeholder-color: $lighter-grey !default;
+$field-placeholder-color-focus: $field-variant-focus !default;
+$field-placeholder-color-active: $field-variant-active !default;
+//
+$field-label-font-weight: 500 !default;
+$field-label-font-size: $font-size !default;
+//
 $field-text-font-size: $font-size-xs !default;
-$field-height: (
-  ($font-size * $field-line-height) + ($field-spacing-y * 2)
-) !default;
 $field-transition: border-color $transition-effect $transition-duration,
   background-color $transition-effect $transition-duration,
   color $transition-effect $transition-duration !default;
-$field-select-arrow-size: .5rem !default;
-$field-select-arrow-color: $light-grey !default;
-$field-select-arrow-color-hover: $light-grey !default;
-
-// Addon
-$field-addon-color: $base-color !default;
-$field-addon-background: $lighter-grey !default;
-$field-addon-border-color: $field-border-color !default;
-$field-addon-color-focus: $lighter-grey !default;
-$field-addon-background-focus: $field-color-focus !default;
-$field-addon-border-color-focus: $field-border-color-focus !default;
 
 // Media object //
 
