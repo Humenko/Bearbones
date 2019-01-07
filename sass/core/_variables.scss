@@ -21,6 +21,7 @@ $white: #FFFFFF !default;
 $light-grey: #A0A0A0 !default;
 $lighter-grey: #FAFAFA !default;
 $black: #000000 !default;
+$body-background: $white !default;
 
 // Base
 $base-variant-background: $base-color !default;
@@ -543,6 +544,11 @@ $table-spacing-y: .75rem !default;
 $table-transition: all $transition-effect $transition-duration !default;
 
 //// UTILITIES ///
+
+// List //
+
+$list-padding-x: 1rem !default;
+$list-padding-y: .5rem !default;
 
 // Spacing //
 
