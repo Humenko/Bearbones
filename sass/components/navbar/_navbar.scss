@@ -105,9 +105,13 @@
 			&::after {
 				top: 50%;
 				right: $navbar-item-spacing-x;
+				margin-left: .5rem;
 
-				@include chevron-down($navbar-dropdown-chevron);
-				margin-left: .5rem;				
+				@include chevron-down(
+				$navbar-dropdown-chevron,
+				$navbar-toggle-width,
+				$navbar-toggle-height
+				);
 			}
 		}
 	}
@@ -133,16 +137,26 @@
 			padding-right: $navbar-tab-spacing;
 			padding-left: $navbar-tab-spacing;
 
-			@include border-bottom($navbar-tab-border-width, $border-style, transparent);
+			@include border-bottom(
+			$navbar-tab-border-width,
+			$border-style,
+			transparent
+			);
 			&:hover {
 				@include border-top-color(transparent);
 				@include border-bottom-color($navbar-tab-border-hover-color);
 			}
 			&.active {
-				padding-bottom: calc(#{$navbar-item-spacing-y} - #{$navbar-tab-border-width});
+				padding-bottom: calc(
+				#{$navbar-item-spacing-y} - #{$navbar-tab-border-width}
+				);
 				color: $primary-color;
 
-				@include border-bottom($navbar-tab-border-width, $border-style, $navbar-tab-border-active-color);
+				@include border-bottom(
+				$navbar-tab-border-width,
+				$border-style,
+				$navbar-tab-border-active-color
+				);
 			}
 		}
 		img {
