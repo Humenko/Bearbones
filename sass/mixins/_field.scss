@@ -36,16 +36,16 @@
 	}
 }
 
-@mixin field-validation-variant($color) {
+@mixin field-validation-variant($color, $border, $placeholder) {
 	input,
 	select,
 	textarea,
 	.text {
 		color: $color;
 
-		@include border-color($color);
+		@include border-color($border);
 		&::placeholder {
-			color: $color;
+			color: $placeholder;
 		}
 	}
 }

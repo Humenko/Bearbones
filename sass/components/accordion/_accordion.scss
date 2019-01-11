@@ -41,7 +41,11 @@
 		.chevron {
 			margin-right: .25rem;
 
-			@include chevron-down($accordion-variant-toggle);
+			@include chevron-down(
+			$accordion-variant-toggle,
+			$accordion-toggle-width,
+			$accordion-toggle-height
+			);
 		}
 	}
 	.content {
@@ -71,7 +75,11 @@
 	}
 	.header.active {
 		.chevron {
-			@include chevron-up($accordion-variant-active);
+			@include chevron-up(
+			$accordion-variant-toggle-active,
+			$accordion-toggle-width,
+			$accordion-toggle-height
+			);
 		}
 		.toggle {
 			@include minus($accordion-variant-active);
