@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "stable"
+  - 'stable'
 
 cache:
   directories:
@@ -12,12 +12,12 @@ script:
   - yarn test
 
 deploy:
-    provider: yarn
-    api_key: $NPM_TOKEN
-    email: $NPM_EMAIL
-    skip_cleanup: true    
-    on:
-      branch: master 
+  provider: yarn
+  api_key: $NPM_TOKEN
+  email: $NPM_EMAIL
+  skip_cleanup: true
+  on:
+    branch: master
 
 notifications:
   email:
