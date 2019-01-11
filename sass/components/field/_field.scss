@@ -1,11 +1,9 @@
 .bb-field {
+	margin-bottom: $field-spacing-y;
 	width: 100%;
 	height: auto;
 
 	@include field-font-size($field-font-size);
-	&:not(:last-child) {
-		margin-bottom: $field-spacing-y * 2;
-	}
 	@each $variant, $value in $variants {
 		&.#{$variant} {
 			@include field-variant(
@@ -17,12 +15,20 @@
 			);
 		}
 	}
-	// &.success {
-	// 	@include field-validation-variant($positive-variant-background);
-	// }
-	// &.error {
-	// 	@include field-validation-variant($negative-variant-background);
-	// }
+	&.success {
+		@include field-validation-variant(
+		$field-variant-success-color,
+		$field-variant-success-border,
+		$field-variant-success-placeholder
+		);
+	}
+	&.error {
+		@include field-validation-variant(
+		$field-variant-error-color,
+		$field-variant-error-border,
+		$field-variant-error-placeholder
+		);
+	}
 	@each $font-size, $value in $font-sizes {
 		&.#{$font-size} {
 			@include field-font-size($value);
@@ -36,7 +42,7 @@
 	select,
 	textarea {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		display: block;
 		flex: 1 1 auto;
 		margin-bottom: 0;
@@ -53,7 +59,7 @@
 		@include border-radius($field-border-radius);
 		@include transition($field-transition);
 		@include hover-focus-active {
-			z-index: 3;
+			z-index: 2;
 			outline: none;
 			box-shadow: none;
 
@@ -112,5 +118,13 @@
 		margin-top: $field-text-spacing-y;
 		padding: 0;
 		font-size: $field-text-font-size;
+	}
+}
+
+.form-inline {
+	display: flex;
+	justify-content: space-between;
+	div:not(:last-child) {
+		padding-right: 1rem;
 	}
 }
