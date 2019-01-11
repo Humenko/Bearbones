@@ -12,7 +12,7 @@ script:
   - yarn test
 
 deploy:
-  provider: npm
+  provider: NPM
   api_key: $NPM_TOKEN
   email: $NPM_EMAIL
   skip_cleanup: true

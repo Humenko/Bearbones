@@ -393,11 +393,12 @@ $field-variant-color: $base-variant-background !default;
 $field-variant-border: $lighter-grey !default;
 $field-variant-active: $base-variant-active !default;
 $field-variant-focus: $field-variant-active !default;
-$field-variant-select: $light-grey !default;
-$field-variant-select-active: $light-grey !default;
+$field-variant-toggle: $light-grey !default;
+$field-variant-toggle-active: $light-grey !default;
 $field-variant-placeholder: $lighter-grey !default;
 $field-variant-placeholder-focus: $field-variant-focus !default;
 $field-variant-placeholder-active: $field-variant-active !default;
+$field-variant-label: $field-variant-color !default;
 $field-variant-success-color: $positive-color !default;
 $field-variant-success-placeholder: $positive-color !default;
 $field-variant-success-border: $positive-color !default;
@@ -417,12 +418,13 @@ $field-line-height: $font-line-height !default;
 $field-spacing-x: .5rem !default;
 $field-spacing-y: .5rem !default; // sort this, field-spacing-addon-y
 //
-$field-select-spacing-x: .75rem !default;
-$field-select-width: .5rem !default;
-$field-select-height: .5rem !default;
+$field-toggle-spacing-x: .75rem !default;
+$field-toggle-width: .5rem !default;
+$field-toggle-height: .5rem !default;
 //
 $field-label-spacing-y: .5rem !default;
 $field-label-font-weight: 500 !default;
+$field-label-font-family: $heading-font-family !default;
 $field-label-font-size: $font-size !default;
 //
 $field-text-font-size: $font-size-sm !default;

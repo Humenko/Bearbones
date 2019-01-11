@@ -49,6 +49,7 @@
 		width: 100%;
 		background: $field-variant-background;
 		color: $field-variant-color;
+		font-family: $field-font-family;
 
 		appearance: none;
 		@include border(
@@ -87,7 +88,7 @@
 
 		@include hover {
 			&:after {
-				@include border-color($field-variant-select-active);
+				@include border-color($field-variant-toggle-active);
 			}
 		}
 		select {
@@ -96,13 +97,13 @@
 		&:after {
 			position: absolute;
 			top: 50%;
-			right: $field-select-spacing-x;
-			margin-top: calc(-#{$field-select-height} - -#{$field-border-width});
+			right: $field-toggle-spacing-x;
+			margin-top: calc(-#{$field-toggle-height} - -#{$field-border-width});
 
 			@include chevron-down(
-			$field-variant-select,
-			$field-select-width,
-			$field-select-height
+			$field-variant-toggle,
+			$field-toggle-width,
+			s $field-toggle-height
 			);
 		}
 	}
@@ -110,8 +111,10 @@
 		display: block;
 		margin-bottom: $field-label-spacing-y;
 		width: 100%;
+		color: $field-variant-label;
 		font-weight: $field-label-font-weight;
 		font-size: $field-label-font-size;
+		font-family: $field-label-font-family;
 	}
 	.text {
 		display: block;
