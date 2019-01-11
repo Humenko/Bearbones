@@ -1,45 +1,38 @@
 .bb-field {
-	&:not(:last-child) {
-		margin-bottom: $field-spacing-y*2;
-	}
+	margin-bottom: $field-spacing-y;
+	width: 100%;
 	height: auto;
-	@include field-font-size($font-size-md);
-	&.invert {
-		@include field-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
-	}
-	&.primary {
-		@include field-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
-	}
-	&.secondary {
-		@include field-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
-	}
-	&.positive {
-		@include field-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
-	}
-	&.negative {
-		@include field-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+
+	@include field-font-size($field-font-size);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include field-variant(
+			nth($value, 3),
+			nth($value, 1),
+			nth($value, 2),
+			nth($value, 4),
+			nth($value, 5)
+			);
+		}
 	}
 	&.success {
-		@include field-validation-variant($positive-variant-background);
+		@include field-validation-variant(
+		$field-variant-success-color,
+		$field-variant-success-border,
+		$field-variant-success-placeholder
+		);
 	}
 	&.error {
-		@include field-validation-variant($negative-variant-background);
+		@include field-validation-variant(
+		$field-variant-error-color,
+		$field-variant-error-border,
+		$field-variant-error-placeholder
+		);
 	}
-	&.xs {
-		height: auto;
-		@include field-font-size($font-size-xs);
-	}
-	&.sm {
-		height: auto;
-		@include field-font-size($font-size-sm);
-	}
-	&.lg {
-		height: auto;
-		@include field-font-size($font-size-lg);
-	}
-	&.xl {
-		height: auto;
-		@include field-font-size($font-size-xl);
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include field-font-size($value);
+		}
 	}
 	.input-group {
 		display: inline-flex;
@@ -49,35 +42,41 @@
 	select,
 	textarea {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		display: block;
 		flex: 1 1 auto;
 		margin-bottom: 0;
 		width: 100%;
-		background: $field-background;
-		color: $field-placeholder-color-active;
+		background: $field-variant-background;
+		color: $field-variant-color;
+
 		appearance: none;
-		@include border($field-border-width, $border-style, $field-border-color);
+		@include border(
+		$field-border-width,
+		$field-border-style,
+		$field-variant-border
+		);
 		@include border-radius($field-border-radius);
 		@include transition($field-transition);
-		@include focus-active {
-			z-index: 3;
+		@include hover-focus-active {
+			z-index: 2;
 			outline: none;
 			box-shadow: none;
-			@include border-color($field-border-color-focus);
+
+			@include border-color($field-variant-focus);
 			&::placeholder {
-				color: $field-placeholder-color-focus;
+				color: $field-variant-placeholder-focus;
 			}
 		}
 		&::placeholder {
-			color: $field-placeholder-color;
+			color: $field-variant-placeholder;
 		}
 	}
 	.input {
 		@include focus-active {
-			color: $field-placeholder-color-focus;
+			color: $field-variant-placeholder-focus;
 			&::placeholder {
-				color: $field-placeholder-color-focus;
+				color: $field-variant-placeholder-focus;
 			}
 		}
 	}
@@ -85,9 +84,10 @@
 		position: relative;
 		display: inline-block;
 		width: 100%;
+
 		@include hover {
 			&:after {
-				@include border-color($field-select-arrow-color-hover);
+				@include border-color($field-variant-select-active);
 			}
 		}
 		select {
@@ -96,24 +96,35 @@
 		&:after {
 			position: absolute;
 			top: 50%;
-			right: $field-spacing-x;
-			margin-top: calc(-#{$icon-size} - -#{$field-border-width});
-			@include chevron-down($light-grey);
+			right: $field-select-spacing-x;
+			margin-top: calc(-#{$field-select-height} - -#{$field-border-width});
+
+			@include chevron-down(
+			$field-variant-select,
+			$field-select-width,
+			$field-select-height
+			);
 		}
 	}
 	label {
 		display: block;
+		margin-bottom: $field-label-spacing-y;
 		width: 100%;
 		font-weight: $field-label-font-weight;
 		font-size: $field-label-font-size;
-		&:not(:last-child) {
-			margin-bottom: $field-spacing-y;
-		}
 	}
 	.text {
 		display: block;
-		margin-top: $field-spacing-y;
-		font-size: $field-text-font-size;
+		margin-top: $field-text-spacing-y;
 		padding: 0;
+		font-size: $field-text-font-size;
+	}
+}
+
+.form-inline {
+	display: flex;
+	justify-content: space-between;
+	div:not(:last-child) {
+		padding-right: 1rem;
 	}
 }

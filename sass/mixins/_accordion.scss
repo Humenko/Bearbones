@@ -5,12 +5,20 @@
 			@include plus($color);
 		}
 		.chevron {
-			@include chevron-down($color);
+			@include chevron-down(
+			$color,
+			$accordion-toggle-width,
+			$accordion-toggle-height
+			);
 		}
 	}
 	.active {
 		.chevron {
-			@include chevron-up($color);
+			@include chevron-up(
+			$color,
+			$accordion-toggle-width,
+			$accordion-toggle-height
+			);
 		}
 		.toggle {
 			@include minus($color);

@@ -2,8 +2,8 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-    width: $dimensions;
-    height: $dimensions;
+	width: $dimensions;
+	height: $dimensions;
 	cursor: pointer;
 	span {
 		position: absolute;
@@ -34,20 +34,21 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-    width: $icon-size;
-    height: $icon-size;
+	width: $icon-size;
+	height: $icon-size;
 	cursor: pointer;
 	&:before,
 	&:after {
 		width: 100%;
 		height: 0;
-		@include border($icon-border-width, $icon-border-style, $color);
 		content: '';
-    }
-    &:after {
-        position: absolute;
-        transform: rotate(90deg);
-    }
+
+		@include border($icon-border-width, $icon-border-style, $color);
+	}
+	&:after {
+		position: absolute;
+		transform: rotate(90deg);
+	}
 }
 
 @mixin minus($color) {
@@ -59,63 +60,69 @@
 	cursor: pointer;
 	&:before,
 	&:after {
-        transform: rotate(0);        
 		width: 100%;
 		height: 0;
-		@include border($icon-border-width, $icon-border-style, $color);
 		content: '';
+		transform: rotate(0);
+
+		@include border($icon-border-width, $icon-border-style, $color);
 	}
 }
 
-@mixin chevron-up($color) {
-    z-index: 5;
-    display: block;
-    width: $icon-size;
-    height: $icon-size;
-    content: ' ';
-    transform: rotate(135deg);
-    pointer-events: none;
-    @include border($border-width, $border-style, $color);
-    border-top: 0;
-    border-right: 0;
-    margin-top: $icon-size;
+@mixin chevron-up($color, $width, $height) {
+	z-index: 5;
+	display: block;
+	margin-top: $icon-size;
+	width: $width;
+	height: $height;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	transform: rotate(135deg);
+	pointer-events: none;
+
+	@include border-top($border-width, $border-style, $color);
 }
 
-@mixin chevron-down($color) {
-    z-index: 5;
-    display: block;
-    width: $icon-size;
-    height: $icon-size;
-    content: ' ';
-    transform: rotate(-45deg);
-    pointer-events: none;
-    @include border($border-width, $border-style, $color);
-    border-top: 0;
-    border-right: 0;
+@mixin chevron-down($color, $width, $height) {
+	z-index: 5;
+	display: block;
+	width: $width;
+	height: $height;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	transform: rotate(-45deg);
+	pointer-events: none;
+
+	@include border-bottom($border-width, $border-style, $color);
+	@include border-left($border-width, $border-style, $color);
 }
 
-@mixin chevron-left($color) {
-    z-index: 5;
-    display: block;
-    width: $icon-size;
-    height: $icon-size;
-    content: ' ';
-    transform: rotate(45deg);
-    pointer-events: none;
-    @include border($border-width, $border-style, $color);
-    border-top: 0;
-    border-right: 0;
+@mixin chevron-left($color, $width, $height) {
+	z-index: 5;
+	display: block;
+	width: $width;
+	height: $height;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	transform: rotate(45deg);
+	pointer-events: none;
+
+	@include border-left($border-width, $border-style, $color);
 }
 
-@mixin chevron-right($color) {
-    z-index: 5;
-    display: block;
-    width: $icon-size;
-    height: $icon-size;
-    content: ' ';
-    transform: rotate(225deg);
-    pointer-events: none;
-    @include border($border-width, $border-style, $color);
-    border-top: 0;
-    border-right: 0;
+@mixin chevron-right($color, $width, $height) {
+	z-index: 5;
+	display: block;
+	width: $width;
+	height: $height;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	transform: rotate(225deg);
+	pointer-events: none;
+
+	@include border-right($border-width, $border-style, $color);
 }

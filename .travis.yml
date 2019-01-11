@@ -1,23 +1,23 @@
 language: node_js
 
 node_js:
-  - "stable"
+  - 'stable'
 
 cache:
   directories:
     - node_modules
 
 script:
-  - npm run build:prod
-  - npm run test
+  - yarn build:prod
+  - yarn test
 
 deploy:
-    provider: npm
-    api_key: $NPM_TOKEN
-    email: $NPM_EMAIL
-    skip_cleanup: true    
-    on:
-      branch: master 
+  provider: yarn
+  api_key: $NPM_TOKEN
+  email: $NPM_EMAIL
+  skip_cleanup: true
+  on:
+    branch: master
 
 notifications:
   email:
