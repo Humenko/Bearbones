@@ -5,13 +5,13 @@
 $primary-color: #0A344D !default;
 $primary-pair: #FFFFFF !default;
 //
-$secondary-color: #D17878 !default;
+$secondary-color: #FA7268 !default;
 $secondary-pair: #FFFFFF !default;
 //
-$positive-color: #5DA265 !default;
+$positive-color: #50BF63 !default;
 $positive-pair: #FFFFFF !default;
 //
-$negative-color: #CC493D !default;
+$negative-color: #DC4C41 !default;
 $negative-pair: #FFFFFF !default;
 //
 $base-color: #030303 !default;
@@ -124,7 +124,10 @@ $layout-spacing-lg: $layout-spacing-y * 4 !default;
 
 //// GRID ////
 
-$grid-spacing: .5rem !default;
+$grid-spacing-x: .5rem !default;
+$grid-spacing-y: .5rem !default;
+$column-spacing-x: .5rem !default;
+$column-spacing-y: 0 !default;
 $grid-max-column: 16 !default;
 
 // Breakpoints
@@ -155,7 +158,7 @@ $link-hover-decoration: underline !default;
 $body-font-size: 1rem !default;
 $font-color: $base-color !default;
 $font-family: 'Inter-UI', 'Helvetica', 'Arial', sans-serif !default;
-$font-line-height: 1.3 !default;
+$font-line-height: 1.6 !default;
 $font-size: 1rem !default;
 $font-style: normal !default;
 $font-variant: normal !default;
@@ -181,11 +184,12 @@ $font-sizes: (
 $heading-font-color: $base-color !default;
 $heading-font-family: 'Inter-UI', 'Helvetica', 'Arial', sans-serif !default;
 $heading-font-weight: $font-weight-bold !default;
-$heading-line-height: 1.3 !default;
+$heading-font-weight: 700 !default;
+$heading-line-height: $font-line-height !default;
 $heading-min-width: 20rem !default;
 $heading-max-width: $container-max-width !default;
 $heading-min-font: 1rem !default;
-$heading-min-modifier: 1.2 !default;
+$heading-min-modifier: 1.25 !default;
 $heading-max-modifier: 1.5 !default;
 
 //******************Title
@@ -200,12 +204,12 @@ $transition-duration: .25s !default;
 
 //// COMPONENTS ////
 
-// Accordion //
+//******************Accordion //
 
 $accordion-variant-background: transparent !default;
 $accordion-variant-border: $lighter-grey !default;
 $accordion-variant-toggle: $light-grey !default;
-$accordion-variant-active: $light-grey !default;
+$accordion-variant-toggle-active: $light-grey !default;
 //
 $accordion-border-style: $border-style !default;
 $accordion-border-width: $border-width !default;
@@ -222,7 +226,9 @@ $accordion-heading-spacing-x: 0 !default;
 $accordion-heading-spacing-y: 1rem !default;
 $accordion-content-spacing-x: 1rem !default;
 $accordion-content-spacing-y: 1rem !default;
-$accordion-toggle-spacing: 0 .5rem 0 0 !default;
+$accordion-toggle-spacing: 0 .5rem 0 0 !default; // sort this
+$accordion-toggle-width: .5rem !default;
+$accordion-toggle-height: .5rem !default;
 //
 $accordion-toggle-transition: all $transition-effect $transition-duration !default;
 
@@ -295,7 +301,7 @@ $button-border-radius: $border-radius !default;
 $button-border-style: $border-style !default;
 $button-border-width: $border-width !default;
 //
-$button-font-family: $heading-font-family !default;
+$button-font-family: $font-family !default;
 $button-font-size: $font-size !default;
 $button-font-weight: 400 !default;
 $button-line-height: 1.3 !default;
@@ -379,15 +385,6 @@ $dropdown-offset: -.125rem !default;
 $dropdown-transition: color 0s, opacity $transition-effect $transition-duration,
   transform $transition-effect $transition-duration !default;
 
-// Footer //
-
-$footer-variant-background: $lighter-grey !default;
-$footer-variant-color: $base-color !default;
-//
-$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, .1);
-//
-$footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
-
 //******************Field //
 
 //
@@ -396,35 +393,61 @@ $field-variant-color: $base-variant-background !default;
 $field-variant-border: $lighter-grey !default;
 $field-variant-active: $base-variant-active !default;
 $field-variant-focus: $field-variant-active !default;
+$field-variant-select: $light-grey !default;
+$field-variant-select-active: $light-grey !default;
+$field-variant-placeholder: $lighter-grey !default;
+$field-variant-placeholder-focus: $field-variant-focus !default;
+$field-variant-placeholder-active: $field-variant-active !default;
+$field-variant-success-color: $positive-color !default;
+$field-variant-success-placeholder: $positive-color !default;
+$field-variant-success-border: $positive-color !default;
+$field-variant-error-color: $negative-color !default;
+$field-variant-error-placeholder: $negative-color !default;
+$field-variant-error-border: $negative-color !default;
 //
 $field-border-radius: $border-radius !default;
 $field-border-style: $border-style !default;
 $field-border-width: $border-width !default;
 //
-$field-font-family: $heading-font-family !default;
+$field-font-family: $font-family !default;
 $field-font-size: $font-size !default;
 $field-font-weight: 400 !default;
+$field-line-height: $font-line-height !default;
 //
 $field-spacing-x: .5rem !default;
-$field-spacing-y: .5rem !default;
+$field-spacing-y: .5rem !default; // sort this, field-spacing-addon-y
 //
 $field-select-spacing-x: .75rem !default;
 $field-select-width: .5rem !default;
 $field-select-height: .5rem !default;
-$field-select-color: $field-variant-active !default;
-$field-select-color-active: $field-select-color !default;
 //
-$field-placeholder-color: $lighter-grey !default;
-$field-placeholder-color-focus: $field-variant-focus !default;
-$field-placeholder-color-active: $field-variant-active !default;
-//
+$field-label-spacing-y: .5rem !default;
 $field-label-font-weight: 500 !default;
 $field-label-font-size: $font-size !default;
 //
-$field-text-font-size: $font-size-xs !default;
+$field-text-font-size: $font-size-sm !default;
+$field-text-spacing-y: .25rem !default;
+//
 $field-transition: border-color $transition-effect $transition-duration,
   background-color $transition-effect $transition-duration,
   color $transition-effect $transition-duration !default;
+
+// Addon
+$field-addon-color: $base-color !default;
+$field-addon-background: $lighter-grey !default;
+$field-addon-border-color: $field-variant-border !default;
+$field-addon-color-focus: $lighter-grey !default;
+$field-addon-background-focus: $field-variant-focus !default;
+$field-addon-border-color-focus: $field-variant-color !default;
+
+// Footer //
+
+$footer-variant-background: $lighter-grey !default;
+$footer-variant-color: $base-color !default;
+//
+$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, .1);
+//
+$footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
 
 // Media object //
 
@@ -473,6 +496,8 @@ $navbar-tab-transition: border-color $transition-effect $transition-duration,
 $navbar-dropdown-transition: color 0s,
   opacity $transition-effect $transition-duration,
   transform $transition-effect $transition-duration !default;
+$navbar-toggle-width: .5rem !default;
+$navbar-toggle-height: .5rem !default;
 
 // Pagination //
 
@@ -505,7 +530,7 @@ $stat-value-font-family: $heading-font-family !default;
 $stat-value-font-weight: 400 !default;
 $stat-value-font-size: 3rem !default;
 $stat-value-text-transform: uppercase !default;
-$stat-label-font-family: $heading-font-family !default;
+$stat-label-font-family: $font-family !default;
 $stat-label-font-weight: 600 !default;
 $stat-label-font-size: $stat-value-font-size / 4 !default;
 $stat-label-text-transform: uppercase !default;
@@ -515,14 +540,16 @@ $stat-line-height: 1em !default;
 //
 $stat-spacing: 1rem !default;
 //
-$stat-value-font-size-xs: $stat-value-font-size - 1.5rem !default;
-$stat-value-font-size-sm: $stat-value-font-size - .75rem !default;
-$stat-value-font-size-lg: $stat-value-font-size + .75rem !default;
-$stat-value-font-size-xl: $stat-value-font-size + 1.5rem !default;
+$stat-value-font-size-xs: $stat-value-font-size - 1rem !default;
+$stat-value-font-size-sm: $stat-value-font-size - .5rem !default;
+$stat-value-font-size-lg: $stat-value-font-size + .5rem !default;
+$stat-value-font-size-xl: $stat-value-font-size + 1rem !default;
+
+//FIX FONT SIZING
 
 //******************Tab //
 
-$tab-background: $lighter-grey !default;
+$tab-background: darken($base-pair, 2%) !default;
 $tab-border-width: $border-width !default;
 $tab-transition: all $transition-effect $transition-duration !default;
 $tab-item-spacing-x: $padding !default;

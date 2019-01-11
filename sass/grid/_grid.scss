@@ -4,9 +4,9 @@
 	flex-basis: 0;
 	flex-grow: 1;
 	flex-shrink: 1;
-	margin-right: -$grid-spacing;
-	margin-bottom: $grid-spacing * 2;
-	margin-left: -$grid-spacing;
+	margin-right: -$grid-spacing-x;
+	margin-bottom: $grid-spacing-y * 2;
+	margin-left: -$grid-spacing-x;
 
 	@include respond-to('lg') {
 		display: flex;
@@ -14,7 +14,7 @@
 		@include grid;
 	}
 	&:last-child {
-		margin-bottom: -$grid-spacing;
+		margin-bottom: -$grid-spacing-y;
 	}
 	&.center {
 		justify-content: center;
@@ -36,9 +36,9 @@
 		flex-basis: 0;
 		flex-grow: 1;
 		flex-shrink: 1;
-		padding-right: $grid-spacing-x;
-		padding-bottom: $grid-spacing-y;
-		padding-left: $grid-spacing-x;
+		padding-right: $column-spacing-x;
+		padding-bottom: $column-spacing-y;
+		padding-left: $column-spacing-x;
 		&:last-child {
 			padding-bottom: 0;
 		}

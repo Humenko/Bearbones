@@ -65,18 +65,18 @@
 
 			@include border-color($field-variant-focus);
 			&::placeholder {
-				color: $field-placeholder-color-focus;
+				color: $field-variant-placeholder-focus;
 			}
 		}
 		&::placeholder {
-			color: $field-placeholder-color;
+			color: $field-variant-placeholder;
 		}
 	}
 	.input {
 		@include focus-active {
-			color: $field-placeholder-color-focus;
+			color: $field-variant-placeholder-focus;
 			&::placeholder {
-				color: $field-placeholder-color-focus;
+				color: $field-variant-placeholder-focus;
 			}
 		}
 	}
@@ -87,7 +87,7 @@
 
 		@include hover {
 			&:after {
-				@include border-color($field-select-color-active);
+				@include border-color($field-variant-select-active);
 			}
 		}
 		select {
@@ -100,7 +100,7 @@
 			margin-top: calc(-#{$field-select-height} - -#{$field-border-width});
 
 			@include chevron-down(
-			$field-select-color,
+			$field-variant-select,
 			$field-select-width,
 			$field-select-height
 			);

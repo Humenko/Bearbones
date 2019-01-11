@@ -38,26 +38,26 @@
 		}
 	}
 	&.grand-parent {
-		margin-top: -$grid-spacing;
-		margin-right: -$grid-spacing;
-		margin-left: -$grid-spacing;
+		margin-top: -$grid-spacing-y;
+		margin-right: -$grid-spacing-x;
+		margin-left: -$grid-spacing-x;
 		&:last-child {
-			margin-bottom: -$grid-spacing;
+			margin-bottom: -$grid-spacing-y;
 		}
 		&:not(:last-child) {
-			margin-bottom: $grid-spacing;
+			margin-bottom: $grid-spacing-y;
 		}
 	}
 	&.child {
 		margin: 0;
 	}
 	&.parent {
-		padding: $grid-spacing;
+		padding: $grid-spacing-y $grid-spacing-x;
 	}
 	&.vertical {
 		flex-direction: column;
 		& > .bb-family-grid.child:not(:last-child) {
-			margin-bottom: $grid-spacing * 2;
+			margin-bottom: $grid-spacing-y * 2;
 		}
 	}
 }

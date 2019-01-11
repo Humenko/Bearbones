@@ -82,7 +82,7 @@
 			);
 		}
 		.toggle {
-			@include minus($accordion-variant-active);
+			@include minus($accordion-variant-toggle-active);
 		}
 	}
 }
