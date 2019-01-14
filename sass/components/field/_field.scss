@@ -38,6 +38,13 @@
 		display: inline-flex;
 		width: 100%;
 	}
+	&:not(.xs):not(.sm):not(.lg):not(.xl) {
+		input,
+		select,
+		textarea {
+			min-height: $field-minimum-height;
+		}
+	}
 	input,
 	select,
 	textarea {
@@ -74,6 +81,7 @@
 		}
 	}
 	.input {
+		// Check this works
 		@include focus-active {
 			color: $field-variant-placeholder-focus;
 			&::placeholder {
