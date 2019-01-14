@@ -405,6 +405,9 @@ $field-variant-success-border: $positive-color !default;
 $field-variant-error-color: $negative-color !default;
 $field-variant-error-placeholder: $negative-color !default;
 $field-variant-error-border: $negative-color !default;
+$field-variant-checkbox: $field-variant-background !default;
+$field-variant-checkbox-active: $primary-color !default;
+$field-variant-checkbox-background-active: $field-variant-background !default;
 //
 $field-border-radius: $border-radius !default;
 $field-border-style: $border-style !default;
@@ -422,6 +425,11 @@ $field-spacing-y: .5rem !default; // sort this, field-spacing-addon-y
 $field-toggle-spacing-x: .75rem !default;
 $field-toggle-width: .5rem !default;
 $field-toggle-height: .5rem !default;
+//
+$field-checkbox-height: 1.5rem;
+$field-checkbox-width: 1.5rem;
+$field-checkbox-border-width: .125rem;
+$field-checkbox-label-font-size: $font-size-sm;
 //
 $field-label-spacing-y: .5rem !default;
 $field-label-font-weight: 500 !default;

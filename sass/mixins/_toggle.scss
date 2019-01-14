@@ -126,3 +126,18 @@
 
 	@include border-right($border-width, $border-style, $color);
 }
+
+@mixin tick($color, $width, $height) {
+	z-index: 1;
+	display: block;
+	width: $width;
+	height: $height / 2;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	transform: rotate(-45deg);
+	pointer-events: none;
+
+	@include border-bottom($field-checkbox-border-width, $border-style, $color);
+	@include border-left($field-checkbox-border-width, $border-style, $color);
+}
