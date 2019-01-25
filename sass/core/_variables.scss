@@ -262,6 +262,11 @@ $loader-spinner-border-radius: 50% !default;
 $loader-spinner-size: 4rem !default;
 $loader-spinner-offset: -($loader-spinner-size / 2) !default;
 $loader-spinner-transition-duration: 1s !default;
+$animation-audio-width: 4rem;
+$animation-audio-height: 4rem;
+$animation-audio-bar-width: .25rem;
+$animation-audio-bar-variant-color: $white;
+$animation-audio-bar-animation-duration: 1.5s;
 
 // Box //
 
@@ -296,6 +301,7 @@ $button-variant-color: $base-variant-color !default;
 $button-variant-border: $base-variant-border !default;
 $button-variant-hover: $base-variant-hover !default;
 $button-variant-active: $base-variant-active !default;
+$button-variant-disabled-opacity: .2 !default;
 //
 $button-border-radius: $border-radius !default;
 $button-border-style: $border-style !default;

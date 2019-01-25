@@ -14,7 +14,7 @@
   }
   &.disabled,
   &:disabled {
-    opacity: 0.7;
+    opacity: $button-variant-disabled-opacity;
     pointer-events: none;
     cursor: not-allowed;
   }
@@ -37,7 +37,7 @@
   }
   &.disabled,
   &:disabled {
-    opacity: 0.7;
+    opacity: $button-variant-disabled-opacity;
     pointer-events: none;
     cursor: not-allowed;
   }
@@ -58,7 +58,7 @@
   }
   &.disabled,
   &:disabled {
-    opacity: 0.7;
+    opacity: $button-variant-disabled-opacity;
     pointer-events: none;
     cursor: not-allowed;
   }
@@ -77,7 +77,7 @@
   }
   &.disabled,
   &:disabled {
-    opacity: 0.7;
+    opacity: $button-variant-disabled-opacity;
     pointer-events: none;
     cursor: not-allowed;
   }
