@@ -80,3 +80,5 @@
 @include text-variant('.text-negative', $negative-variant-background);
 @include text-variant('.text-invert', $invert-variant-background);
 @include text-variant('.text-white', $white);
+@include text-variant('.text-light-grey', $light-grey);
+@include text-variant('.text-lighter-grey', $lighter-grey);
