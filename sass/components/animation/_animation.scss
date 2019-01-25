@@ -133,20 +133,20 @@
 			background-color: $animation-audio-bar-variant-color;
 		}
 		li:nth-child(1) {
-			animation: animation-animation-audio-1
-			$animation-audio-bar-animation-duration ease infinite 0s;
+			animation: animation-audio-1 $animation-audio-bar-animation-duration ease
+			infinite 0s;
 		}
 		li:nth-child(2) {
-			animation: animation-animation-audio-2
-			$animation-audio-bar-animation-duration ease-in-out infinite .2s;
+			animation: animation-audio-2 $animation-audio-bar-animation-duration
+			ease-in-out infinite .2s;
 		}
 		li:nth-child(3) {
-			animation: animation-animation-audio-1
-			$animation-audio-bar-animation-duration ease infinite .1s;
+			animation: animation-audio-1 $animation-audio-bar-animation-duration ease
+			infinite .1s;
 		}
 		li:nth-child(4) {
-			animation: animation-animation-audio-2
-			$animation-audio-bar-animation-duration ease-in infinite .3s;
+			animation: animation-audio-2 $animation-audio-bar-animation-duration
+			ease-in infinite .3s;
 		}
 	}
 }
