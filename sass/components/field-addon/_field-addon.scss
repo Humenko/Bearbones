@@ -55,10 +55,10 @@
 	select {
 		@include focus-active {
 			& + .field-addon {
-				background: $field-addon-background-focus;
-				color: $field-addon-color-focus;
+				background: $field-addon-variant-background-focus;
+				color: $field-addon-variant-focus;
 
-				@include border-color($field-addon-border-color-focus);
+				@include border-color($field-addon-variant-border-focus);
 			}
 		}
 	}
@@ -81,29 +81,27 @@
 
 	.field-addon {
 		margin-bottom: 0;
-		padding: $field-spacing-y $field-spacing-x;
-		background: $field-addon-background;
-		color: $field-addon-color;
+		padding: $field-addon-spacing-y $field-addon-spacing-x;
+		background: $field-addon-variant-background;
+		color: $field-addon-variant-color;
 		text-align: center;
 		line-height: $field-line-height;
 
-		@include border($field-border-width, $border-style, $field-addon-border-color);
+		@include border(
+		$field-border-width,
+		$border-style,
+		$field-addon-variant-border
+		);
 		@include transition($field-transition);
 		@include border-radius($field-border-radius);
-		&.invert {
-			@include field-addon-variant($invert-variant-color, $invert-variant-background, $invert-variant-border);
-		}
-		&.primary {
-			@include field-addon-variant($primary-variant-color, $primary-variant-background, $primary-variant-border);
-		}
-		&.secondary {
-			@include field-addon-variant($secondary-variant-color, $secondary-variant-background, $secondary-variant-border);
-		}
-		&.positive {
-			@include field-addon-variant($positive-variant-color, $positive-variant-background, $positive-variant-border);
-		}
-		&.negative {
-			@include field-addon-variant($negative-variant-color, $negative-variant-background, $negative-variant-border);
+		@each $variant, $value in $variants {
+			&.#{$variant} {
+				@include field-addon-variant(
+				nth($value, 3),
+				nth($value, 1),
+				nth($value, 2)
+				);
+			}
 		}
 		input[type='radio'],
 		input[type='checkbox'] {
@@ -111,6 +109,6 @@
 		}
 	}
 	.bb-btn {
-		padding: $field-spacing-y $field-spacing-x;
+		padding: $field-addon-spacing-y $field-addon-spacing-x;
 	}
 }

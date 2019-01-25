@@ -391,9 +391,8 @@ $dropdown-offset: -.125rem !default;
 $dropdown-transition: color 0s, opacity $transition-effect $transition-duration,
   transform $transition-effect $transition-duration !default;
 
-//******************Field //
+//*****************Field //
 
-//
 $field-variant-background: $white !default;
 $field-variant-color: $base-variant-background !default;
 $field-variant-border: $lighter-grey !default;
@@ -450,12 +449,15 @@ $field-transition: border-color $transition-effect $transition-duration,
   color $transition-effect $transition-duration !default;
 
 // Addon
-$field-addon-color: $base-color !default;
-$field-addon-background: $lighter-grey !default;
-$field-addon-border-color: $field-variant-border !default;
-$field-addon-color-focus: $lighter-grey !default;
-$field-addon-background-focus: $field-variant-focus !default;
-$field-addon-border-color-focus: $field-variant-color !default;
+$field-addon-variant-background: $lighter-grey !default;
+$field-addon-variant-color: $base-color !default;
+$field-addon-variant-border: $field-variant-border !default;
+$field-addon-variant-focus: $lighter-grey !default;
+$field-addon-variant-background-focus: $field-variant-focus !default;
+$field-addon-variant-border-focus: $field-variant-color !default;
+//
+$field-addon-spacing-x: .5rem !default;
+$field-addon-spacing-y: .5rem !default;
 
 // Footer //
 
