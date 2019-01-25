@@ -1,6 +1,6 @@
 {
   "name": "bearbones",
-  "version": "0.32.1",
+  "version": "0.32.2",
   "homepage": "https://bearbon.es",
   "description": "",
   "author": "Daniel Humenko",
@@ -24,16 +24,18 @@
     "url": "https://github.com/humenko/bearbones/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.4",
-    "bundlesize": "^0.17.0",
+    "autoprefixer": "^9.4.6",
+    "bundlesize": "^0.17.1",
     "csscomb": "^4.2.0",
     "cssnano": "^4.1.8",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.1",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "source-map-explorer": "^1.6.0"
   },
   "scripts": {
+    "analyse": "source-map-explorer css/bearbones.css.map",
     "build:dev": "run-s clean build-sass build-autoprefix",
     "build:prod": "run-s build-sass build-autoprefix build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
@@ -53,7 +55,7 @@
     },
     {
       "path": "./css/bearbones.min.css",
-      "maxSize": "20 kB"
+      "maxSize": "25 kB"
     }
   ]
 }

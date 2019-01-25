@@ -118,7 +118,7 @@
 			animation: loader-bar $loader-bar-transition-duration forwards ease-in-out;
 		}
 	}
-	.audio {
+	&.audio {
 		position: absolute;
 		display: inline-flex;
 		justify-content: space-between;
