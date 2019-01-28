@@ -130,6 +130,7 @@
 		transform: scaleY(-1);
 		li {
 			width: $animation-audio-bar-width;
+			border-radius: $border-radius;
 			background-color: $animation-audio-bar-variant-color;
 		}
 		li:nth-child(1) {
