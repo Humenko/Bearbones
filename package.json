@@ -1,11 +1,11 @@
 {
   "name": "bearbones",
-  "version": "0.32.4",
+  "version": "0.33.0",
   "homepage": "https://bearbon.es",
   "description": "",
   "author": "Daniel Humenko",
   "license": "MIT",
-  "main": "sass/bearbones.scss",
+  "main": "scss/bearbones.scss",
   "style": "css/bearbones.min.css",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "url": "https://github.com/humenko/bearbones/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.6",
+    "autoprefixer": "^9.4.7",
     "bundlesize": "^0.17.1",
     "csscomb": "^4.2.0",
     "cssnano": "^4.1.8",
@@ -38,7 +38,7 @@
     "build:prod": "run-s build-sass build-autoprefix build-minify",
     "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
     "build-minify": "node-sass --output-style compressed css/bearbones.css css/bearbones.min.css",
-    "build-sass": "node-sass --output-style expanded --source-map true sass/bearbones.scss css/bearbones.css",
+    "build-sass": "node-sass --output-style expanded --source-map true scss/bearbones.scss css/bearbones.css",
     "clean": "rimraf css",
     "watch": "yarn run build-sass --watch",
     "server": "http-server",
