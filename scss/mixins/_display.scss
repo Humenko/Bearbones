@@ -1,0 +1,5 @@
+@mixin display-variant($parent, $display) {
+	#{$parent} {
+		display: $display;
+	}
+}

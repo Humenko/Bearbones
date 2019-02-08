@@ -1,19 +1,5 @@
-.p-absolute {
-	position: absolute;
-}
-
-.p-fixed {
-	position: fixed;
-}
-
-.p-relative {
-	position: relative;
-}
-
-.p-static {
-	position: static;
-}
-
-.p-sticky {
-	position: sticky;
-}
+@include position-variant('.p-absolute', absolute);
+@include position-variant('.p-fixed', fixed);
+@include position-variant('.p-relative', relative);
+@include position-variant('.p-static', static);
+@include position-variant('.p-sticky', sticky);

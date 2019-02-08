@@ -1,31 +1,8 @@
-.d-none {
-	display: none;
-}
-
-.d-block {
-	display: block;
-}
-
-.d-inline-block {
-	display: inline-block;
-}
-
-.d-flex {
-	display: flex;
-}
-
-.d-inline-flex {
-	display: inline-flex;
-}
-
-.d-inline {
-	display: inline;
-}
-
-.d-table {
-	display: table;
-}
-
-.d-table-cell {
-	display: table-cell;
-}
+@include display-variant('.d-none', none);
+@include display-variant('.d-block', block);
+@include display-variant('.d-inline-block', inline-block);
+@include display-variant('.d-flex', flex);
+@include display-variant('.d-inline-flex', inline-flex);
+@include display-variant('.d-inline', inline);
+@include display-variant('.d-table', table);
+@include display-variant('.d-table-cell', table-cell);

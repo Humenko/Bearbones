@@ -1,0 +1,41 @@
+@mixin flex-direction($parent, $direction) {
+	#{$parent} {
+		flex-direction: $direction;
+	}
+}
+
+@mixin flex-order($parent, $order) {
+	#{$parent} {
+		order: $order;
+	}
+}
+
+@mixin flex-wrap($parent, $wrap) {
+	#{$parent} {
+		flex-wrap: $wrap;
+	}
+}
+
+@mixin flex-justify-content($parent, $justify-content) {
+	#{$parent} {
+		justify-content: $justify-content;
+	}
+}
+
+@mixin flex-align-items($parent, $align-items) {
+	#{$parent} {
+		align-items: $align-items;
+	}
+}
+
+@mixin flex-align-content($parent, $align-content) {
+	#{$parent} {
+		align-content: $align-content;
+	}
+}
+
+@mixin flex-align-self($parent, $align-self) {
+	#{$parent} {
+		align-self: $align-self;
+	}
+}

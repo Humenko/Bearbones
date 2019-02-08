@@ -164,6 +164,7 @@ $font-style: normal !default;
 $font-variant: normal !default;
 $font-weight: normal !default;
 $font-weight-bold: 600 !default;
+$font-weight-light: 300 !default;
 
 // Variant
 $font-size-xs: .5rem !default;
@@ -309,7 +310,7 @@ $button-border-width: $border-width !default;
 //
 $button-font-family: $font-family !default;
 $button-font-size: $font-size !default;
-$button-font-weight: 400 !default;
+$button-font-weight: $font-weight !default;
 $button-line-height: 1.3 !default;
 $button-text-transform: none !default;
 //
@@ -362,7 +363,7 @@ $divider-border-style: $border-style !default;
 $divider-border-width: $border-width / 2 !default;
 //
 $divider-content-border-width: $divider-border-width * 1.5 !default;
-$divider-font-weight: 500 !default;
+$divider-font-weight: $font-weight !default;
 //
 $divider-spacing-x: 1rem !default;
 $divider-spacing-y: 1.5rem !default;
@@ -420,7 +421,7 @@ $field-border-width: $border-width !default;
 //
 $field-font-family: $font-family !default;
 $field-font-size: $font-size !default;
-$field-font-weight: 400 !default;
+$field-font-weight: $font-weight !default;
 $field-line-height: $font-line-height !default;
 //
 $field-minimum-height: 2.625rem !default;
@@ -437,7 +438,7 @@ $field-checkbox-border-width: .125rem;
 $field-checkbox-label-font-size: $font-size-sm;
 //
 $field-label-spacing-y: .5rem !default;
-$field-label-font-weight: 500 !default;
+$field-label-font-weight: $font-weight-bold !default;
 $field-label-font-family: $heading-font-family !default;
 $field-label-font-size: $font-size !default;
 //
@@ -486,7 +487,7 @@ $navbar-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .1),
   0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 $navbar-item-spacing-x: .5rem !default;
 $navbar-item-spacing-y: .75rem !default;
-$navbar-font-weight: 600 !default;
+$navbar-font-weight: $font-weight-bold !default;
 $navbar-container-spacing: 0 1rem !default;
 $navbar-height: 3rem !default;
 $navbar-image-max-height: $navbar-height/1.5 !default;
@@ -531,7 +532,7 @@ $pagination-border-style: $border-style !default;
 $pagination-border-width: $border-width !default;
 //
 $pagination-font-size: $font-size !default;
-$pagination-font-weight: 500 !default;
+$pagination-font-weight: $font-weight-bold !default;
 //
 $pagination-min-width: 3rem !default;
 $pagination-spacing-y: .5rem !default;
@@ -546,14 +547,14 @@ $pagination-dot-spacing: .1rem !default;
 // Stat //
 
 $stat-value-font-family: $heading-font-family !default;
-$stat-value-font-weight: 400 !default;
+$stat-value-font-weight: $font-weight !default;
 $stat-value-font-size: 3rem !default;
 $stat-value-text-transform: uppercase !default;
 $stat-label-font-family: $font-family !default;
-$stat-label-font-weight: 600 !default;
+$stat-label-font-weight: $font-weight-bold !default;
 $stat-label-font-size: $stat-value-font-size / 4 !default;
 $stat-label-text-transform: uppercase !default;
-$stat-text-font-weight: 600 !default;
+$stat-text-font-weight: $font-weight-bold !default;
 $stat-text-font-size: $stat-value-font-size / 2 !default;
 $stat-line-height: 1em !default;
 //

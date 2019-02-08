@@ -9,7 +9,7 @@
 	h4,
 	h5,
 	p {
-		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative):not(.text-invert):not(.text-white):not(.text-light-grey):not(.text-lighter-grey) {
 			color: $color;
 		}
 	}
@@ -29,7 +29,7 @@
 	h4,
 	h5,
 	p {
-		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+		&:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative):not(.text-invert):not(.text-white):not(.text-light-grey):not(.text-lighter-grey) {
 			color: $color;
 		}
 	}

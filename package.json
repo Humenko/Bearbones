@@ -13,7 +13,7 @@
   },
   "keywords": [
     "css",
-    "sass",
+    "scss",
     "mobile-first",
     "flexbox",
     "responsive",
@@ -34,23 +34,18 @@
     "rimraf": "^2.6.3"
   },
   "scripts": {
-    "build:dev": "run-s clean build-sass build-autoprefix",
-    "build:prod": "run-s build-sass build-autoprefix build-minify",
-    "build-autoprefix": "postcss --use autoprefixer --output css/bearbones.css css/bearbones.css",
+    "build:dev": "run-s clean build-scss build-autoprefix",
+    "build:prod": "run-s build-scss build-autoprefix build-minify",
+    "build-autoprefix": "postcss -u autoprefixer -o css/bearbones.css css/bearbones.css",
     "build-minify": "node-sass --output-style compressed css/bearbones.css css/bearbones.min.css",
-    "build-sass": "node-sass --output-style expanded --source-map true scss/bearbones.scss css/bearbones.css",
+    "build-scss": "node-sass --output-style expanded --source-map true scss/bearbones.scss css/bearbones.css",
     "clean": "rimraf css",
-    "watch": "yarn run build-sass --watch",
-    "server": "http-server",
-    "start": "run-p watch server",
+    "watch": "yarn run build-scss --watch",
+    "analyse": "yarn build:prod && source-map-explorer ./css/bearbones.css ./css/bearbones.css.map",
     "test": "run-s build:prod test-size",
     "test-size": "bundlesize"
   },
   "bundlesize": [
-    {
-      "path": "./css/bearbones.css",
-      "maxSize": "50 kB"
-    },
     {
       "path": "./css/bearbones.min.css",
       "maxSize": "25 kB"

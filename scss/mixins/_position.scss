@@ -1,0 +1,5 @@
+@mixin position-variant($parent, $position) {
+	#{$parent} {
+		position: $position;
+	}
+}

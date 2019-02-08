@@ -1,7 +1,3 @@
-@mixin text-font-size($font-size) {
-	font-size: $font-size;
-}
-
 @mixin text-variant($parent, $color) {
 	#{$parent} {
 		color: $color;
@@ -10,5 +6,41 @@
 		@include hover-focus {
 			color: darken($color, 20%);
 		}
+	}
+}
+
+@mixin text-font-size($parent, $size) {
+	#{$parent} {
+		font-size: $size;
+	}
+}
+
+@mixin text-align($parent, $alignment) {
+	#{$parent} {
+		text-align: $alignment;
+	}
+}
+
+@mixin text-transform($parent, $transform) {
+	#{$parent} {
+		text-transform: $transform;
+	}
+}
+
+@mixin text-decoration($parent, $decoration) {
+	#{$parent} {
+		text-decoration: $decoration;
+	}
+}
+
+@mixin text-font-weight($parent, $weight) {
+	#{$parent} {
+		font-weight: $weight;
+	}
+}
+
+@mixin text-font-family($parent, $font) {
+	#{$parent} {
+		font-family: $font;
 	}
 }
