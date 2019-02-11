@@ -25,7 +25,7 @@ ul {
 }
 
 ul.icon {
-	padding-left: $list-spacing-x * 2;
+	list-style: none;
 	@each $font-size, $value in $font-sizes {
 		&.#{$font-size},
 		.#{$font-size} {
