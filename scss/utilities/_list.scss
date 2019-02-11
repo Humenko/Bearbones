@@ -6,6 +6,9 @@ ul.inline {
 	@include list-unstyled;
 	.inline-item {
 		display: inline-block;
+		&:not(:first-child) {
+			padding-left: $list-spacing-x;
+		}
 	}
 }
 
@@ -17,12 +20,12 @@ ul {
 		}
 	}
 	li {
-		padding-bottom: $list-padding-y;
+		padding-bottom: $list-spacing-y;
 	}
 }
 
 ul.icon {
-	padding-left: $list-padding-x * 2;
+	padding-left: $list-spacing-x * 2;
 	@each $font-size, $value in $font-sizes {
 		&.#{$font-size},
 		.#{$font-size} {
@@ -32,7 +35,7 @@ ul.icon {
 	li {
 		i {
 			margin-left: -$font-size - .5;
-			padding-right: $list-padding-x / 2;
+			padding-right: $list-spacing-x / 2;
 		}
 	}
 }

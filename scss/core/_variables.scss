@@ -157,7 +157,7 @@ $link-hover-decoration: underline !default;
 //******************Body
 $body-font-size: 1rem !default;
 $font-color: $base-color !default;
-$font-family: 'Inter-UI', 'Helvetica', 'Arial', sans-serif !default;
+$font-family: 'Helvetica', 'Arial', sans-serif !default;
 $font-line-height: 1.6 !default;
 $font-size: 1rem !default;
 $font-style: normal !default;
@@ -183,7 +183,7 @@ $font-sizes: (
 
 //******************Heading
 $heading-font-color: $base-color !default;
-$heading-font-family: 'Inter-UI', 'Helvetica', 'Arial', sans-serif !default;
+$heading-font-family: 'Helvetica', 'Arial', sans-serif !default;
 $heading-font-weight: $font-weight-bold !default;
 $heading-font-weight: 700 !default;
 $heading-line-height: $font-line-height !default;
@@ -596,8 +596,8 @@ $table-transition: all $transition-effect $transition-duration !default;
 
 // List //
 
-$list-padding-x: 1rem !default;
-$list-padding-y: .5rem !default;
+$list-spacing-x: 1rem !default;
+$list-spacing-y: .5rem !default;
 
 // Spacing //
 
