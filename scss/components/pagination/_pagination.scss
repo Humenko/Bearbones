@@ -19,6 +19,11 @@
 		cursor: pointer;
 
 		@include transition($pagination-transition);
+		&.disabled,
+		&:disabled {
+			cursor: not-allowed;
+			pointer-events: none;
+		}
 	}
 	&:not(.connected) {
 		.item {

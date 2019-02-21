@@ -10,11 +10,6 @@
 			color: $color;
 			text-decoration: none;
 		}
-		&.disabled,
-		&:disabled {
-			cursor: not-allowed;
-			pointer-events: none;
-		}
 		&:active,
 		&.active {
 			border-color: $active;
@@ -41,11 +36,6 @@
 			background: $hover;
 			color: $color;
 			text-decoration: none;
-		}
-		&.disabled,
-		&:disabled {
-			cursor: not-allowed;
-			pointer-events: none;
 		}
 		&:active,
 		&.active {
