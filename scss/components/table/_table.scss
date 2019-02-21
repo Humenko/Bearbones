@@ -93,51 +93,69 @@
 	&.hover {
 		cursor: pointer;
 
-		@include table-hover-variant($table-variant-hover);
+		@include table-hover-variant($table-variant-hover, $table-variant-color);
 		&,
 		tr {
 			@each $variant, $value in $variants {
 				&.#{$variant} {
-					@include table-hover-variant(nth($value, 1));
+					@include table-hover-variant(nth($value, 1), nth($value, 3));
 				}
 			}
 			&.success {
-				@include table-hover-variant($positive-variant-background);
+				@include table-hover-variant(
+				$positive-variant-background,
+				$positive-variant-color
+				);
 			}
 			&.error {
-				@include table-hover-variant($negative-variant-background);
+				@include table-hover-variant(
+				$negative-variant-background,
+				$positive-variant-color
+				);
 			}
 		}
 		td,
 		th {
 			@each $variant, $value in $variants {
 				&.#{$variant} {
-					@include table-cell-hover-variant(nth($value, 1));
+					@include table-cell-hover-variant(nth($value, 1), nth($value, 3));
 				}
 			}
 			&.success {
-				@include table-cell-hover-variant($positive-variant-background);
+				@include table-cell-hover-variant(
+				$positive-variant-background,
+				$positive-variant-color
+				);
 			}
 			&.error {
-				@include table-cell-hover-variant($negative-variant-background);
+				@include table-cell-hover-variant(
+				$negative-variant-background,
+				$positive-variant-color
+				);
 			}
 		}
 	}
 	.selected {
-		@include table-selected-variant($table-variant-hover);
+		@include table-selected-variant($table-variant-hover, $table-variant-color);
 		@each $variant, $value in $variants {
 			&.#{$variant},
 			.#{$variant} {
-				@include table-selected-variant(nth($value, 1));
+				@include table-selected-variant(nth($value, 1), nth($value, 3));
 			}
 		}
 		&.success,
 		.success {
-			@include table-selected-variant($positive-variant-background);
+			@include table-selected-variant(
+			$positive-variant-background,
+			$positive-variant-color
+			);
 		}
 		&.error,
 		.error {
-			@include table-selected-variant($negative-variant-background);
+			@include table-selected-variant(
+			$negative-variant-background,
+			$positive-variant-color
+			);
 		}
 	}
 }

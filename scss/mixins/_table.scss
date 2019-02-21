@@ -1,6 +1,5 @@
 @mixin table-variant($color, $background, $border) {
-	background: lighten($background, 15%);
-	color: $color;
+	background: rgba($background, .2);
 	tr {
 		@include border-color($border);
 	}
@@ -13,22 +12,25 @@
 	}
 }
 
-@mixin table-hover-variant($color) {
+@mixin table-hover-variant($background, $color) {
 	td {
 		@include hover {
-			background: $color;
+			background: $background;
+			color: $color;
 		}
 	}
 }
 
-@mixin table-cell-hover-variant($color) {
+@mixin table-cell-hover-variant($background, $color) {
 	& {
 		@include hover {
-			background: $color;
+			background: $background;
+			color: $color;
 		}
 	}
 }
 
-@mixin table-selected-variant($color) {
-	background: $color;
+@mixin table-selected-variant($background, $color) {
+	background: $background;
+	color: $color;
 }
