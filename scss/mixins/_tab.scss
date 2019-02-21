@@ -3,58 +3,25 @@
 }
 
 @mixin tab-variant($color) {
-	$light-color: lighten($color, 10%);
-	$lighter-color: lighten($color, 35%);
+	$light-color: rgba($color, .2);
 	ul {
-		@include border-bottom-color($lighter-color);
 		li {
 			&.active {
 				a {
-					@include border-bottom-color($color);
 					color: $color;
+
+					@include border-bottom($tab-border-width, $tab-border-style, $color);
 					@include hover {
 						@include border-bottom-color($color);
-						color: $color;
 					}
 				}
 			}
-			a {
-				@include border-bottom-color($lighter-color);
-				color: $light-color;
+			.item {
+				@include border-bottom-color($light-color);
 				@include hover {
-					@include border-bottom-color($light-color);
 					color: $color;
-				}
-			}
-		}
-	}
-}
 
-@mixin tab-outline-variant($color) {
-	$light-color: lighten($color, 10%);
-	$lighter-color: lighten($color, 35%);
-	ul {
-		@include border-bottom-color($lighter-color);
-		li {
-			&.active {
-				a {
-					@include border-color($lighter-color);
-					@include border-bottom-color($white);
-					color: $color;
-					@include hover {
-						background: transparent;
-						@include border-bottom-color($white);
-						color: $color;
-					}
-				}
-			}
-			a {
-				@include border-bottom-color($lighter-color);
-				color: $light-color;
-				@include hover {
-					@include border-bottom-color($lighter-color);
-					color: $color;
-					background: $lighter-color;
+					@include border-bottom-color($color);
 				}
 			}
 		}
@@ -62,7 +29,7 @@
 }
 
 @mixin tab-naked-variant($color) {
-	$light-color: lighten($color, 10%);
+	$light-color: rgba($color, 10%);
 	ul {
 		@include border-bottom-color(transparent);
 		li {
@@ -71,7 +38,7 @@
 					@include border-bottom-color($color);
 				}
 			}
-			a {
+			.item {
 				@include border-bottom-color(transparent);
 				@include hover {
 					@include border-bottom-color($light-color);
