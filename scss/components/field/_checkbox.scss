@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	padding-left: 2rem;
+	padding-left: $field-checkbox-width * 1.5;
 	cursor: pointer;
 	&label {
 		font-size: $field-checkbox-label-font-size;
