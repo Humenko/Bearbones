@@ -12,12 +12,6 @@
     background: $hover;
     @include border-color($hover);
   }
-  &.disabled,
-  &:disabled {
-    opacity: $button-variant-disabled-opacity;
-    pointer-events: none;
-    cursor: not-allowed;
-  }
   &:active,
   &.active {
     background: $active;
@@ -35,12 +29,6 @@
     color: $hover;
     @include border-color($hover);
   }
-  &.disabled,
-  &:disabled {
-    opacity: $button-variant-disabled-opacity;
-    pointer-events: none;
-    cursor: not-allowed;
-  }
   &:active,
   &.active {
     color: $hover;
@@ -56,12 +44,6 @@
     background: $color;
     color: $background;
   }
-  &.disabled,
-  &:disabled {
-    opacity: $button-variant-disabled-opacity;
-    pointer-events: none;
-    cursor: not-allowed;
-  }
   &:active,
   &.active {
     background: $background;
@@ -74,12 +56,6 @@
   @include border-color($background);
   &:after {
     @include border-color($color transparent transparent);
-  }
-  &.disabled,
-  &:disabled {
-    opacity: $button-variant-disabled-opacity;
-    pointer-events: none;
-    cursor: not-allowed;
   }
   &.outline {
     color: $color;

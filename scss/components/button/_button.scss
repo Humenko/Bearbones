@@ -43,6 +43,12 @@
 	&.no-border-radius {
 		@include border-radius($no-border-radius);
 	}
+	&.disabled,
+	&:disabled {
+		opacity: $button-variant-disabled-opacity;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
 	@each $variant, $value in $variants {
 		&.#{$variant} {
 			@include button-variant(
