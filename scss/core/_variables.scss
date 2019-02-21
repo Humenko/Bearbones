@@ -154,7 +154,7 @@ $link-hover-decoration: underline !default;
 
 // Typography //
 
-//******************Body
+// Body
 $body-font-size: 1rem !default;
 $font-color: $base-color !default;
 $font-family: 'Helvetica', 'Arial', sans-serif !default;
@@ -447,13 +447,10 @@ $field-text-spacing-y: .25rem !default;
 //
 $field-transition: all $transition-effect $transition-duration !default;
 
-// Addon
-$field-addon-variant-background: $lighter-grey !default;
-$field-addon-variant-color: $base-color !default;
-$field-addon-variant-border: $field-variant-border !default;
-$field-addon-variant-focus: $lighter-grey !default;
-$field-addon-variant-background-focus: $field-variant-focus !default;
-$field-addon-variant-border-focus: $field-variant-color !default;
+// ******** Addon
+$field-addon-variant-background: $field-variant-active !default;
+$field-addon-variant-color: $field-variant-background !default;
+$field-addon-variant-border: $field-variant-active !default;
 $field-addon-variant-disabled-opacity: .2 !default;
 //
 $field-addon-spacing-x: .5rem !default;
@@ -472,7 +469,7 @@ $footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
 
 $media-variant-border: $light-grey !default;
 //
-$media-border-radius: $border-width !default;
+$media-border-radius: $border-radius !default;
 $media-border-style: $border-style !default;
 $media-border-width: $border-width !default;
 //
@@ -558,29 +555,39 @@ $stat-text-font-size: $stat-value-font-size / 2 !default;
 $stat-line-height: 1em !default;
 //
 $stat-spacing: 1rem !default;
-//
-$stat-value-font-size-xs: $stat-value-font-size - 1rem !default;
-$stat-value-font-size-sm: $stat-value-font-size - .5rem !default;
-$stat-value-font-size-lg: $stat-value-font-size + .5rem !default;
-$stat-value-font-size-xl: $stat-value-font-size + 1rem !default;
+$stat-value-font-sizes: (
+  xs: $stat-value-font-size - 1rem,
+  sm: $stat-value-font-size - .5rem,
+  lg: $stat-value-font-size + .5rem,
+  xl: $stat-value-font-size + 1rem
+) !default;
 
 //FIX FONT SIZING
 
-//******************Tab //
+// Tab //
 
-$tab-background: darken($base-pair, 2%) !default;
+$tab-variant-background: $base-color !default;
+$tab-variant-color: $base-color !default;
+$tab-variant-border: rgba($tab-variant-background, .2) !default;
+$tab-variant-hover: $tab-variant-background !default;
+$tab-variant-active: $tab-variant-hover !default;
+//
+$tab-border-radius: $border-radius !default;
+$tab-border-style: $border-style !default;
 $tab-border-width: $border-width !default;
+//
+$tab-spacing-x: 1rem !default;
+$tab-spacing-y: .25rem !default;
+//
 $tab-transition: all $transition-effect $transition-duration !default;
-$tab-item-spacing-x: $padding !default;
-$tab-item-spacing-y: $padding / 2 !default;
 
 // Table //
 
 $table-variant-background: darken($base-variant-color, 2%) !default;
 $table-variant-color: $base-variant-background !default;
-$table-variant-border: darken($table-variant-background, 12%) !default;
-$table-variant-hover: darken($table-variant-background, 12%) !default;
-$table-variant-active: darken($table-variant-background, 12%) !default;
+$table-variant-border: $base-variant-active !default;
+$table-variant-hover: $base-variant-active !default;
+$table-variant-active: $base-variant-active !default;
 //
 $table-border-radius: $border-radius * 2 !default;
 $table-border-style: $border-style !default;
