@@ -38,7 +38,7 @@
 			@include stat-variant(nth($value, 1));
 		}
 	}
-	@each $font-size, $value in $font-sizes {
+	@each $font-size, $value in $stat-value-font-sizes {
 		&.#{$font-size} {
 			@include stat-font-size($value);
 		}

@@ -19,7 +19,7 @@ $base-pair: #FFFFFF !default;
 //
 $white: #FFFFFF !default;
 $light-grey: #A0A0A0 !default;
-$lighter-grey: #FAFAFA !default;
+$lighter-grey: #E0E0E0 !default;
 $black: #000000 !default;
 $body-background: $white !default;
 
@@ -163,7 +163,7 @@ $font-size: 1rem !default;
 $font-style: normal !default;
 $font-variant: normal !default;
 $font-weight: normal !default;
-$font-weight-bold: 600 !default;
+$font-weight-bold: 700 !default;
 $font-weight-light: 300 !default;
 
 // Variant
@@ -185,7 +185,6 @@ $font-sizes: (
 $heading-font-color: $base-color !default;
 $heading-font-family: 'Helvetica', 'Arial', sans-serif !default;
 $heading-font-weight: $font-weight-bold !default;
-$heading-font-weight: 700 !default;
 $heading-line-height: $font-line-height !default;
 $heading-min-width: 20rem !default;
 $heading-max-width: $container-max-width !default;
@@ -392,13 +391,14 @@ $dropdown-offset: -.125rem !default;
 $dropdown-transition: color 0s, opacity $transition-effect $transition-duration,
   transform $transition-effect $transition-duration !default;
 
-//*****************Field //
+// Field //
 
 $field-variant-background: $white !default;
 $field-variant-color: $base-variant-background !default;
 $field-variant-border: $lighter-grey !default;
 $field-variant-active: $base-variant-active !default;
 $field-variant-focus: $field-variant-active !default;
+$field-variant-disabled-opacity: .2 !default;
 $field-variant-toggle: $light-grey !default;
 $field-variant-toggle-active: $light-grey !default;
 $field-variant-placeholder: $lighter-grey !default;
@@ -438,16 +438,14 @@ $field-checkbox-border-width: .125rem;
 $field-checkbox-label-font-size: $font-size-sm;
 //
 $field-label-spacing-y: .5rem !default;
-$field-label-font-weight: $font-weight-bold !default;
+$field-label-font-weight: $font-weight !default;
 $field-label-font-family: $heading-font-family !default;
 $field-label-font-size: $font-size !default;
 //
 $field-text-font-size: $font-size-sm !default;
 $field-text-spacing-y: .25rem !default;
 //
-$field-transition: border-color $transition-effect $transition-duration,
-  background-color $transition-effect $transition-duration,
-  color $transition-effect $transition-duration !default;
+$field-transition: all $transition-effect $transition-duration !default;
 
 // Addon
 $field-addon-variant-background: $lighter-grey !default;
@@ -456,14 +454,15 @@ $field-addon-variant-border: $field-variant-border !default;
 $field-addon-variant-focus: $lighter-grey !default;
 $field-addon-variant-background-focus: $field-variant-focus !default;
 $field-addon-variant-border-focus: $field-variant-color !default;
+$field-addon-variant-disabled-opacity: .2 !default;
 //
 $field-addon-spacing-x: .5rem !default;
 $field-addon-spacing-y: .5rem !default;
 
 // Footer //
 
-$footer-variant-background: $lighter-grey !default;
-$footer-variant-color: $base-color !default;
+$footer-variant-background: $primary-color !default;
+$footer-variant-color: $primary-pair !default;
 //
 $footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, .1);
 //
