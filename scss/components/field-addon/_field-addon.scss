@@ -2,68 +2,55 @@
 	&.left {
 		input,
 		select {
-			border-left: 0;
-
 			@include border-left-radius(0);
 		}
 		.field-addon,
-		.field-btn,
 		.bb-btn {
 			order: -1;
-			border-right: 0;
 
 			@include border-right-radius(0);
+		}
+		.bb-btn {
+			border-right: 0;
 		}
 	}
 	&.right {
 		input,
 		select {
-			border-right: 0;
-
 			@include border-right-radius(0);
 		}
 		.field-addon,
-		.field-btn,
 		.bb-btn {
 			order: 1;
-			border-left: 0;
 
 			@include border-left-radius(0);
+		}
+		.bb-btn {
+			border-left: 0;
 		}
 	}
 	&.left-right {
 		input,
 		select {
-			border-right: 0;
-			border-left: 0;
-
 			@include border-left-radius(0);
 			@include border-right-radius(0);
 		}
 		.field-addon:first-child,
-		.field-btn:first-child,
 		.bb-btn:first-child {
 			@include border-right-radius(0);
 		}
 		.field-addon:last-child,
-		.field-btn:last-child,
 		.bb-btn:last-child {
 			@include border-left-radius(0);
 		}
-	}
-	input,
-	select {
-		@include focus-active {
-			& + .field-addon {
-				background: $field-addon-variant-background-focus;
-				color: $field-addon-variant-focus;
-
-				@include border-color($field-addon-variant-border-focus);
-			}
+		.bb-btn:first-child {
+			border-right: 0;
+		}
+		.bb-btn:last-child {
+			border-left: 0;
 		}
 	}
 	.field-addon,
-	.field-btn,
 	.bb-field input,
 	.bb-field select {
 		display: flex;
@@ -73,8 +60,7 @@
 		}
 	}
 
-	.field-addon,
-	.field-btn {
+	.field-addon {
 		vertical-align: middle;
 		white-space: nowrap;
 	}
@@ -110,5 +96,14 @@
 	}
 	.bb-btn {
 		padding: $field-addon-spacing-y $field-addon-spacing-x;
+	}
+}
+
+.disabled {
+	.field-addon,
+	.bb-btn {
+		opacity: $field-addon-variant-disabled-opacity;
+		cursor: not-allowed;
+		pointer-events: none;
 	}
 }
