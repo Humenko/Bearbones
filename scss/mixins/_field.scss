@@ -1,19 +1,9 @@
 @mixin field-variant($color, $background, $border, $hover, $active) {
-	.field-addon {
-		background: $background;
-		color: $color;
-
-		@include border-color($border);
-		&.disabled,
-		&:disabled {
-			opacity: .7;
-			cursor: not-allowed;
-			pointer-events: none;
-		}
-	}
 	input,
 	select,
 	textarea {
+		border-color: $background;
+
 		@include hover-focus {
 			@include border-color($hover);
 		}
@@ -60,7 +50,7 @@
 		font-size: $font-size;
 	}
 	label {
-		margin-bottom: $field-spacing-y + ($font-size - 1rem);
+		padding-bottom: $field-spacing-y + ($font-size - 1rem);
 		font-size: $font-size;
 	}
 }

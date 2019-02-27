@@ -1,9 +1,9 @@
-@mixin burger($dimensions) {
+@mixin burger($color, $width, $height) {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	width: $dimensions;
-	height: $dimensions;
+	width: $width;
+	height: $height;
 	cursor: pointer;
 	span {
 		position: absolute;
@@ -15,7 +15,7 @@
 		margin-left: auto;
 		width: 1.5rem;
 		height: 2px;
-		background: $base-color;
+		background: $color;
 		transition: none 2s ease-in-out;
 		transition-property: background, left, opacity, transform;
 		&:nth-child(1) {
@@ -80,8 +80,6 @@
 	content: ' ';
 	transform: rotate(135deg);
 	pointer-events: none;
-
-	@include border-top($border-width, $border-style, $color);
 }
 
 @mixin chevron-down($color, $width, $height) {
