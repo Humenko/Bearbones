@@ -226,7 +226,8 @@ $accordion-heading-spacing-x: 0 !default;
 $accordion-heading-spacing-y: 1rem !default;
 $accordion-content-spacing-x: 1rem !default;
 $accordion-content-spacing-y: 1rem !default;
-$accordion-toggle-spacing: 0 .5rem 0 0 !default; // sort this
+$accordion-toggle-spacing-y: 0 !default;
+$accordion-toggle-spacing-x: 1rem !default;
 $accordion-toggle-width: .5rem !default;
 $accordion-toggle-height: .5rem !default;
 //
@@ -332,25 +333,39 @@ $button-loader-size: .75rem !default;
 $button-loader-offset: -($button-loader-size / 2) !default;
 $button-loader-spacing: $button-loader-offset 0 0 $button-loader-offset !default;
 
-//******************Card //
+// Card //
 
-$card-background: $white !default;
-$card-border-color: $lighter-grey !default;
+$card-variant-background: $white !default;
+$card-variant-color: $base-variant-background !default;
+$card-variant-border: $lighter-grey !default;
+$card-variant-hover: $lighter-grey !default;
+//
+$card-border-radius: $border-radius * 2 !default;
 $card-border-style: $border-style !default;
-$card-border-width: .25rem !default;
-$card-border-radius: $border-radius !default;
-$card-color: $base-color !default;
-$card-footer-border-color: $card-border-color !default;
-$card-item-border-color: $card-border-color !default;
-$card-box-shadow: 0 3px 1px -1px rgba(0, 0, 0, .1),
-  0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$card-border-width: $border-width !default;
+//
+$card-header-variant-border: $card-variant-border !default;
+$card-header-variant-color: $primary-variant-background !default;
+$card-header-font-family: $heading-font-family !default;
+$card-header-font-weight: $font-weight-bold !default;
+$card-header-border-style: $card-border-style !default;
+$card-header-border-width: $card-border-width / 2 !default;
+$card-header-spacing-x: $padding !default;
+$card-header-spacing-y: $padding !default;
+//
 $card-content-font-family: $font-family !default;
 $card-content-spacing-x: $padding !default;
 $card-content-spacing-y: $padding !default;
-$card-heading-font-family: $heading-font-family !default;
-$card-heading-font-weight: $font-weight-bold !default;
-$card-header-spacing-x: $padding !default;
-$card-header-spacing-y: $padding !default;
+//
+$card-footer-variant-border: $card-variant-border !default;
+$card-footer-variant-color: $primary-variant-background !default;
+$card-footer-item-variant-border: $card-footer-variant-border !default;
+$card-footer-border-style: $card-border-style !default;
+$card-footer-border-width: $card-border-width / 2 !default;
+$card-footer-spacing-x: $padding !default;
+$card-footer-spacing-y: $padding !default;
+//
+$card-box-shadow: 0 1.25rem 1.5rem -1.25rem rgba(10, 10, 10, .1) !default;
 
 // Divider //
 
@@ -367,29 +382,34 @@ $divider-font-weight: $font-weight !default;
 $divider-spacing-x: 1rem !default;
 $divider-spacing-y: 1.5rem !default;
 
-//******************Dropdown //
+// Dropdown //
 
+$dropdown-variant-background: $base-pair !default;
+$dropdown-variant-background-hover: rgba($primary-color, .05) !default;
+$dropdown-variant-background-active: rgba($primary-color, .05) !default;
+$dropdown-variant-color: $base-pair !default;
+$dropdown-variant-color-hover: $base-color !default;
+$dropdown-variant-color-active: $base-color !default;
+//
 $dropdown-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .1),
   0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
-$dropdown-item-active-color: $primary-color !default;
-$dropdown-background: $base-pair !default;
-$dropdown-border: $border-width $border-style transparent !default;
-$dropdown-font-size: $font-size !default;
+$dropdown-variant-border: $border-width $border-style transparent !default;
 $dropdown-border-radius: $border-radius !default;
-$dropdown-menu-font-size: $font-size-md !default;
+//
 $dropdown-menu-spacing-x: 0 !default;
-$dropdown-menu-spacing-y: 0 !default;
-$dropdown-item-spacing-x: .75rem !default;
-$dropdown-item-spacing-y: .75rem !default;
-$dropdown-item-color: $primary-color !default;
-$dropdown-item-hover: $primary-color !default;
-$dropdown-item-hover-background: $lighter-grey !default;
-$dropdown-item-active: $primary-color !default;
-$dropdown-item-active-background: $lighter-grey !default;
+$dropdown-menu-spacing-y: .5rem !default;
+$dropdown-item-spacing-x: 1.5rem !default;
+$dropdown-item-spacing-y: .5rem !default;
+$dropdown-divider-spacing-y: .5rem !default;
+$dropdown-divider-spacing-x: 0 !default;
+//
 $dropdown-min-width: 10rem !default;
 $dropdown-offset: -.125rem !default;
 $dropdown-transition: color 0s, opacity $transition-effect $transition-duration,
   transform $transition-effect $transition-duration !default;
+//
+$dropdown-toggle-width: .5rem !default;
+$dropdown-toggle-height: .5rem !default;
 
 // Field //
 
@@ -426,7 +446,7 @@ $field-line-height: $font-line-height !default;
 //
 $field-minimum-height: 2.625rem !default;
 $field-spacing-x: .5rem !default;
-$field-spacing-y: .5rem !default; // sort this, field-spacing-addon-y
+$field-spacing-y: .5rem !default;
 //
 $field-toggle-spacing-x: .75rem !default;
 $field-toggle-width: .5rem !default;
@@ -447,7 +467,7 @@ $field-text-spacing-y: .25rem !default;
 //
 $field-transition: all $transition-effect $transition-duration !default;
 
-// ******** Addon
+// Addon
 $field-addon-variant-background: $field-variant-active !default;
 $field-addon-variant-color: $field-variant-background !default;
 $field-addon-variant-border: $field-variant-active !default;
@@ -476,44 +496,31 @@ $media-border-width: $border-width !default;
 $media-spacing-x: 1rem !default;
 $media-spacing-y: 1rem !default;
 
-//******************Navbar //
+// Navbar //
 
-$navbar-background: $base-pair !default;
-$navbar-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .1),
-  0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
-$navbar-item-spacing-x: .5rem !default;
-$navbar-item-spacing-y: .75rem !default;
-$navbar-font-weight: $font-weight-bold !default;
-$navbar-container-spacing: 0 1rem !default;
-$navbar-height: 3rem !default;
-$navbar-image-max-height: $navbar-height/1.5 !default;
-$navbar-item-color: $primary-color !default;
-$navbar-item-hover-color: $primary-color !default;
-$navbar-item-hover-background: transparent !default;
-$navbar-item-active-color: $primary-color !default;
-$navbar-item-active-background: $base-pair !default;
-$navbar-dropdown-background: $base-pair !default;
-$navbar-dropdown-chevron: $primary-color !default;
-$navbar-dropdown-border: $border-width $border-style transparent !default;
-$navbar-dropdown-border-radius: $border-radius !default;
-$navbar-dropdown-item-hover: $primary-pair !default;
-$navbar-dropdown-item-hover-background: $primary-color !default;
-$navbar-dropdown-item-active: $primary-color !default;
-$navbar-dropdown-item-active-background: $white !default;
-$navbar-dropdown-radius: $base-pair !default;
-$navbar-dropdown-offset: -.125rem !default;
+$navbar-variant-background: $white !default;
+$navbar-variant-color: $base-variant-background !default;
+$navbar-variant-border: $base-variant-border !default;
+$navbar-variant-hover: rgba($primary-color, .05) !default;
+$navbar-variant-active: rgba($primary-color, .05) !default;
+$navbar-variant-toggle: $secondary-color !default;
+//
+$navbar-font-family: $heading-font-family !default;
+$navbar-font-size: $font-size !default;
+$navbar-font-weight: $font-weight !default;
+//
+$navbar-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$navbar-height: 4rem !default;
+$navbar-logo-max-height: 3rem !default;
+$navbar-logo-height: $navbar-height !default;
+$navbar-logo-width: $navbar-height !default;
+//
+$navbar-item-spacing-x: .75rem !default;
+$navbar-item-spacing-y: .5rem !default;
 $navbar-fixed-spacing-y: 4rem !default;
-$navbar-tab-border-hover-color: $navbar-item-hover-color !default;
-$navbar-tab-border-active-color: $navbar-item-active-color !default;
-$navbar-tab-border-width: $border-width !default;
-$navbar-tab-spacing: $padding !default;
-$navbar-tab-transition: border-color $transition-effect $transition-duration,
-  color $transition-effect $transition-duration !default;
-$navbar-dropdown-transition: color 0s,
-  opacity $transition-effect $transition-duration,
-  transform $transition-effect $transition-duration !default;
-$navbar-toggle-width: .5rem !default;
-$navbar-toggle-height: .5rem !default;
+//
+$navbar-toggle-width: 4rem !default;
+$navbar-toggle-height: 4rem !default;
 
 // Pagination //
 
@@ -569,7 +576,7 @@ $stat-value-font-sizes: (
 $tab-variant-background: $base-color !default;
 $tab-variant-color: $base-color !default;
 $tab-variant-border: rgba($tab-variant-background, .2) !default;
-$tab-variant-hover: $tab-variant-background !default;
+$tab-variant-hover: rgba($tab-variant-background, .2) !default;
 $tab-variant-active: $tab-variant-hover !default;
 //
 $tab-border-radius: $border-radius !default;
@@ -581,13 +588,13 @@ $tab-spacing-y: .25rem !default;
 //
 $tab-transition: all $transition-effect $transition-duration !default;
 
-// Table //
+// ******* Table //
 
 $table-variant-background: darken($base-variant-color, 2%) !default;
 $table-variant-color: $base-variant-background !default;
-$table-variant-border: $base-variant-active !default;
-$table-variant-hover: $base-variant-active !default;
-$table-variant-active: $base-variant-active !default;
+$table-variant-border: darken($table-variant-background, 12%) !default;
+$table-variant-hover: darken($table-variant-background, 12%) !default;
+$table-variant-active: darken($table-variant-background, 12%) !default;
 //
 $table-border-radius: $border-radius * 2 !default;
 $table-border-style: $border-style !default;
