@@ -1,5 +1,4 @@
 .bb-dropdown {
-	display: inline-block;
 	&.active,
 	&.hover:hover {
 		.dropdown-menu {
@@ -11,42 +10,45 @@
 	}
 	.dropdown-menu {
 		position: absolute;
-		z-index: 20;
 		display: block;
-		padding: $dropdown-menu-spacing-y $dropdown-menu-spacing-x;
-		min-width: $dropdown-min-width;
-		border-top: $dropdown-border;
-		background: $dropdown-background;
-		box-shadow: $dropdown-box-shadow;
-		list-style: none;
-		font-size: $dropdown-font-size;
-		opacity: 0;
-		transform: translateY(#{$dropdown-offset});
-		pointer-events: none;
 
-		@include border-bottom-radius($dropdown-border-radius);
-		@include transition($dropdown-transition);
-		&.static {
-			transform: translateY(0);
-
-			@include transition(none);
+		&.active,
+		&.hover:hover,
+		&.hover:focus {
+			.dropdown-menu {
+				@include respond-to('lg') {
+					display: block;
+					opacity: 1;
+					transform: translateY(0);
+					pointer-events: auto;
+				}
+			}
 		}
-		a.dropdown-item {
+
+		.dropdown-item {
 			display: block;
 			flex-grow: 0;
 			flex-shrink: 0;
 			justify-content: flex-start;
-			padding: $dropdown-item-spacing-y/2 $dropdown-item-spacing-x;
-			color: $dropdown-item-color;
-			&:hover {
-				background: $dropdown-item-hover-background;
-				color: $dropdown-item-hover;
+			padding: $dropdown-item-spacing-y $dropdown-item-spacing-x;
+
+			@include transition($dropdown-transition);
+			@include hover-focus {
+				background: $dropdown-variant-background-hover;
+				color: $dropdown-variant-color-hover;
 				text-decoration: none;
 			}
+			@include respond-to('lg') {
+				padding: $dropdown-item-spacing-y $dropdown-item-spacing-x;
+				white-space: nowrap;
+			}
 			&.active {
-				background: $dropdown-item-active-background;
-				color: $dropdown-item-active;
+				background: $dropdown-variant-background-active;
+				color: $dropdown-variant-color-active;
 			}
 		}
+	}
+	.bb-divider {
+		margin: $dropdown-divider-spacing-y $dropdown-divider-spacing-x;
 	}
 }
