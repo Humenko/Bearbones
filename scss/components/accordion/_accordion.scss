@@ -25,21 +25,19 @@
 		$accordion-border-style,
 		$accordion-variant-border
 		);
-		span {
-			margin: $accordion-toggle-spacing;
-		}
 		span,
 		:before,
 		:after {
 			transition: $accordion-toggle-transition;
 		}
 		.toggle {
+			margin: $accordion-toggle-spacing-y $accordion-toggle-spacing-x / 2;
 			min-width: 1rem;
 
 			@include plus($accordion-variant-toggle);
 		}
 		.chevron {
-			margin-right: .25rem;
+			margin: $accordion-toggle-spacing-y $accordion-toggle-spacing-x;
 
 			@include chevron-down(
 			$accordion-variant-toggle,
