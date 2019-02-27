@@ -1,3 +1,6 @@
 @mixin card-variant($border-width, $border-style, $color) {
-	@include border-bottom($border-width, $border-style, $color);
+	background: $color;
+	color: $white;
+
+	@include border($border-width, $border-style, $color);
 }

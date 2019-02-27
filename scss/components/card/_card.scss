@@ -1,28 +1,13 @@
 .bb-card {
 	position: relative;
 	max-width: 100%;
-	background: $card-background;
+	background: $card-variant-background;
 	box-shadow: $card-box-shadow;
-	color: $card-color;
+	color: $card-variant-color;
 	font-family: $card-content-font-family;
 
+	@include border($card-border-width, $card-border-style, $card-variant-border);
 	@include border-radius($card-border-radius);
-	&.no-shadow {
-		box-shadow: none;
-	}
-	&.no-border-radius {
-		@include border-radius($no-border-radius);
-		.card-image img {
-			@include border-top-radius($no-border-radius);
-		}
-	}
-	&.invert {
-		@include card-variant(
-		$card-border-width,
-		$card-border-style,
-		$invert-variant-color
-		);
-	}
 	&.primary {
 		@include card-variant(
 		$card-border-width,
@@ -30,75 +15,84 @@
 		$primary-variant-background
 		);
 	}
-	&.secondary {
-		@include card-variant(
-		$card-border-width,
-		$card-border-style,
-		$secondary-variant-background
-		);
-	}
-	&.positive {
-		@include card-variant(
-		$card-border-width,
-		$card-border-style,
-		$positive-variant-background
-		);
-	}
-	&.negative {
-		@include card-variant(
-		$card-border-width,
-		$card-border-style,
-		$negative-variant-background
-		);
-	}
-	.card-header {
+	.header {
 		display: flex;
 		align-items: stretch;
 
 		@include border-bottom(
-		$card-border-width,
-		$card-border-style,
-		$card-border-color
+		$card-header-border-width,
+		$card-header-border-style,
+		$card-header-variant-border
 		);
 		.header-title {
 			display: flex;
 			align-items: center;
 			flex-grow: 1;
-			padding: $card-header-spacing-y $card-header-spacing-x
-			$card-header-spacing-y $card-header-spacing-x;
-			font-weight: $card-heading-font-weight;
-			font-family: $card-heading-font-family;
+			padding: $card-header-spacing-y $card-header-spacing-x;
+			color: $card-header-variant-color;
+			font-weight: $card-header-font-weight;
+			font-family: $card-header-font-family;
 		}
 	}
-	.card-image {
-		position: relative;
-		display: block;
-		img {
-			width: 100%;
-
-			@include border-top-radius($card-border-radius);
-		}
-	}
-	.card-content {
+	.content {
 		padding: $card-content-spacing-y $card-content-spacing-x;
-		& + .card-content {
+		& + .content {
 			padding-top: 0;
 		}
 		.media:not(:last-child) {
-			margin-bottom: $card-content-spacing-y;
+			margin-bottom: $card-content-spacing-y / 2;
 		}
 		&:last-child {
 			padding-bottom: $card-content-spacing-y;
 		}
 	}
-	.card-footer {
+	.image {
+		position: relative;
+		display: block;
+		img {
+			width: 100%;
+		}
+		&:first-child {
+			@include border-bottom(
+			$card-border-width,
+			$card-border-style,
+			$card-variant-border
+			);
+			img {
+				@include border-top-radius($card-border-radius / 2);
+			}
+		}
+		&:last-child {
+			@include border-top(
+			$card-border-width,
+			$card-border-style,
+			$card-variant-border
+			);
+			img {
+				@include border-bottom-radius($card-border-radius / 2);
+			}
+		}
+		&:not(:first-child):not(:last-child) {
+			@include border-top(
+			$card-border-width,
+			$card-border-style,
+			$card-variant-border
+			);
+			@include border-bottom(
+			$card-border-width,
+			$card-border-style,
+			$card-variant-border
+			);
+		}
+	}
+	.footer {
 		display: flex;
 		align-items: stretch;
 
 		@include border-top(
-		$card-border-width,
-		$card-border-style,
-		$card-footer-border-color
+		$card-footer-border-width,
+		$card-footer-border-style,
+		$card-footer-variant-border
 		);
 		.item {
 			display: flex;
@@ -108,16 +102,48 @@
 			flex-shrink: 0;
 			justify-content: center;
 			padding: $card-content-spacing-y / 2 $card-content-spacing-x / 2;
-			&:not(:last-child) {
-				@include border-right(
-				$card-border-width,
-				$card-border-style,
-				$card-item-border-color
-				);
-			}
-			&:hover {
+
+			@include hover-focus-active {
+				background: $card-variant-hover;
 				text-decoration: none;
 			}
+			&:first-child {
+				@include border-bottom-left-radius($card-border-radius / 2);
+			}
+			&:last-child {
+				@include border-bottom-right-radius($card-border-radius / 2);
+			}
+			&:not(:last-child) {
+				@include border-right(
+				$card-footer-border-width,
+				$card-footer-border-style,
+				$card-variant-border
+				);
+			}
+		}
+	}
+	&.no-shadow {
+		box-shadow: none;
+	}
+	&.no-border-radius {
+		@include border-radius($no-border-radius);
+		.image img {
+			@include border-radius($no-border-radius);
+		}
+		.footer .item {
+			@include border-radius($no-border-radius);
+		}
+	}
+	&.right {
+		text-align: right;
+		.header-title {
+			justify-content: flex-end;
+		}
+	}
+	&.center {
+		text-align: center;
+		.header-title {
+			justify-content: center;
 		}
 	}
 }
