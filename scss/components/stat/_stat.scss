@@ -1,46 +1,48 @@
 .bb-stat {
-	display: inline-flex;
-	flex-direction: column;
-	.value {
-		padding: 0;
-		text-align: center;
-		text-transform: $stat-value-text-transform;
-		font-weight: $stat-value-font-weight;
-		font-size: $stat-value-font-size;
-		font-family: $stat-value-font-family;
-		line-height: $stat-line-height;
-		&.text {
-			min-height: 2rem;
-			text-align: center;
-			font-weight: $stat-text-font-weight;
-			font-size: $stat-text-font-size;
-			line-height: $stat-line-height;
-		}
-	}
-	.label {
-		padding: 0;
-		text-align: center;
-		text-transform: $stat-label-text-transform;
-		font-weight: $stat-label-font-weight;
-		font-size: $stat-label-font-size;
-		font-family: $stat-label-font-family;
-	}
-	&.horizontal {
-		align-items: center;
-		flex-direction: row;
-		margin: 1rem 0;
-		:last-child {
-			margin-left: $stat-spacing/1.5;
-		}
-	}
-	@each $variant, $value in $variants {
-		&.#{$variant} {
-			@include stat-variant(nth($value, 1));
-		}
-	}
-	@each $font-size, $value in $stat-value-font-sizes {
-		&.#{$font-size} {
-			@include stat-font-size($value);
-		}
-	}
+  display: inline-flex;
+  flex-direction: column;
+  .value {
+    padding: 0;
+    text-align: center;
+    text-transform: $stat-value-text-transform;
+    font-weight: $stat-value-font-weight;
+    font-size: $stat-value-font-size;
+    font-family: $stat-value-font-family;
+    line-height: $stat-line-height;
+    display: flex;
+    justify-content: center;
+    &.text {
+      min-height: 2rem;
+      text-align: center;
+      font-weight: $stat-text-font-weight;
+      font-size: $stat-text-font-size;
+      line-height: $stat-line-height;
+    }
+  }
+  .label {
+    padding: 0;
+    text-align: center;
+    text-transform: $stat-label-text-transform;
+    font-weight: $stat-label-font-weight;
+    font-size: $stat-label-font-size;
+    font-family: $stat-label-font-family;
+  }
+  &.horizontal {
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem 0;
+    :last-child {
+      margin-left: $stat-spacing-y/1.5;
+    }
+  }
+  @each $variant, $value in $variants {
+    &.#{$variant} {
+      @include stat-variant(nth($value, 1));
+    }
+  }
+  @each $font-size, $value in $stat-value-font-sizes {
+    &.#{$font-size} {
+      @include stat-font-size($value);
+    }
+  }
 }
