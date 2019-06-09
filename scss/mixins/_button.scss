@@ -10,11 +10,13 @@
   @include border-color($border);
   @include hover-focus {
     background: $hover;
+    box-shadow: $button-box-shadow-hover;
     @include border-color($hover);
   }
   &:active,
   &.active {
     background: $active;
+    box-shadow: $button-box-shadow-hover;
     @include border-color($active);
   }
 }
