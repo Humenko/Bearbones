@@ -1,62 +1,67 @@
 .bb-grid {
-	display: block;
-	flex-flow: wrap;
-	flex-basis: 0;
-	flex-grow: 1;
-	flex-shrink: 1;
-	margin-right: -$grid-spacing-x;
-	margin-bottom: $grid-spacing-y * 2;
-	margin-left: -$grid-spacing-x;
+  display: block;
+  flex-flow: wrap;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: -$grid-spacing-x;
+  margin-bottom: $grid-spacing-y * 2;
+  margin-left: -$grid-spacing-x;
 
-	@include respond-to('lg') {
-		display: flex;
+  @include respond-to('lg') {
+    display: flex;
 
-		@include grid;
-	}
-	&:last-child {
-		margin-bottom: -$grid-spacing-y;
-	}
-	&.center {
-		justify-content: center;
-	}
-	&.connected {
-		margin-top: 0;
-		margin-right: 0;
-		margin-left: 0;
-		&:last-child {
-			margin-bottom: 0;
-		}
-		& > .column {
-			margin: 0;
-			padding: 0;
-		}
-	}
-	.column {
-		display: block;
-		flex-basis: 0;
-		flex-grow: 1;
-		flex-shrink: 1;
-		padding-right: $column-spacing-x;
-		padding-bottom: $column-spacing-y;
-		padding-left: $column-spacing-x;
-		&:last-child {
-			padding-bottom: 0;
-		}
-		&.full-y {
-			flex: 1;
-			 > div {
-				height: 100%;
-			}
-		}
-	}
-	@each $breakpoint in map-keys($breakpoints) {
-		@include respond-to($breakpoint) {
-			@include grid-responsive($breakpoint);
-			&.#{$breakpoint} {
-				display: flex;
+    @include grid;
+  }
+  &:last-child {
+    margin-bottom: -$grid-spacing-y;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.connected {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & > .column {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-right: $column-spacing-x;
+    padding-bottom: $column-spacing-y;
+    padding-left: $column-spacing-x;
+    &:last-child {
+      padding-bottom: $column-spacing-y * 2;
+    }
+    &.full-y {
+      flex: 1;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+  @each $breakpoint in map-keys($breakpoints) {
+    @include respond-to($breakpoint) {
+      @include grid-responsive($breakpoint);
+      &.#{$breakpoint} {
+        display: flex;
 
-				@include grid;
-			}
-		}
-	}
+        @include grid;
+        &.reverse {
+          @include respond-to(#{$breakpoint}) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
 }
