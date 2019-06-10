@@ -1,19 +1,25 @@
 .section {
-	margin: 0;
-	padding: $layout-spacing-y $layout-spacing-x;
-	&.lg {
-		padding-top: $layout-spacing-lg;
-		padding-bottom: $layout-spacing-lg;
-	}
-	@each $variant, $value in $variants {
-		&.#{$variant} {
-			@include layout-variant(nth($value, 3), nth($value, 1));
-		}
-	}
-	&.full-y {
-		padding: 0 $layout-spacing-x;
-	}
-	&.full-x {
-		padding: $layout-spacing-y 0;
-	}
+  margin: 0;
+  padding: $layout-spacing-y $layout-spacing-x;
+  &.lg {
+    padding-top: $layout-spacing-lg;
+    padding-bottom: $layout-spacing-lg;
+  }
+  @each $variant, $value in $variants {
+    &.#{$variant} {
+      @include layout-variant(nth($value, 3), nth($value, 1));
+    }
+  }
+  &.full-y {
+    padding: 0 $layout-spacing-x;
+  }
+  &.full-x {
+    padding: $layout-spacing-y 0;
+  }
+  &.p-t-0 {
+    padding-top: 0;
+  }
+  &.p-b-0 {
+    padding-bottom: 0;
+  }
 }

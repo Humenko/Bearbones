@@ -3,3 +3,7 @@
 @include position-variant('.p-relative', relative);
 @include position-variant('.p-static', static);
 @include position-variant('.p-sticky', sticky);
+
+.scroll {
+  overflow-x: scroll;
+}
