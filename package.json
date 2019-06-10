@@ -1,6 +1,6 @@
 {
   "name": "bearbones",
-  "version": "0.35.0",
+  "version": "0.36.0",
   "homepage": "https://bearbon.es",
   "description": "",
   "author": "Daniel Humenko",
@@ -24,14 +24,15 @@
     "url": "https://github.com/humenko/bearbones/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.7",
-    "bundlesize": "^0.17.1",
-    "csscomb": "^4.2.0",
+    "autoprefixer": "^9.6.0",
+    "bundlesize": "^0.17.2",
+    "csscomb": "^4.3.0",
     "cssnano": "^4.1.8",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.1",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "source-map-explorer": "^2.0.0"
   },
   "scripts": {
     "build:dev": "run-s clean build-scss build-autoprefix",
@@ -40,8 +41,8 @@
     "build-minify": "node-sass --output-style compressed css/bearbones.css css/bearbones.min.css",
     "build-scss": "node-sass --output-style expanded --source-map true scss/bearbones.scss css/bearbones.css",
     "clean": "rimraf css",
-    "watch": "yarn run build-scss --watch",
-    "analyse": "yarn build:prod && source-map-explorer ./css/bearbones.css ./css/bearbones.css.map",
+    "watch": "npm run build-scss --watch",
+    "analyse": "run-s build:prod && source-map-explorer ./css/bearbones.css ./css/bearbones.css.map",
     "test": "run-s build:prod test-size",
     "test-size": "bundlesize"
   },
