@@ -1,221 +1,221 @@
 .bb-animation {
-  &.up {
-    transform: translateY(100vh);
+	&.up {
+		transform: translateY(100vh);
 
-    @include slide-variant;
-  }
-  &.down {
-    transform: translateY(-100vh);
+		@include slide-variant;
+	}
+	&.down {
+		transform: translateY(-100vh);
 
-    @include slide-variant;
-  }
-  &.right {
-    transform: translateX(100vw);
+		@include slide-variant;
+	}
+	&.right {
+		transform: translateX(100vw);
 
-    @include slide-variant;
-  }
-  &.left {
-    transform: translateX(-100vw);
+		@include slide-variant;
+	}
+	&.left {
+		transform: translateX(-100vw);
 
-    @include slide-variant;
-  }
-  &.up,
-  &.down,
-  &.right,
-  &.left {
-    &.slide {
-      transform: translate(0);
-    }
-  }
-  &.spinner {
-    position: relative;
-    display: block;
-    width: $loader-spinner-size;
-    height: $loader-spinner-size;
-    border-width: $loader-spinner-border;
-    border-style: solid;
-    color: transparent !important;
-    cursor: default;
-    animation: loader-spin $loader-spinner-transition-duration linear;
-    animation-iteration-count: infinite;
-    pointer-events: none;
+		@include slide-variant;
+	}
+	&.up,
+	&.down,
+	&.right,
+	&.left {
+		&.slide {
+			transform: translate(0);
+		}
+	}
+	&.spinner {
+		position: relative;
+		display: block;
+		width: $loader-spinner-size;
+		height: $loader-spinner-size;
+		border-width: $loader-spinner-border;
+		border-style: solid;
+		color: transparent !important;
+		cursor: default;
+		animation: loader-spin $loader-spinner-transition-duration linear;
+		animation-iteration-count: infinite;
+		pointer-events: none;
 
-    @include border-radius($loader-spinner-border-radius);
-    @include spinner-variant($base-variant-background);
-    &.invert {
-      @include spinner-variant($invert-variant-background);
-    }
-    &.primary {
-      @include spinner-variant($primary-variant-background);
-    }
-    &.secondary {
-      @include spinner-variant($secondary-variant-background);
-    }
-    &.positive {
-      @include spinner-variant($positive-variant-background);
-    }
-    &.negative {
-      @include spinner-variant($negative-variant-background);
-    }
-  }
-  &.pulse {
-    position: relative;
-    width: $loader-pulse-size;
-    height: $loader-pulse-size;
-    color: transparent !important;
-    cursor: default;
-    animation: loader-pulse $loader-pulse-transition-duration infinite
-      ease-in-out;
-    pointer-events: none;
+		@include border-radius($loader-spinner-border-radius);
+		@include spinner-variant($base-variant-background);
+		&.invert {
+			@include spinner-variant($invert-variant-background);
+		}
+		&.primary {
+			@include spinner-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include spinner-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include spinner-variant($positive-variant-background);
+		}
+		&.negative {
+			@include spinner-variant($negative-variant-background);
+		}
+	}
+	&.pulse {
+		position: relative;
+		width: $loader-pulse-size;
+		height: $loader-pulse-size;
+		color: transparent !important;
+		cursor: default;
+		animation: loader-pulse $loader-pulse-transition-duration infinite
+		ease-in-out;
+		pointer-events: none;
 
-    @include border-radius($loader-pulse-border-radius);
-    @include pulse-variant($base-variant-background);
-    &.invert {
-      @include pulse-variant($invert-variant-background);
-    }
-    &.primary {
-      @include pulse-variant($primary-variant-background);
-    }
-    &.secondary {
-      @include pulse-variant($secondary-variant-background);
-    }
-    &.positive {
-      @include pulse-variant($positive-variant-background);
-    }
-    &.negative {
-      @include pulse-variant($negative-variant-background);
-    }
-  }
-  &.bar {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: $animation-bar-size;
-    background: $animation-bar-background;
-    border-radius: $animation-bar-border-radius;
-    color: transparent !important;
-    overflow: hidden;
-    cursor: default;
-    pointer-events: none;
+		@include border-radius($loader-pulse-border-radius);
+		@include pulse-variant($base-variant-background);
+		&.invert {
+			@include pulse-variant($invert-variant-background);
+		}
+		&.primary {
+			@include pulse-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include pulse-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include pulse-variant($positive-variant-background);
+		}
+		&.negative {
+			@include pulse-variant($negative-variant-background);
+		}
+	}
+	&.bar {
+		position: relative;
+		display: flex;
+		overflow: hidden;
+		width: 100%;
+		height: $animation-bar-size;
+		border-radius: $animation-bar-border-radius;
+		background: $animation-bar-background;
+		color: transparent !important;
+		cursor: default;
+		pointer-events: none;
 
-    @include bar-variant($base-variant-background);
-    &.invert {
-      @include bar-variant($invert-variant-background);
-    }
-    &.primary {
-      @include bar-variant($primary-variant-background);
-    }
-    &.secondary {
-      @include bar-variant($secondary-variant-background);
-    }
-    &.positive {
-      @include bar-variant($positive-variant-background);
-    }
-    &.negative {
-      @include bar-variant($negative-variant-background);
-    }
-    span {
-      display: flex;
-      width: 0;
-      animation: animation-bar $animation-bar-transition-duration forwards
-        ease-in-out;
-    }
-  }
-  &.audio {
-    position: absolute;
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    width: $animation-audio-width;
-    height: $animation-audio-height;
-    list-style: none;
-    transform: scaleY(-1);
-    li {
-      width: $animation-audio-bar-width;
-      border-radius: $border-radius;
-      background-color: $animation-audio-bar-variant-color;
-    }
-    li:nth-child(1) {
-      animation: animation-audio-1 $animation-audio-bar-animation-duration ease
-        infinite 0s;
-    }
-    li:nth-child(2) {
-      animation: animation-audio-2 $animation-audio-bar-animation-duration
-        ease-in-out infinite 0.2s;
-    }
-    li:nth-child(3) {
-      animation: animation-audio-1 $animation-audio-bar-animation-duration ease
-        infinite 0.1s;
-    }
-    li:nth-child(4) {
-      animation: animation-audio-2 $animation-audio-bar-animation-duration
-        ease-in infinite 0.3s;
-    }
-  }
-  &.flash {
-    animation: animation-flash $animation-flash-transition-duration infinite
-      ease-in-out !important;
-  }
+		@include bar-variant($base-variant-background);
+		&.invert {
+			@include bar-variant($invert-variant-background);
+		}
+		&.primary {
+			@include bar-variant($primary-variant-background);
+		}
+		&.secondary {
+			@include bar-variant($secondary-variant-background);
+		}
+		&.positive {
+			@include bar-variant($positive-variant-background);
+		}
+		&.negative {
+			@include bar-variant($negative-variant-background);
+		}
+		span {
+			display: flex;
+			width: 0;
+			animation: animation-bar $animation-bar-transition-duration forwards
+			ease-in-out;
+		}
+	}
+	&.audio {
+		position: absolute;
+		display: inline-flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		width: $animation-audio-width;
+		height: $animation-audio-height;
+		list-style: none;
+		transform: scaleY(-1);
+		li {
+			width: $animation-audio-bar-width;
+			border-radius: $border-radius;
+			background-color: $animation-audio-bar-variant-color;
+		}
+		li:nth-child(1) {
+			animation: animation-audio-1 $animation-audio-bar-animation-duration ease
+			infinite 0s;
+		}
+		li:nth-child(2) {
+			animation: animation-audio-2 $animation-audio-bar-animation-duration
+			ease-in-out infinite .2s;
+		}
+		li:nth-child(3) {
+			animation: animation-audio-1 $animation-audio-bar-animation-duration ease
+			infinite .1s;
+		}
+		li:nth-child(4) {
+			animation: animation-audio-2 $animation-audio-bar-animation-duration
+			ease-in infinite .3s;
+		}
+	}
+	&.flash {
+		animation: animation-flash $animation-flash-transition-duration infinite
+		ease-in-out !important;
+	}
 }
 
 @keyframes loader-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes loader-pulse {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
 }
 
 @keyframes animation-bar {
-  100% {
-    width: 100%;
-  }
+	100% {
+		width: 100%;
+	}
 }
 
 @keyframes animation-audio-1 {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: $animation-audio-height;
-  }
-  100% {
-    height: 0;
-  }
+	0% {
+		height: 0;
+	}
+	50% {
+		height: $animation-audio-height;
+	}
+	100% {
+		height: 0;
+	}
 }
 
 @keyframes animation-audio-2 {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: $animation-audio-height * 0.75;
-  }
-  100% {
-    height: 0;
-  }
+	0% {
+		height: 0;
+	}
+	50% {
+		height: $animation-audio-height * .75;
+	}
+	100% {
+		height: 0;
+	}
 }
 
 @keyframes animation-flash {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
