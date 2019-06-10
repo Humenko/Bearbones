@@ -1,87 +1,88 @@
 .bb-accordion {
-  width: 100%;
-  @include border-bottom(
-    $accordion-border-width,
-    $accordion-border-style,
-    $accordion-variant-border
-  );
-  @each $variant, $value in $variants {
-    &.#{$variant} {
-      @include accordion-variant(nth($value, 1));
-    }
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: $accordion-heading-spacing-y $accordion-heading-spacing-x;
-    background: $accordion-variant-background;
-    font-weight: $accordion-heading-font-weight;
-    font-size: $accordion-heading-font-size;
-    font-family: $accordion-heading-font-family;
-    cursor: pointer;
+	width: 100%;
 
-    @include border-top(
-      $accordion-border-width,
-      $accordion-border-style,
-      $accordion-variant-border
-    );
-    span,
-    :before,
-    :after {
-      transition: $accordion-toggle-transition;
-    }
-    .toggle {
-      margin: $accordion-toggle-spacing-y $accordion-toggle-spacing-x / 2;
-      min-width: 1rem;
+	@include border-bottom(
+	$accordion-border-width,
+	$accordion-border-style,
+	$accordion-variant-border
+	);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include accordion-variant(nth($value, 1));
+		}
+	}
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: $accordion-heading-spacing-y $accordion-heading-spacing-x;
+		background: $accordion-variant-background;
+		font-weight: $accordion-heading-font-weight;
+		font-size: $accordion-heading-font-size;
+		font-family: $accordion-heading-font-family;
+		cursor: pointer;
 
-      @include plus($accordion-variant-toggle);
-    }
-    .chevron {
-      margin: $accordion-toggle-spacing-y $accordion-toggle-spacing-x;
+		@include border-top(
+		$accordion-border-width,
+		$accordion-border-style,
+		$accordion-variant-border
+		);
+		span,
+		:before,
+		:after {
+			transition: $accordion-toggle-transition;
+		}
+		.toggle {
+			margin: $accordion-toggle-spacing-y $accordion-toggle-spacing-x / 2;
+			min-width: 1rem;
 
-      @include chevron-down(
-        $accordion-variant-toggle,
-        $accordion-toggle-width,
-        $accordion-toggle-height
-      );
-    }
-  }
-  .content {
-    display: none;
-    margin-top: 0;
-    padding-bottom: $accordion-content-spacing-y;
-    &.active {
-      display: block;
-    }
-    .header {
-      justify-content: flex-start;
-      padding: $accordion-heading-spacing-y / 2 $accordion-heading-spacing-x;
-      font-weight: $accordion-subheading-font-weight;
-      font-size: $accordion-subheading-font-size;
-      font-family: $accordion-subheading-font-family;
-      &:first-child {
-        @include border-top(
-          $accordion-border-width,
-          $accordion-border-style,
-          $accordion-variant-border
-        );
-      }
-    }
-    .content {
-      padding: 0 0 $accordion-content-spacing-y 0;
-    }
-  }
-  .header.active {
-    .chevron {
-      @include chevron-up(
-        $accordion-variant-toggle-active,
-        $accordion-toggle-width,
-        $accordion-toggle-height
-      );
-    }
-    .toggle {
-      @include minus($accordion-variant-toggle-active);
-    }
-  }
+			@include plus($accordion-variant-toggle);
+		}
+		.chevron {
+			margin: $accordion-toggle-spacing-y $accordion-toggle-spacing-x;
+
+			@include chevron-down(
+			$accordion-variant-toggle,
+			$accordion-toggle-width,
+			$accordion-toggle-height
+			);
+		}
+	}
+	.content {
+		display: none;
+		margin-top: 0;
+		padding-bottom: $accordion-content-spacing-y;
+		&.active {
+			display: block;
+		}
+		.header {
+			justify-content: flex-start;
+			padding: $accordion-heading-spacing-y / 2 $accordion-heading-spacing-x;
+			font-weight: $accordion-subheading-font-weight;
+			font-size: $accordion-subheading-font-size;
+			font-family: $accordion-subheading-font-family;
+			&:first-child {
+				@include border-top(
+				$accordion-border-width,
+				$accordion-border-style,
+				$accordion-variant-border
+				);
+			}
+		}
+		.content {
+			padding: 0 0 $accordion-content-spacing-y 0;
+		}
+	}
+	.header.active {
+		.chevron {
+			@include chevron-up(
+			$accordion-variant-toggle-active,
+			$accordion-toggle-width,
+			$accordion-toggle-height
+			);
+		}
+		.toggle {
+			@include minus($accordion-variant-toggle-active);
+		}
+	}
 }
