@@ -1,47 +1,47 @@
 .bb-breadcrumb {
-  margin-bottom: $breadcrumb-spacing;
-  padding: 0;
-  text-transform: capitalize;
-  ul {
-    padding: 0;
-    background: $breadcrumb-variant-background;
-    list-style: none;
+	margin-bottom: $breadcrumb-spacing;
+	padding: 0;
+	text-transform: capitalize;
+	ul {
+		padding: 0;
+		background: $breadcrumb-variant-background;
+		list-style: none;
 
-    @include clearfix;
-    .breadcrumb-item {
-      float: left;
-      + .breadcrumb-item::before {
-        display: inline-block;
-        padding-right: $breadcrumb-item-spacing;
-        padding-left: $breadcrumb-item-spacing;
-        color: $breadcrumb-variant-divider;
-        content: '#{$breadcrumb-divider}';
-      }
-      &.active {
-        color: $breadcrumb-variant-active;
-      }
-      a {
-        color: $breadcrumb-variant-color;
-      }
-    }
-  }
-  @each $font-size, $value in $font-sizes {
-    &.#{$font-size} {
-      @include breadcrumb-font-size($value);
-    }
-  }
-  &.scroll {
-    overflow: hidden;
-    overflow-x: scroll;
-    width: 100%;
-    white-space: nowrap;
-    ul {
-      margin-bottom: 0;
-      padding-left: 0;
-    }
-    .breadcrumb-item {
-      display: inline;
-      float: none;
-    }
-  }
+		@include clearfix;
+		.breadcrumb-item {
+			float: left;
+			+ .breadcrumb-item::before {
+				display: inline-block;
+				padding-right: $breadcrumb-item-spacing;
+				padding-left: $breadcrumb-item-spacing;
+				color: $breadcrumb-variant-divider;
+				content: '#{$breadcrumb-divider}';
+			}
+			&.active {
+				color: $breadcrumb-variant-active;
+			}
+			a {
+				color: $breadcrumb-variant-color;
+			}
+		}
+	}
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include breadcrumb-font-size($value);
+		}
+	}
+	&.scroll {
+		overflow: hidden;
+		overflow-x: scroll;
+		width: 100%;
+		white-space: nowrap;
+		ul {
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+		.breadcrumb-item {
+			display: inline;
+			float: none;
+		}
+	}
 }
