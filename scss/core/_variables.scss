@@ -2,24 +2,24 @@
 
 // Colour //
 
-$primary-color: #0A344D !default;
-$primary-pair: #FFFFFF !default;
+$primary-color: #0a344d !default;
+$primary-pair: #ffffff !default;
 //
-$secondary-color: #FA7268 !default;
-$secondary-pair: #FFFFFF !default;
+$secondary-color: #fa7268 !default;
+$secondary-pair: #ffffff !default;
 //
-$positive-color: #50BF63 !default;
-$positive-pair: #FFFFFF !default;
+$positive-color: #50bf63 !default;
+$positive-pair: #ffffff !default;
 //
-$negative-color: #DC4C41 !default;
-$negative-pair: #FFFFFF !default;
+$negative-color: #dc4c41 !default;
+$negative-pair: #ffffff !default;
 //
 $base-color: #030303 !default;
-$base-pair: #FFFFFF !default;
+$base-pair: #ffffff !default;
 //
-$white: #FFFFFF !default;
-$light-grey: #A0A0A0 !default;
-$lighter-grey: #E0E0E0 !default;
+$white: #ffffff !default;
+$light-grey: #a0a0a0 !default;
+$lighter-grey: #e0e0e0 !default;
 $black: #000000 !default;
 $body-background: $white !default;
 
@@ -110,7 +110,7 @@ $variants: (
 
 $padding: 1rem !default;
 $margin: 1.5rem !default;
-$body-spacing-y: .5rem !default;
+$body-spacing-y: 0.5rem !default;
 
 ////****************** LAYOUT ////
 
@@ -124,10 +124,10 @@ $layout-spacing-lg: $layout-spacing-y * 4 !default;
 
 //// GRID ////
 
-$grid-spacing-x: .5rem !default;
-$grid-spacing-y: .5rem !default;
-$column-spacing-x: .5rem !default;
-$column-spacing-y: .5rem !default;
+$grid-spacing-x: 0.5rem !default;
+$grid-spacing-y: 0.5rem !default;
+$column-spacing-x: 0.5rem !default;
+$column-spacing-y: 0.5rem !default;
 $grid-max-column: 16 !default;
 
 // Breakpoints
@@ -140,9 +140,9 @@ $breakpoints: (
 
 // Border //
 
-$border-width: .125rem !default;
+$border-width: 0.125rem !default;
 $border-style: solid !default;
-$border-radius: .2rem !default;
+$border-radius: 0.2rem !default;
 $border-radius-circle: 50% !default;
 $no-border-radius: 0rem !default;
 
@@ -167,8 +167,8 @@ $font-weight-bold: 700 !default;
 $font-weight-light: 300 !default;
 
 // Variant
-$font-size-xs: .5rem !default;
-$font-size-sm: .75rem !default;
+$font-size-xs: 0.5rem !default;
+$font-size-sm: 0.75rem !default;
 $font-size-md: 1rem !default;
 $font-size-lg: 1.25rem !default;
 $font-size-xl: 1.5rem !default;
@@ -194,13 +194,15 @@ $heading-max-modifier: 1.5 !default;
 
 //******************Title
 $subtitle-font-size: $font-size-lg !default;
+$subtitle-font-size-sm: $font-size-md !default;
+$subtitle-font-size-lg: $font-size-xl !default;
 $title-line-height: $heading-line-height !default;
 $title-spacing-y: 1.5rem !default;
 
 //******************Transition //
 
 $transition-effect: ease-in-out !default;
-$transition-duration: .25s !default;
+$transition-duration: 0.25s !default;
 
 //// COMPONENTS ////
 
@@ -228,8 +230,8 @@ $accordion-content-spacing-x: 1rem !default;
 $accordion-content-spacing-y: 1rem !default;
 $accordion-toggle-spacing-y: 0 !default;
 $accordion-toggle-spacing-x: 1rem !default;
-$accordion-toggle-width: .5rem !default;
-$accordion-toggle-height: .5rem !default;
+$accordion-toggle-width: 0.5rem !default;
+$accordion-toggle-height: 0.5rem !default;
 //
 $accordion-toggle-transition: all $transition-effect $transition-duration !default;
 
@@ -250,24 +252,25 @@ $alert-spacing-y: 1rem !default;
 
 $slide-transition-duration: 2s !default;
 $slide-transition-effect: $transition-effect !default;
-$loader-bar-background: $lighter-grey !default;
-$loader-bar-border: .5rem !default;
-$loader-bar-border-radius: 50% !default;
-$loader-bar-size: .5rem !default;
-$loader-bar-transition-duration: 5s !default;
+$animation-bar-background: $lighter-grey !default;
+$animation-bar-border: 0.5rem !default;
+$animation-bar-border-radius: 50% !default;
+$animation-bar-size: 0.5rem !default;
+$animation-bar-transition-duration: 5s !default;
 $loader-pulse-border-radius: 50% !default;
 $loader-pulse-size: 2rem !default;
 $loader-pulse-transition-duration: 1.75s !default;
-$loader-spinner-border: .5rem !default;
+$loader-spinner-border: 0.5rem !default;
 $loader-spinner-border-radius: 50% !default;
 $loader-spinner-size: 4rem !default;
 $loader-spinner-offset: -($loader-spinner-size / 2) !default;
 $loader-spinner-transition-duration: 1s !default;
 $animation-audio-width: 4rem;
 $animation-audio-height: 4rem;
-$animation-audio-bar-width: .25rem;
+$animation-audio-bar-width: 0.25rem;
 $animation-audio-bar-variant-color: $white;
 $animation-audio-bar-animation-duration: 1.5s;
+$animation-flash-transition-duration: 1.75s !default;
 
 // Box //
 
@@ -302,11 +305,14 @@ $button-variant-color: $base-variant-color !default;
 $button-variant-border: $base-variant-border !default;
 $button-variant-hover: $base-variant-hover !default;
 $button-variant-active: $base-variant-active !default;
-$button-variant-disabled-opacity: .2 !default;
+$button-variant-disabled-opacity: 0.2 !default;
 //
 $button-border-radius: $border-radius !default;
 $button-border-style: $border-style !default;
 $button-border-width: $border-width !default;
+//
+$button-box-shadow: none;
+$button-box-shadow-hover: none;
 //
 $button-font-family: $font-family !default;
 $button-font-size: $font-size !default;
@@ -314,24 +320,28 @@ $button-font-weight: $font-weight !default;
 $button-line-height: 1.3 !default;
 $button-text-transform: none !default;
 //
-$button-spacing-x: .5rem !default;
-$button-spacing-y: .5rem !default;
+$button-spacing-x: 0.5rem !default;
+$button-spacing-y: 0.5rem !default;
 //
 $button-transition: all $transition-effect $transition-duration !default;
 // Close button
-$button-close-icon-size: .125rem !default;
+$button-close-icon-size: 0.125rem !default;
 $button-close-size: 1.25rem !default;
-$button-close-size-xs: .85rem !default;
+$button-close-size-xs: 0.85rem !default;
 $button-close-size-sm: 1.05rem !default;
 $button-close-size-lg: 1.45rem !default;
 $button-close-size-xl: 1.65rem !default;
 $button-close-transform: translateX(-50%) translateY(-50%) rotate(45deg) !default;
 // Loading button
-$button-loader-border: .1rem !default;
+$button-loader-border: 0.1rem !default;
 $button-loader-circle: 50% !default;
-$button-loader-size: .75rem !default;
+$button-loader-size: 0.75rem !default;
 $button-loader-offset: -($button-loader-size / 2) !default;
 $button-loader-spacing: $button-loader-offset 0 0 $button-loader-offset !default;
+// Button Group
+$button-group-border-radius: $button-border-radius !default;
+$button-group-spacing-x: $button-spacing-x;
+$button-group-spacing-y: $button-spacing-y;
 
 // Card //
 
@@ -365,7 +375,7 @@ $card-footer-border-width: $card-border-width / 2 !default;
 $card-footer-spacing-x: $padding !default;
 $card-footer-spacing-y: $padding !default;
 //
-$card-box-shadow: 0 1.25rem 1.5rem -1.25rem rgba(10, 10, 10, .1) !default;
+$card-box-shadow: 0 1.25rem 1.5rem -1.25rem rgba(10, 10, 10, 0.1) !default;
 
 // Divider //
 
@@ -385,31 +395,32 @@ $divider-spacing-y: 1.5rem !default;
 // Dropdown //
 
 $dropdown-variant-background: $base-pair !default;
-$dropdown-variant-background-hover: rgba($primary-color, .05) !default;
-$dropdown-variant-background-active: rgba($primary-color, .05) !default;
+$dropdown-variant-background-hover: rgba($primary-color, 0.05) !default;
+$dropdown-variant-background-active: rgba($primary-color, 0.05) !default;
 $dropdown-variant-color: $base-pair !default;
 $dropdown-variant-color-hover: $base-color !default;
 $dropdown-variant-color-active: $base-color !default;
 //
-$dropdown-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .1),
-  0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
-$dropdown-variant-border: $border-width $border-style transparent !default;
+$dropdown-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1),
+  0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !default;
+$dropdown-border-width: $border-width !default;
+$dropdown-variant-border: $dropdown-border-width $border-style transparent !default;
 $dropdown-border-radius: $border-radius !default;
 //
 $dropdown-menu-spacing-x: 0 !default;
-$dropdown-menu-spacing-y: .5rem !default;
+$dropdown-menu-spacing-y: 0.5rem !default;
 $dropdown-item-spacing-x: 1.5rem !default;
-$dropdown-item-spacing-y: .5rem !default;
-$dropdown-divider-spacing-y: .5rem !default;
+$dropdown-item-spacing-y: 0.5rem !default;
+$dropdown-divider-spacing-y: 0.5rem !default;
 $dropdown-divider-spacing-x: 0 !default;
 //
 $dropdown-min-width: 10rem !default;
-$dropdown-offset: -.125rem !default;
+$dropdown-offset: -0.125rem !default;
 $dropdown-transition: color 0s, opacity $transition-effect $transition-duration,
   transform $transition-effect $transition-duration !default;
 //
-$dropdown-toggle-width: .5rem !default;
-$dropdown-toggle-height: .5rem !default;
+$dropdown-toggle-width: 0.5rem !default;
+$dropdown-toggle-height: 0.5rem !default;
 
 // Field //
 
@@ -418,7 +429,7 @@ $field-variant-color: $base-variant-background !default;
 $field-variant-border: $lighter-grey !default;
 $field-variant-active: $base-variant-active !default;
 $field-variant-focus: $field-variant-active !default;
-$field-variant-disabled-opacity: .2 !default;
+$field-variant-disabled-opacity: 0.2 !default;
 $field-variant-toggle: $light-grey !default;
 $field-variant-toggle-active: $light-grey !default;
 $field-variant-placeholder: $lighter-grey !default;
@@ -445,25 +456,25 @@ $field-font-weight: $font-weight !default;
 $field-line-height: $font-line-height !default;
 //
 $field-minimum-height: 2.625rem !default;
-$field-spacing-x: .5rem !default;
-$field-spacing-y: .5rem !default;
+$field-spacing-x: 0.5rem !default;
+$field-spacing-y: 0.5rem !default;
 //
-$field-toggle-spacing-x: .75rem !default;
-$field-toggle-width: .5rem !default;
-$field-toggle-height: .5rem !default;
+$field-toggle-spacing-x: 0.75rem !default;
+$field-toggle-width: 0.5rem !default;
+$field-toggle-height: 0.5rem !default;
 //
 $field-checkbox-height: 1.5rem;
 $field-checkbox-width: 1.5rem;
-$field-checkbox-border-width: .125rem;
+$field-checkbox-border-width: 0.125rem;
 $field-checkbox-label-font-size: $font-size-sm;
 //
-$field-label-spacing-y: .5rem !default;
+$field-label-spacing-y: 0.5rem !default;
 $field-label-font-weight: $font-weight !default;
 $field-label-font-family: $heading-font-family !default;
 $field-label-font-size: $font-size !default;
 //
 $field-text-font-size: $font-size-sm !default;
-$field-text-spacing-y: .25rem !default;
+$field-text-spacing-y: 0.25rem !default;
 //
 $field-transition: all $transition-effect $transition-duration !default;
 
@@ -471,17 +482,17 @@ $field-transition: all $transition-effect $transition-duration !default;
 $field-addon-variant-background: $field-variant-active !default;
 $field-addon-variant-color: $field-variant-background !default;
 $field-addon-variant-border: $field-variant-active !default;
-$field-addon-variant-disabled-opacity: .2 !default;
+$field-addon-variant-disabled-opacity: 0.2 !default;
 //
-$field-addon-spacing-x: .5rem !default;
-$field-addon-spacing-y: .5rem !default;
+$field-addon-spacing-x: 0.5rem !default;
+$field-addon-spacing-y: 0.5rem !default;
 
 // Footer //
 
 $footer-variant-background: $primary-color !default;
 $footer-variant-color: $primary-pair !default;
 //
-$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, .1);
+$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, 0.1);
 //
 $footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
 
@@ -501,22 +512,23 @@ $media-spacing-y: 1rem !default;
 $navbar-variant-background: $white !default;
 $navbar-variant-color: $base-variant-background !default;
 $navbar-variant-border: $base-variant-border !default;
-$navbar-variant-hover: rgba($primary-color, .05) !default;
-$navbar-variant-active: rgba($primary-color, .05) !default;
+$navbar-variant-hover: rgba($primary-color, 0.05) !default;
+$navbar-variant-active: rgba($primary-color, 0.05) !default;
 $navbar-variant-toggle: $secondary-color !default;
 //
 $navbar-font-family: $heading-font-family !default;
 $navbar-font-size: $font-size !default;
 $navbar-font-weight: $font-weight !default;
+$navbar-line-height: 1.6 !default;
 //
-$navbar-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$navbar-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12) !default;
 $navbar-height: 4rem !default;
 $navbar-logo-max-height: 3rem !default;
 $navbar-logo-height: $navbar-height !default;
 $navbar-logo-width: $navbar-height !default;
 //
-$navbar-item-spacing-x: .75rem !default;
-$navbar-item-spacing-y: .5rem !default;
+$navbar-item-spacing-x: 0.75rem !default;
+$navbar-item-spacing-y: 0.5rem !default;
 $navbar-fixed-spacing-y: 4rem !default;
 //
 $navbar-toggle-width: 4rem !default;
@@ -538,14 +550,14 @@ $pagination-font-size: $font-size !default;
 $pagination-font-weight: $font-weight-bold !default;
 //
 $pagination-min-width: 3rem !default;
-$pagination-spacing-y: .5rem !default;
-$pagination-spacing-x: .75rem !default;
+$pagination-spacing-y: 0.5rem !default;
+$pagination-spacing-x: 0.75rem !default;
 //
 $pagination-transition: all $transition-effect $transition-duration !default;
 // Dots
 $pagination-dot-border-radius: $border-radius-circle !default;
-$pagination-dot-size: .3rem !default;
-$pagination-dot-spacing: .1rem !default;
+$pagination-dot-size: 0.3rem !default;
+$pagination-dot-spacing: 0.1rem !default;
 
 // Stat //
 
@@ -561,11 +573,12 @@ $stat-text-font-weight: $font-weight-bold !default;
 $stat-text-font-size: $stat-value-font-size / 2 !default;
 $stat-line-height: 1em !default;
 //
-$stat-spacing: 1rem !default;
+$stat-spacing-x: 1rem !default;
+$stat-spacing-y: 1rem !default;
 $stat-value-font-sizes: (
   xs: $stat-value-font-size - 1rem,
-  sm: $stat-value-font-size - .5rem,
-  lg: $stat-value-font-size + .5rem,
+  sm: $stat-value-font-size - 0.5rem,
+  lg: $stat-value-font-size + 0.5rem,
   xl: $stat-value-font-size + 1rem
 ) !default;
 
@@ -575,8 +588,8 @@ $stat-value-font-sizes: (
 
 $tab-variant-background: $base-color !default;
 $tab-variant-color: $base-color !default;
-$tab-variant-border: rgba($tab-variant-background, .2) !default;
-$tab-variant-hover: rgba($tab-variant-background, .2) !default;
+$tab-variant-border: rgba($tab-variant-background, 0.2) !default;
+$tab-variant-hover: rgba($tab-variant-background, 0.2) !default;
 $tab-variant-active: $tab-variant-hover !default;
 //
 $tab-border-radius: $border-radius !default;
@@ -584,7 +597,7 @@ $tab-border-style: $border-style !default;
 $tab-border-width: $border-width !default;
 //
 $tab-spacing-x: 1rem !default;
-$tab-spacing-y: .25rem !default;
+$tab-spacing-y: 0.25rem !default;
 //
 $tab-transition: all $transition-effect $transition-duration !default;
 
@@ -600,8 +613,8 @@ $table-border-radius: $border-radius * 2 !default;
 $table-border-style: $border-style !default;
 $table-border-width: $border-width / 2 !default;
 //
-$table-spacing-x: .75rem !default;
-$table-spacing-y: .75rem !default;
+$table-spacing-x: 0.75rem !default;
+$table-spacing-y: 0.75rem !default;
 //
 $table-transition: all $transition-effect $transition-duration !default;
 
@@ -610,7 +623,7 @@ $table-transition: all $transition-effect $transition-duration !default;
 // List //
 
 $list-spacing-x: 1rem !default;
-$list-spacing-y: .5rem !default;
+$list-spacing-y: 0.5rem !default;
 
 // Spacing //
 
@@ -624,18 +637,18 @@ $spacers: (
   ),
   1: (
     x: (
-      $spacer-x * .25
+      $spacer-x * 0.25
     ),
     y: (
-      $spacer-y * .25
+      $spacer-y * 0.25
     )
   ),
   2: (
     x: (
-      $spacer-x * .5
+      $spacer-x * 0.5
     ),
     y: (
-      $spacer-y * .5
+      $spacer-y * 0.5
     )
   ),
   3: (
@@ -662,7 +675,7 @@ $spacers: (
 
 //******************Chevron
 
-$icon-size: .5rem !default;
+$icon-size: 0.5rem !default;
 $icon-border-color: $light-grey !default;
-$icon-border-width: .0625rem !default;
+$icon-border-width: 0.0625rem !default;
 $icon-border-style: $border-style !default;
