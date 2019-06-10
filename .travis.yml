@@ -8,7 +8,7 @@ cache:
     - node_modules
 
 script:
-  - npm build:prod
+  - npm run build:prod
   - npm test
 
 deploy:
