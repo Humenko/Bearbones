@@ -1,36 +1,36 @@
 @mixin table-variant($color, $background, $border) {
-	background: rgba($background, .2);
-	tr {
-		@include border-color($border);
-	}
+  background: rgba($background, 0.2);
+  tr {
+    @include border-color($border);
+  }
 }
 
 @mixin table-striped-variant($color) {
-	tr:nth-child(even) {
-		background: $white;
-		color: $color;
-	}
+  tr:nth-child(even) {
+    background: $white;
+    color: $color;
+  }
 }
 
 @mixin table-hover-variant($background, $color) {
-	td {
-		@include hover {
-			background: $background;
-			color: $color;
-		}
-	}
+  td {
+    @include hover {
+      background: $background;
+      color: $color;
+    }
+  }
 }
 
 @mixin table-cell-hover-variant($background, $color) {
-	& {
-		@include hover {
-			background: $background;
-			color: $color;
-		}
-	}
+  & {
+    @include hover {
+      background: $background;
+      color: $color;
+    }
+  }
 }
 
 @mixin table-selected-variant($background, $color) {
-	background: $background;
-	color: $color;
+  background: $background;
+  color: $color;
 }
