@@ -1,53 +1,54 @@
 .bb-btns {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 0;
-  width: 100%;
-  vertical-align: baseline;
+	display: inline-flex;
+	flex-direction: row;
+	margin: 0;
+	width: 100%;
+	vertical-align: baseline;
 
-  @include respond-to('md') {
-    width: auto;
-  }
-  &.full-x {
-    width: 100%;
-  }
-  &.no-border-radius {
-    @include border-radius($no-border-radius);
-    .bb-btn {
-      &:first-child {
-        @include border-left-radius($no-border-radius);
-      }
-      &:last-child {
-        @include border-right-radius($no-border-radius);
-      }
-    }
-  }
-  &.vertical {
-    display: flex;
-    flex-direction: column;
-    .bb-btn {
-      margin: 0;
+	@include respond-to('md') {
+		width: auto;
+	}
+	&.full-x {
+		width: 100%;
+	}
+	&.no-border-radius {
+		@include border-radius($no-border-radius);
+		.bb-btn {
+			&:first-child {
+				@include border-left-radius($no-border-radius);
+			}
+			&:last-child {
+				@include border-right-radius($no-border-radius);
+			}
+		}
+	}
+	&.vertical {
+		display: flex;
+		flex-direction: column;
+		.bb-btn {
+			margin: 0;
 
-      @include border-radius($no-border-radius);
-      &:first-child {
-        @include border-top-radius($button-border-radius);
-        @include border-bottom-radius($no-border-radius);
-      }
-      &:last-child {
-        @include border-top-radius($no-border-radius);
-        @include border-bottom-radius($button-border-radius);
-      }
-    }
-  }
-  .bb-btn {
-    padding: $button-group-spacing-y $button-group-spacing-x;
-    flex: 1;
-    @include border-radius($no-border-radius);
-    &:first-child {
-      @include border-left-radius($button-group-border-radius);
-    }
-    &:last-child {
-      @include border-right-radius($button-group-border-radius);
-    }
-  }
+			@include border-radius($no-border-radius);
+			&:first-child {
+				@include border-top-radius($button-border-radius);
+				@include border-bottom-radius($no-border-radius);
+			}
+			&:last-child {
+				@include border-top-radius($no-border-radius);
+				@include border-bottom-radius($button-border-radius);
+			}
+		}
+	}
+	.bb-btn {
+		flex: 1;
+		padding: $button-group-spacing-y $button-group-spacing-x;
+
+		@include border-radius($no-border-radius);
+		&:first-child {
+			@include border-left-radius($button-group-border-radius);
+		}
+		&:last-child {
+			@include border-right-radius($button-group-border-radius);
+		}
+	}
 }
