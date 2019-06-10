@@ -1,150 +1,150 @@
 .bb-field {
-  margin-bottom: $field-spacing-y;
-  width: 100%;
-  height: auto;
+	margin-bottom: $field-spacing-y;
+	width: 100%;
+	height: auto;
 
-  @include field-font-size($field-font-size);
-  @each $variant, $value in $variants {
-    &.#{$variant} {
-      @include field-variant(
-        nth($value, 3),
-        nth($value, 1),
-        nth($value, 2),
-        nth($value, 4),
-        nth($value, 5)
-      );
-    }
-  }
-  &.success {
-    @include field-validation-variant(
-      $field-variant-success-color,
-      $field-variant-success-border,
-      $field-variant-success-placeholder
-    );
-  }
-  &.error {
-    @include field-validation-variant(
-      $field-variant-error-color,
-      $field-variant-error-border,
-      $field-variant-error-placeholder
-    );
-  }
-  &.disabled,
-  &:disabled {
-    input,
-    select,
-    textarea {
-      opacity: $field-variant-disabled-opacity;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-    label {
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-  }
-  @each $font-size, $value in $font-sizes {
-    &.#{$font-size} {
-      @include field-font-size($value);
-    }
-  }
-  &:not(.xs):not(.sm):not(.lg):not(.xl) {
-    input,
-    select,
-    textarea {
-      min-height: $field-minimum-height;
-    }
-  }
-  input,
-  select,
-  textarea {
-    position: relative;
-    z-index: 1;
-    display: block;
-    flex: 1 1 auto;
-    margin-bottom: 0;
-    width: 100%;
-    background: $field-variant-background;
-    color: $field-variant-color;
-    font-family: $field-font-family;
+	@include field-font-size($field-font-size);
+	@each $variant, $value in $variants {
+		&.#{$variant} {
+			@include field-variant(
+			nth($value, 3),
+			nth($value, 1),
+			nth($value, 2),
+			nth($value, 4),
+			nth($value, 5)
+			);
+		}
+	}
+	&.success {
+		@include field-validation-variant(
+		$field-variant-success-color,
+		$field-variant-success-border,
+		$field-variant-success-placeholder
+		);
+	}
+	&.error {
+		@include field-validation-variant(
+		$field-variant-error-color,
+		$field-variant-error-border,
+		$field-variant-error-placeholder
+		);
+	}
+	&.disabled,
+	&:disabled {
+		input,
+		select,
+		textarea {
+			opacity: $field-variant-disabled-opacity;
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+		label {
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+	}
+	@each $font-size, $value in $font-sizes {
+		&.#{$font-size} {
+			@include field-font-size($value);
+		}
+	}
+	&:not(.xs):not(.sm):not(.lg):not(.xl) {
+		input,
+		select,
+		textarea {
+			min-height: $field-minimum-height;
+		}
+	}
+	input,
+	select,
+	textarea {
+		position: relative;
+		z-index: 1;
+		display: block;
+		flex: 1 1 auto;
+		margin-bottom: 0;
+		width: 100%;
+		background: $field-variant-background;
+		color: $field-variant-color;
+		font-family: $field-font-family;
 
-    appearance: none;
-    @include border(
-      $field-border-width,
-      $field-border-style,
-      $field-variant-border
-    );
-    @include border-radius($field-border-radius);
-    @include transition($field-transition);
-    @include hover-focus-active {
-      z-index: 3;
-      outline: none;
-      box-shadow: none;
+		appearance: none;
+		@include border(
+		$field-border-width,
+		$field-border-style,
+		$field-variant-border
+		);
+		@include border-radius($field-border-radius);
+		@include transition($field-transition);
+		@include hover-focus-active {
+			z-index: 3;
+			outline: none;
+			box-shadow: none;
 
-      @include border-color($field-variant-focus);
-      &::placeholder {
-        color: $field-variant-placeholder-focus;
-      }
-    }
-    &::placeholder {
-      color: $field-variant-placeholder;
-    }
-  }
-  .bb-select {
-    position: relative;
-    display: inline-block;
-    width: 100%;
+			@include border-color($field-variant-focus);
+			&::placeholder {
+				color: $field-variant-placeholder-focus;
+			}
+		}
+		&::placeholder {
+			color: $field-variant-placeholder;
+		}
+	}
+	.bb-select {
+		position: relative;
+		display: inline-block;
+		width: 100%;
 
-    @include hover {
-      &:after {
-        @include border-color($field-variant-toggle-active);
-      }
-    }
-    select {
-      padding-right: calc(
-        #{$field-toggle-width} * 2 + #{$field-toggle-spacing-x}
-      );
-      overflow-x: hidden;
-    }
-    &:after {
-      position: absolute;
-      top: 50%;
-      right: $field-toggle-spacing-x;
-      margin-top: calc(-#{$field-toggle-height} - -#{$field-border-width});
+		@include hover {
+			&:after {
+				@include border-color($field-variant-toggle-active);
+			}
+		}
+		select {
+			overflow-x: hidden;
+			padding-right: calc(
+			#{$field-toggle-width} * 2 + #{$field-toggle-spacing-x}
+			);
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			right: $field-toggle-spacing-x;
+			margin-top: calc(-#{$field-toggle-height} - -#{$field-border-width});
 
-      @include chevron-down(
-        $field-variant-toggle,
-        $field-toggle-width,
-        $field-toggle-height
-      );
-    }
-  }
-  label {
-    display: block;
-    margin-bottom: 0;
-    padding-bottom: $field-label-spacing-y;
-    width: 100%;
-    color: $field-variant-label;
-    font-weight: $field-label-font-weight;
-    font-size: $field-label-font-size;
-    font-family: $field-label-font-family;
-  }
-  .text {
-    display: block;
-    margin-top: $field-text-spacing-y;
-    padding: 0;
-    font-size: $field-text-font-size;
-  }
-  .input-group {
-    display: inline-flex;
-    width: 100%;
-  }
+			@include chevron-down(
+			$field-variant-toggle,
+			$field-toggle-width,
+			$field-toggle-height
+			);
+		}
+	}
+	label {
+		display: block;
+		margin-bottom: 0;
+		padding-bottom: $field-label-spacing-y;
+		width: 100%;
+		color: $field-variant-label;
+		font-weight: $field-label-font-weight;
+		font-size: $field-label-font-size;
+		font-family: $field-label-font-family;
+	}
+	.text {
+		display: block;
+		margin-top: $field-text-spacing-y;
+		padding: 0;
+		font-size: $field-text-font-size;
+	}
+	.input-group {
+		display: inline-flex;
+		width: 100%;
+	}
 }
 
 .form-inline {
-  display: flex;
-  justify-content: space-between;
-  div:not(:last-child) {
-    padding-right: $field-spacing-x;
-  }
+	display: flex;
+	justify-content: space-between;
+	div:not(:last-child) {
+		padding-right: $field-spacing-x;
+	}
 }
