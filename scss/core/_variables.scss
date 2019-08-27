@@ -311,8 +311,8 @@ $button-border-radius: $border-radius !default;
 $button-border-style: $border-style !default;
 $button-border-width: $border-width !default;
 //
-$button-box-shadow: none;
-$button-box-shadow-hover: none;
+$button-box-shadow: none !default;
+$button-box-shadow-hover: none !default;
 //
 $button-font-family: $font-family !default;
 $button-font-size: $font-size !default;
@@ -340,8 +340,8 @@ $button-loader-offset: -($button-loader-size / 2) !default;
 $button-loader-spacing: $button-loader-offset 0 0 $button-loader-offset !default;
 // Button Group
 $button-group-border-radius: $button-border-radius !default;
-$button-group-spacing-x: $button-spacing-x;
-$button-group-spacing-y: $button-spacing-y;
+$button-group-spacing-x: $button-spacing-x !default;
+$button-group-spacing-y: $button-spacing-y !default;
 
 // Card //
 
@@ -442,9 +442,10 @@ $field-variant-success-border: $positive-color !default;
 $field-variant-error-color: $negative-color !default;
 $field-variant-error-placeholder: $negative-color !default;
 $field-variant-error-border: $negative-color !default;
-$field-variant-checkbox: $field-variant-background !default;
-$field-variant-checkbox-active: $primary-color !default;
-$field-variant-checkbox-background-active: $field-variant-background !default;
+$field-checkbox-variant-background: $field-variant-background !default;
+$field-checkbox-variant-border: $field-variant-color !default;
+$field-checkbox-variant-active: $primary-color !default;
+$field-checkbox-variant-background-active: $field-variant-background !default;
 //
 $field-border-radius: $border-radius !default;
 $field-border-style: $border-style !default;
@@ -461,12 +462,15 @@ $field-spacing-y: 0.5rem !default;
 //
 $field-toggle-spacing-x: 0.75rem !default;
 $field-toggle-width: 0.5rem !default;
-$field-toggle-height: 0.5rem !default;
+$field-toggle-height: 0.25rem !default;
 //
-$field-checkbox-height: 1.5rem;
-$field-checkbox-width: 1.5rem;
-$field-checkbox-border-width: 0.125rem;
-$field-checkbox-label-font-size: $font-size-sm;
+$field-checkbox-height: 1.5rem !default;
+$field-checkbox-width: 1.5rem !default;
+$field-checkbox-toggle-variant: $primary-color !default;
+$field-checkbox-toggle-width: 0.5rem !default;
+$field-checkbox-toggle-height: 0.5rem !default;
+$field-checkbox-toggle-border-width: 0.25rem !default;
+$field-checkbox-label-font-size: $font-size-sm !default;
 //
 $field-label-spacing-y: 0.5rem !default;
 $field-label-font-weight: $font-weight !default;

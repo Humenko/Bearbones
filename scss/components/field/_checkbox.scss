@@ -1,80 +1,80 @@
 .bb-checkbox {
-	position: relative;
-	display: flex;
-	align-items: center;
-	padding-left: $field-checkbox-width * 1.5;
-	cursor: pointer;
-	&label {
-		font-size: $field-checkbox-label-font-size;
-	}
-	input {
-		position: absolute;
-		z-index: -1;
-		opacity: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: $field-checkbox-width * 1.5;
+  font-size: $field-checkbox-label-font-size;
+  cursor: pointer;
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 
-		@include hover-focus-active {
-			 ~ .check {
-				border-color: $field-variant-active;
-			}
-		}
-		&:disabled {
-			@include hover-focus-active {
-				 ~ .check {
-					border-color: $field-variant-focus;
-				}
-				&:checked ~ .check {
-					border-color: $field-variant-active;
-				}
-			}
-			 ~ .check {
-				opacity: .6;
-				pointer-events: none;
-			}
-		}
-		&:checked {
-			 ~ .check {
-				background: $field-variant-checkbox-background-active;
-				&:after {
-					display: block;
+    @include hover-focus-active {
+      ~ .check {
+        border-color: $field-checkbox-variant-border;
+      }
+    }
+    &:disabled {
+      @include hover-focus-active {
+        ~ .check {
+          border-color: $field-checkbox-variant-active;
+        }
+        &:checked ~ .check {
+          border-color: $field-checkbox-variant-active;
+        }
+      }
+      ~ .check {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+    }
+    &:checked {
+      ~ .check {
+        background: $field-checkbox-variant-background-active;
+        &:after {
+          display: block;
 
-					@include tick(
-					$field-variant-checkbox-active,
-					$field-toggle-width,
-					$field-toggle-height
-					);
-				}
-			}
-		}
-	}
-	.check {
-		position: absolute;
-		top: calc(50% - #{$field-checkbox-height / 2});
-		left: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: $field-checkbox-width;
-		height: $field-checkbox-height;
-		border-radius: $field-border-radius;
-		background: $field-variant-checkbox;
+          @include tick(
+            $field-checkbox-variant-active,
+            $field-checkbox-toggle-width,
+            $field-checkbox-toggle-height,
+            $field-checkbox-toggle-border-width
+          );
+        }
+      }
+    }
+  }
+  .check {
+    position: absolute;
+    top: calc(50% - #{$field-checkbox-height / 2});
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $field-checkbox-width;
+    height: $field-checkbox-height;
+    border-radius: $field-border-radius;
+    background: $field-checkbox-variant-background;
 
-		@include border(
-		$field-border-width,
-		$field-border-style,
-		$field-variant-border
-		);
-		@include transition($field-transition);
-		&:after {
-			position: absolute;
-			display: none;
-			margin-top: -$field-checkbox-border-width / 2;
-			content: '';
+    @include border(
+      $field-border-width,
+      $field-border-style,
+      $field-checkbox-variant-border
+    );
+    @include transition($field-transition);
+    &:after {
+      position: absolute;
+      display: none;
+      margin-top: -$field-checkbox-toggle-border-width / 2;
+      content: '';
 
-			@include tick(
-			$field-variant-checkbox,
-			$field-toggle-width,
-			$field-toggle-height
-			);
-		}
-	}
+      @include tick(
+        $field-checkbox-variant-background,
+        $field-checkbox-toggle-width,
+        $field-checkbox-toggle-height,
+        $field-checkbox-toggle-border-width
+      );
+    }
+  }
 }

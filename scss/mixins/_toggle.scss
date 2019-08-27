@@ -125,17 +125,17 @@
 	@include border-right($border-width, $border-style, $color);
 }
 
-@mixin tick($color, $width, $height) {
+@mixin tick($color, $width, $height, $border-width) {
 	z-index: 1;
 	display: block;
 	width: $width;
-	height: $height / 2;
+	height: $height;
 	border-top: 0;
 	border-right: 0;
 	content: ' ';
 	transform: rotate(-45deg);
 	pointer-events: none;
 
-	@include border-bottom($field-checkbox-border-width, $border-style, $color);
-	@include border-left($field-checkbox-border-width, $border-style, $color);
+	@include border-bottom($border-width, $border-style, $color);
+	@include border-left($border-width, $border-style, $color);
 }

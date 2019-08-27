@@ -2,6 +2,8 @@
 	&.left {
 		input,
 		select {
+			border-left: 0;
+
 			@include border-left-radius(0);
 		}
 		.field-addon,
@@ -17,6 +19,8 @@
 	&.right {
 		input,
 		select {
+			border-right: 0;
+
 			@include border-right-radius(0);
 		}
 		.field-addon,
@@ -32,6 +36,9 @@
 	&.left-right {
 		input,
 		select {
+			border-right: 0;
+			border-left: 0;
+
 			@include border-left-radius(0);
 			@include border-right-radius(0);
 		}
@@ -94,8 +101,13 @@
 			margin-top: 0;
 		}
 	}
-	.bb-btn {
-		padding: $field-addon-spacing-y $field-addon-spacing-x;
+	.input-group {
+		.bb-btn {
+			padding: $field-addon-spacing-y $field-addon-spacing-x;
+		}
+	}
+	select {
+		padding-right: 2rem;
 	}
 }
 
