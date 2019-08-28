@@ -1,6 +1,6 @@
 {
   "name": "bearbones",
-  "version": "0.36.2",
+  "version": "0.36.3",
   "homepage": "https://bearbon.es",
   "description": "",
   "author": "Daniel Humenko",
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
-    "bundlesize": "^0.17.2",
+    "bundlesize": "^0.18.0",
     "csscomb": "^4.3.0",
     "cssnano": "^4.1.8",
     "node-sass": "^4.12.0",
