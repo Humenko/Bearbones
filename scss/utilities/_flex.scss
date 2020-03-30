@@ -2,6 +2,10 @@
 	flex: 1;
 }
 
+.flex-0 {
+	flex: 0 0;
+}
+
 @include flex-order('.flex-first', -1);
 @include flex-order('.flex-last', 1);
 @include flex-order('.flex-unordered', 0);

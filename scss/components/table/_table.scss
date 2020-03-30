@@ -29,6 +29,10 @@
 			td:last-child {
 				border-top-right-radius: $table-border-radius;
 			}
+			td,
+			th {
+				padding-top: $table-container-spacing-y;
+			}
 		}
 		&:last-child {
 			@include border-bottom-radius($table-border-radius);
@@ -37,6 +41,10 @@
 			}
 			td:last-child {
 				border-bottom-right-radius: $table-border-radius;
+			}
+			td,
+			th {
+				padding-bottom: $table-container-spacing-y;
 			}
 		}
 		&:not(:last-child) {

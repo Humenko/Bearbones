@@ -265,11 +265,11 @@ $loader-spinner-border-radius: 50% !default;
 $loader-spinner-size: 4rem !default;
 $loader-spinner-offset: -($loader-spinner-size / 2) !default;
 $loader-spinner-transition-duration: 1s !default;
-$animation-audio-width: 4rem;
-$animation-audio-height: 4rem;
-$animation-audio-bar-width: 0.25rem;
-$animation-audio-bar-variant-color: $white;
-$animation-audio-bar-animation-duration: 1.5s;
+$animation-audio-width: 4rem !default;
+$animation-audio-height: 4rem !default;
+$animation-audio-bar-width: 0.25rem !default;
+$animation-audio-bar-variant-color: $white !default;
+$animation-audio-bar-animation-duration: 1.5s !default;
 $animation-flash-transition-duration: 1.75s !default;
 
 // Box //
@@ -459,6 +459,7 @@ $field-line-height: $font-line-height !default;
 $field-minimum-height: 2.625rem !default;
 $field-spacing-x: 0.5rem !default;
 $field-spacing-y: 0.5rem !default;
+$field-container-spacing-y: 0.5rem !default;
 //
 $field-toggle-spacing-x: 0.75rem !default;
 $field-toggle-width: 0.5rem !default;
@@ -619,6 +620,7 @@ $table-border-width: $border-width / 2 !default;
 //
 $table-spacing-x: 0.75rem !default;
 $table-spacing-y: 0.75rem !default;
+$table-container-spacing-y: 1.5rem !default;
 //
 $table-transition: all $transition-effect $transition-duration !default;
 

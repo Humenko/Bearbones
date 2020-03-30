@@ -1,7 +1,8 @@
 .bb-field {
 	&.left {
 		input,
-		select {
+		select,
+		textarea {
 			border-left: 0;
 
 			@include border-left-radius(0);
@@ -18,7 +19,8 @@
 	}
 	&.right {
 		input,
-		select {
+		select,
+		textarea {
 			border-right: 0;
 
 			@include border-right-radius(0);
@@ -35,7 +37,8 @@
 	}
 	&.left-right {
 		input,
-		select {
+		select,
+		textarea {
 			border-right: 0;
 			border-left: 0;
 
