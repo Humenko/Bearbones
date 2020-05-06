@@ -73,36 +73,36 @@ $variants: (
       $invert-variant-border,
       $invert-variant-color,
       $invert-variant-hover,
-      $invert-variant-active
+      $invert-variant-active,
     ),
     primary: (
       $primary-variant-background,
       $primary-variant-border,
       $primary-variant-color,
       $primary-variant-hover,
-      $primary-variant-active
+      $primary-variant-active,
     ),
     secondary: (
       $secondary-variant-background,
       $secondary-variant-border,
       $secondary-variant-color,
       $secondary-variant-hover,
-      $secondary-variant-active
+      $secondary-variant-active,
     ),
     positive: (
       $positive-variant-background,
       $positive-variant-border,
       $positive-variant-color,
       $positive-variant-hover,
-      $positive-variant-active
+      $positive-variant-active,
     ),
     negative: (
       $negative-variant-background,
       $negative-variant-border,
       $negative-variant-color,
       $negative-variant-hover,
-      $negative-variant-active
-    )
+      $negative-variant-active,
+    ),
   )
 );
 
@@ -135,7 +135,7 @@ $breakpoints: (
   sm: 28rem,
   md: 40rem,
   lg: 57.5rem,
-  xl: 75rem
+  xl: 75rem,
 ) !default;
 
 // Border //
@@ -178,7 +178,7 @@ $font-sizes: (
   xs: $font-size-xs,
   sm: $font-size-sm,
   lg: $font-size-lg,
-  xl: $font-size-xl
+  xl: $font-size-xl,
 ) !default;
 
 //******************Heading
@@ -497,7 +497,7 @@ $field-addon-spacing-y: 0.5rem !default;
 $footer-variant-background: $primary-color !default;
 $footer-variant-color: $primary-pair !default;
 //
-$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, 0.1);
+$footer-box-shadow: 0 0 1.5rem 0 rgba(10, 10, 10, 0.1) !default;
 //
 $footer-spacing: 3rem $layout-spacing-x 6rem $layout-spacing-x !default;
 
@@ -584,7 +584,7 @@ $stat-value-font-sizes: (
   xs: $stat-value-font-size - 1rem,
   sm: $stat-value-font-size - 0.5rem,
   lg: $stat-value-font-size + 0.5rem,
-  xl: $stat-value-font-size + 1rem
+  xl: $stat-value-font-size + 1rem,
 ) !default;
 
 //FIX FONT SIZING
@@ -639,44 +639,44 @@ $spacer-y: $spacer !default;
 $spacers: (
   0: (
     x: 0,
-    y: 0
+    y: 0,
   ),
   1: (
     x: (
-      $spacer-x * 0.25
+      $spacer-x * 0.25,
     ),
     y: (
-      $spacer-y * 0.25
-    )
+      $spacer-y * 0.25,
+    ),
   ),
   2: (
     x: (
-      $spacer-x * 0.5
+      $spacer-x * 0.5,
     ),
     y: (
-      $spacer-y * 0.5
-    )
+      $spacer-y * 0.5,
+    ),
   ),
   3: (
     x: $spacer-x,
-    y: $spacer-y
+    y: $spacer-y,
   ),
   4: (
     x: (
-      $spacer-x * 1.5
+      $spacer-x * 1.5,
     ),
     y: (
-      $spacer-y * 1.5
-    )
+      $spacer-y * 1.5,
+    ),
   ),
   5: (
     x: (
-      $spacer-x * 2
+      $spacer-x * 2,
     ),
     y: (
-      $spacer-y * 2
-    )
-  )
+      $spacer-y * 2,
+    ),
+  ),
 ) !default;
 
 //******************Chevron
